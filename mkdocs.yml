@@ -1,0 +1,65 @@
+site_name: Documentation Raphaël Hirsch
+site_description: Base de connaissances, notes techniques et ressources
+site_url: https://documentation.raphael-hirsch.fr
+
+theme:
+  name: material
+  language: fr
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer en mode sombre
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer en mode clair
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.integrate
+    - content.code.copy
+
+plugins:
+  - search
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Accueil: index.md
+  - Système: 
+      - Systeme/index.md
+      - Conteneurs: 
+          - Systeme/Conteneurs/docker.md
+  - Réseau: Reseau/index.md
+  - Cybersécurité: Cybersecurite/index.md
+  - Management: Management/index.md
+  - Développement: Developpement/index.md
+  - Autres:
+      - Autres/index.md
+      - Projets:
+          - Autres/rpg-tower-crawler.md
+  - Index des Tags: tags.md
