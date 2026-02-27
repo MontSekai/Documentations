@@ -52,6 +52,8 @@ nav:
   - Accueil: index.md
   - Système: 
       - Systeme/systeme.md
+      - OS:
+          - Systeme/OS/debian.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Conteneurs: 
@@ -75,8 +77,16 @@ nav:
       - Management/management.md
       - Gestion_de_projet:
           - Management/Gestion_de_projet/gantt.md
+          - Management/Gestion_de_projet/matrice_des_risques.md
+          - Management/Gestion_de_projet/pert.md
+          - Management/Gestion_de_projet/qcd.md
+          - Management/Gestion_de_projet/raci.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
+      - Stratégie:
+          - Management/Strategie/but_objectif.md
+          - Management/Strategie/kpi.md
+          - Management/Strategie/swot.md
   - Développement: Developpement/developpement.md
   - Autres:
       - Autres/autres.md
