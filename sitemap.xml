@@ -2,42 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://documentation.raphael-hirsch.fr/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/tags/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Autres/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Autres/rpg-tower-crawler/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Developpement/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Developpement/Conception/diagramme_des_flux/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/gantt/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/tcp_ip/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/VPN/open_vpn/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Automatisation/ansible/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/Conteneurs/docker/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Conteneurs/kubernetes/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Infrastructure_as_Code/terraform/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/dns/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
 </urlset>
