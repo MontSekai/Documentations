@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/VPN/open_vpn/">
+        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/Protocoles/modele_osi/">
       
       
-        <link rel="prev" href="../../Protocoles/tcp_ip/">
+        <link rel="prev" href="../ethernet_trames/">
       
       
-        <link rel="next" href="../../../Cybersecurite/cybersecurite/">
+        <link rel="next" href="../tcp_ip/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>OpenVPN - Documentation Raphaël Hirsch</title>
+        <title>Le modèle OSI - Documentation Raphaël Hirsch</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openvpn" class="md-skip">
+        <a href="#le-modele-osi" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenVPN
+              Le modèle OSI
             
           </span>
         </div>
@@ -1052,8 +1052,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1070,11 +1072,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1095,7 +1097,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1113,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/ethernet_trames/" class="md-nav__link">
+      <a href="../ethernet_trames/" class="md-nav__link">
         
   
   
@@ -1138,10 +1140,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Protocoles/modele_osi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Le modèle OSI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1157,6 +1186,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-7-couches-en-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les 7 Couches en détail
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les 7 Couches en détail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-fameuse-couche-0-ou-couche-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La fameuse "Couche 0" (ou Couche 8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-le-modele-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparaison : Le modèle TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1169,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/tcp_ip/" class="md-nav__link">
+      <a href="../tcp_ip/" class="md-nav__link">
         
   
   
@@ -1202,8 +1290,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1218,11 +1304,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1243,7 +1329,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1258,37 +1344,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenVPN
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../VPN/open_vpn/" class="md-nav__link">
         
   
   
@@ -1304,48 +1363,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1922,7 +1939,14 @@
       
       
       
-        <a href="../../../tags/#tag:openvpn" class="md-tag">OpenVPN</a>
+        <a href="../../../tags/#tag:osi" class="md-tag">OSI</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:protocoles" class="md-tag">Protocoles</a>
       
     
       
@@ -1932,23 +1956,114 @@
         <a href="../../../tags/#tag:reseau" class="md-tag">Reseau</a>
       
     
-      
-      
-      
-      
-        <a href="../../../tags/#tag:vpn" class="md-tag">VPN</a>
-      
-    
   </nav>
 
 
 
-<h1 id="openvpn">OpenVPN</h1>
-<p>OpenVPN est une solution logicielle libre permettant de créer un réseau privé virtuel (VPN).</p>
-<h2 id="installation">Installation</h2>
-<p>...</p>
-<h2 id="configuration">Configuration</h2>
-<p>...</p>
+<h1 id="le-modele-osi">Le modèle OSI</h1>
+<p>Le modèle OSI (Open Systems Interconnection) est un standard de communication en réseau qui décrit les protocoles en 7 couches empilées.</p>
+<h2 id="les-7-couches-en-detail">Les 7 Couches en détail</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">N°</th>
+<th style="text-align: left;">Couche OSI</th>
+<th style="text-align: left;">Matériel / Équipement</th>
+<th style="text-align: left;">Vérification d'erreur possible</th>
+<th style="text-align: left;">Rôle de la couche</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>7</strong></td>
+<td style="text-align: left;"><strong>Application</strong></td>
+<td style="text-align: left;">PC, Serveur, Pare-feu applicatif (WAF)</td>
+<td style="text-align: left;">Gérée selon le protocole (ex: HTTPS gère ses erreurs, HTTP non).</td>
+<td style="text-align: left;">Fournit les interfaces réseau aux logiciels (HTTP, DNS, FTP, SMTP).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;"><strong>Présentation</strong></td>
+<td style="text-align: left;">PC, Serveur</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Formatage (ASCII, JPEG) et chiffrement (TLS/SSL) des données.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;"><strong>Session</strong></td>
+<td style="text-align: left;">PC, Serveur</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Ouvre, gère et ferme la communication (session) entre les applications.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;"><strong>Transport</strong></td>
+<td style="text-align: left;">PC, Pare-feu (Firewall), Load Balancer</td>
+<td style="text-align: left;"><strong>Oui</strong> (avec TCP). <strong>Non</strong> (avec UDP).</td>
+<td style="text-align: left;">Transport de bout en bout, segmentation et gestion des ports (ex: Port 80, 443).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;"><strong>Réseau</strong></td>
+<td style="text-align: left;">Routeur, Switch de Niveau 3</td>
+<td style="text-align: left;"><strong>Oui</strong> (Checksum dans l'en-tête du paquet IP).</td>
+<td style="text-align: left;">Adressage logique (Adresses IP) et Routage (chemin optimal). Unité : Le Paquet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;"><strong>Liaison de données</strong></td>
+<td style="text-align: left;">Switch, Carte Réseau (NIC)</td>
+<td style="text-align: left;"><strong>Oui</strong> (FCS - Frame Check Sequence à la fin de la trame).</td>
+<td style="text-align: left;">Adressage physique (Adresses MAC) et contrôle d'accès au support (CSMA/CD). Unité : La <a href="../ethernet_trames/">Trame</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;"><strong>Physique</strong></td>
+<td style="text-align: left;">Câble RJ45, Fibre optique, Hub, Répéteur</td>
+<td style="text-align: left;"><strong>Non</strong> (ou matériellement très basique via le voltage).</td>
+<td style="text-align: left;">Conversion des bits (0 et 1) en signaux électriques, lumineux ou ondes radio.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="la-fameuse-couche-0-ou-couche-8">La fameuse "Couche 0" (ou Couche 8)</h3>
+<p>En informatique, on entend souvent parler en blaguant de la <strong>Couche 0</strong> (ou de la <strong>Couche 8</strong>).
+* <strong>La Couche 8 (L'Utilisateur)</strong> : Fait référence à l'humain devant l'écran (<em>"Le problème se situe entre la chaise et le clavier"</em>).
+* <strong>La Couche 0 (L'Environnement Physique)</strong> : Fait souvent référence à un problème encore plus basique que le câble lui-même. C'est l'absence d'électricité, le câble arraché par une pelleteuse, ou un équipement physiquement éteint ou non branché.</p>
+<hr />
+<h2 id="comparaison-le-modele-tcpip">Comparaison : Le modèle TCP/IP</h2>
+<p>Le modèle OSI est un modèle <strong>théorique</strong> conçu pour standardiser et expliquer le fonctionnement des réseaux mondiaux. Dans la <strong>pratique réelle</strong>, Internet utilise le modèle <strong>TCP/IP</strong> (modèle DoD - <em>Department of Defense</em>), qui est plus condensé (4 couches) :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Modèle OSI (7 couches)</th>
+<th style="text-align: left;">Modèle TCP/IP (4 couches)</th>
+<th style="text-align: left;">Protocoles Associés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Application (7), Présentation (6), Session (5)</td>
+<td style="text-align: left;"><strong>Application</strong> (4)</td>
+<td style="text-align: left;">HTTP, FTP, DNS, SMTP</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transport (4)</td>
+<td style="text-align: left;"><strong>Transport</strong> (3)</td>
+<td style="text-align: left;">TCP, UDP</td>
+</tr>
+<tr>
+<td style="text-align: left;">Réseau (3)</td>
+<td style="text-align: left;"><strong>Internet</strong> (2)</td>
+<td style="text-align: left;">IPv4, IPv6, ICMP, IPsec</td>
+</tr>
+<tr>
+<td style="text-align: left;">Liaison de données (2), Physique (1)</td>
+<td style="text-align: left;"><strong>Accès Réseau</strong> (1) <em>(ou Network Interface)</em></td>
+<td style="text-align: left;">Ethernet, Wi-Fi (802.11)</td>
+</tr>
+</tbody>
+</table>
 
 
 

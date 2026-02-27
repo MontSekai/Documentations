@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/VPN/open_vpn/">
+        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Systeme/Services/dhcp/">
       
       
-        <link rel="prev" href="../../Protocoles/tcp_ip/">
+        <link rel="prev" href="../../Infrastructure_as_Code/terraform/">
       
       
-        <link rel="next" href="../../../Cybersecurite/cybersecurite/">
+        <link rel="next" href="../dns/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>OpenVPN - Documentation Raphaël Hirsch</title>
+        <title>DHCP (Dynamic Host Configuration Protocol) - Documentation Raphaël Hirsch</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openvpn" class="md-skip">
+        <a href="#dhcp-dynamic-host-configuration-protocol" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenVPN
+              DHCP (Dynamic Host Configuration Protocol)
             
           </span>
         </div>
@@ -235,11 +235,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../Systeme/systeme/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../systeme/" class="md-tabs__link">
           
   
   
@@ -257,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../reseau/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../Reseau/reseau/" class="md-tabs__link">
           
   
   
@@ -444,8 +444,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -463,17 +465,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -491,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -509,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/systeme/" class="md-nav__link">
+      <a href="../../systeme/" class="md-nav__link">
         
   
   
@@ -591,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Automatisation/ansible/" class="md-nav__link">
+      <a href="../../Automatisation/ansible/" class="md-nav__link">
         
   
   
@@ -683,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Conteneurs/docker/" class="md-nav__link">
+      <a href="../../Conteneurs/docker/" class="md-nav__link">
         
   
   
@@ -711,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Conteneurs/kubernetes/" class="md-nav__link">
+      <a href="../../Conteneurs/kubernetes/" class="md-nav__link">
         
   
   
@@ -801,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Infrastructure_as_Code/terraform/" class="md-nav__link">
+      <a href="../../Infrastructure_as_Code/terraform/" class="md-nav__link">
         
   
   
@@ -834,8 +839,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -850,11 +857,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -875,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -890,10 +897,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Systeme/Services/dhcp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DHCP (Dynamic Host Configuration Protocol)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -909,6 +943,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-relais-dhcp-dhcp-relay-ip-helper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Relais DHCP (DHCP Relay / IP Helper)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -921,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Services/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   
@@ -961,10 +1037,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -978,20 +1052,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -1009,7 +1080,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1027,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reseau/" class="md-nav__link">
+      <a href="../../../Reseau/reseau/" class="md-nav__link">
         
   
   
@@ -1113,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/ethernet_trames/" class="md-nav__link">
+      <a href="../../../Reseau/Protocoles/ethernet_trames/" class="md-nav__link">
         
   
   
@@ -1141,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/modele_osi/" class="md-nav__link">
+      <a href="../../../Reseau/Protocoles/modele_osi/" class="md-nav__link">
         
   
   
@@ -1169,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/tcp_ip/" class="md-nav__link">
+      <a href="../../../Reseau/Protocoles/tcp_ip/" class="md-nav__link">
         
   
   
@@ -1202,8 +1273,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1218,11 +1287,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1243,7 +1312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1258,37 +1327,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenVPN
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Reseau/VPN/open_vpn/" class="md-nav__link">
         
   
   
@@ -1304,48 +1346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1922,33 +1922,43 @@
       
       
       
-        <a href="../../../tags/#tag:openvpn" class="md-tag">OpenVPN</a>
+        <a href="../../../tags/#tag:dhcp" class="md-tag">DHCP</a>
       
     
       
       
       
       
-        <a href="../../../tags/#tag:reseau" class="md-tag">Reseau</a>
+        <a href="../../../tags/#tag:services" class="md-tag">Services</a>
       
     
       
       
       
       
-        <a href="../../../tags/#tag:vpn" class="md-tag">VPN</a>
+        <a href="../../../tags/#tag:systeme" class="md-tag">Systeme</a>
       
     
   </nav>
 
 
 
-<h1 id="openvpn">OpenVPN</h1>
-<p>OpenVPN est une solution logicielle libre permettant de créer un réseau privé virtuel (VPN).</p>
-<h2 id="installation">Installation</h2>
-<p>...</p>
-<h2 id="configuration">Configuration</h2>
-<p>...</p>
+<h1 id="dhcp-dynamic-host-configuration-protocol">DHCP (Dynamic Host Configuration Protocol)</h1>
+<p>Le DHCP est un protocole réseau dont le rôle est d'assurer la configuration automatique des paramètres IP d'une machine.</p>
+<h2 id="fonctionnement">Fonctionnement</h2>
+<p>Lorsqu'un appareil se connecte au réseau, il envoie une requête de diffusion (<em>DHCP Discover</em>) pour trouver un serveur DHCP, qui va lui attribuer dynamiquement :
+- Une adresse IP
+- Un masque de sous-réseau
+- Une passerelle par défaut
+- Un ou plusieurs serveurs <a href="../dns/">DNS</a></p>
+<h2 id="le-relais-dhcp-dhcp-relay-ip-helper">Le Relais DHCP (DHCP Relay / IP Helper)</h2>
+<p>Par défaut, les requêtes DHCP sont des requêtes de <strong>diffusion réseau (Broadcast)</strong>. Or, par définition, <strong>un routeur bloque les broadcasts</strong>. </p>
+<p>Si votre serveur DHCP (ex: un Windows Server) ne se trouve pas physiquement sur le même sous-réseau que le PC client (par exemple, le serveur est dans le VLAN Serveurs et le PC dans le VLAN Utilisateurs), la requête du PC n'atteindra jamais le serveur.</p>
+<p>Pour résoudre ce problème, on configure un <strong>Relais DHCP</strong> (souvent appelé <em>IP Helper-Address</em> chez Cisco) sur l'interface du routeur côté client. 
+1. Le client envoie sa requête Broadcast <code>255.255.255.255</code>.
+2. Le routeur intercepte ce Broadcast.
+3. Le routeur transforme la requête en message <strong>Unicast</strong> (un message direct point-à-point) et l'envoie à l'adresse IP exacte du serveur DHCP.
+4. Le serveur DHCP répond au routeur, qui retransmet l'IP au client.</p>
 
 
 

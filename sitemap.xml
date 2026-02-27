@@ -9,7 +9,7 @@
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Autres/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Autres/autres/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
@@ -17,19 +17,15 @@
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/cybersecurite/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Developpement/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Developpement/developpement/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Developpement/Conception/diagramme_des_flux/</loc>
-         <lastmod>2026-02-27</lastmod>
-    </url>
-    <url>
-         <loc>https://documentation.raphael-hirsch.fr/Management/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Management/management/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
@@ -41,7 +37,15 @@
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Reseau/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/reseau/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/ethernet_trames/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/modele_osi/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
@@ -53,7 +57,7 @@
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://documentation.raphael-hirsch.fr/Systeme/</loc>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/systeme/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
@@ -70,6 +74,10 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/Infrastructure_as_Code/terraform/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/dhcp/</loc>
          <lastmod>2026-02-27</lastmod>
     </url>
     <url>
