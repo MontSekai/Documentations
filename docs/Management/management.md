@@ -16,6 +16,7 @@ Cette section regroupe toutes les notes relatives au management et à la gestion
 
 ??? note "Processus"
     - [Diagramme des flux](Processus/diagramme_des_flux.md)
+    - [Référentiel ITIL](Processus/itil.md)
 
 ??? note "Stratégie"
     - [Buts et Objectifs](Strategie/but_objectif.md)

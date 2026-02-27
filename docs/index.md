@@ -43,10 +43,16 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [Triangle QCD](Management/Gestion_de_projet/qcd.md)
     ??? note "Processus"
         - [Diagramme des flux](Management/Processus/diagramme_des_flux.md)
+        - [Référentiel ITIL](Management/Processus/itil.md)
     ??? note "Stratégie"
         - [Buts et Objectifs](Management/Strategie/but_objectif.md)
         - [KPI](Management/Strategie/kpi.md)
         - [Matrice SWOT](Management/Strategie/swot.md)
+
+??? note "Cybersécurité"
+    - [Général (Page Accueil)](Cybersecurite/cybersecurite.md)
+    ??? note "Méthodologies"
+        - [EBIOS Risk Manager](Cybersecurite/ebios.md)
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)

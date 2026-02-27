@@ -72,7 +72,10 @@ nav:
           - Reseau/Protocoles/tcp_ip.md
       - VPN:
           - Reseau/VPN/open_vpn.md
-  - Cybersécurité: Cybersecurite/cybersecurite.md
+  - Cybersécurité: 
+      - Cybersecurite/cybersecurite.md
+      - Methodologies:
+          - Cybersecurite/ebios.md
   - Management: 
       - Management/management.md
       - Gestion_de_projet:
@@ -83,6 +86,7 @@ nav:
           - Management/Gestion_de_projet/raci.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
+          - Management/Processus/itil.md
       - Stratégie:
           - Management/Strategie/but_objectif.md
           - Management/Strategie/kpi.md
