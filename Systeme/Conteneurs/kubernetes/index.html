@@ -881,17 +881,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#commandes-principales" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2343,11 +2332,37 @@
 <h1 id="kubernetes">Kubernetes</h1>
 <p>Kubernetes est un système open source d'orchestration de conteneurs.</p>
 <h2 id="architecture">Architecture</h2>
-<p>...</p>
-<h2 id="architecture_1">Architecture</h2>
-<p>...</p>
+<p>Kubernetes fonctionne sur une architecture de cluster composée de deux types de nœuds :
+- <strong>Control Plane (Master Node)</strong> : Gère le cluster (API Server, etcd, Scheduler, Controller Manager).
+- <strong>Worker Nodes</strong> : Hébergent les applications via des Pods (Kubelet, Kube-proxy, Container Runtime).</p>
 <h2 id="commandes-principales">Commandes principales</h2>
-<p>...</p>
+<p>Voici quelques commandes incontournables avec l'outil <code>kubectl</code> :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Commande</th>
+<th style="text-align: left;">Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>kubectl get pods</code></strong></td>
+<td style="text-align: left;">Liste les Pods en cours d'exécution dans le namespace actuel.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>kubectl describe pod &lt;nom&gt;</code></strong></td>
+<td style="text-align: left;">Affiche des détails complets sur un Pod spécifique.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>kubectl get nodes</code></strong></td>
+<td style="text-align: left;">Affiche l'état des nœuds du cluster.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>kubectl apply -f fichier.yaml</code></strong></td>
+<td style="text-align: left;">Déploie ou met à jour une ressource à partir d'un fichier manifeste.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="certifications-officielles-cncf">Certifications Officielles (CNCF)</h2>
 <p>La CNCF (Cloud Native Computing Foundation) propose 3 certifications pratiques très reconnues pour valider ses compétences sur Kubernetes :</p>
 <ul>

@@ -2310,9 +2310,18 @@
 <h1 id="openvpn">OpenVPN</h1>
 <p>OpenVPN est une solution logicielle libre permettant de créer un réseau privé virtuel (VPN).</p>
 <h2 id="installation">Installation</h2>
-<p>...</p>
+<p>Sous Debian/Ubuntu, l'installation se fait simplement via les dépôts officiels :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openvpn<span class="w"> </span>easy-rsa
+</code></pre></div>
+<em>(L'outil <code>easy-rsa</code> est souvent installé en complément pour gérer votre propre infrastructure à clés publiques - PKI - et générer vos certificats)</em>.</p>
 <h2 id="configuration">Configuration</h2>
-<p>...</p>
+<p>Un fichier de configuration OpenVPN standard porte l'extension <code>.conf</code> coté serveur, et souvent <code>.ovpn</code> coté client.</p>
+<p>Il définit des paramètres critiques tels que :
+1. <strong>L'IP et le Port</strong> : (Ex: Port 1194, souvent en UDP pour de meilleures performances).
+2. <strong>Le mode de routage</strong> : <code>dev tun</code> (Tunnel IP classique, le plus utilisé) ou <code>dev tap</code> (Tunnel Ethernet de niveau 2).
+3. <strong>Les certificats</strong> : Chemins vers le CA, le certificat serveur et la clé privée.
+4. <strong>La plage d'IP</strong> attribuée aux clients (Ex: <code>server 10.8.0.0 255.255.255.0</code>).</p>
 
 
 

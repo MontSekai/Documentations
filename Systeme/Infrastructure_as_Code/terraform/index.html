@@ -2310,9 +2310,40 @@
 <h1 id="terraform">Terraform</h1>
 <p>Terraform est un outil open source d'infrastructure en tant que code.</p>
 <h2 id="providers">Providers</h2>
-<p>...</p>
+<p>Un "Provider" (fournisseur) est un plugin qui permet à Terraform d'interagir avec des API externes (comme AWS, Azure, Google Cloud, ou même Proxmox et VMware). 
+C'est la première chose que l'on déclare dans un fichier <code>main.tf</code> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;aws&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eu-west-3&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="commandes-principales">Commandes principales</h2>
-<p>...</p>
+<p>Voici le cycle de vie classique d'un déploiement avec Terraform :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Commande</th>
+<th style="text-align: left;">Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>terraform init</code></td>
+<td style="text-align: left;">Initialise le projet, télécharge les modules et les providers requis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terraform plan</code></td>
+<td style="text-align: left;">Analyse le code et montre ce qui va être créé/modifié/supprimé <strong>sans rien appliquer</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terraform apply</code></td>
+<td style="text-align: left;">Applique les changements (après demande de confirmation).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terraform destroy</code></td>
+<td style="text-align: left;">Détruit toute l'infrastructure définie dans le code.</td>
+</tr>
+</tbody>
+</table>
 
 
 
