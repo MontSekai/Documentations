@@ -51,7 +51,7 @@ markdown_extensions:
 nav:
   - Accueil: index.md
   - Système: 
-      - Systeme/index.md
+      - Systeme/systeme.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Conteneurs: 
@@ -60,23 +60,26 @@ nav:
       - Infrastructure_as_Code:
           - Systeme/Infrastructure_as_Code/terraform.md
       - Services:
+          - Systeme/Services/dhcp.md
           - Systeme/Services/dns.md
   - Réseau: 
-      - Reseau/index.md
+      - Reseau/reseau.md
       - Protocoles:
+          - Reseau/Protocoles/ethernet_trames.md
+          - Reseau/Protocoles/modele_osi.md
           - Reseau/Protocoles/tcp_ip.md
       - VPN:
           - Reseau/VPN/open_vpn.md
-  - Cybersécurité: Cybersecurite/index.md
+  - Cybersécurité: Cybersecurite/cybersecurite.md
   - Management: 
-      - Management/index.md
+      - Management/management.md
       - Gestion_de_projet:
           - Management/Gestion_de_projet/gantt.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
-  - Développement: Developpement/index.md
+  - Développement: Developpement/developpement.md
   - Autres:
-      - Autres/index.md
+      - Autres/autres.md
       - Projets:
           - Autres/rpg-tower-crawler.md
   - Index des Tags: tags.md

@@ -21,9 +21,34 @@ Pour la rendre lisible par les humains, elle est divisée en **4 octets** de 8 b
 * **Exemple** : `192.168.1.10`
 * **Valeur en binaire** : `11000000.10101000.00000001.00001010`
 
-*(Note sur le **bit de parité** : En télécommunication bas niveau - couche 1 et 2 OSI - un "bit de parité" peut être ajouté à une trame binaire pour détecter des erreurs de transmission de données matérielles. Cependant, à la couche IP - couche 3 - dans l'adresse IP elle-même, chaque bit sert uniquement au routage (il n'y a pas de bit de parité intégré à l'adresse). La vérification d'erreur se fait par un "Checksum / Somme de contrôle" dans l'en-tête du paquet IP.)*
+Pour convertir un octet (8 bits) en nombre décimal, on utilise le tableau des puissances de 2 suivant :
 
-### 2. Le Masque de sous-réseau et le CIDR
+| Binaire | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Valeur**| **128** | **64** | **32** | **16** | **8** | **4** | **2** | **1** |
+
+*(Note sur le **bit de parité** : En télécommunication bas niveau - couche 1 et 2 [OSI](modele_osi.md) - un "bit de parité" peut être ajouté à une [trame binaire](ethernet_trames.md) pour détecter des erreurs de transmission de données matérielles. Cependant, à la couche IP - couche 3 - dans l'adresse IP elle-même, chaque bit sert uniquement au routage (il n'y a pas de bit de parité intégré à l'adresse). La vérification d'erreur se fait par un "Checksum / Somme de contrôle" dans l'en-tête du paquet IP.)*
+
+### 2. Classes d'adresses IP et IPs remarquables
+
+Historiquement, les adresses IPv4 ont été divisées en classes pour faciliter leur distribution :
+
+| Classe | Plage d'adresses réseau | Masque par défaut | Cas d'usage typique |
+| :--- | :--- | :--- | :--- |
+| **A** | `1.0.0.0` à `126.0.0.0` | `/8` (255.0.0.0) | Réseaux géants (gouvernements, grands opérateurs). |
+| **B** | `128.0.0.0` à `191.255.0.0` | `/16` (255.255.0.0) | Moyennes et grandes entreprises. |
+| **C** | `192.0.0.0` à `223.255.255.0` | `/24` (255.255.255.0) | Petits réseaux (domestique, TPE). |
+
+Certaines adresses et plages ont des rôles très spécifiques :
+
+| IP / Plage | Nom | Rôle |
+| :--- | :--- | :--- |
+| `127.0.0.1` | **Loopback** (Boucle locale) | Permet à une machine de communiquer avec elle-même pour tester sa propre carte réseau. |
+| `169.254.x.x` | **APIPA** | Adresse auto-assignée par l'OS si le serveur [DHCP](../../Systeme/Services/dhcp.md) (qui distribue les IP) est injoignable. |
+| `0.0.0.0` | **Route par défaut** / Any | Désigne "n'importe quelle adresse" ou la route de sortie globale vers Internet. |
+| `255.255.255.255` | **Broadcast global** | Envoie un message à absolument toutes les machines du réseau physique local. |
+
+### 3. Le Masque de sous-réseau et le CIDR
 Pour savoir quelle partie de l'adresse identifie le **Réseau** et quelle partie identifie l'**Hôte** (la machine), on utilise un masque de sous-réseau.
 Le masque est aussi composé de 32 bits, mais c'est toujours une suite ininterrompue de `1` suivie d'une suite de `0`.
 * **Exemple de masque** : `255.255.255.0`
@@ -38,17 +63,15 @@ Le calcul des hôtes possibles se fait grâce aux puissances de 2 (symbolisé `2
 
 **Formule magique : $2^n - 2$**
 
-Pourquoi retirer 2 ? Dans chaque sous-réseau, **deux adresses sont toujours réservées** et ne peuvent techniquement pas être assignées à un ordinateur ou une carte réseau :
+Pourquoi retirer 2 ? Peu importe la taille de votre sous-réseau, **la première et la dernière adresse sont toujours réservées** et ne peuvent jamais être attribuées à une machine informatique :
 
-1. **L'Adresse Réseau (_Network Address_)** :
-   * C'est la toute première adresse du bloc (tous les bits de la partie hôte sont à `0`).
-   * Elle sert d'identifiant unique pour router le trafic vers le réseau global lui-même (ex: la rue).
-   * Dans un sous-réseau "standard" `/24`, elle se termine par `.0`.
+1. **La Première Adresse = Adresse Réseau (_Network Address_)** :
+   * Elle désigne l'ensemble du réseau. C'est l'adresse lue par les routeurs pour diriger le trafic global vers la bonne direction.
    
-2. **L'Adresse de Diffusion (_Broadcast Address_)** :
-   * C'est la toute dernière adresse du bloc (tous les bits de la partie hôte sont à `1`).
-   * Elle sert à envoyer un paquet à **toutes les machines** du sous-réseau simultanément (ex: une annonce générale dans la rue).
-   * Dans un sous-réseau "standard" `/24`, elle se termine par `.255`.
+2. **La Dernière Adresse = Adresse de Diffusion (_Broadcast Address_)** :
+   * Elle sert à envoyer un message simultanément à toutes les machines présentes dans la totalité de ce sous-réseau précis.
+
+*(Remarque : Il est courant de penser qu'une adresse réseau finit forcément par `.0` et qu'une adresse de diffusion finit forcément par `.255`. C'est vrai pour les réseaux standards `/24`, mais ce n'est plus le cas dès que l'on découpe des sous-réseaux plus petits, où le réseau pourrait très bien être `.16` et la diffusion `.31`.)*
 
 ### Exemple de décodage d'une IP (Tableau)
 
@@ -59,17 +82,15 @@ Qu'est ce que l'ordinateur comprend de ça ?
 | :--- | :--- | :--- |
 | **L'IP de la machine** | `192.168.1.130` | L'adresse unique configurée sur mon poste. |
 | **Le Masque** *(Mask)* | `255.255.255.0` | Déduit du `/24`. Il indique que les 3 premiers octets (192.168.1) fixent le réseau ! |
-| **L'Adresse Réseau** *(Network Address)* | `192.168.1.0` | La première adresse. Utilisée dans les tables de routage pour désigner tout le bloc. |
-| **La plage utilisable** *(Host Range)* | `.1` jusqu'à `.254` | Les 254 adresses que je peux distribuer manuellement ou via DHCP à mes appareils. |
-| **L'Adresse de diffusion** *(Broadcast)* | `192.168.1.255` | La dernière adresse. Si on ping cette IP, tout le réseau `192.168.1.x` répondra. |
+| **L'Adresse Réseau** *(Network Address)* | `192.168.1.0` | La **première** adresse. Utilisée dans les tables de routage. |
+| **La plage utilisable** *(Host Range)* | `.1` jusqu'à `.254` | Les 254 adresses que je peux distribuer (de la 2ème à l'avant-dernière). |
+| **L'Adresse de diffusion** *(Broadcast)* | `192.168.1.255` | La **dernière** adresse du bloc. Pinguer cette IP interroge tout le réseau local. |
 
-*(Note: Le mythe du ".0=Réseau" et ".255=Broadcast" n'est vrai **que dans le cadre d'un /24 ou d'un /16**. Sur un réseau plus petit comme un /28, l'adresse réseau pourrait très bien être `.16` et le broadcast `.31` !)*
-
-**Exemple rapide - Calcul pour un sous-réseau `/28` :**
-* L'adresse fait toujours 32 bits au total.
-* Bits réservés par le masque (partie Réseau) : 28 bits (notation CIDR).
+**Exemple de découpage plus complexe : Calcul pour un sous-réseau `/28`**
+* L'adresse fait toujours 32 bits au total, sur lesquels le réseau en bloque 28 (notation CIDR).
 * Bits restants pour les machines ($n$) : $32 - 28 = \mathbf{4}$ bits.
-* Nombre total d'IPs dans le bloc : $2^4 = \mathbf{16}$ IPs (ex: de `.0` à `.15`).
+* Nombre total d'IPs dans le bloc : $2^4 = \mathbf{16}$ IPs.
+* Par exemple, si la première IP est `192.168.1.0` (Adresse Réseau), les IP utilisables vont de `.1` à `.14`, et la dernière est `192.168.1.15` (Adresse de Diffusion).
 * Nombre d'**hôtes configurables** : $16 - 2 = \mathbf{14}$ machines possibles.
 ## Fonctionnement
 
