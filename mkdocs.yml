@@ -52,12 +52,30 @@ nav:
   - Accueil: index.md
   - Système: 
       - Systeme/index.md
+      - Automatisation:
+          - Systeme/Automatisation/ansible.md
       - Conteneurs: 
           - Systeme/Conteneurs/docker.md
-  - Réseau: Reseau/index.md
+          - Systeme/Conteneurs/kubernetes.md
+      - Infrastructure_as_Code:
+          - Systeme/Infrastructure_as_Code/terraform.md
+      - Services:
+          - Systeme/Services/dns.md
+  - Réseau: 
+      - Reseau/index.md
+      - Protocoles:
+          - Reseau/Protocoles/tcp_ip.md
+      - VPN:
+          - Reseau/VPN/open_vpn.md
   - Cybersécurité: Cybersecurite/index.md
-  - Management: Management/index.md
-  - Développement: Developpement/index.md
+  - Management: 
+      - Management/index.md
+      - Gestion_de_projet:
+          - Management/Gestion_de_projet/gantt.md
+  - Développement: 
+      - Developpement/index.md
+      - Conception:
+          - Developpement/Conception/diagramme_des_flux.md
   - Autres:
       - Autres/index.md
       - Projets:
