@@ -92,6 +92,4 @@ Qu'est ce que l'ordinateur comprend de ça ?
 * Nombre total d'IPs dans le bloc : $2^4 = \mathbf{16}$ IPs.
 * Par exemple, si la première IP est `192.168.1.0` (Adresse Réseau), les IP utilisables vont de `.1` à `.14`, et la dernière est `192.168.1.15` (Adresse de Diffusion).
 * Nombre d'**hôtes configurables** : $16 - 2 = \mathbf{14}$ machines possibles.
-## Fonctionnement
-
-...
+Le fonctionnement détaillé du modèle TCP/IP se retrouve dans la comparaison globale sur la page du [Modèle OSI](modele_osi.md).

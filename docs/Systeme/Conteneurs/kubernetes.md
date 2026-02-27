@@ -11,15 +11,20 @@ Kubernetes est un système open source d'orchestration de conteneurs.
 
 ## Architecture
 
-...
-
-## Architecture
-
-...
+Kubernetes fonctionne sur une architecture de cluster composée de deux types de nœuds :
+- **Control Plane (Master Node)** : Gère le cluster (API Server, etcd, Scheduler, Controller Manager).
+- **Worker Nodes** : Hébergent les applications via des Pods (Kubelet, Kube-proxy, Container Runtime).
 
 ## Commandes principales
 
-...
+Voici quelques commandes incontournables avec l'outil `kubectl` :
+
+| Commande | Explication |
+| :--- | :--- |
+| **`kubectl get pods`** | Liste les Pods en cours d'exécution dans le namespace actuel. |
+| **`kubectl describe pod <nom>`** | Affiche des détails complets sur un Pod spécifique. |
+| **`kubectl get nodes`** | Affiche l'état des nœuds du cluster. |
+| **`kubectl apply -f fichier.yaml`** | Déploie ou met à jour une ressource à partir d'un fichier manifeste. |
 
 ## Certifications Officielles (CNCF)
 
