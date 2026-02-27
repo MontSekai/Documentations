@@ -72,10 +72,9 @@ nav:
       - Management/index.md
       - Gestion_de_projet:
           - Management/Gestion_de_projet/gantt.md
-  - Développement: 
-      - Developpement/index.md
-      - Conception:
-          - Developpement/Conception/diagramme_des_flux.md
+      - Processus:
+          - Management/Processus/diagramme_des_flux.md
+  - Développement: Developpement/index.md
   - Autres:
       - Autres/index.md
       - Projets:

@@ -1,7 +1,7 @@
 ---
 tags:
-  - Developpement
-  - Conception
+  - Management
+  - Processus
   - Flux
 ---
 
