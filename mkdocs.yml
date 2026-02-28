@@ -92,7 +92,10 @@ nav:
           - Management/Strategie/but_objectif.md
           - Management/Strategie/kpi.md
           - Management/Strategie/swot.md
-  - Développement: Developpement/developpement.md
+  - Développement:
+      - Developpement/developpement.md
+      - Bases_de_donnees:
+          - Developpement/Bases_de_donnees/sql.md
   - Autres:
       - Autres/autres.md
       - Projets:
