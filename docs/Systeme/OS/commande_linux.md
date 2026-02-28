@@ -6,7 +6,7 @@ tags:
   - Linux
 ---
 
-# Aide-mémoire Debian (Linux)
+# Commande Linux
 
 Debian est un système d’exploitation libre pour votre ordinateur, considéré comme l'un des piliers des distributions GNU/Linux modernes. 
 Voici un mémento des commandes d'administration essentielles.
@@ -112,6 +112,16 @@ sudo chmod 777 dossier/    # Tout le monde fait tout (Dangereux !)
   * Pour redémarrer le service réseau :
     ```bash
     sudo systemctl restart networking
+    ```
+
+* **Tests de connectivité et diagnostic réseau** :
+  * Pour vérifier la connectivité avec une autre machine :
+    ```bash
+    ping [IP ou nom]
+    ```
+  * Pour identifier le chemin (les routeurs) emprunté par les paquets jusqu'à la destination :
+    ```bash
+    traceroute [IP ou nom]
     ```
 
 ## 5. Autres commandes utiles au quotidien

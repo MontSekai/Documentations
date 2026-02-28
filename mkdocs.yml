@@ -53,7 +53,8 @@ nav:
   - Système: 
       - Systeme/systeme.md
       - OS:
-          - Systeme/OS/debian.md
+          - Systeme/OS/commande_linux.md
+          - Systeme/OS/commande_windows.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Conteneurs: 
