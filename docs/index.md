@@ -9,7 +9,8 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
 ??? note "Système"
     - [Général (Page Accueil)](Systeme/systeme.md)
     ??? note "OS"
-        - [Aide-mémoire Debian](Systeme/OS/debian.md)
+        - [Commandes Linux (Debian)](Systeme/OS/commande_linux.md)
+        - [Commandes Windows](Systeme/OS/commande_windows.md)
     ??? note "Automatisation"
         - [Ansible](Systeme/Automatisation/ansible.md)
     ??? note "Conteneurs"
@@ -29,9 +30,6 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [TCP/IP](Reseau/Protocoles/tcp_ip.md)
     ??? note "VPN"
         - [OpenVPN](Reseau/VPN/open_vpn.md)
-
-??? note "Cybersécurité"
-    - [Général (Page Accueil)](Cybersecurite/cybersecurite.md)
 
 ??? note "Management"
     - [Général (Page Accueil)](Management/management.md)
@@ -56,6 +54,8 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)
+    ??? note "Bases de données"
+        - [SQL](Developpement/Bases_de_donnees/sql.md)
 
 ??? note "Autres et Projets"
     - [Général (Page Accueil)](Autres/autres.md)

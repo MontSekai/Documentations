@@ -124,6 +124,17 @@ sudo chmod 777 dossier/    # Tout le monde fait tout (Dangereux !)
     traceroute [IP ou nom]
     ```
 
+* **Requêtes web et téléchargement (`curl`)** :
+  `curl` permet de transférer des données et récupérer des pages web ou fichiers en ligne de commande.
+  
+  | Option / Commande | Explication |
+  | :--- | :--- |
+  | `curl https://site.com` | Affiche le code HTML/texte brut retourné par le site dans le terminal. |
+  | `curl -I https://site.com` | N'affiche que les **En-têtes HTTP** (Headers) sans récupérer le contenu. Idéal pour vérifier si la page tourne en 200 OK ou 404. |
+  | `curl -O https://site.com/fichier.zip` | Télécharge le fichier et le sauvegarde en conservant son nom originel (`fichier.zip`). |
+  | `curl -k https://site.com` | Ignore les erreurs de certification SSL (pratique pour des sites avec des certificats auto-signés). |
+  | `curl -X POST -d "cle=valeur" api.com` | Envoie une requête POST explicite vers une API avec des données spécifiques. |
+
 ## 5. Autres commandes utiles au quotidien
 
 * **Mettre à jour la liste des paquets et le système** :
