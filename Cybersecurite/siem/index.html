@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/VPN/open_vpn/">
+        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Cybersecurite/siem/">
       
       
-        <link rel="prev" href="../../Protocoles/tcp_ip/">
+        <link rel="prev" href="../xdr/">
       
       
-        <link rel="next" href="../../../Cybersecurite/cybersecurite/">
+        <link rel="next" href="../ndr/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
-        <title>OpenVPN - Documentation Raphaël Hirsch</title>
+        <title>SIEM (Security Information and Event Management) - Documentation Raphaël Hirsch</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openvpn" class="md-skip">
+        <a href="#siem-security-information-and-event-management" class="md-skip">
           Aller au contenu
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Documentation Raphaël Hirsch" class="md-header__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
+    <a href="../.." title="Documentation Raphaël Hirsch" class="md-header__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenVPN
+              SIEM (Security Information and Event Management)
             
           </span>
         </div>
@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -239,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Systeme/systeme/" class="md-tabs__link">
+        <a href="../../Systeme/systeme/" class="md-tabs__link">
           
   
   
@@ -257,13 +257,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../reseau/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Reseau/reseau/" class="md-tabs__link">
           
   
   
@@ -281,11 +279,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../Cybersecurite/cybersecurite/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../cybersecurite/" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Management/management/" class="md-tabs__link">
+        <a href="../../Management/management/" class="md-tabs__link">
           
   
   
@@ -329,7 +329,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Developpement/developpement/" class="md-tabs__link">
+        <a href="../../Developpement/developpement/" class="md-tabs__link">
           
   
   
@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Autres/autres/" class="md-tabs__link">
+        <a href="../../Autres/autres/" class="md-tabs__link">
           
   
   
@@ -371,7 +371,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../tags/" class="md-tabs__link">
+      <a href="../../tags/" class="md-tabs__link">
         
   
   
@@ -408,7 +408,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Documentation Raphaël Hirsch" class="md-nav__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
+    <a href="../.." title="Documentation Raphaël Hirsch" class="md-nav__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -426,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/systeme/" class="md-nav__link">
+      <a href="../../Systeme/systeme/" class="md-nav__link">
         
   
   
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/commande_linux/" class="md-nav__link">
+      <a href="../../Systeme/OS/commande_linux/" class="md-nav__link">
         
   
   
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/commande_windows/" class="md-nav__link">
+      <a href="../../Systeme/OS/commande_windows/" class="md-nav__link">
         
   
   
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/windows_server/" class="md-nav__link">
+      <a href="../../Systeme/OS/windows_server/" class="md-nav__link">
         
   
   
@@ -747,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/ad_forets_domaines/" class="md-nav__link">
+      <a href="../../Systeme/OS/ad_forets_domaines/" class="md-nav__link">
         
   
   
@@ -775,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/ad_fsmo/" class="md-nav__link">
+      <a href="../../Systeme/OS/ad_fsmo/" class="md-nav__link">
         
   
   
@@ -803,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/OS/ad_types_dc/" class="md-nav__link">
+      <a href="../../Systeme/OS/ad_types_dc/" class="md-nav__link">
         
   
   
@@ -901,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Automatisation/ansible/" class="md-nav__link">
+      <a href="../../Systeme/Automatisation/ansible/" class="md-nav__link">
         
   
   
@@ -993,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Conteneurs/docker/" class="md-nav__link">
+      <a href="../../Systeme/Conteneurs/docker/" class="md-nav__link">
         
   
   
@@ -1021,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Conteneurs/kubernetes/" class="md-nav__link">
+      <a href="../../Systeme/Conteneurs/kubernetes/" class="md-nav__link">
         
   
   
@@ -1111,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Infrastructure_as_Code/terraform/" class="md-nav__link">
+      <a href="../../Systeme/Infrastructure_as_Code/terraform/" class="md-nav__link">
         
   
   
@@ -1203,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Services/dhcp/" class="md-nav__link">
+      <a href="../../Systeme/Services/dhcp/" class="md-nav__link">
         
   
   
@@ -1231,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Systeme/Services/dns/" class="md-nav__link">
+      <a href="../../Systeme/Services/dns/" class="md-nav__link">
         
   
   
@@ -1271,10 +1271,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1288,20 +1286,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -1319,7 +1314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1337,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reseau/" class="md-nav__link">
+      <a href="../../Reseau/reseau/" class="md-nav__link">
         
   
   
@@ -1423,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/ethernet_trames/" class="md-nav__link">
+      <a href="../../Reseau/Protocoles/ethernet_trames/" class="md-nav__link">
         
   
   
@@ -1451,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/modele_osi/" class="md-nav__link">
+      <a href="../../Reseau/Protocoles/modele_osi/" class="md-nav__link">
         
   
   
@@ -1479,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Protocoles/tcp_ip/" class="md-nav__link">
+      <a href="../../Reseau/Protocoles/tcp_ip/" class="md-nav__link">
         
   
   
@@ -1512,8 +1507,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1528,11 +1521,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1553,7 +1546,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1568,37 +1561,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenVPN
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Reseau/VPN/open_vpn/" class="md-nav__link">
         
   
   
@@ -1614,48 +1580,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1680,8 +1604,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1695,17 +1621,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -1723,7 +1652,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1741,7 +1670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cybersecurite/cybersecurite/" class="md-nav__link">
+      <a href="../cybersecurite/" class="md-nav__link">
         
   
   
@@ -1823,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cybersecurite/ebios/" class="md-nav__link">
+      <a href="../ebios/" class="md-nav__link">
         
   
   
@@ -1856,8 +1785,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1876,11 +1807,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -1901,7 +1832,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1919,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cybersecurite/edr/" class="md-nav__link">
+      <a href="../edr/" class="md-nav__link">
         
   
   
@@ -1947,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cybersecurite/xdr/" class="md-nav__link">
+      <a href="../xdr/" class="md-nav__link">
         
   
   
@@ -1972,10 +1903,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Cybersecurite/siem/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIEM (Security Information and Event Management)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1991,6 +1949,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deux-fonctions-fondamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deux fonctions fondamentales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deux fonctions fondamentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sim-security-information-management-la-memoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SIM (Security Information Management) — La mémoire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sem-security-event-management-les-yeux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SEM (Security Event Management) — Les yeux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-dun-siem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture d'un SIEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dusage-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas d'usage concrets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soar-lautomatisation-au-dessus-du-siem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOAR : L'automatisation au-dessus du SIEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-siem-du-marche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples de SIEM du marché
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2003,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cybersecurite/ndr/" class="md-nav__link">
+      <a href="../ndr/" class="md-nav__link">
         
   
   
@@ -2106,7 +2167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/management/" class="md-nav__link">
+      <a href="../../Management/management/" class="md-nav__link">
         
   
   
@@ -2196,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Gestion_de_projet/gantt/" class="md-nav__link">
+      <a href="../../Management/Gestion_de_projet/gantt/" class="md-nav__link">
         
   
   
@@ -2224,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Gestion_de_projet/matrice_des_risques/" class="md-nav__link">
+      <a href="../../Management/Gestion_de_projet/matrice_des_risques/" class="md-nav__link">
         
   
   
@@ -2252,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Gestion_de_projet/pert/" class="md-nav__link">
+      <a href="../../Management/Gestion_de_projet/pert/" class="md-nav__link">
         
   
   
@@ -2280,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Gestion_de_projet/qcd/" class="md-nav__link">
+      <a href="../../Management/Gestion_de_projet/qcd/" class="md-nav__link">
         
   
   
@@ -2308,7 +2369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Gestion_de_projet/raci/" class="md-nav__link">
+      <a href="../../Management/Gestion_de_projet/raci/" class="md-nav__link">
         
   
   
@@ -2400,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Processus/diagramme_des_flux/" class="md-nav__link">
+      <a href="../../Management/Processus/diagramme_des_flux/" class="md-nav__link">
         
   
   
@@ -2428,7 +2489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Processus/itil/" class="md-nav__link">
+      <a href="../../Management/Processus/itil/" class="md-nav__link">
         
   
   
@@ -2522,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Strategie/but_objectif/" class="md-nav__link">
+      <a href="../../Management/Strategie/but_objectif/" class="md-nav__link">
         
   
   
@@ -2550,7 +2611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Strategie/kpi/" class="md-nav__link">
+      <a href="../../Management/Strategie/kpi/" class="md-nav__link">
         
   
   
@@ -2578,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Management/Strategie/swot/" class="md-nav__link">
+      <a href="../../Management/Strategie/swot/" class="md-nav__link">
         
   
   
@@ -2677,7 +2738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Developpement/developpement/" class="md-nav__link">
+      <a href="../../Developpement/developpement/" class="md-nav__link">
         
   
   
@@ -2759,7 +2820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Developpement/Bases_de_donnees/sql/" class="md-nav__link">
+      <a href="../../Developpement/Bases_de_donnees/sql/" class="md-nav__link">
         
   
   
@@ -2858,7 +2919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Autres/autres/" class="md-nav__link">
+      <a href="../../Autres/autres/" class="md-nav__link">
         
   
   
@@ -2940,7 +3001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Autres/rpg-tower-crawler/" class="md-nav__link">
+      <a href="../../Autres/rpg-tower-crawler/" class="md-nav__link">
         
   
   
@@ -2983,7 +3044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   
@@ -3024,42 +3085,106 @@
       
       
       
-        <a href="../../../tags/#tag:openvpn" class="md-tag">OpenVPN</a>
+        <a href="../../tags/#tag:cybersecurite" class="md-tag">Cybersecurite</a>
       
     
       
       
       
       
-        <a href="../../../tags/#tag:reseau" class="md-tag">Reseau</a>
+        <a href="../../tags/#tag:siem" class="md-tag">SIEM</a>
       
     
       
       
       
       
-        <a href="../../../tags/#tag:vpn" class="md-tag">VPN</a>
+        <a href="../../tags/#tag:soc" class="md-tag">SOC</a>
       
     
   </nav>
 
 
 
-<h1 id="openvpn">OpenVPN</h1>
-<p>OpenVPN est une solution logicielle libre permettant de créer un réseau privé virtuel (VPN).</p>
-<h2 id="installation">Installation</h2>
-<p>Sous Debian/Ubuntu, l'installation se fait simplement via les dépôts officiels :</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openvpn<span class="w"> </span>easy-rsa
-</code></pre></div>
-<em>(L'outil <code>easy-rsa</code> est souvent installé en complément pour gérer votre propre infrastructure à clés publiques - PKI - et générer vos certificats)</em>.</p>
-<h2 id="configuration">Configuration</h2>
-<p>Un fichier de configuration OpenVPN standard porte l'extension <code>.conf</code> coté serveur, et souvent <code>.ovpn</code> coté client.</p>
-<p>Il définit des paramètres critiques tels que :
-1. <strong>L'IP et le Port</strong> : (Ex: Port 1194, souvent en UDP pour de meilleures performances).
-2. <strong>Le mode de routage</strong> : <code>dev tun</code> (Tunnel IP classique, le plus utilisé) ou <code>dev tap</code> (Tunnel Ethernet de niveau 2).
-3. <strong>Les certificats</strong> : Chemins vers le CA, le certificat serveur et la clé privée.
-4. <strong>La plage d'IP</strong> attribuée aux clients (Ex: <code>server 10.8.0.0 255.255.255.0</code>).</p>
+<h1 id="siem-security-information-and-event-management">SIEM (Security Information and Event Management)</h1>
+<p>Le <strong>SIEM</strong> est la <strong>tour de contrôle centralisée du SOC</strong> (<em>Security Operations Center</em>). Il ingère, normalise et corrèle les journaux (<em>logs</em>) de l'ensemble de l'infrastructure pour détecter les menaces et prouver la conformité réglementaire.</p>
+<h2 id="deux-fonctions-fondamentales">Deux fonctions fondamentales</h2>
+<h3 id="1-sim-security-information-management-la-memoire">1. SIM (Security Information Management) — La mémoire</h3>
+<p>Collecte, stocke et archive à long terme les logs de toutes les sources (Active Directory, firewall, serveurs, applications...). Cette rétention est souvent imposée par la réglementation (ex: <strong>12 mois</strong> selon la LPM, <strong>5 ans</strong> pour les données bancaires).</p>
+<h3 id="2-sem-security-event-management-les-yeux">2. SEM (Security Event Management) — Les yeux</h3>
+<p>Analyse les logs en temps réel à la recherche d'événements anormaux via des <strong>règles de corrélation</strong> (ex : "Si un utilisateur se connecte de deux pays différents en moins de 30 minutes → Alerte Impossible Travel").</p>
+<h2 id="architecture-dun-siem">Architecture d'un SIEM</h2>
+<pre class="mermaid"><code>graph TD
+    subgraph Sources de logs
+        AD["🖥️ Active Directory / LDAP"]
+        FW["🔥 Firewalls / Proxies"]
+        EP["💻 Endpoints (EDR)"]
+        SRV["⚙️ Serveurs &amp; Applications"]
+        CLOUD["☁️ Cloud (Azure / AWS / M365)"]
+    end
+
+    subgraph SIEM
+        COL["Collecte &amp; Normalisation"]
+        CORR["Moteur de corrélation (Règles SIGMA)"]
+        STORE["Stockage long terme"]
+        DASH["Dashboards &amp; Alertes"]
+    end
+
+    AD --&gt; COL
+    FW --&gt; COL
+    EP --&gt; COL
+    SRV --&gt; COL
+    CLOUD --&gt; COL
+    COL --&gt; CORR
+    COL --&gt; STORE
+    CORR --&gt; DASH</code></pre>
+<h2 id="cas-dusage-concrets">Cas d'usage concrets</h2>
+<ul>
+<li><strong>Détection de Brute Force</strong> : Plus de 10 échecs de connexion sur le même compte en 1 minute → Alerte.</li>
+<li><strong>Impossible Travel</strong> : Connexion depuis Paris à 9h et depuis Tokyo à 9h15 pour le même compte → Alerte.</li>
+<li><strong>Exfiltration de données</strong> : Volume de données sortant anormalement élevé depuis un poste.</li>
+<li><strong>Escalade de privilèges</strong> : Compte standard qui rejoint le groupe "Domain Admins" à 3h du matin.</li>
+<li><strong>Conformité</strong> : Preuve que les logs de connexion sont conservés depuis N mois (audit CNIL, SOX, PCI-DSS...).</li>
+</ul>
+<h2 id="soar-lautomatisation-au-dessus-du-siem">SOAR : L'automatisation au-dessus du SIEM</h2>
+<p>Le <strong>SOAR</strong> (<em>Security Orchestration, Automation and Response</em>) est souvent associé ou intégré au SIEM. Il permet d'<strong>automatiser les réponses</strong> aux alertes via des "playbooks" (ex: "Si Alerte Brute Force → Bloquer automatiquement le compte + envoyer un email à l'IT + ouvrir un ticket ITSM").</p>
+<h2 id="exemples-de-siem-du-marche">Exemples de SIEM du marché</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Produit</th>
+<th style="text-align: left;">Éditeur</th>
+<th style="text-align: left;">Positionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Microsoft Sentinel</strong></td>
+<td style="text-align: left;">Microsoft</td>
+<td style="text-align: left;">Cloud-native (Azure), excellent pour M365</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Splunk</strong></td>
+<td style="text-align: left;">Cisco</td>
+<td style="text-align: left;">Leader historique, très puissant mais cher</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IBM QRadar</strong></td>
+<td style="text-align: left;">IBM</td>
+<td style="text-align: left;">Référence Enterprise, on-premise ou cloud</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Elastic SIEM</strong></td>
+<td style="text-align: left;">Elastic</td>
+<td style="text-align: left;">Open-source &amp; flexible, self-hosted</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wazuh</strong></td>
+<td style="text-align: left;">Open-source</td>
+<td style="text-align: left;">Alternative libre très utilisée en PME</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3112,10 +3237,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "toc.integrate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
