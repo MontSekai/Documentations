@@ -8,7 +8,8 @@ tags:
 Cette section regroupe toutes les notes relatives à l'administration système.
 
 ??? note "OS"
-    - [Debian](OS/debian.md)
+    - [Commandes Linux (Debian)](OS/commande_linux.md)
+    - [Commandes Windows](OS/commande_windows.md)
 
 ??? note "Automatisation"
     - [Ansible](Automatisation/ansible.md)
