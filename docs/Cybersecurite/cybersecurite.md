@@ -11,10 +11,7 @@ Cette section regroupe toutes les notes relatives à la cybersécurité.
     - [EBIOS Risk Manager](ebios.md)
 
 ??? note "Outils de détection"
-    - [EDR — Endpoint Detection & Response](edr.md)
-    - [XDR — Extended Detection & Response](xdr.md)
-    - [SIEM — Security Information & Event Management](siem.md)
-    - [NDR — Network Detection & Response](ndr.md)
+    - [EDR, NDR, SIEM, XDR (Synthèse)](outils_detection.md)
 
 ??? note "Normes et Réglementation"
     - [RGPD, HDS, ISO 27001, NIS2...](normes_reglementation.md)

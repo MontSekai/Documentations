@@ -11,11 +11,16 @@ Cette section regroupe toutes les notes relatives à la topologie, aux protocole
     - [TCP/IP](Protocoles/tcp_ip.md)
     - [Le modèle OSI](Protocoles/modele_osi.md)
     - [Ethernet et les Trames](Protocoles/ethernet_trames.md)
+    - [Trames taguées : 802.1Q et 802.1X](Protocoles/802.1Q_802.1X.md)
     - [Protocoles de routage (RIP, OSPF)](protocoles_routage.md)
     - [Ports réseau courants](ports_reseau.md)
 
+??? note "Sans Fil"
+    - [Wi-Fi et Sécurité (802.11)](wifi.md)
+
 ??? note "VPN"
     - [OpenVPN](VPN/open_vpn.md)
+    - [IPSec](VPN/ipsec.md)
 
 ??? note "Sécurité réseau"
     - [Proxy, Reverse Proxy, WAF, Pare-feu](Securite/proxy_firewall.md)

@@ -18,7 +18,8 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
             - [Types de contrôleurs de domaine](Systeme/OS/ad_types_dc.md)
     ??? note "Automatisation"
         - [Ansible](Systeme/Automatisation/ansible.md)
-    ??? note "Conteneurs"
+    ??? note "Virtualisation et Conteneurs"
+        - [Virtualisation (VM, LXC) et Docker](Systeme/virtualisation.md)
         - [Docker](Systeme/Conteneurs/docker.md)
         - [Kubernetes](Systeme/Conteneurs/kubernetes.md)
     ??? note "Infrastructure as Code"
@@ -33,10 +34,16 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     - [Général (Page Accueil)](Reseau/reseau.md)
     ??? note "Protocoles"
         - [Ethernet et Trames](Reseau/Protocoles/ethernet_trames.md)
+        - [Trames taguées : 802.1Q/802.1X](Reseau/Protocoles/802.1Q_802.1X.md)
         - [Modèle OSI](Reseau/Protocoles/modele_osi.md)
         - [TCP/IP](Reseau/Protocoles/tcp_ip.md)
+        - [Protocoles de routage](Reseau/protocoles_routage.md)
+        - [Ports réseau courants](Reseau/ports_reseau.md)
+    ??? note "Sans Fil"
+        - [Wi-Fi et Sécurité (802.11)](Reseau/wifi.md)
     ??? note "VPN"
         - [OpenVPN](Reseau/VPN/open_vpn.md)
+        - [IPSec](Reseau/VPN/ipsec.md)
     ??? note "Sécurité réseau"
         - [Proxy, Reverse Proxy, WAF, Pare-feu](Reseau/Securite/proxy_firewall.md)
         - [ACL](Reseau/Securite/acl.md)
@@ -47,11 +54,8 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
 ??? note "Management"
     - [Général (Page Accueil)](Management/management.md)
     ??? note "Gestion de projet"
-        - [Diagramme de GANTT](Management/Gestion_de_projet/gantt.md)
-        - [Diagramme PERT](Management/Gestion_de_projet/pert.md)
+        - [Outils fondamentaux (GANTT, PERT, RACI, QCD)](Management/Gestion_de_projet/outils_gestion_projet.md)
         - [Matrice des risques](Management/Gestion_de_projet/matrice_des_risques.md)
-        - [Matrice RACI](Management/Gestion_de_projet/raci.md)
-        - [Triangle QCD](Management/Gestion_de_projet/qcd.md)
     ??? note "Processus"
         - [Diagramme des flux](Management/Processus/diagramme_des_flux.md)
         - [Référentiel ITIL](Management/Processus/itil.md)
@@ -64,11 +68,10 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     - [Général (Page Accueil)](Cybersecurite/cybersecurite.md)
     ??? note "Méthodologies"
         - [EBIOS Risk Manager](Cybersecurite/ebios.md)
+    ??? note "Chiffrement et Certificats"
+        - [Cryptographie et PKI](Cybersecurite/pki_crypto.md)
     ??? note "Outils de détection"
-        - [EDR](Cybersecurite/edr.md)
-        - [XDR](Cybersecurite/xdr.md)
-        - [SIEM](Cybersecurite/siem.md)
-        - [NDR](Cybersecurite/ndr.md)
+        - [EDR, NDR, SIEM, XDR (Synthèse)](Cybersecurite/outils_detection.md)
     ??? note "Normes et Réglementation"
         - [RGPD, HDS, ISO 27001, NIS2...](Cybersecurite/normes_reglementation.md)
     ??? note "Gouvernance"

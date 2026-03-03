@@ -64,9 +64,11 @@ nav:
               - Systeme/OS/ad_forets_domaines.md
               - Systeme/OS/ad_fsmo.md
               - Systeme/OS/ad_types_dc.md
+              - Systeme/OS/gpo.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
-      - Conteneurs: 
+      - Virtualisation et Conteneurs: 
+          - Systeme/virtualisation.md
           - Systeme/Conteneurs/docker.md
           - Systeme/Conteneurs/kubernetes.md
       - Infrastructure_as_Code:
@@ -80,12 +82,20 @@ nav:
       - Reseau/reseau.md
       - Protocoles:
           - Reseau/Protocoles/ethernet_trames.md
+          - Reseau/Protocoles/802.1Q_802.1X.md
           - Reseau/Protocoles/modele_osi.md
           - Reseau/Protocoles/tcp_ip.md
+          - Reseau/Protocoles/ipv4.md
+          - Reseau/Protocoles/ipv6.md
           - Reseau/protocoles_routage.md
-          - Reseau/ports_reseau.md
+      - Physique et Transport:
+          - Reseau/Physique_Transport/cablage.md
+          - Reseau/Physique_Transport/ports_reseau.md
+      - Sans Fil:
+          - Reseau/wifi.md
       - VPN:
           - Reseau/VPN/open_vpn.md
+          - Reseau/VPN/ipsec.md
       - Sécurité:
           - Reseau/Securite/proxy_firewall.md
           - Reseau/Securite/acl.md
@@ -94,16 +104,14 @@ nav:
           - Reseau/routage.md
           - Reseau/spanning_tree.md
           - Reseau/haute_disponibilite.md
-          - Reseau/cablage.md
   - Cybersécurité: 
       - Cybersecurite/cybersecurite.md
       - Methodologies:
           - Cybersecurite/ebios.md
+      - Chiffrement et Certificats:
+          - Cybersecurite/pki_crypto.md
       - Outils de détection:
-          - Cybersecurite/edr.md
-          - Cybersecurite/xdr.md
-          - Cybersecurite/siem.md
-          - Cybersecurite/ndr.md
+          - Cybersecurite/outils_detection.md
       - Normes et Réglementation:
           - Cybersecurite/normes_reglementation.md
       - Gouvernance:
@@ -116,11 +124,8 @@ nav:
   - Management: 
       - Management/management.md
       - Gestion_de_projet:
-          - Management/Gestion_de_projet/gantt.md
+          - Management/Gestion_de_projet/outils_gestion_projet.md
           - Management/Gestion_de_projet/matrice_des_risques.md
-          - Management/Gestion_de_projet/pert.md
-          - Management/Gestion_de_projet/qcd.md
-          - Management/Gestion_de_projet/raci.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
           - Management/Processus/itil.md

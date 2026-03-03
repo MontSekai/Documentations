@@ -19,7 +19,8 @@ Cette section regroupe toutes les notes relatives à l'administration système.
 ??? note "Automatisation"
     - [Ansible](Automatisation/ansible.md)
 
-??? note "Conteneurs"
+??? note "Virtualisation et Conteneurs"
+    - [Virtualisation (VM, LXC) et Docker](virtualisation.md)
     - [Docker](Conteneurs/docker.md)
     - [Kubernetes](Conteneurs/kubernetes.md)
 

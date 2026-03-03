@@ -8,11 +8,8 @@ tags:
 Cette section regroupe toutes les notes relatives au management et à la gestion de projet.
 
 ??? note "Gestion de projet"
-    - [Diagramme de GANTT](Gestion_de_projet/gantt.md)
-    - [Diagramme PERT](Gestion_de_projet/pert.md)
+    - [Outils fondamentaux (GANTT, PERT, RACI, QCD)](Gestion_de_projet/outils_gestion_projet.md)
     - [Matrice des risques](Gestion_de_projet/matrice_des_risques.md)
-    - [Matrice RACI](Gestion_de_projet/raci.md)
-    - [Triangle QCD](Gestion_de_projet/qcd.md)
 
 ??? note "Processus"
     - [Diagramme des flux](Processus/diagramme_des_flux.md)
