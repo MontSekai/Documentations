@@ -17,6 +17,18 @@
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/anssi/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/cnil/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/cyber_assurance/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/cybersecurite/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
@@ -30,6 +42,22 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/ndr/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/normes_reglementation/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/pca_pra/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/pgssi_s/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/pssi/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
@@ -93,7 +121,35 @@
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/cablage/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/haute_disponibilite/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/ports_reseau/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/protocoles_routage/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/reseau/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/routage/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/spanning_tree/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/vlan/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
@@ -106,6 +162,14 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/tcp_ip/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Securite/acl/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Securite/proxy_firewall/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
@@ -162,6 +226,14 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/dns/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/sauvegarde/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/supervision/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
 </urlset>
