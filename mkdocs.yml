@@ -74,14 +74,27 @@ nav:
       - Services:
           - Systeme/Services/dhcp.md
           - Systeme/Services/dns.md
+          - Systeme/Services/sauvegarde.md
+          - Systeme/Services/supervision.md
   - Réseau: 
       - Reseau/reseau.md
       - Protocoles:
           - Reseau/Protocoles/ethernet_trames.md
           - Reseau/Protocoles/modele_osi.md
           - Reseau/Protocoles/tcp_ip.md
+          - Reseau/protocoles_routage.md
+          - Reseau/ports_reseau.md
       - VPN:
           - Reseau/VPN/open_vpn.md
+      - Sécurité:
+          - Reseau/Securite/proxy_firewall.md
+          - Reseau/Securite/acl.md
+      - Infrastructure:
+          - Reseau/vlan.md
+          - Reseau/routage.md
+          - Reseau/spanning_tree.md
+          - Reseau/haute_disponibilite.md
+          - Reseau/cablage.md
   - Cybersécurité: 
       - Cybersecurite/cybersecurite.md
       - Methodologies:
@@ -91,6 +104,15 @@ nav:
           - Cybersecurite/xdr.md
           - Cybersecurite/siem.md
           - Cybersecurite/ndr.md
+      - Normes et Réglementation:
+          - Cybersecurite/normes_reglementation.md
+      - Gouvernance:
+          - Cybersecurite/pssi.md
+          - Cybersecurite/pgssi_s.md
+          - Cybersecurite/pca_pra.md
+          - Cybersecurite/cyber_assurance.md
+          - Cybersecurite/anssi.md
+          - Cybersecurite/cnil.md
   - Management: 
       - Management/management.md
       - Gestion_de_projet:

@@ -26,6 +26,8 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     ??? note "Services"
         - [DHCP](Systeme/Services/dhcp.md)
         - [DNS](Systeme/Services/dns.md)
+        - [Sauvegarde et PRA](Systeme/Services/sauvegarde.md)
+        - [Supervision / SNMP](Systeme/Services/supervision.md)
 
 ??? note "Réseau"
     - [Général (Page Accueil)](Reseau/reseau.md)
@@ -35,6 +37,12 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [TCP/IP](Reseau/Protocoles/tcp_ip.md)
     ??? note "VPN"
         - [OpenVPN](Reseau/VPN/open_vpn.md)
+    ??? note "Sécurité réseau"
+        - [Proxy, Reverse Proxy, WAF, Pare-feu](Reseau/Securite/proxy_firewall.md)
+        - [ACL](Reseau/Securite/acl.md)
+    ??? note "Infrastructure"
+        - [VLAN et Segmentation réseau](Reseau/vlan.md)
+        - [Routage et Routage inter-VLAN](Reseau/routage.md)
 
 ??? note "Management"
     - [Général (Page Accueil)](Management/management.md)
@@ -61,6 +69,15 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [XDR](Cybersecurite/xdr.md)
         - [SIEM](Cybersecurite/siem.md)
         - [NDR](Cybersecurite/ndr.md)
+    ??? note "Normes et Réglementation"
+        - [RGPD, HDS, ISO 27001, NIS2...](Cybersecurite/normes_reglementation.md)
+    ??? note "Gouvernance"
+        - [PSSI](Cybersecurite/pssi.md)
+        - [PGSSI-S](Cybersecurite/pgssi_s.md)
+        - [PCA / PRA](Cybersecurite/pca_pra.md)
+        - [Cyber Assurance](Cybersecurite/cyber_assurance.md)
+        - [ANSSI](Cybersecurite/anssi.md)
+        - [CNIL](Cybersecurite/cnil.md)
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)

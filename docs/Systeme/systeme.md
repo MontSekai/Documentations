@@ -28,4 +28,6 @@ Cette section regroupe toutes les notes relatives à l'administration système.
 
 ??? note "Services"
     - [DHCP](Services/dhcp.md)
-    - [DNS (Domain Name System)](Services/dns.md)
+    - [DNS](Services/dns.md)
+    - [Sauvegarde et PRA](Services/sauvegarde.md)
+    - [Supervision / SNMP](Services/supervision.md)
