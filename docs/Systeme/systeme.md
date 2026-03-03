@@ -10,6 +10,11 @@ Cette section regroupe toutes les notes relatives à l'administration système.
 ??? note "OS"
     - [Commandes Linux (Debian)](OS/commande_linux.md)
     - [Commandes Windows](OS/commande_windows.md)
+    - [Windows Server](OS/windows_server.md)
+    ??? note "Active Directory"
+        - [Forêts et Domaines](OS/ad_forets_domaines.md)
+        - [Rôles FSMO](OS/ad_fsmo.md)
+        - [Types de contrôleurs de domaine](OS/ad_types_dc.md)
 
 ??? note "Automatisation"
     - [Ansible](Automatisation/ansible.md)

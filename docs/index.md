@@ -11,6 +11,11 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     ??? note "OS"
         - [Commandes Linux (Debian)](Systeme/OS/commande_linux.md)
         - [Commandes Windows](Systeme/OS/commande_windows.md)
+        - [Windows Server](Systeme/OS/windows_server.md)
+        ??? note "Active Directory"
+            - [Forêts et Domaines](Systeme/OS/ad_forets_domaines.md)
+            - [Rôles FSMO](Systeme/OS/ad_fsmo.md)
+            - [Types de contrôleurs de domaine](Systeme/OS/ad_types_dc.md)
     ??? note "Automatisation"
         - [Ansible](Systeme/Automatisation/ansible.md)
     ??? note "Conteneurs"
@@ -51,6 +56,11 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     - [Général (Page Accueil)](Cybersecurite/cybersecurite.md)
     ??? note "Méthodologies"
         - [EBIOS Risk Manager](Cybersecurite/ebios.md)
+    ??? note "Outils de détection"
+        - [EDR](Cybersecurite/edr.md)
+        - [XDR](Cybersecurite/xdr.md)
+        - [SIEM](Cybersecurite/siem.md)
+        - [NDR](Cybersecurite/ndr.md)
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)

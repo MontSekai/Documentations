@@ -59,6 +59,11 @@ nav:
       - OS:
           - Systeme/OS/commande_linux.md
           - Systeme/OS/commande_windows.md
+          - Systeme/OS/windows_server.md
+          - Active Directory:
+              - Systeme/OS/ad_forets_domaines.md
+              - Systeme/OS/ad_fsmo.md
+              - Systeme/OS/ad_types_dc.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Conteneurs: 
@@ -81,6 +86,11 @@ nav:
       - Cybersecurite/cybersecurite.md
       - Methodologies:
           - Cybersecurite/ebios.md
+      - Outils de détection:
+          - Cybersecurite/edr.md
+          - Cybersecurite/xdr.md
+          - Cybersecurite/siem.md
+          - Cybersecurite/ndr.md
   - Management: 
       - Management/management.md
       - Gestion_de_projet:

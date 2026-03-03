@@ -25,6 +25,22 @@
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/edr/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/ndr/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/siem/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Cybersecurite/xdr/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Developpement/developpement/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
@@ -117,11 +133,27 @@
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/ad_forets_domaines/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/ad_fsmo/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/ad_types_dc/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/commande_linux/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/commande_windows/</loc>
+         <lastmod>2026-03-03</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/windows_server/</loc>
          <lastmod>2026-03-03</lastmod>
     </url>
     <url>
