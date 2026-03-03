@@ -2937,10 +2937,46 @@ Voici un mémento des commandes d'administration essentielles.</p>
 <li>Pour vérifier la connectivité avec une autre machine :
     <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ping<span class="w"> </span><span class="o">[</span>IP<span class="w"> </span>ou<span class="w"> </span>nom<span class="o">]</span>
 </code></pre></div></li>
-<li>Pour identifier le chemin (les routeurs) emprunté par les paquets jusqu'à la destination :
+<li>
+<p>Pour identifier le chemin (les routeurs) emprunté par les paquets jusqu'à la destination :
     <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>traceroute<span class="w"> </span><span class="o">[</span>IP<span class="w"> </span>ou<span class="w"> </span>nom<span class="o">]</span>
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Requêtes web et téléchargement (<code>curl</code>)</strong> :
+  <code>curl</code> permet de transférer des données et récupérer des pages web ou fichiers en ligne de commande.</p>
+</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option / Commande</th>
+<th style="text-align: left;">Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>curl https://site.com</code></td>
+<td style="text-align: left;">Affiche le code HTML/texte brut retourné par le site dans le terminal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>curl -I https://site.com</code></td>
+<td style="text-align: left;">N'affiche que les <strong>En-têtes HTTP</strong> (Headers) sans récupérer le contenu. Idéal pour vérifier si la page tourne en 200 OK ou 404.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>curl -O https://site.com/fichier.zip</code></td>
+<td style="text-align: left;">Télécharge le fichier et le sauvegarde en conservant son nom originel (<code>fichier.zip</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>curl -k https://site.com</code></td>
+<td style="text-align: left;">Ignore les erreurs de certification SSL (pratique pour des sites avec des certificats auto-signés).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>curl -X POST -d "cle=valeur" api.com</code></td>
+<td style="text-align: left;">Envoie une requête POST explicite vers une API avec des données spécifiques.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="5-autres-commandes-utiles-au-quotidien">5. Autres commandes utiles au quotidien</h2>
 <ul>
 <li><strong>Mettre à jour la liste des paquets et le système</strong> :
