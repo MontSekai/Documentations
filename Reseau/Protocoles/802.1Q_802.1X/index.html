@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/ports_reseau/">
+        <link rel="canonical" href="https://documentation.raphael-hirsch.fr/Reseau/Protocoles/802.1Q_802.1X/">
       
       
-        <link rel="prev" href="../protocoles_routage/">
+        <link rel="prev" href="../ethernet_trames/">
       
       
-        <link rel="next" href="../VPN/open_vpn/">
+        <link rel="next" href="../modele_osi/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
-        <title>Ports Réseau Courants - Documentation Raphaël Hirsch</title>
+        <title>Trames taguées : 802.1Q et 802.1X - Documentation Raphaël Hirsch</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ports-reseau-courants" class="md-skip">
+        <a href="#trames-taguees-8021q-et-8021x" class="md-skip">
           Aller au contenu
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../.." title="Documentation Raphaël Hirsch" class="md-header__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
+    <a href="../../.." title="Documentation Raphaël Hirsch" class="md-header__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ports Réseau Courants
+              Trames taguées : 802.1Q et 802.1X
             
           </span>
         </div>
@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -239,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Systeme/systeme/" class="md-tabs__link">
+        <a href="../../../Systeme/systeme/" class="md-tabs__link">
           
   
   
@@ -263,7 +263,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../reseau/" class="md-tabs__link">
+        <a href="../../reseau/" class="md-tabs__link">
           
   
   
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Cybersecurite/cybersecurite/" class="md-tabs__link">
+        <a href="../../../Cybersecurite/cybersecurite/" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Management/management/" class="md-tabs__link">
+        <a href="../../../Management/management/" class="md-tabs__link">
           
   
   
@@ -329,7 +329,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Developpement/developpement/" class="md-tabs__link">
+        <a href="../../../Developpement/developpement/" class="md-tabs__link">
           
   
   
@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Autres/autres/" class="md-tabs__link">
+        <a href="../../../Autres/autres/" class="md-tabs__link">
           
   
   
@@ -371,7 +371,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tags/" class="md-tabs__link">
+      <a href="../../../tags/" class="md-tabs__link">
         
   
   
@@ -408,7 +408,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Documentation Raphaël Hirsch" class="md-nav__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
+    <a href="../../.." title="Documentation Raphaël Hirsch" class="md-nav__button md-logo" aria-label="Documentation Raphaël Hirsch" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -426,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/systeme/" class="md-nav__link">
+      <a href="../../../Systeme/systeme/" class="md-nav__link">
         
   
   
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/commande_linux/" class="md-nav__link">
+      <a href="../../../Systeme/OS/commande_linux/" class="md-nav__link">
         
   
   
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/commande_windows/" class="md-nav__link">
+      <a href="../../../Systeme/OS/commande_windows/" class="md-nav__link">
         
   
   
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/windows_server/" class="md-nav__link">
+      <a href="../../../Systeme/OS/windows_server/" class="md-nav__link">
         
   
   
@@ -690,6 +690,8 @@
   
     
     
+      
+        
       
         
       
@@ -747,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/ad_forets_domaines/" class="md-nav__link">
+      <a href="../../../Systeme/OS/ad_forets_domaines/" class="md-nav__link">
         
   
   
@@ -775,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/ad_fsmo/" class="md-nav__link">
+      <a href="../../../Systeme/OS/ad_fsmo/" class="md-nav__link">
         
   
   
@@ -803,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/OS/ad_types_dc/" class="md-nav__link">
+      <a href="../../../Systeme/OS/ad_types_dc/" class="md-nav__link">
         
   
   
@@ -811,6 +813,34 @@
     
   
     Types de Contrôleurs de Domaine (DC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Systeme/OS/gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO (Group Policy Object)
   
 
     
@@ -901,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Automatisation/ansible/" class="md-nav__link">
+      <a href="../../../Systeme/Automatisation/ansible/" class="md-nav__link">
         
   
   
@@ -943,6 +973,8 @@
       
         
       
+        
+      
     
     
     
@@ -964,7 +996,7 @@
   <span class="md-ellipsis">
     
   
-    Conteneurs
+    Virtualisation et Conteneurs
   
 
     
@@ -980,7 +1012,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Conteneurs
+    Virtualisation et Conteneurs
   
 
           </label>
@@ -993,7 +1025,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Conteneurs/docker/" class="md-nav__link">
+      <a href="../../../Systeme/virtualisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualisation et Conteneurisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Systeme/Conteneurs/docker/" class="md-nav__link">
         
   
   
@@ -1021,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Conteneurs/kubernetes/" class="md-nav__link">
+      <a href="../../../Systeme/Conteneurs/kubernetes/" class="md-nav__link">
         
   
   
@@ -1111,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Infrastructure_as_Code/terraform/" class="md-nav__link">
+      <a href="../../../Systeme/Infrastructure_as_Code/terraform/" class="md-nav__link">
         
   
   
@@ -1207,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Services/dhcp/" class="md-nav__link">
+      <a href="../../../Systeme/Services/dhcp/" class="md-nav__link">
         
   
   
@@ -1235,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Services/dns/" class="md-nav__link">
+      <a href="../../../Systeme/Services/dns/" class="md-nav__link">
         
   
   
@@ -1263,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Services/sauvegarde/" class="md-nav__link">
+      <a href="../../../Systeme/Services/sauvegarde/" class="md-nav__link">
         
   
   
@@ -1291,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Systeme/Services/supervision/" class="md-nav__link">
+      <a href="../../../Systeme/Services/supervision/" class="md-nav__link">
         
   
   
@@ -1337,6 +1397,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1401,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/" class="md-nav__link">
+      <a href="../../reseau/" class="md-nav__link">
         
   
   
@@ -1432,6 +1496,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1493,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Protocoles/ethernet_trames/" class="md-nav__link">
+      <a href="../ethernet_trames/" class="md-nav__link">
         
   
   
@@ -1501,90 +1569,6 @@
     
   
     Ethernet et les Trames
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Protocoles/modele_osi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Le modèle OSI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Protocoles/tcp_ip/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TCP/IP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../protocoles_routage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Protocoles de Routage Dynamique
   
 
     
@@ -1621,7 +1605,7 @@
   <span class="md-ellipsis">
     
   
-    Ports Réseau Courants
+    Trames taguées : 802.1Q et 802.1X
   
 
     
@@ -1639,7 +1623,7 @@
   <span class="md-ellipsis">
     
   
-    Ports Réseau Courants
+    Trames taguées : 802.1Q et 802.1X
   
 
     
@@ -1665,33 +1649,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plages-de-ports" class="md-nav__link">
+  <a href="#1-trames-8021q-taggage-vlan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plages de ports
+        1. Trames 802.1Q (Taggage VLAN)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ports-courants-a-connaitre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ports courants à connaître
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ports courants à connaître">
+    <nav class="md-nav" aria-label="1. Trames 802.1Q (Taggage VLAN)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#administration-et-acces-distant" class="md-nav__link">
+  <a href="#composition-du-tag-8021q-4-octets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Administration et accès distant
+        Composition du Tag 802.1Q (4 octets)
       
     </span>
   </a>
@@ -1699,65 +1672,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#web" class="md-nav__link">
+  <a href="#vlan-natif-untagged" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Web
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#messagerie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Messagerie
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infrastructure-reseau" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Infrastructure réseau
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transfert-de-fichiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Transfert de fichiers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bases-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bases de données
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#autres-services-courants" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autres services courants
+        VLAN Natif (Untagged)
       
     </span>
   </a>
@@ -1770,13 +1688,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#protocoles-de-transport-tcp-vs-udp" class="md-nav__link">
+  <a href="#2-ieee-8021x-controle-dacces-base-sur-les-ports" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Protocoles de transport : TCP vs UDP
+        2. IEEE 802.1X (Contrôle d'accès basé sur les ports)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. IEEE 802.1X (Contrôle d&#39;accès basé sur les ports)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe-de-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principe de fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-concrets-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas concrets d'utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-differentes-methodes-eap-extensible-authentication-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les différentes méthodes EAP (Extensible Authentication Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1789,9 +1746,29 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modele_osi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Le modèle OSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1803,33 +1780,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../tcp_ip/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
     
   
-    VPN
+    TCP/IP
   
 
     
@@ -1837,19 +1796,11 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    VPN
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+              
             
               
                 
@@ -1858,14 +1809,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../VPN/open_vpn/" class="md-nav__link">
+      <a href="../ipv4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    OpenVPN
+    L'Adressage IPv4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipv6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L'Adressage IPv6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocoles_routage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocoles de Routage Dynamique
   
 
     
@@ -1911,10 +1918,340 @@
       
         
         
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physique et Transport
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Physique et Transport
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Physique_Transport/cablage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Câblage Réseau : RJ45, Fibre et FTTH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Physique_Transport/ports_reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ports Réseau Courants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sans Fil
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sans Fil
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wi-Fi et Réseaux Sans Fil (802.11)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPN
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VPN
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/open_vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenVPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/ipsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IPSec (IP Security)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -1932,8 +2269,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1950,7 +2287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Securite/proxy_firewall/" class="md-nav__link">
+      <a href="../../Securite/proxy_firewall/" class="md-nav__link">
         
   
   
@@ -1978,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Securite/acl/" class="md-nav__link">
+      <a href="../../Securite/acl/" class="md-nav__link">
         
   
   
@@ -2024,8 +2361,6 @@
       
         
       
-        
-      
     
     
     
@@ -2037,10 +2372,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
   
@@ -2058,8 +2393,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2076,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vlan/" class="md-nav__link">
+      <a href="../../vlan/" class="md-nav__link">
         
   
   
@@ -2104,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routage/" class="md-nav__link">
+      <a href="../../routage/" class="md-nav__link">
         
   
   
@@ -2132,7 +2467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spanning_tree/" class="md-nav__link">
+      <a href="../../spanning_tree/" class="md-nav__link">
         
   
   
@@ -2160,7 +2495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../haute_disponibilite/" class="md-nav__link">
+      <a href="../../haute_disponibilite/" class="md-nav__link">
         
   
   
@@ -2181,57 +2516,31 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
-                
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
   
-    <li class="md-nav__item">
-      <a href="../cablage/" class="md-nav__link">
+    
+    
+      
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Câblage Réseau : RJ45, Fibre et FTTH
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
       
         
       
@@ -2293,7 +2602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/cybersecurite/" class="md-nav__link">
+      <a href="../../../Cybersecurite/cybersecurite/" class="md-nav__link">
         
   
   
@@ -2375,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/ebios/" class="md-nav__link">
+      <a href="../../../Cybersecurite/ebios/" class="md-nav__link">
         
   
   
@@ -2415,12 +2724,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2442,7 +2745,7 @@
   <span class="md-ellipsis">
     
   
-    Outils de détection
+    Chiffrement et Certificats
   
 
     
@@ -2458,7 +2761,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Outils de détection
+    Chiffrement et Certificats
   
 
           </label>
@@ -2471,98 +2774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/edr/" class="md-nav__link">
+      <a href="../../../Cybersecurite/pki_crypto/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    EDR (Endpoint Detection and Response)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Cybersecurite/xdr/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    XDR (Extended Detection and Response)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Cybersecurite/siem/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SIEM (Security Information and Event Management)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Cybersecurite/ndr/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    NDR (Network Detection and Response)
+    Cryptographie, Certificats et PKI
   
 
     
@@ -2616,7 +2835,7 @@
   <span class="md-ellipsis">
     
   
-    Normes et Réglementation
+    Outils de détection
   
 
     
@@ -2629,6 +2848,96 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outils de détection
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cybersecurite/outils_detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de Détection (EDR, NDR, SIEM, XDR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normes et Réglementation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2645,7 +2954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/normes_reglementation/" class="md-nav__link">
+      <a href="../../../Cybersecurite/normes_reglementation/" class="md-nav__link">
         
   
   
@@ -2706,10 +3015,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   
@@ -2727,8 +3036,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2745,7 +3054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/pssi/" class="md-nav__link">
+      <a href="../../../Cybersecurite/pssi/" class="md-nav__link">
         
   
   
@@ -2773,7 +3082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/pgssi_s/" class="md-nav__link">
+      <a href="../../../Cybersecurite/pgssi_s/" class="md-nav__link">
         
   
   
@@ -2801,7 +3110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/pca_pra/" class="md-nav__link">
+      <a href="../../../Cybersecurite/pca_pra/" class="md-nav__link">
         
   
   
@@ -2829,7 +3138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/cyber_assurance/" class="md-nav__link">
+      <a href="../../../Cybersecurite/cyber_assurance/" class="md-nav__link">
         
   
   
@@ -2857,7 +3166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/anssi/" class="md-nav__link">
+      <a href="../../../Cybersecurite/anssi/" class="md-nav__link">
         
   
   
@@ -2885,7 +3194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cybersecurite/cnil/" class="md-nav__link">
+      <a href="../../../Cybersecurite/cnil/" class="md-nav__link">
         
   
   
@@ -2988,7 +3297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/management/" class="md-nav__link">
+      <a href="../../../Management/management/" class="md-nav__link">
         
   
   
@@ -3017,12 +3326,6 @@
   
     
     
-      
-        
-      
-        
-      
-        
       
         
       
@@ -3078,14 +3381,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Gestion_de_projet/gantt/" class="md-nav__link">
+      <a href="../../../Management/Gestion_de_projet/outils_gestion_projet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Diagramme de GANTT
+    Outils de la Gestion de Projet
   
 
     
@@ -3106,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Gestion_de_projet/matrice_des_risques/" class="md-nav__link">
+      <a href="../../../Management/Gestion_de_projet/matrice_des_risques/" class="md-nav__link">
         
   
   
@@ -3114,90 +3417,6 @@
     
   
     Matrice des risques
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Management/Gestion_de_projet/pert/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Diagramme PERT
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Management/Gestion_de_projet/qcd/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Triangle QCD (Qualité, Coût, Délai)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Management/Gestion_de_projet/raci/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Matrice RACI
   
 
     
@@ -3282,7 +3501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Processus/diagramme_des_flux/" class="md-nav__link">
+      <a href="../../../Management/Processus/diagramme_des_flux/" class="md-nav__link">
         
   
   
@@ -3310,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Processus/itil/" class="md-nav__link">
+      <a href="../../../Management/Processus/itil/" class="md-nav__link">
         
   
   
@@ -3404,7 +3623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Strategie/but_objectif/" class="md-nav__link">
+      <a href="../../../Management/Strategie/but_objectif/" class="md-nav__link">
         
   
   
@@ -3432,7 +3651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Strategie/kpi/" class="md-nav__link">
+      <a href="../../../Management/Strategie/kpi/" class="md-nav__link">
         
   
   
@@ -3460,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Management/Strategie/swot/" class="md-nav__link">
+      <a href="../../../Management/Strategie/swot/" class="md-nav__link">
         
   
   
@@ -3559,7 +3778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developpement/developpement/" class="md-nav__link">
+      <a href="../../../Developpement/developpement/" class="md-nav__link">
         
   
   
@@ -3641,7 +3860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developpement/Bases_de_donnees/sql/" class="md-nav__link">
+      <a href="../../../Developpement/Bases_de_donnees/sql/" class="md-nav__link">
         
   
   
@@ -3740,7 +3959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Autres/autres/" class="md-nav__link">
+      <a href="../../../Autres/autres/" class="md-nav__link">
         
   
   
@@ -3822,7 +4041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Autres/rpg-tower-crawler/" class="md-nav__link">
+      <a href="../../../Autres/rpg-tower-crawler/" class="md-nav__link">
         
   
   
@@ -3865,7 +4084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tags/" class="md-nav__link">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   
@@ -3906,356 +4125,90 @@
       
       
       
-        <a href="../../tags/#tag:ports" class="md-tag">Ports</a>
+        <a href="../../../tags/#tag:8021q" class="md-tag">802.1Q</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:protocoles" class="md-tag">Protocoles</a>
+        <a href="../../../tags/#tag:8021x" class="md-tag">802.1X</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:reseau" class="md-tag">Reseau</a>
+        <a href="../../../tags/#tag:reseau" class="md-tag">Reseau</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:securite" class="md-tag">Securite</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:trames" class="md-tag">Trames</a>
       
     
   </nav>
 
 
 
-<h1 id="ports-reseau-courants">Ports Réseau Courants</h1>
-<p>Un <strong>port réseau</strong> est un numéro logique (de 0 à 65535) associé à un protocole ou service réseau. Il complète l'adresse IP pour identifier précisément quel service est visé sur un équipement.</p>
-<h2 id="plages-de-ports">Plages de ports</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Plage</th>
-<th style="text-align: left;">Nom</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>0 – 1023</strong></td>
-<td style="text-align: left;">Well-Known Ports</td>
-<td style="text-align: left;">Ports standards réservés aux services connus (IANA)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>1024 – 49151</strong></td>
-<td style="text-align: left;">Registered Ports</td>
-<td style="text-align: left;">Ports enregistrés pour des applications tierces</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>49152 – 65535</strong></td>
-<td style="text-align: left;">Dynamic / Private</td>
-<td style="text-align: left;">Ports éphémères attribués automatiquement aux connexions clients</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ports-courants-a-connaitre">Ports courants à connaître</h2>
-<h3 id="administration-et-acces-distant">Administration et accès distant</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>22</strong></td>
-<td style="text-align: center;">SSH</td>
-<td style="text-align: left;">Accès distant sécurisé (remplace Telnet)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>23</strong></td>
-<td style="text-align: center;">Telnet</td>
-<td style="text-align: left;">Accès distant NON chiffré — ❌ <strong>Ne plus utiliser</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>3389</strong></td>
-<td style="text-align: center;">RDP</td>
-<td style="text-align: left;">Remote Desktop Protocol (bureau à distance Windows)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>5900</strong></td>
-<td style="text-align: center;">VNC</td>
-<td style="text-align: left;">Virtual Network Computing (bureau à distance multi-OS)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="web">Web</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>80</strong></td>
-<td style="text-align: center;">HTTP</td>
-<td style="text-align: left;">Web non chiffré</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>443</strong></td>
-<td style="text-align: center;">HTTPS</td>
-<td style="text-align: left;">Web chiffré (TLS)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>8080</strong></td>
-<td style="text-align: center;">HTTP-alt</td>
-<td style="text-align: left;">Port alternatif HTTP (proxy, dev)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>8443</strong></td>
-<td style="text-align: center;">HTTPS-alt</td>
-<td style="text-align: left;">Port alternatif HTTPS</td>
-</tr>
-</tbody>
-</table>
-<h3 id="messagerie">Messagerie</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>25</strong></td>
-<td style="text-align: center;">SMTP</td>
-<td style="text-align: left;">Envoi d'email entre serveurs</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>465</strong></td>
-<td style="text-align: center;">SMTPS</td>
-<td style="text-align: left;">SMTP sur SSL (obsolète mais encore utilisé)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>587</strong></td>
-<td style="text-align: center;">SMTP/STARTTLS</td>
-<td style="text-align: left;">Envoi d'email depuis un client de messagerie (recommandé)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>110</strong></td>
-<td style="text-align: center;">POP3</td>
-<td style="text-align: left;">Récupération d'email (non chiffré)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>995</strong></td>
-<td style="text-align: center;">POP3S</td>
-<td style="text-align: left;">POP3 sur SSL</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>143</strong></td>
-<td style="text-align: center;">IMAP</td>
-<td style="text-align: left;">Synchronisation d'emails</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>993</strong></td>
-<td style="text-align: center;">IMAPS</td>
-<td style="text-align: left;">IMAP sur SSL</td>
-</tr>
-</tbody>
-</table>
-<h3 id="infrastructure-reseau">Infrastructure réseau</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>53</strong></td>
-<td style="text-align: center;">DNS</td>
-<td style="text-align: left;">Résolution de noms (UDP et TCP)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>67/68</strong></td>
-<td style="text-align: center;">DHCP</td>
-<td style="text-align: left;">Attribution d'adresses IP (server/client)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>161/162</strong></td>
-<td style="text-align: center;">SNMP</td>
-<td style="text-align: left;">Supervision réseau (161=poll, 162=trap)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>123</strong></td>
-<td style="text-align: center;">NTP</td>
-<td style="text-align: left;">Synchronisation de l'heure</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>514</strong></td>
-<td style="text-align: center;">Syslog</td>
-<td style="text-align: left;">Envoi de journaux vers un serveur centralisé</td>
-</tr>
-</tbody>
-</table>
-<h3 id="transfert-de-fichiers">Transfert de fichiers</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>21</strong></td>
-<td style="text-align: center;">FTP (control)</td>
-<td style="text-align: left;">Transfert de fichiers (non chiffré) — ❌ Éviter</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>22</strong></td>
-<td style="text-align: center;">SFTP</td>
-<td style="text-align: left;">FTP via SSH (chiffré) — ✅ Recommandé</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>989/990</strong></td>
-<td style="text-align: center;">FTPS</td>
-<td style="text-align: left;">FTP sur TLS</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>445</strong></td>
-<td style="text-align: center;">SMB</td>
-<td style="text-align: left;">Partage de fichiers Windows (Active Directory)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>2049</strong></td>
-<td style="text-align: center;">NFS</td>
-<td style="text-align: left;">Partage de fichiers Unix/Linux</td>
-</tr>
-</tbody>
-</table>
-<h3 id="bases-de-donnees">Bases de données</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>1433</strong></td>
-<td style="text-align: center;">MSSQL</td>
-<td style="text-align: left;">Microsoft SQL Server</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>3306</strong></td>
-<td style="text-align: center;">MySQL / MariaDB</td>
-<td style="text-align: left;">Base de données MySQL</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>5432</strong></td>
-<td style="text-align: center;">PostgreSQL</td>
-<td style="text-align: left;">Base de données PostgreSQL</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>1521</strong></td>
-<td style="text-align: center;">Oracle</td>
-<td style="text-align: left;">Oracle Database</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>27017</strong></td>
-<td style="text-align: center;">MongoDB</td>
-<td style="text-align: left;">Base de données MongoDB</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>6379</strong></td>
-<td style="text-align: center;">Redis</td>
-<td style="text-align: left;">Cache Redis</td>
-</tr>
-</tbody>
-</table>
-<h3 id="autres-services-courants">Autres services courants</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Port</th>
-<th style="text-align: center;">Protocole</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>389</strong></td>
-<td style="text-align: center;">LDAP</td>
-<td style="text-align: left;">Annuaire LDAP (Active Directory)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>636</strong></td>
-<td style="text-align: center;">LDAPS</td>
-<td style="text-align: left;">LDAP sur SSL</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>88</strong></td>
-<td style="text-align: center;">Kerberos</td>
-<td style="text-align: left;">Authentification Active Directory</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>443</strong></td>
-<td style="text-align: center;">HTTPS / RPC</td>
-<td style="text-align: left;">Aussi utilisé par WinRM (HTTPS) et Office 365</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>500/4500</strong></td>
-<td style="text-align: center;">IKE / IPSec NAT-T</td>
-<td style="text-align: left;">Établissement de tunnels VPN IPSec</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>1194</strong></td>
-<td style="text-align: center;">OpenVPN</td>
-<td style="text-align: left;">VPN OpenVPN (UDP/TCP)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>4443</strong></td>
-<td style="text-align: center;">HTTPS-alt</td>
-<td style="text-align: left;">Utilisé par certains proxy et appliances</td>
-</tr>
-</tbody>
-</table>
-<h2 id="protocoles-de-transport-tcp-vs-udp">Protocoles de transport : TCP vs UDP</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Protocole</th>
-<th style="text-align: center;">Orienté connexion</th>
-<th style="text-align: center;">Fiabilité</th>
-<th style="text-align: left;">Usage typique</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>TCP</strong></td>
-<td style="text-align: center;">Oui (3-way handshake)</td>
-<td style="text-align: center;">✅ Oui (accusés de réception)</td>
-<td style="text-align: left;">HTTP, SSH, FTP, SMTP</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>UDP</strong></td>
-<td style="text-align: center;">Non</td>
-<td style="text-align: center;">❌ Non (best-effort)</td>
-<td style="text-align: left;">DNS, DHCP, SNMP, streaming, jeux</td>
-</tr>
-</tbody>
-</table>
+<h1 id="trames-taguees-8021q-et-8021x">Trames taguées : 802.1Q et 802.1X</h1>
+<p>Dans les réseaux d'entreprise modernes, une <a href="Protocoles/ethernet_trames.md">trame Ethernet classique (802.3)</a> est souvent modifiée pour y insérer des informations supplémentaires (<em>tags</em>). Les deux usages les plus fondamentaux sont le taggage VLAN (802.1Q) et le contrôle d'accès réseau (802.1X).</p>
+<h2 id="1-trames-8021q-taggage-vlan">1. Trames 802.1Q (Taggage VLAN)</h2>
+<p>Le standard <strong>IEEE 802.1Q</strong> définit la manière d'insérer un tag VLAN dans l'en-tête d'une trame Ethernet. C'est ce qui permet de faire passer le trafic de plusieurs VLANs simultanément sur un seul câble physique (<a href="vlan.md">liaison Trunk</a>).</p>
+<h3 id="composition-du-tag-8021q-4-octets">Composition du Tag 802.1Q (4 octets)</h3>
+<p>Le tag 802.1Q est inséré <strong>juste après les adresses MAC source/destination</strong>, et avant le champ Type/Longueur. Il ajoute 4 octets à la trame Ethernet classique (qui passe de 1518 à 1522 octets max).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------+-----------+---------+-----------+-----------+---------+
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>| MAC Dest. | MAC Src.  | 802.1Q  | Éthertype |   Data    |   FCS   |
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>| (6 octets)| (6 octets)|(4 octets)| (2 octets)| (46-1500) |(4 octets)|
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>+-----------+-----------+---------+-----------+-----------+---------+
+</code></pre></div>
+<p>Le tag lui-même se décompose ainsi :
+1. <strong>TPID (Tag Protocol Identifier)</strong> (2 octets) : Fixé à <code>0x8100</code> pour indiquer qu'il s'agit d'une trame taguée 802.1Q.
+2. <strong>PCP (Priority Code Point) / 802.1p</strong> (3 bits) : Définit la <a href="#qos-8021p">QoS (Qualité de Service)</a>. Valeur de 0 à 7 (voix sur IP, vidéo...).
+3. <strong>DEI (Drop Eligible Indicator)</strong> (1 bit) : Indique si la trame peut être jetée en priorité en cas de congestion.
+4. <strong>VID (VLAN Identifier)</strong> (12 bits) : Le numéro du VLAN. Sur 12 bits, on peut avoir jusqu'à $2^{12} = 4096$ VLANs virtuels (les numéros 0 et 4095 sont réservés).</p>
+<h3 id="vlan-natif-untagged">VLAN Natif (Untagged)</h3>
+<p>Sur un port Trunk 802.1Q, un VLAN spécifique (généralement le VLAN 1, bien que ce soit déconseillé pour des raisons de sécurité) est désigné comme <strong>VLAN natif</strong>. Les trames appartenant au VLAN natif <strong>ne reçoivent pas de tag 802.1Q</strong>. Si le switch reçoit une trame standard (sans tag) sur un port Trunk, il l'assigne automatiquement au VLAN natif.</p>
+<hr />
+<h2 id="2-ieee-8021x-controle-dacces-base-sur-les-ports">2. IEEE 802.1X (Contrôle d'accès basé sur les ports)</h2>
+<p>Le standard <strong>IEEE 802.1X / PNAC</strong> (Port-Based Network Access Control) est un mécanisme de sécurité qui <strong>bloque l'accès au réseau au niveau du port physique</strong> tant que l'équipement ne s'est pas authentifié. C'est la norme utilisée pour sécuriser les réseaux Wi-Fi (WPA2/3-Enterprise) et les prises RJ45 dans les entreprises.</p>
+<h3 id="principe-de-fonctionnement">Principe de fonctionnement</h3>
+<p>Tant que l'authentification n'a pas réussi, le port du switch ne laisse passer <strong>que le trafic d'authentification (EAPoL - EAP over LAN)</strong>. Tout autre trafic (DHCP, IP...) est bloqué.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant S as Supplicant (PC / Téléphone)
+    participant A as Authenticator (Switch / Borne Wi-Fi)
+    participant AS as Authentication Server (Serveur RADIUS)
+
+    Note over S, A: Port physique bloqué pour le trafic standard
+    S-&gt;&gt;A: EAPoL-Start
+    A-&gt;&gt;S: EAP-Request/Identity
+    S-&gt;&gt;A: EAP-Response/Identity (Ex: r.hirsch)
+    A-&gt;&gt;AS: RADIUS Access-Request (Relais Identity)
+
+    Note over S, AS: Négociation de l'authentification (TLS, PEAP, certificats...)
+    AS-&gt;&gt;A: RADIUS Access-Accept
+
+    Note over S, A: 🔥 Port ouvert et assignation dynamique du VLAN
+    A-&gt;&gt;S: EAP-Success</code></pre>
+<h3 id="cas-concrets-dutilisation">Cas concrets d'utilisation</h3>
+<ol>
+<li><strong>Wi-Fi WPA2/WPA3-Enterprise</strong> : Chaque employé se connecte avec ses identifiants Active Directory plutôt qu'avec une clé WPA partagée.</li>
+<li><strong>Assignation dynamique de VLANs</strong> : En fonction du compte qui s'authentifie, le serveur RADIUS (souvent <em>Microsoft NPS</em> ou <em>Cisco ISE</em>) indique au switch dans quel VLAN placer le port (ex: le port bascule en VLAN 10 si la personne authentifiée est de la compta, en VLAN 50 si c'est un administrateur).</li>
+<li><strong>MAB (MAC Authentication Bypass)</strong> : Utilisé pour les équipements sans interface utilisateur (imprimantes anciennes, IoT, caméras) qui ne gèrent pas le protocole 802.1X. Le switch utilise leur adresse MAC comme identifiant auprès du serveur RADIUS.</li>
+</ol>
+<h3 id="les-differentes-methodes-eap-extensible-authentication-protocol">Les différentes méthodes EAP (Extensible Authentication Protocol)</h3>
+<p>802.1X s'appuie sur la famille des protocoles <strong>EAP</strong>. Les plus communs :
+* <strong>EAP-TLS</strong> : Méthode la plus sécurisée. Utilise des <strong>certificats numériques</strong> sur le client ET sur le serveur. Ne nécessite pas de mot de passe.
+* <strong>PEAP (Protected EAP)</strong> : Utilise un certificat uniquement sur le serveur (pour monter un tunnel sécurisé TLS), puis l'authentification du client passe par identifiant/mot de passe (ex: MS-CHAPv2). Très utilisé dans les architectures Windows AD.</p>
 
 
 
@@ -4308,10 +4261,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "toc.integrate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
