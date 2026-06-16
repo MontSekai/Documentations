@@ -4448,6 +4448,7 @@
 <li><a href="Systeme/OS/ad_forets_domaines/">Forêts et Domaines</a></li>
 <li><a href="Systeme/OS/ad_fsmo/">Rôles FSMO</a></li>
 <li><a href="Systeme/OS/ad_types_dc/">Types de contrôleurs de domaine</a></li>
+<li><a href="Systeme/OS/gpo/">GPO (Stratégies de groupe)</a></li>
 </ul>
 </details>
 </details>
@@ -4460,7 +4461,7 @@
 <details class="note">
 <summary>Virtualisation et Conteneurs</summary>
 <ul>
-<li><a href="Systeme/virtualisation/">Virtualisation (VM, LXC) et Docker</a></li>
+<li><a href="Systeme/virtualisation/">Virtualisation (VM, LXC)</a></li>
 <li><a href="Systeme/Conteneurs/docker/">Docker</a></li>
 <li><a href="Systeme/Conteneurs/kubernetes/">Kubernetes</a></li>
 </ul>
@@ -4476,8 +4477,15 @@
 <ul>
 <li><a href="Systeme/Services/dhcp/">DHCP</a></li>
 <li><a href="Systeme/Services/dns/">DNS</a></li>
-<li><a href="Systeme/Services/sauvegarde/">Sauvegarde et PRA</a></li>
-<li><a href="Systeme/Services/supervision/">Supervision / SNMP</a></li>
+<li><a href="Systeme/Services/sauvegarde/">Sauvegarde</a></li>
+<li><a href="Systeme/Services/supervision/">Supervision</a></li>
+</ul>
+</details>
+<details class="note">
+<summary>Stockage</summary>
+<ul>
+<li><a href="Systeme/Stockage/netapp/">Baies NetApp (Concept)</a></li>
+<li><a href="Systeme/Stockage/commande_netapp/">Commandes NetApp (CLI)</a></li>
 </ul>
 </details>
 </details>
@@ -4493,8 +4501,16 @@
 <li><a href="Reseau/Protocoles/802.1Q_802.1X/">Trames taguées : 802.1Q/802.1X</a></li>
 <li><a href="Reseau/Protocoles/modele_osi/">Modèle OSI</a></li>
 <li><a href="Reseau/Protocoles/tcp_ip/">TCP/IP</a></li>
+<li><a href="Reseau/Protocoles/ipv4/">IPv4</a></li>
+<li><a href="Reseau/Protocoles/ipv6/">IPv6</a></li>
 <li><a href="Reseau/protocoles_routage/">Protocoles de routage</a></li>
-<li><a href="Reseau/ports_reseau.md">Ports réseau courants</a></li>
+</ul>
+</details>
+<details class="note">
+<summary>Physique et Transport</summary>
+<ul>
+<li><a href="Reseau/Physique_Transport/cablage/">Câblage et Fibre</a></li>
+<li><a href="Reseau/Physique_Transport/ports_reseau/">Ports réseau courants</a></li>
 </ul>
 </details>
 <details class="note">
@@ -4522,34 +4538,8 @@
 <ul>
 <li><a href="Reseau/vlan/">VLAN et Segmentation réseau</a></li>
 <li><a href="Reseau/routage/">Routage et Routage inter-VLAN</a></li>
-</ul>
-</details>
-</details>
-<details class="note">
-<summary>Management</summary>
-<ul>
-<li><a href="Management/management/">Général (Page Accueil)</a></li>
-</ul>
-<details class="note">
-<summary>Gestion de projet</summary>
-<ul>
-<li><a href="Management/Gestion_de_projet/outils_gestion_projet/">Outils fondamentaux (GANTT, PERT, RACI, QCD)</a></li>
-<li><a href="Management/Gestion_de_projet/matrice_des_risques/">Matrice des risques</a></li>
-</ul>
-</details>
-<details class="note">
-<summary>Processus</summary>
-<ul>
-<li><a href="Management/Processus/diagramme_des_flux/">Diagramme des flux</a></li>
-<li><a href="Management/Processus/itil/">Référentiel ITIL</a></li>
-</ul>
-</details>
-<details class="note">
-<summary>Stratégie</summary>
-<ul>
-<li><a href="Management/Strategie/but_objectif/">Buts et Objectifs</a></li>
-<li><a href="Management/Strategie/kpi/">KPI</a></li>
-<li><a href="Management/Strategie/swot/">Matrice SWOT</a></li>
+<li><a href="Reseau/spanning_tree/">Spanning Tree (STP)</a></li>
+<li><a href="Reseau/haute_disponibilite/">Haute Disponibilité (Cluster)</a></li>
 </ul>
 </details>
 </details>
@@ -4585,12 +4575,48 @@
 <details class="note">
 <summary>Gouvernance</summary>
 <ul>
+<li><a href="Cybersecurite/identite_acces/">Identité et Accès (IAM/MFA)</a></li>
 <li><a href="Cybersecurite/pssi/">PSSI</a></li>
 <li><a href="Cybersecurite/pgssi_s/">PGSSI-S</a></li>
 <li><a href="Cybersecurite/pca_pra/">PCA / PRA</a></li>
 <li><a href="Cybersecurite/cyber_assurance/">Cyber Assurance</a></li>
 <li><a href="Cybersecurite/anssi/">ANSSI</a></li>
 <li><a href="Cybersecurite/cnil/">CNIL</a></li>
+</ul>
+</details>
+</details>
+<details class="note">
+<summary>Management</summary>
+<ul>
+<li><a href="Management/management/">Général (Page Accueil)</a></li>
+</ul>
+<details class="note">
+<summary>Gestion de projet</summary>
+<ul>
+<li><a href="Management/Gestion_de_projet/outils_gestion_projet/">Outils fondamentaux (GANTT, PERT, RACI)</a></li>
+<li><a href="Management/Gestion_de_projet/methodologies_projet/">Méthodologies de Projet (Cycle en V, Prince2)</a></li>
+<li><a href="Management/Gestion_de_projet/agile_scrum/">Agilité et Scrum</a></li>
+<li><a href="Management/Gestion_de_projet/pmo_ppm/">PMO et PPM</a></li>
+<li><a href="Management/Gestion_de_projet/matrice_des_risques/">Matrice des risques</a></li>
+</ul>
+</details>
+<details class="note">
+<summary>Processus</summary>
+<ul>
+<li><a href="Management/Processus/diagramme_des_flux/">Diagramme des flux</a></li>
+<li><a href="Management/Processus/bpmn/">BPMN</a></li>
+<li><a href="Management/Processus/itil/">Référentiel ITIL V4</a></li>
+</ul>
+</details>
+<details class="note">
+<summary>Stratégie</summary>
+<ul>
+<li><a href="Management/Strategie/but_objectif/">Buts et Objectifs</a></li>
+<li><a href="Management/Strategie/kpi/">KPI</a></li>
+<li><a href="Management/Strategie/swot/">Matrice SWOT</a></li>
+<li><a href="Management/Strategie/finance_it/">Finance IT (ROI, CAPEX/OPEX)</a></li>
+<li><a href="Management/Strategie/transformation_numerique/">Transformation Numérique</a></li>
+<li><a href="Management/Strategie/industrie_40/">Industrie 4.0</a></li>
 </ul>
 </details>
 </details>
@@ -4610,6 +4636,7 @@
 <summary>Autres et Projets</summary>
 <ul>
 <li><a href="Autres/autres/">Général (Page Accueil)</a></li>
+<li><a href="Autres/charte_editoriale/">Charte Éditoriale du Wiki</a></li>
 </ul>
 <details class="note">
 <summary>Projets</summary>

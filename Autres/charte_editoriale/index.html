@@ -4294,6 +4294,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-checklist-obligatoire-a-la-creation-dune-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Checklist obligatoire à la création d'une page
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4520,6 +4531,22 @@ Il est <strong>recommandé</strong> de garder les commandes d'un même écosyst�
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>| :--- | :--- | :--- |
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>| <span class="sb">`ping`</span> | Tester la connectivité IP | <span class="sb">`ping 8.8.8.8`</span> |
 </code></pre></div>
+<hr />
+<h2 id="3-checklist-obligatoire-a-la-creation-dune-page">3. Checklist obligatoire à la création d'une page</h2>
+<p><strong>À NE JAMAIS OUBLIER :</strong> La simple création d'une nouvelle page Markdown avec du texte ne suffit pas. Pour qu'elle soit correctement intégrée au wiki, vous devez systématiquement vérifier ces 3 points :</p>
+<ol>
+<li><strong>L'en-tête YAML (Tags)</strong> : Toute page doit commencer par un bloc définissant ses catégories pour le moteur de recherche.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nn">---</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">tags</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CategoriePrincipale</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MotClef</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nn">---</span>
+</code></pre></div></li>
+<li><strong>Le Maillage Interne (Liens)</strong> : Créez des ponts ! Ajoutez systématiquement dans le corps du texte ou dans la section 5 des liens vers d'autres concepts du wiki (ex: <code>Voir aussi : [Modèle OSI](../Protocoles/modele_osi.md)</code>).</li>
+<li><strong>Mise à jour de la Navigation</strong> : Pour que la page soit visible par l'utilisateur, vous devez ajouter son chemin d'accès à deux endroits précis :</li>
+<li>Le fichier racine <strong><code>mkdocs.yml</code></strong> (pour l'intégrer au menu latéral gauche).</li>
+<li>Le fichier <strong><code>docs/index.md</code></strong> (pour l'intégrer aux blocs de la page d'accueil).</li>
+</ol>
 
 
 
