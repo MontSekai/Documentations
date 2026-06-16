@@ -1746,6 +1746,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réseau
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1762,6 +1780,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Protocoles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physique-et-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Physique et Transport
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-et-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Infrastructure et Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securite-reseau-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Sécurité réseau &amp; VPN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4938,47 +5019,40 @@
 
 <h1 id="reseau">Réseau</h1>
 <p>Cette section regroupe toutes les notes relatives à la topologie, aux protocoles et au matériel réseau.</p>
-<details class="note">
-<summary>Protocoles</summary>
+<h2 id="protocoles">📂 Protocoles</h2>
 <ul>
+<li><a href="../Protocoles/http_https/">HTTP et HTTPS</a></li>
+<li><a href="../Protocoles/ssh_rdp/">SSH et RDP (Accès distant)</a></li>
+<li><a href="../Protocoles/ethernet_trames/">Ethernet et Trames</a></li>
+<li><a href="../Protocoles/802.1Q_802.1X/">Trames taguées : 802.1Q/802.1X</a></li>
+<li><a href="../Protocoles/modele_osi/">Modèle OSI</a></li>
 <li><a href="../Protocoles/tcp_ip/">TCP/IP</a></li>
-<li><a href="../Protocoles/modele_osi/">Le modèle OSI</a></li>
-<li><a href="../Protocoles/ethernet_trames/">Ethernet et les Trames</a></li>
-<li><a href="../Protocoles/802.1Q_802.1X/">Trames taguées : 802.1Q et 802.1X</a></li>
-<li><a href="../protocoles_routage/">Protocoles de routage (RIP, OSPF)</a></li>
-<li><a href="ports_reseau.md">Ports réseau courants</a></li>
+<li><a href="../Protocoles/ipv4/">IPv4</a></li>
+<li><a href="../Protocoles/ipv6/">IPv6</a></li>
+<li><a href="../protocoles_routage/">Protocoles de routage</a></li>
 </ul>
-</details>
-<details class="note">
-<summary>Sans Fil</summary>
+<h2 id="physique-et-transport">📂 Physique et Transport</h2>
 <ul>
-<li><a href="../wifi/">Wi-Fi et Sécurité (802.11)</a></li>
+<li><a href="../Physique_Transport/cablage/">Câblage et Fibre</a></li>
+<li><a href="../Physique_Transport/ports_reseau/">Ports réseau courants</a></li>
 </ul>
-</details>
-<details class="note">
-<summary>VPN</summary>
+<h2 id="infrastructure-et-architecture">📂 Infrastructure et Architecture</h2>
+<ul>
+<li><a href="../Infrastructure/nat_pat/">NAT, PAT et Bridge</a></li>
+<li><a href="../Architecture/p2p/">Peer-to-Peer (P2P)</a></li>
+<li><a href="../vlan/">VLAN et Segmentation réseau</a></li>
+<li><a href="../routage/">Routage et Routage inter-VLAN</a></li>
+<li><a href="../spanning_tree/">Spanning Tree (STP)</a></li>
+<li><a href="../haute_disponibilite/">Haute Disponibilité (Cluster/VIP)</a></li>
+</ul>
+<h2 id="securite-reseau-vpn">📂 Sécurité réseau &amp; VPN</h2>
 <ul>
 <li><a href="../VPN/open_vpn/">OpenVPN</a></li>
 <li><a href="../VPN/ipsec/">IPSec</a></li>
-</ul>
-</details>
-<details class="note">
-<summary>Sécurité réseau</summary>
-<ul>
 <li><a href="../Securite/proxy_firewall/">Proxy, Reverse Proxy, WAF, Pare-feu</a></li>
-<li><a href="../Securite/acl/">ACL - Listes de contrôle d'accès</a></li>
+<li><a href="../Securite/acl/">ACL</a></li>
+<li><a href="../wifi/">Wi-Fi et Sécurité (802.11)</a></li>
 </ul>
-</details>
-<details class="note">
-<summary>Infrastructure</summary>
-<ul>
-<li><a href="../vlan/">VLAN et Segmentation réseau</a></li>
-<li><a href="../routage/">Routage et Routage inter-VLAN</a></li>
-<li><a href="../spanning_tree/">Spanning Tree (STP / RSTP)</a></li>
-<li><a href="../haute_disponibilite/">Haute Disponibilité (VIP, Cluster, HA, Stack)</a></li>
-<li><a href="cablage.md">Câblage (RJ45, Fibre, FTTH)</a></li>
-</ul>
-</details>
 
 
 

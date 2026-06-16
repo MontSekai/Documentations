@@ -533,6 +533,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Système
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -549,6 +567,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#os-et-systemes-dexploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 OS et Systèmes d'Exploitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-directory-identites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Active Directory (Identités)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatisation-iac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Automatisation &amp; IaC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualisation-et-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Virtualisation et Conteneurs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-dinfrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Services d'Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Stockage
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4937,52 +5040,48 @@
 
 
 <h1 id="systeme">Système</h1>
-<p>Cette section regroupe toutes les notes relatives à l'administration système.</p>
-<details class="note">
-<summary>OS</summary>
+<p>Cette section regroupe toutes les notes relatives à l'administration système, serveurs et infrastructure.</p>
+<h2 id="os-et-systemes-dexploitation">📂 OS et Systèmes d'Exploitation</h2>
 <ul>
+<li><a href="../OS/noyau/">Noyau (Kernel)</a></li>
 <li><a href="../OS/commande_linux/">Commandes Linux (Debian)</a></li>
 <li><a href="../OS/commande_windows/">Commandes Windows</a></li>
 <li><a href="../OS/windows_server/">Windows Server</a></li>
 </ul>
-<details class="note">
-<summary>Active Directory</summary>
+<h2 id="active-directory-identites">📂 Active Directory (Identités)</h2>
 <ul>
 <li><a href="../OS/ad_forets_domaines/">Forêts et Domaines</a></li>
 <li><a href="../OS/ad_fsmo/">Rôles FSMO</a></li>
 <li><a href="../OS/ad_types_dc/">Types de contrôleurs de domaine</a></li>
+<li><a href="../OS/gpo/">GPO (Stratégies de groupe)</a></li>
+<li><a href="../OS/entra_id/">Entra ID (Azure AD)</a></li>
+<li><a href="../OS/ldap/">LDAP et LDAPS</a></li>
 </ul>
-</details>
-</details>
-<details class="note">
-<summary>Automatisation</summary>
+<h2 id="automatisation-iac">📂 Automatisation &amp; IaC</h2>
 <ul>
 <li><a href="../Automatisation/ansible/">Ansible</a></li>
+<li><a href="../Infrastructure_as_Code/terraform/">Terraform</a></li>
 </ul>
-</details>
-<details class="note">
-<summary>Virtualisation et Conteneurs</summary>
+<h2 id="virtualisation-et-conteneurs">📂 Virtualisation et Conteneurs</h2>
 <ul>
-<li><a href="../virtualisation/">Virtualisation (VM, LXC) et Docker</a></li>
+<li><a href="../virtualisation/">Virtualisation (VM, LXC)</a></li>
 <li><a href="../Conteneurs/docker/">Docker</a></li>
 <li><a href="../Conteneurs/kubernetes/">Kubernetes</a></li>
 </ul>
-</details>
-<details class="note">
-<summary>Infrastructure as Code</summary>
-<ul>
-<li><a href="../Infrastructure_as_Code/terraform/">Terraform</a></li>
-</ul>
-</details>
-<details class="note">
-<summary>Services</summary>
+<h2 id="services-dinfrastructure">📂 Services d'Infrastructure</h2>
 <ul>
 <li><a href="../Services/dhcp/">DHCP</a></li>
 <li><a href="../Services/dns/">DNS</a></li>
-<li><a href="../Services/sauvegarde/">Sauvegarde et PRA</a></li>
-<li><a href="../Services/supervision/">Supervision / SNMP</a></li>
+<li><a href="../Services/sauvegarde/">Sauvegarde</a></li>
+<li><a href="../Services/supervision/">Supervision</a></li>
 </ul>
-</details>
+<h2 id="stockage">📂 Stockage</h2>
+<ul>
+<li><a href="../Stockage/netapp/">Baies NetApp (Concept)</a></li>
+<li><a href="../Stockage/commande_netapp/">Commandes NetApp (CLI)</a></li>
+<li><a href="../Stockage/raid/">RAID (Matériel/Disques)</a></li>
+<li><a href="../Stockage/iscsi/">iSCSI (SAN)</a></li>
+</ul>
 
 
 
