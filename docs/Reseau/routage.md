@@ -7,107 +7,48 @@ tags:
 
 # Routeur, Routage et Routage Inter-VLAN
 
-## Le Routeur
+Le mécanisme intelligent de transfert des paquets IP entre les réseaux.
 
-Un **routeur** est un équipement de couche 3 (réseau) dont le rôle est d'**acheminer les paquets IP entre différents réseaux**. Contrairement à un switch (couche 2) qui ne voit que les adresses MAC, le routeur prend ses décisions en lisant l'**adresse IP de destination**.
+## 1. Définition
+Le **routage** est le processus réseau fondamental qui permet d'acheminer des paquets IP (Couche 3) d'un réseau source vers un autre réseau de destination. Un **routeur** (ou un pare-feu/Switch L3) est l'équipement dédié à cette tâche. Sans mécanisme de routage, une machine est incapable de communiquer avec une autre machine située en dehors de son propre sous-réseau local.
 
-## La Table de Routage
+## 2. Description / Fonctionnement
+Pour fonctionner, chaque routeur maintient en mémoire vive une "carte GPS" appelée **Table de routage**. Lorsqu'il reçoit un paquet IP entrant sur l'une de ses pattes, il lit l'adresse IP de destination, consulte sa table, et transmet le paquet vers l'interface ou le routeur voisin approprié (le *Next-Hop*).
 
-Chaque routeur maintient une **table de routage** : une liste de réseaux connus et de l'interface (ou du prochain routeur, le *next-hop*) à utiliser pour les atteindre.
+Les tables de routage sont alimentées par deux grandes méthodes :
+* **Routage Statique** : Les chemins sont renseignés à la main par l'administrateur (ex: "Pour aller vers le réseau 10.0.0.0/8, passe par le routeur 192.168.1.254"). Inadapté aux grands réseaux car statique en cas de panne de lien.
+* **Routage Dynamique** : Les routeurs utilisent des protocoles mathématiques complexes (OSPF, BGP) pour s'échanger en direct la liste des réseaux qu'ils connaissent. Le routeur calcule automatiquement le chemin le plus court et réagit instantanément si une fibre est coupée.
 
-```bash
-# Commande show ip route (Cisco)
-C    192.168.1.0/24 is directly connected, GigabitEthernet0/0  ! Réseau directement connecté
-S    10.0.0.0/8 [1/0] via 192.168.1.254                        ! Route statique
-O    172.16.0.0/16 [110/20] via 192.168.2.1, OSPF              ! Route apprise par OSPF
-R    0.0.0.0/0 [120/1] via 192.168.1.254, RIP                  ! Route par défaut (default gateway)
-```
+## 3. Utilisation / Cas Pratique
+Le routage est indispensable sur Internet pour lier les fournisseurs d'accès, mais il est aussi la clé des réseaux LAN d'entreprise avec le principe du **Routage Inter-[VLAN](vlan.md)**.
+Exemple : Par sécurité matérielle (Couche 2), un poste situé dans le VLAN 10 (Comptabilité) ne peut pas communiquer directement avec un serveur situé dans le VLAN 20 (Production). Il faut donc placer un routeur ou un Pare-feu au milieu pour faire "passer la frontière" aux paquets IP de la couche 3, tout en y appliquant éventuellement des règles de sécurité (ACL).
 
-**Codes des routes :**
+## 4. Modifications possibles / Alternatives
+Il existe deux manières standards de concevoir du routage inter-VLAN en LAN :
+* **Router-on-a-Stick** (Ancienne méthode) : On utilise un Routeur externe relié au Switch central par un seul lien physique "Trunk" (qui porte tous les VLANs). Le routeur crée des "sous-interfaces virtuelles" (ex: interface gig0/0.10 et gig0/0.20) qui serviront de passerelles pour les différents VLANs. C'est simple, mais le câble unique devient un goulot d'étranglement sévère.
+* **Switch Multicouche de Couche 3** (SVI - Méthode moderne) : On se passe de routeur physique local. Le Switch (modèle plus haut de gamme) embarque le processeur de routage et gère directement cela en interne à des vitesses faramineuses grâce à des interfaces virtuelles internes (SVI).
 
-| Code | Signification |
-| :---: | :--- |
-| **C** | Connected — réseau directement connecté à une interface |
-| **S** | Static — route configurée manuellement |
-| **O** | OSPF — route apprise dynamiquement via OSPF |
-| **R** | RIP — route apprise via RIP |
-| **B** | BGP — route apprise via BGP (protocole d'Internet) |
+## 5. Exemples visuels et Liens utiles
 
-## Types de routage
-
-### Routage Statique
-Les routes sont **configurées manuellement** par l'administrateur. Simple pour les petits réseaux, mais ne s'adapte pas automatiquement en cas de panne.
-
-```bash
-ip route 10.0.0.0 255.0.0.0 192.168.1.254   ! Vers le réseau 10.0.0.0/8, passer par .254
-ip route 0.0.0.0 0.0.0.0 192.168.1.1        ! Route par défaut (default gateway)
-```
-
-### Routage Dynamique
-Les routeurs échangent automatiquement leurs tables de routage via des **protocoles de routage**. Ils s'adaptent en temps réel aux pannes de liens.
-
-| Protocole | Type | Usage |
-| :--- | :--- | :--- |
-| **RIP** (v2) | Distance Vector | Petits réseaux, obsolète |
-| **OSPF** | Link State | Standard pour les réseaux d'entreprise |
-| **EIGRP** | Hybride (Cisco) | Réseaux Cisco uniquement |
-| **BGP** | Path Vector | Protocole d'Internet entre AS (FAI, cloud providers) |
-
----
-
-## Routage Inter-VLAN
-
-Par définition, les VLANs isolent les réseaux : un poste en [VLAN 10](vlan.md) ne peut pas communiquer avec un poste en VLAN 20 sans passer par un routeur (couche 3). C'est le **routage inter-VLAN**.
-
-### Méthode 1 : Router-on-a-Stick (Sous-interfaces)
-
-Un seul lien physique **trunk (802.1Q)** relie le switch au routeur. Le routeur crée des **sous-interfaces virtuelles**, une par VLAN, chacune avec sa propre adresse IP (passerelle du VLAN).
-
-```bash
-! Routeur (Router-on-a-Stick)
-interface GigabitEthernet0/0.10
- encapsulation dot1Q 10                ! Tag VLAN 10
- ip address 192.168.10.254 255.255.255.0  ! Passerelle du VLAN 10
-
-interface GigabitEthernet0/0.20
- encapsulation dot1Q 20
- ip address 192.168.20.254 255.255.255.0
-```
-
+### Architecture Router-on-a-Stick
 ```mermaid
 graph LR
-    V10["💻 VLAN 10\n192.168.10.0/24"]
-    V20["💻 VLAN 20\n192.168.20.0/24"]
-    SW["🔀 Switch L2\n(Port Trunk)"]
-    R["🌐 Routeur\nGi0/0.10 + Gi0/0.20"]
+    V10["💻 PC VLAN 10\nIP 192.168.10.x"]
+    V20["💻 PC VLAN 20\nIP 192.168.20.x"]
+    SW["🔀 Switch L2"]
+    R["🌐 Routeur Pare-Feu"]
 
-    V10 --> SW
-    V20 --> SW
-    SW -- "Trunk 802.1Q" --> R
+    V10 -- "Access" --> SW
+    V20 -- "Access" --> SW
+    SW -- "Câble Trunk Unique" --> R
+    
+    note over R: Interfaces virtuelles\nEth0.10 et Eth0.20
 ```
 
-### Méthode 2 : Switch de Couche 3 (SVIs)
-
-Un **switch multicouche (L3)** peut router directement entre VLANs sans routeur externe, via des **SVI** (Switched Virtual Interface) : des interfaces virtuelles créées sur le switch, une par VLAN.
-
-```bash
-! Switch L3
-interface Vlan10
- ip address 192.168.10.254 255.255.255.0
- no shutdown
-
-interface Vlan20
- ip address 192.168.20.254 255.255.255.0
- no shutdown
-
-ip routing   ! Active le routage IP sur le switch L3
-```
-
-**Avantage** : Le routage est fait en interne sur le switch, beaucoup plus rapide (ASIC hardware), sans lien physique trunk dédié vers un routeur externe.
-
-| Critère | Router-on-a-Stick | Switch L3 (SVI) |
-| :--- | :---: | :---: |
-| Matériel nécessaire | Routeur + Switch L2 | Switch L3 uniquement |
-| Performance | Limitée par le lien trunk | Très haute (hardware) |
-| Simplicité | Simple à implémenter | Idéal pour les entreprises |
-| Coût | Faible | Plus élevé (switch L3) |
+### Table de routage typique (Exemple console Cisco)
+| Code initial | Réseau de Destination | Passerelle (Next Hop) | Origine (Comment a-t-il été appris ?) |
+| :---: | :--- | :--- | :--- |
+| **C** | `192.168.1.0/24` | *Directly connected* | Le réseau est branché sur mon port local. |
+| **S** | `10.0.0.0/8` | `via 192.168.1.254` | **Route statique** ajoutée à la main. |
+| **O** | `172.16.0.0/16` | `via 192.168.2.1` | **OSPF** (Protocole dynamique intra-entreprise). |
+| **S*** | `0.0.0.0/0` | `via 192.168.1.254` | **Route par défaut** (Le chemin vers Internet). |

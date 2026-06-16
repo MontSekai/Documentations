@@ -7,57 +7,25 @@ tags:
 
 # Cyber Assurance
 
-La **cyber assurance** (ou assurance cyber) est un contrat qui permet à une organisation de **transférer une partie du risque financier** lié à une cyberattaque ou à un incident de sécurité vers un assureur. Elle ne remplace pas les mesures de sécurité mais constitue un filet de sécurité financier en cas de sinistre.
+Contrat permettant de transférer une partie du risque financier lié à un incident de sécurité.
 
-> [!NOTE]
-> L'assurance cyber est un **transfert de risque**, pas une élimination du risque. Les assureurs exigent de plus en plus des preuves de maturité cybersécurité avant d'accorder une couverture.
+## 1. Définition
+La **cyber assurance** (ou assurance cyber) est un contrat qui permet à une organisation de transférer une partie du risque financier lié à une cyberattaque ou à un incident de sécurité vers un assureur.
 
-## Ce que couvre une police cyber
+## 2. Description / Fonctionnement
+La couverture s'étend généralement sur deux axes :
+* **Dommages propres (1ère partie)** : Frais de réponse à incident (experts, avocats), perte de chiffre d'affaires, coûts de restauration des données, rançon (partiellement).
+* **Responsabilité civile (Tierce partie)** : Couvre les amendes éventuelles et les recours des clients ou partenaires dont les données auraient fuité.
 
-### Couverture de première partie (dommages propres)
-| Garantie | Exemples concrets |
-| :--- | :--- |
-| **Frais de réponse à l'incident** | Experts forensiques, RSSI externe, gestion de crise |
-| **Interruption d'activité** | Perte de chiffre d'affaires pendant la panne |
-| **Restauration des données** | Coûts de récupération et de reconstruction des données |
-| **Rançon et extorsion** | Prise en charge (partielle) des rançongiciels (controversé) |
-| **Notification des victimes** | Obligation RGPD de notifier les personnes concernées |
-| **Frais de communication de crise** | Gestion de la réputation, relations presse |
+Les assureurs exigent des preuves de sécurité strictes avant de signer (Authentification Multi-Facteurs, sauvegardes déconnectées, EDR, PCA/PRA testés).
 
-### Couverture de tierce partie (responsabilité civile)
-| Garantie | Exemples concrets |
-| :--- | :--- |
-| **Responsabilité en cas de fuite de données** | Amendes CNIL, recours des clients |
-| **Atteinte à la vie privée** | Violation de données personnelles (RGPD) |
-| **Responsabilité vis-à-vis de tiers** | L'attaque a servi de rebond vers des clients |
+## 3. Utilisation / Cas Pratique
+Souscrire à une cyber assurance est une mesure de "Traitement du risque" (stratégie "Transférer le risque") décidée généralement suite à une analyse de type [EBIOS RM](ebios.md). Elle sert de filet de sécurité financier pour éviter la faillite en cas d'attaque par ransomware avec immobilisation de la production pendant plusieurs semaines.
 
-## Conditions des assureurs (exigences de sécurité)
-
-Les assureurs cyber évaluent la **maturité cybersécurité** de l'organisme avant d'accorder une couverture. Les exigences minimales courantes en 2024 :
-
-| Exigence | Niveau requis |
-| :--- | :--- |
-| **Authentification multi-facteurs (MFA)** | Obligatoire sur les accès distants et les comptes admin |
-| **Sauvegardes testées et isolées** | Règle 3-2-1, sauvegardes hors-line ou immuables |
-| **Plan de réponse à incident documenté** | PCA/PRA à jour et testé |
-| **Gestion des correctifs (Patch)** | Politique de mise à jour définie |
-| **Formation et sensibilisation** | Preuve de sensibilisation des utilisateurs |
-| **[EDR](edr.md)** | Sur tous les endpoints |
-| **Tests d'intrusion** | Pentests réguliers appréciés |
-
+## 4. Modifications possibles / Alternatives
+L'assurance ne remplace *jamais* la sécurité technique : c'est uniquement un complément financier. 
 > [!WARNING]
-> Un sinistre peut être **refusé** par l'assureur si les mesures de sécurité déclarées au moment de la souscription n'étaient pas réellement en place. La déclaration du niveau de sécurité engage la responsabilité de l'organisme.
+> Une déclaration trompeuse sur le niveau de sécurité réel de l'entreprise lors de la souscription entraînera un refus sec d'indemnisation de la part de l'assureur en cas de sinistre.
 
-## Facteurs influençant le coût
-
-* **Chiffre d'affaires** : Principal critère de tarification
-* **Secteur d'activité** : Santé, finance et collectivités sont considérés à risque élevé
-* **Historique de sinistres** : Un incident passé augmente la prime
-* **Niveau de maturité cyber** : Plus l'organisme est mature, plus la prime est basse
-* **Montant de la franchise** : Plus la franchise est haute, plus la prime est basse
-
-## Liens utiles
-
-* [PSSI — Politique de Sécurité](pssi.md)
-* [PCA / PRA — Continuité d'activité](pca_pra.md)
-* [ANSSI — Agence nationale de cybersécurité](anssi.md)
+## 5. Exemples visuels et Liens utiles
+*(Ajouter un exemple de questionnaire type fourni par un assureur pour évaluer la maturité cyber d'un client).*

@@ -8,63 +8,37 @@ tags:
 
 # Windows Server
 
-Windows Server est la gamme de systèmes d'exploitation de Microsoft destinée aux serveurs d'entreprise. Il constitue la fondation de la majorité des infrastructures IT en environnement professionnel, principalement autour de l'**Active Directory (AD)**.
+Système d'exploitation serveur de Microsoft et fondation des rôles de l'infrastructure d'entreprise.
 
-## Les principaux rôles et services
+## 1. Définition
+Windows Server est la gamme de systèmes d'exploitation (OS) de Microsoft spécifiquement destinée aux environnements serveurs d'entreprise. Il constitue la colonne vertébrale applicative de l'écrasante majorité des infrastructures IT mondiales pour la gestion des utilisateurs.
 
-Un rôle Windows Server est un ensemble de fonctionnalités installables répondant à un besoin précis. Voici les plus courants en entreprise :
+## 2. Description / Fonctionnement
+Contrairement à Windows 10/11 pour les postes de travail, Windows Server est conçu pour s'exécuter en continu et fournir de nombreux services réseau natifs appelés "Rôles".
+Les rôles les plus cruciaux sont :
+* **AD DS (Active Directory)** : Gestion centralisée des identités, droits et accès.
+* **DNS** : Résolution de noms en adresses IP (absolument indispensable à la survie de l'AD).
+* **DHCP** : Distribution automatisée des IPs sur le réseau local.
+* **File Server (SMB)** : Stockage, gestion des quotas et partage sécurisé de données.
+* **Hyper-V** : Hyperviseur pour la création de Machines Virtuelles.
 
-### Active Directory Domain Services (AD DS)
+## 3. Utilisation / Cas Pratique
+Lors du montage d'un nouveau réseau d'entreprise, l'administrateur installe une machine sous Windows Server. Le premier serveur est "promu" en tant que **Contrôleur de Domaine (AD DS + DNS)**. Ensuite, d'autres serveurs rejoignent ce domaine et reçoivent les rôles de Serveur de fichiers ou **RDS** (accès à un bureau à distance pour le télétravail des employés). Le rôle **WSUS** est aussi très souvent déployé pour centraliser, tester et maîtriser la distribution des correctifs de sécurité (Patchs) sur le parc de PC.
 
-C'est **le** service central de toute infrastructure Windows. Il gère l'**annuaire d'entreprise** : l'ensemble des objets (utilisateurs, ordinateurs, groupes, imprimantes) et leurs droits d'accès aux ressources du réseau.
-* **Authentification** : Valide l'identité de chaque utilisateur grâce au protocole Kerberos (ou NTLM).
-* **Stratégies de Groupe (GPO)** : Permet de déployer massivement des configurations (paramètres de sécurité, logiciels, fond d'écran...) sur des milliers de postes en quelques secondes.
-* **Voir aussi** : [Forêts et Domaines](ad_forets_domaines.md) · [Rôles FSMO](ad_fsmo.md) · [Types de contrôleurs AD](ad_types_dc.md)
+## 4. Modifications possibles / Alternatives
+L'alternative historique et écrasante à Windows Server est le monde **Linux**, qui domine le marché de l'hébergement web public (Apache, Nginx) et des conteneurs Cloud. 
+Cependant, pour la gestion stricte d'un parc de PC bureautiques locaux, Active Directory sous Windows Server reste le standard incontesté. Ce modèle "On-Premise" (sur site) est toutefois progressivement concurrencé par les solutions 100% Cloud de Microsoft comme *Entra ID* (anciennement Azure AD) couplé à *Intune* (MDM).
 
-### DNS (Domain Name System)
+## 5. Exemples visuels et Liens utiles
 
-Sur un réseau Windows en domaine, le serveur DNS Microsoft est étroitement couplé à l'AD DS. Il enregistre automatiquement les noms et adresses des machines du domaine (enregistrements dynamiques, zone `_msdcs`). **Sans DNS fonctionnel, l'AD tombe en panne.**
-
-### DHCP (Dynamic Host Configuration Protocol)
-
-Distribue les adresses IP de façon automatique aux postes du réseau. Sous Windows Server, le service DHCP doit être **autorisé dans l'Active Directory** pour pouvoir démarrer, ce qui évite les serveurs DHCP pirates.
-
-### File Server (Serveur de fichiers)
-
-Centralise le stockage des fichiers de l'entreprise et gère les partages réseau via le protocole **SMB** (Server Message Block). Les fonctionnalités clés associées sont :
-* **DFS** (Distributed File System) : Espace de noms unifié pour agréger plusieurs serveurs de fichiers.
-* **FSLogix / Quotas** : Limitation de l'espace disque par utilisateur.
-
-### Hyper-V (Hyperviseur)
-
-Le rôle d'**hyperviseur de type 1** de Microsoft. Il permet de créer et gérer des **machines virtuelles (VMs)** directement sur le matériel physique, sans OS hôte intermédiaire. Alternative à VMware ESXi.
-
-### RDS (Remote Desktop Services)
-
-Permet aux utilisateurs d'accéder à distance soit à un **bureau Windows complet** (Desktop Session Host), soit à des **applications publiées** (RemoteApp) qui s'exécutent sur le serveur mais s'affichent sur le poste client.
-
-### WSUS (Windows Server Update Services)
-
-Centralise la gestion des mises à jour Windows pour le parc de machines. Les postes récupèrent leurs patchs depuis le serveur WSUS interne plutôt qu'auprès de Microsoft directement, permettant ainsi de valider et planifier les mises à jour avant leur déploiement.
-
-### IIS (Internet Information Services)
-
-Le serveur web de Microsoft. Héberge des sites web et des applications web ASP.NET sur le réseau interne (Intranet) ou exposé sur Internet. Alternative à Apache / Nginx.
-
-### NPS (Network Policy Server)
-
-Serveur RADIUS de Microsoft. Centralise l'authentification des accès réseau (VPN, Wi-Fi WPA2-Enterprise, connexions commutées) en s'appuyant sur l'AD.
-
-## Résumé des rôles
-
-| Rôle | Protocole / Standard | Utilité principale |
+| Rôle Server | Protocole ou Standard | Utilité principale |
 | :--- | :---: | :--- |
-| **AD DS** | Kerberos, LDAP | Annuaire central, authentification, GPO |
-| **DNS** | DNS | Résolution de noms (indispensable à l'AD) |
-| **DHCP** | DHCP | Attribution automatique des IPs |
-| **File Server** | SMB | Partage de fichiers centralisé |
-| **Hyper-V** | — | Virtualisation |
-| **RDS** | RDP | Accès bureau/applicatif distant |
-| **WSUS** | HTTP/HTTPS | Gestion des mises à jour |
-| **IIS** | HTTP/HTTPS | Hébergement web |
-| **NPS** | RADIUS | Auth. réseau centralisée (VPN, Wi-Fi) |
+| **AD DS** | LDAP, Kerberos | Annuaire, Authentification, [GPO](gpo.md) |
+| **DNS** | DNS | Résolution de noms |
+| **DHCP** | DHCP | Attribution IP automatique |
+| **File Server** | SMB / CIFS | Serveur de partage de fichiers |
+| **Hyper-V** | Virtualisation Type 1 | Création de VMs |
+| **RDS** | RDP | Bureaux à distance et Virtualisation d'applis |
+| **WSUS** | HTTP/HTTPS | Mises à jour Windows centralisées |
+| **IIS** | HTTP/HTTPS | Hébergement Web Microsoft |
+| **NPS** | RADIUS | Authentification réseau (Wi-Fi d'entreprise) |

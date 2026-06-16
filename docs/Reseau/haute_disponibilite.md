@@ -9,100 +9,43 @@ tags:
 
 # VIP, Cluster, HA et Stack
 
-Ces concepts désignent les différentes techniques utilisées pour **garantir la disponibilité et la redondance** d'un service ou d'un équipement réseau.
+Les concepts clés pour garantir la résilience extrême et la continuité de service des infrastructures.
 
-## VIP — Virtual IP Address
+## 1. Définition
+La **Haute Disponibilité (HA - High Availability)** est un objectif majeur de conception d'architecture visant à éliminer totalement les points uniques de défaillance (SPOF - Single Point of Failure). Le but est de garantir qu'un service informatique reste accessible et transparent pour les utilisateurs, même en cas de panne matérielle sévère (feu, perte de courant, crash matériel).
 
-Une **VIP** (Adresse IP Virtuelle) est une adresse IP qui n'est pas liée à un seul équipement physique, mais qui **flotte** entre plusieurs serveurs ou équipements. Les clients accèdent toujours à la même IP, qui est prise en charge par l'équipement actif à un instant donné.
+## 2. Description / Fonctionnement
+Pour atteindre la HA, l'infrastructure s'appuie sur plusieurs technologies collaboratives :
+* **Le Cluster** : C'est un groupe de serveurs physiques qui travaillent main dans la main. S'il s'agit d'un cluster *Actif/Passif*, un seul serveur travaille, l'autre est en veille de secours. S'il est *Actif/Actif* (Load Balancing / Équilibrage de charge), ils se partagent le travail en permanence. Si l'un meurt, les survivants encaissent la totalité de son trafic.
+* **La VIP (Virtual IP)** : C'est une adresse IP "flottante" qui n'est pas fixée physiquement. Si le serveur A (qui détient la VIP) tombe en panne, le serveur B réclame immédiatement la VIP. Le client distant, qui ne connaît que l'adresse de cette VIP, ne subit aucune coupure.
+* **La Stack (Empilage)** : Technologie spécifique aux switchs réseau physiques. On relie plusieurs switchs empilés par un très gros câble dédié à l'arrière pour qu'ils fusionnent et ne forment plus qu'un seul gros équipement logique aux yeux de l'administrateur.
 
+## 3. Utilisation / Cas Pratique
+Lors du déploiement d'un portail web e-commerce ultra-critique, on place un *Load Balancer* (équilibreur de charge type HAProxy) devant deux gros serveurs Web. Le Load Balancer détient la **VIP** publique connue des clients. Il répartit le trafic de manière équitable (*Cluster Actif/Actif*).
+Côté armoire réseau, ces serveurs sont branchés à une **Stack** de 2 switchs en lien agrégé (LACP - un câble vers chaque switch). Ainsi, si un câble est coupé, qu'un switch grille, ou qu'un serveur Web brûle, le site web ne s'arrête pas une seule seconde.
+
+## 4. Modifications possibles / Alternatives
+L'ennemi mortel redouté de tout cluster est le fameux phénomène de **Split-Brain**. 
+C'est le cas très grave où le lien réseau de synchronisation entre le nœud A et le nœud B est coupé, mais que les deux serveurs physiques sont encore en vie de leur côté. Chacun croyant à tort que l'autre est mort, ils s'arrogent tous les deux la VIP en même temps et écrivent sur les mêmes disques de stockage partagés simultanément, ce qui entraîne une corruption irréversible de la base de données.
+La parade technologique est le **STONITH (Shoot The Other Node In The Head)** : Un mécanisme bas-niveau (ex: via iDRAC/IPMI) qui donne l'ordre d'éteindre de force l'alimentation électrique de l'autre nœud au moindre doute.
+
+## 5. Exemples visuels et Liens utiles
+
+### Basculement via VIP (Failover Actif/Passif)
 ```mermaid
 graph LR
-    C["👤 Client\n(accède à 10.0.0.100)"] --> VIP["🔵 VIP : 10.0.0.100"]
-    VIP --> A["⚙️ Nœud Actif\n(10.0.0.1)"]
-    VIP -.->|"Basculement si panne"| B["⚙️ Nœud Passif\n(10.0.0.2)"]
+    C["👤 Client Internet\n(Requête IP: 10.0.0.100)"] --> VIP["🔵 VIP Flottante : 10.0.0.100"]
+    VIP --> A["⚙️ Nœud Master (Actif)\nIP machine réelle : 10.0.0.1"]
+    VIP -.->|"En cas de panne du Master"| B["⚙️ Nœud Backup (Passif)\nIP machine réelle : 10.0.0.2"]
 ```
 
-**Protocoles de gestion de VIP :**
-* **VRRP** (Virtual Router Redundancy Protocol) : Standard ouvert, très utilisé sur les routeurs et pare-feux. Un routeur **Master** détient la VIP, les autres sont en **Backup**.
-* **HSRP** (Hot Standby Router Protocol) : Protocole propriétaire Cisco, logique similaire à VRRP.
-* **CARP** (Common Address Redundancy Protocol) : Utilisé sur BSD et pfSense.
-* **Keepalived** : Solution Linux très répandue pour la gestion de VIP couplée à des health checks.
-
----
-
-## Cluster
-
-Un **cluster** est un groupe de serveurs qui travaillent ensemble pour former un **système unique et plus fiable** (ou plus puissant). Il existe deux grandes familles :
-
-### Cluster de Haute Disponibilité (HA Cluster)
-
-Objectif : **Éliminer les points uniques de défaillance (SPOF)**. Si un nœud tombe, un autre prend le relais automatiquement.
-
-| Mode | Description |
-| :--- | :--- |
-| **Actif / Passif** | Un seul nœud traite les requêtes, l'autre attend en veille. |
-| **Actif / Actif** | Tous les nœuds traitent des requêtes simultanément. Répartition de charge + redondance. |
-
-### Cluster de Load Balancing
-
-Plusieurs serveurs traitent les requêtes en parallèle pour améliorer les **performances et la scalabilité**. Un **load balancer** (matériel ou logiciel) distribue les requêtes selon différents algorithmes :
-
-| Algorithme | Fonctionnement |
-| :--- | :--- |
-| **Round Robin** | Envoie à chaque serveur à tour de rôle |
-| **Least Connections** | Envoie au serveur qui a le moins de connexions actives |
-| **IP Hash** | Le même client va toujours sur le même serveur (session persistante) |
-| **Weighted** | Servers plus puissants reçoivent plus de requêtes |
-
----
-
-## HA — High Availability (Haute Disponibilité)
-
-La **HA** est un objectif de conception : garantir qu'un service reste **disponible un maximum de temps**, exprimé en pourcentage d'uptime :
-
-| Niveau | % Disponibilité | Indisponibilité max / an |
-| :---: | :---: | :--- |
-| **3 nines** | 99,9% | ~8h 45min |
-| **4 nines** | 99,99% | ~52 min |
-| **5 nines** | 99,999% | ~5 min |
-
-### Composants d'une architecture HA
-
-* **Redondance matérielle** : Alimentations doubles, disques en RAID, cartes réseau en agrégation (LACP/bonding)
-* **Clustering** : Plusieurs nœuds capables de prendre le relais
-* **VIP / Floating IP** : Les clients ne changent pas d'adresse lors d'un basculement
-* **Health checks** : Surveillance continue de l'état des nœuds
-* **Fencing / STONITH** : Mécanisme d'isolation d'un nœud défaillant pour éviter le split-brain
-
-> [!IMPORTANT]
-> Le **Split-Brain** est la situation où deux nœuds d'un cluster pensent chacun être le seul actif (après une perte de la liaison inter-nœuds). Cela peut provoquer une corruption des données. Le mécanisme **STONITH** (Shoot The Other Node In The Head) éteint de force le nœud incertain.
-
----
-
-## Stack (Empilage de switches)
-
-Une **stack** est un groupe de switches interconnectés par un câble dédié (backplane virtuel) et qui fonctionnent comme **un seul équipement logique** géré depuis une seule interface.
-
+### Stack de Switchs Réseau
 ```mermaid
 graph TD
-    subgraph "Stack = 1 switch logique"
+    subgraph "Une Stack = 1 seul switch logique"
         S1["Switch 1 (Master)"]
         S2["Switch 2"]
-        S3["Switch 3"]
-        S1 <-- "Câble Stack\n(StackWise, VSS, IRF)" --> S2
-        S2 <-- "Câble Stack" --> S3
-        S3 <-- "Câble Stack" --> S1
+        S1 <-- "Gros Câble Empilage (Backplane)" --> S2
     end
-    ADM["🖥️ Management\n(1 seule IP, 1 seule config)"] --> S1
+    ADM["🖥️ PC Administrateur\n(Se connecte à 1 seule IP de Management commune)"] --> S1
 ```
-
-**Avantages :**
-* **Gestion simplifiée** : Une seule IP de management, une seule configuration, un seul fichier IOS.
-* **Redondance** : Si le switch Master tombe, un autre prend le rôle automatiquement.
-* **Haute bande passante inter-switches** : Le backplane de stack est bien plus rapide qu'un simple câble réseau.
-* **Ports agrégés (LAG) cross-stack** : On peut créer un agrégat de liens physiquement répartis sur différents switches de la stack.
-
-**Technologies propriétaires :**
-* **Cisco StackWise / StackWise Virtual** (VSS pour les Catalyst 6500+)
-* **HP/Aruba IRF** (Intelligent Resilient Framework)
-* **Juniper Virtual Chassis**

@@ -9,69 +9,52 @@ tags:
 
 # Virtualisation et Conteneurisation
 
-La virtualisation et la conteneurisation sont deux approches permettant d'isoler des applications et de maximiser l'utilisation des ressources matérielles. Bien qu'elles répondent à des besoins similaires en termes d'isolation, leur fonctionnement diffère fondamentalement.
+Techniques permettant d'isoler des systèmes ou des applications pour maximiser l'utilisation du matériel.
 
-## 1. La Virtualisation (Machines Virtuelles - VMs)
+## 1. Définition
+* **Virtualisation** : S'appuie sur une couche logicielle (l'hyperviseur) pour simuler un ordinateur physique complet et y exécuter plusieurs systèmes d'exploitation (Machines Virtuelles ou VMs) de manière totalement isolée sur le même matériel physique.
+* **Conteneurisation** : Virtualisation légère au niveau de l'OS. Les conteneurs se partagent le même noyau (Kernel) que l'hôte mais restent isolés dans l'espace utilisateur.
 
-La virtualisation s'appuie sur une couche logicielle appelée **hyperviseur**, qui permet d'exécuter plusieurs systèmes d'exploitation (Guest OS) de manière isolée sur une même machine physique (Host).
+## 2. Description / Fonctionnement
+* **L'hyperviseur de Type 1 (Bare-Metal)** : S'installe directement sur le matériel, sans OS intermédiaire, pour des performances maximales (ex: VMware ESXi, Proxmox VE). 
+* **L'hyperviseur de Type 2** : S'installe sur un OS existant, utile pour les tests sur PC (ex: VirtualBox sur Windows).
+* **Les conteneurs systèmes (LXC)** : Simulent un système Linux complet (init, ssh) de façon très légère en partageant le noyau hôte.
+* **Les conteneurs applicatifs (Docker)** : Isolent uniquement un processus ou une application spécifique.
 
-Chaque VM embarque :
-- Un noyau complet (Kernel)
-- Les bibliothèques et binaires nécessaires
-- L'application
+## 3. Utilisation / Cas Pratique
+* **VMs** : Serveurs de production lourds, isolation forte de sécurité, hébergement d'OS différents (ex: faire tourner un serveur Windows sur une infrastructure physique Linux).
+* **LXC** : Déploiement d'environnements de type "serveur Linux" très denses sur Proxmox. Ils sont très rapides à démarrer et consomment très peu de RAM et d'espace disque.
+* **Docker** : Architecture microservices, pipelines CI/CD, garantie de portabilité du code entre l'environnement du développeur et la production.
 
-### Hyperviseur de Type 1 (Bare-Metal)
-S'installe **directement sur le matériel**, sans OS intermédiaire. Idéal pour les serveurs en production, car les performances sont excellentes.
-* **Exemples** : VMware ESXi, Microsoft Hyper-V (Server Core), Proxmox VE (KVM), Xen.
+## 4. Modifications possibles / Alternatives
 
-### Hyperviseur de Type 2 (Hosted)
-S'installe **au-dessus d'un système d'exploitation hôte** existant (Windows, Linux, macOS). Principalement utilisé pour le test et le développement sur poste de travail.
-* **Exemples** : VMware Workstation, Oracle VirtualBox.
+### Les Micro-VMs (Firecracker, Kata Containers)
+Une Micro-VM est une machine virtuelle extrêmement allégée, conçue pour démarrer en quelques millisecondes. Elle offre la vitesse de lancement d'un conteneur avec l'isolation de sécurité stricte d'une VM traditionnelle en utilisant un noyau minimaliste. C'est la technologie phare utilisée par le cloud public pour le *Serverless* (ex: AWS Lambda) afin d'exécuter du code de locataires différents sur les mêmes serveurs physiques en toute sécurité.
 
-## 2. La Conteneurisation
+## 5. Exemples visuels et Liens utiles
 
-La conteneurisation est une virtualisation **au niveau de l'OS**. Il n'y a pas d'hyperviseur ni de système d'exploitation invité (Guest OS).
-Tous les conteneurs se **partagent le même noyau (Kernel)** de l'OS hôte, mais restent isolés les uns des autres dans l'espace utilisateur (user space) grâce aux _Namespaces_ et aux _Cgroups_ sous Linux.
-
-* **Exemples** : [Docker](Conteneurs/docker.md), Podman, Containerd.
-
-### Les Conteneurs Systèmes : LXC / LXD
-
-Les **LXC** (Linux Containers) se situent à mi-chemin entre une VM complète et un conteneur applicatif Docker :
-* Contrairement à Docker (qui fait tourner un seul processus par conteneur), un **LXC fait tourner un OS Linux complet** (init, sshd, syslog...) de façon légère, mais toujours en partageant le noyau hôte.
-* **LXD / Incus** : Propose une surcouche de gestion aux LXC, les gérant presque comme des VMs (snapshots, migrations, réseau virtuel) au point qu'ils sont très populaires sur des plateformes comme Proxmox.
-
-## 3. Comparatif : VM vs LXC vs Docker
-
-| Caractéristique | Machine Virtuelle (VM) | Conteneur Système (LXC) | Conteneur d'Application (Docker) |
+### Comparatif VM vs LXC vs Docker
+| Caractéristique | Machine Virtuelle (VM) | Conteneur Système (LXC) | Conteneur (Docker) |
 | :--- | :--- | :--- | :--- |
-| **Périmètre** | Isole un OS complet | Isole un environnement OS Linux | Isole un processus applicatif (microservice) |
+| **Périmètre** | OS complet | Environnement OS Linux | Processus (Microservice) |
 | **Noyau (Kernel)** | Possède son propre noyau | **Partage le noyau de l'hôte** | **Partage le noyau de l'hôte** |
-| **Poids (Stockage)** | Lourd (Plusieurs Go) | Très léger (Quelques Mo) | Très léger (Quelques Mo) |
-| **Temps de démarrage** | Lent (Minutes) | Quasi instantané (Secondes) | Quasi instantané (Secondes) |
-| **Sécurité/Isolation** | Forte (Isolation Hard/Hyperviseur) | Modérée (Namespaces) | Modérée (Namespaces) |
+| **Temps boot** | Lent (Minutes) | Instantané (Secondes) | Instantané (Secondes) |
+| **Poids** | Lourd (Plusieurs Go) | Très léger (Quelques Mo) | Très léger (Quelques Mo) |
 
+### Architecture de base
 ```mermaid
 graph TD
-    subgraph "Machine Virtuelle (Hyperviseur)"
+    subgraph "Virtualisation (Hyperviseur)"
         H1["OS Invité 1 + App"]
-        H2["OS Invité 2 + App"]
-        HYP["Hyperviseur (ESXi / Hyper-V)"]
-        MAT1["Matériel Physique"]
+        HYP["Hyperviseur (ESXi / Proxmox)"]
         H1 --> HYP
-        H2 --> HYP
-        HYP --> MAT1
     end
 
-    subgraph "Conteneurs (LXC / Docker)"
-        C1["App 1"]
-        C2["App 2"]
-        ENG["Moteur de Conteneurs (Docker/LXC)"]
+    subgraph "Conteneurisation (LXC / Docker)"
+        C1["App / LXC 1"]
+        ENG["Moteur (Docker/LXD)"]
         OSH["OS Hôte (Noyau partagé)"]
-        MAT2["Matériel Physique"]
         C1 --> ENG
-        C2 --> ENG
         ENG --> OSH
-        OSH --> MAT2
     end
 ```

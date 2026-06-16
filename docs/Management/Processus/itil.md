@@ -9,9 +9,14 @@ tags:
 
 ITIL est un référentiel recensant les bonnes pratiques pour le **Management des Services Informatiques** (ITSM - *IT Service Management*). Son but est d'aligner les services informatiques sur les besoins de l'entreprise.
 
-## Les concepts clés
+## ITIL 4
 
-La version actuelle (ITIL 4) s'appuie sur le Système de Valeur des Services (SVS) et délaisse l'ancien cycle de vie en V pour une approche beaucoup plus agile.
+**Définition** : ITIL 4 est la dernière version du référentiel recensant les bonnes pratiques pour le Management des Services Informatiques (ITSM).
+**Description** : Elle s'appuie sur le Système de Valeur des Services (SVS) et délaisse l'ancien cycle de vie en V pour une approche beaucoup plus agile et holistique. Elle intègre des concepts issus d'autres frameworks comme Agile, DevOps et Lean.
+**Utilisation** : ITIL 4 est utilisé par les entreprises pour aligner l'informatique sur les besoins métiers, améliorer la qualité des services IT, réduire les coûts et gérer les risques.
+**Modifications possibles** : ITIL n'est pas une norme stricte mais un cadre (framework). Il est fortement recommandé d'adapter (tailoring) les pratiques à la taille, la culture et les contraintes spécifiques de l'organisation. On peut choisir de n'implémenter que certaines pratiques (ex: gestion des incidents, centre de services).
+
+## Les concepts clés
 
 ### 1. La co-création de Valeur
 Les services IT ne sont plus justes "délivrés" au client, la valeur est co-créée entre le fournisseur (l'IT) et le consommateur (les métiers), via une relation de partenariat.

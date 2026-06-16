@@ -7,76 +7,58 @@ tags:
 
 # VLAN et Segmentation Réseau
 
-Un **VLAN** (Virtual Local Area Network) est un réseau local virtuel qui permet de **segmenter logiquement** un réseau physique en plusieurs réseaux indépendants, même si les équipements partagent la même infrastructure physique (même switch).
+Mécanisme permettant de diviser un réseau physique en plusieurs réseaux virtuels isolés.
 
-## Pourquoi segmenter ?
+## 1. Définition
+Un **VLAN** (Virtual Local Area Network) est un réseau local virtuel. Il permet de segmenter logiquement un réseau physique en plusieurs domaines de diffusion (Broadcast Domains) totalement indépendants, et ce, même si les équipements sont physiquement branchés sur le même switch.
 
-Sans VLAN, tous les équipements sur un réseau partagent le même **domaine de broadcast** : un simple broadcast atteint tout le monde, et tout le monde peut "voir" le trafic des autres.
+## 2. Description / Fonctionnement
+Chaque VLAN agit comme un switch séparé et possède son propre sous-réseau IP. Un équipement dans le VLAN 10 ne peut pas communiquer directement avec un équipement du VLAN 20 sans passer par un routeur (routage inter-VLAN).
+Deux types de ports existent sur les switchs pour gérer les VLANs :
+* **Port Access** : Le port du switch appartient à un seul VLAN. Le PC branché dessus reçoit du trafic standard sans étiquette ; il n'a pas conscience d'être dans un VLAN.
+* **Port Trunk (802.1Q)** : Le port transporte le trafic de *plusieurs* VLANs en même temps. Il ajoute une "étiquette" (Tag 802.1Q) sur chaque trame Ethernet pour indiquer au switch voisin à quel VLAN elle appartient. Utilisé pour relier les switchs entre eux ou vers un routeur.
 
-**Bénéfices des VLANs :**
-* **Sécurité** : Isolation logique entre les services (un poste du VLAN Comptabilité ne peut pas accéder directement au serveur de Production).
-* **Performance** : Réduit la taille des domaines de broadcast, donc le bruit réseau.
-* **Flexibilité** : Regrouper des équipements par fonction (VLAN Serveurs, VLAN RH, VLAN Imprimantes) indépendamment de leur localisation physique.
-* **Simplification de l'administration** : Déplacer un poste de VLAN = changement de configuration sur le switch, pas de câblage.
+## 3. Utilisation / Cas Pratique
+Les VLANs sont fondamentaux en entreprise pour la sécurité, les performances (limitation du bruit broadcast) et l'organisation logique.
+Exemple d'architecture recommandée :
+* **VLAN 10** : Serveurs de production.
+* **VLAN 20** : Postes Utilisateurs.
+* **VLAN 30** : Administration IT (Hyperviseurs, Switchs).
+* **VLAN 50** : Téléphones IP (VoIP).
+* **VLAN 60** : Wi-Fi Visiteurs (strictement isolé, accès vers Internet uniquement).
 
-## Fonctionnement : Ports Access et Trunk
+## 4. Modifications possibles / Alternatives
+Pour faire communiquer le VLAN Serveurs et le VLAN Utilisateurs, on déploie un routeur ou un pare-feu au centre (Routage L3).
+Pour les Data Centers géants, la limite technique de 4096 VLANs est problématique. Le SDN (Software-Defined Networking) ou le **VXLAN** sont les évolutions modernes majeures pour gérer la micro-segmentation à très grande échelle.
 
-### Port Access
-Un port **access** est configuré pour appartenir à **un seul VLAN**. Le poste connecté ne "sait" pas qu'il est dans un VLAN, il croit être sur un réseau normal.
+## 5. Exemples visuels et Liens utiles
 
-### Port Trunk (802.1Q)
-Un port **trunk** transporte le trafic de **plusieurs VLANs** simultanément, en ajoutant un **tag 802.1Q** dans l'entête Ethernet pour identifier à quel VLAN appartient chaque trame. Utilisé entre les switches et entre un switch et un routeur.
-
+### Architecture Trunk et Access
 ```mermaid
 graph LR
-    PC1["💻 PC VLAN 10\n(Comptabilité)"]
-    PC2["💻 PC VLAN 20\n(Informatique)"]
-    SW["🔀 Switch L2"]
-    R["🌐 Routeur\n(Inter-VLAN)"]
+    PC1["💻 PC Comptabilité\n(VLAN 10)"]
+    PC2["💻 PC Informatique\n(VLAN 20)"]
+    SW["🔀 Switch Local"]
+    R["🌐 Routeur Pare-feu\n(Routage Inter-VLAN)"]
 
-    PC1 -- "Port Access VLAN 10" --> SW
-    PC2 -- "Port Access VLAN 20" --> SW
-    SW -- "Port Trunk (802.1Q)\nVLAN 10 + VLAN 20" --> R
+    PC1 -- "Port Access (VLAN 10)" --> SW
+    PC2 -- "Port Access (VLAN 20)" --> SW
+    SW -- "Port Trunk (802.1Q)\nVLAN 10 + 20" --> R
 ```
 
-## Architecture de VLANs recommandée
-
-| VLAN ID | Nom | Contenu typique |
-| :---: | :--- | :--- |
-| **10** | VLAN_SERVEURS | Serveurs de production |
-| **20** | VLAN_UTILISATEURS | Postes de travail |
-| **30** | VLAN_MGMT | Interfaces de management (iDRAC, IPMI, switch admin) |
-| **40** | VLAN_DMZ | Serveurs exposés (web, mail) |
-| **50** | VLAN_VOIP | Téléphones IP |
-| **60** | VLAN_INVITES | Réseau Wi-Fi pour les visiteurs (isolé d'internet uniquement) |
-| **99** | VLAN_NATIF | VLAN natif (non taggé) des trunks |
-
-> [!IMPORTANT]
-> Le **VLAN de management** (accès aux interfaces d'admin) doit être isolé et accessible uniquement depuis les postes des administrateurs. Changer le VLAN natif pour qu'il ne soit pas le VLAN 1 par défaut.
-
-## Commandes Cisco (Switch L2/L3)
-
+### Exemple : Commandes de configuration Cisco
 ```bash
-! Créer un VLAN
+! Créer le VLAN 10
 vlan 10
  name VLAN_SERVEURS
-
-! Configurer un port Access
+ 
+! Assigner un port PC (Access)
 interface FastEthernet0/1
  switchport mode access
  switchport access vlan 10
-
-! Configurer un port Trunk
+ 
+! Assigner un port vers le routeur (Trunk)
 interface GigabitEthernet0/1
  switchport mode trunk
- switchport trunk allowed vlan 10,20,30
-
-! Vérification
-show vlan brief
-show interfaces trunk
+ switchport trunk allowed vlan 10,20
 ```
-
-## Voir aussi
-- [Routage inter-VLAN](routage.md)
-- [ACL — Contrôle des flux entre VLANs](acl.md)
-- [Proxy et Pare-feu](Securite/proxy_firewall.md)

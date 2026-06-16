@@ -7,32 +7,24 @@ tags:
 
 # EBIOS RM (Expression des Besoins et Identification des Objectifs de Sécurité)
 
-EBIOS Risk Manager est la méthode d'analyse et d’évaluation des risques cybernétiques créée par l'**ANSSI** (Agence Nationale de la Sécurité des Systèmes d'Information) en France.
+Méthode française d'analyse et d'évaluation des risques cybernétiques centrée sur le risque métier.
 
-## Objectif
+## 1. Définition
+EBIOS Risk Manager est la méthode d'analyse et d’évaluation des risques cybernétiques créée et maintenue par l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) en France.
 
-Contrairement à une simple analyse de vulnérabilités techniques, EBIOS RM adopte une approche ciblée sur le **risque métier**. Elle vise à déterminer les mesures de sécurité concrètes à implémenter pour protéger ce qui compte vraiment pour l'organisation.
+## 2. Description / Fonctionnement
+La méthode complète se déroule en 5 ateliers séquentiels animés avec les différentes parties prenantes :
+1. **Cadrage et socle de sécurité** : Définir le périmètre de l'étude et s'assurer des pré-requis. Identifier les Valeurs Métier.
+2. **Sources de risques (SR)** : Identifier qui pourrait attaquer (cybercriminel, concurrent...).
+3. **Scénarios stratégiques** : Évaluer les chemins d'attaque macroscopiques.
+4. **Scénarios opérationnels** : Décliner en attaques techniques réelles pour évaluer la vraisemblance.
+5. **Traitement du risque** : Décider si l'on **Réduit**, **Refuse**, **Transfère** ou **Accepte** le risque.
 
-## La méthode en 5 étapes
+## 3. Utilisation / Cas Pratique
+Contrairement à un simple scan de vulnérabilités techniques, EBIOS RM est utilisé pour déterminer les mesures de sécurité concrètes à implémenter pour protéger ce qui compte vraiment pour l'organisation (approche par les risques). Elle est souvent exigée pour les projets critiques de l'État ou des OIV.
 
-La méthode complète (souvent animée sous forme d'ateliers avec les différentes parties prenantes) se déroule en 5 ateliers séquentiels :
+## 4. Modifications possibles / Alternatives
+Des méthodes alternatives existent au niveau international comme ISO/IEC 27005 (dont EBIOS RM est d'ailleurs une déclinaison compatible), ou encore la méthode OCTAVE ou FAIR. La rigueur des ateliers peut être allégée (mode "Flash") pour des petits projets.
 
-### Atelier 1 : Cadrage et socle de sécurité
-Définir le périmètre de l'étude (Le projet X, l'application Y) et s'assurer que les pré-requis de sécurité basiques (hygiène informatique) sont déjà en place. Identifier les *Valeurs Métier* (ce qu'on cherche à protéger).
-
-### Atelier 2 : Sources de risques (SR)
-Identifier "qui" pourrait nous attaquer. (ex: Un cybercriminel appâté par le gain, un concurrent, un hacktiviste, un employé malveillant ou négligent).
-
-### Atelier 3 : Scénarios stratégiques
-Évaluer les chemins d'attaque macroscopiques. Comment la SR pourrait-elle atteindre l'objectif qu'elle vise ? On se concentre sur l'écosystème (ex: attaquer un sous-traitant vulnérable pour rebondir vers notre entreprise).
-
-### Atelier 4 : Scénarios opérationnels
-Décliner les scénarios stratégiques en attaques techniques réelles (ex: Phishing ciblé sur la comptabilité -> Déploiement d'un Ranswomware -> Chiffrement des serveurs -> Arrêt de l'activité). C'est là que l'on calcule la **vraisemblance**.
-
-### Atelier 5 : Traitement du risque
-Prendre les décisions face aux risques identifiés (les risques résiduels inacceptables). 
-Pour chaque risque, on décide si on le :
-- **Réduit** (En ajoutant des mesures de sécurité : EDR, MFA...).
-- **Refuse** (En arrêtant l'activité trop dangereuse).
-- **Transfère** (En prenant une cyber-assurance ou en sous-traitant à un Cloud certifié).
-- **Accepte** (En connaissance de cause, validé par la Direction).
+## 5. Exemples visuels et Liens utiles
+Pour plus d'informations et télécharger les guides officiels, consultez le site de [l'ANSSI](anssi.md) ou le Club EBIOS.

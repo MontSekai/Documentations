@@ -7,96 +7,51 @@ tags:
 
 # Spanning Tree Protocol (STP)
 
-Le **Spanning Tree Protocol (STP)** est un protocole de couche 2 qui permet d'**éliminer les boucles** dans les réseaux commutés (switches) tout en maintenant une **redondance physique** des liens.
+Le protocole indispensable garant de la topologie physique et de l'absence de boucles réseau fatales.
 
-## Pourquoi STP est-il nécessaire ?
+## 1. Définition
+Le **Spanning Tree Protocol (STP / IEEE 802.1D)** est un protocole de sécurité de couche 2 (Liaison de données, celle des [Trames Ethernet](Protocoles/ethernet_trames.md)) qui a pour rôle fondamental d'**éliminer les boucles logiques** dans les réseaux de Switchs tout en conservant et en autorisant un câblage de secours matériel redondant.
 
-Dans un réseau avec plusieurs switches interconnectés, il est courant de câbler des liens en redondance pour éviter les SPOF. Sans STP, ces boucles physiques provoquent des **tempêtes de broadcast** : les trames se multiplient à l'infini sur le réseau et le saturent complètement.
+## 2. Description / Fonctionnement
+Dans les armoires informatiques d'une entreprise, on relie très souvent les Switchs d'étage entre eux avec plusieurs câbles de secours en même temps (le but : si un câble est mordu par un rat ou coupé, le réseau d'étage continue de fonctionner). 
+Le drame de la Couche 2, c'est qu'elle ne possède aucun mécanisme de durée de vie (pas de *TTL*) sur ses trames, contrairement aux paquets IP. 
+Si une simple trame de Broadcast (ex: demande IP au réseau DHCP) se met à tourner en boucle dans ces câbles de secours branchés en rond, la trame se duplique à l'infini en une fraction de seconde : c'est la **Tempête de Broadcast** qui sature les puces des switchs et fait s'effondrer la totalité du réseau de l'entreprise.
 
-**STP résout ce problème en bloquant logiquement certains ports**, tout en conservant les câbles comme chemin de secours.
+**Le STP résout ce problème mortel en "bloquant" de manière virtuelle et automatique (Blocking State) les ports des câbles redondants**. Il trace un chemin unique, propre, et sans boucle (une forme mathématique d'Arbre - *Tree*). Si le câble principal de travail lâche, le STP s'en aperçoit et débloque le câble de secours (Forwarding State) pour rétablir la communication.
 
-## Fonctionnement de STP (802.1D)
+## 3. Utilisation / Cas Pratique
+Le fonctionnement mathématique du STP s'articule autour de l'élection d'un "Chef d'orchestre", le **Root Bridge (Le pont racine)**.
+Le switch central possédant le numéro de priorité matérielle le plus bas devient le Root Bridge. Ensuite, absolument tous les autres switchs du réseau calculent la distance la plus courte pour le rejoindre. Ils laissent le port le plus proche ouvert, et décident de bloquer de force tous les autres câbles inutiles qui risqueraient de former une boucle.
 
-### Étape 1 : Élection du Root Bridge
-Le **Root Bridge** est le centre de l'arbre STP. Il est élu en fonction du **Bridge ID** = Priorité (défaut: 32768) + Adresse MAC. Le Bridge ID le plus bas est élu.
+## 4. Modifications possibles / Alternatives
+Le problème historique majeur du vieux STP (Norme 802.1D des années 90) est son incroyable lenteur : quand un câble est physiquement cassé, le STP met entre 30 et 50 secondes pour analyser le réseau et oser débloquer le câble de secours. Cela provoque une coupure réseau très douloureuse pour la téléphonie et les applications.
 
-### Étape 2 : Calcul du chemin vers le Root Bridge
-Chaque switch calcule le chemin le plus court (en **coût STP**) vers le Root Bridge.
+**L'alternative moderne indispensable est le RSTP (Rapid Spanning Tree - 802.1w)** : Il s'agit du standard mondial actuel. Grâce à de nouveaux mécanismes de négociation explicite de switch à switch, il "converge" (s'adapte à une panne) en **moins d'une seconde**.
 
-| Vitesse du lien | Coût STP (802.1D) |
-| :---: | :---: |
-| 10 Mbps | 100 |
-| 100 Mbps | 19 |
-| 1 Gbps | 4 |
-| 10 Gbps | 2 |
+**PortFast et BPDU Guard** :
+Sur les Switchs d'accès, les ports qui sont branchés à des PC de bureau ou à des Serveurs finaux ne causeront logiquement jamais de boucle de switch. L'administrateur active donc la configuration **PortFast** sur ces ports : cela ordonne au STP de ne pas analyser le port au démarrage et de l'ouvrir immédiatement (le PC ne doit pas attendre 30 secondes pour avoir du réseau).
+En contrepartie, par sécurité drastique, on y greffe le mécanisme **BPDU Guard** : si un employé mal intentionné branche en douce un switch de maison sur cette prise murale "PortFast", le BPDU Guard détecte la trame du switch et "éteint / coupe" la prise murale instantanément.
 
-### Étape 3 : Attribution des rôles aux ports
+## 5. Exemples visuels et Liens utiles
 
-| Rôle | Description | État |
-| :--- | :--- | :---: |
-| **Root Port (RP)** | Port offrant le meilleur chemin vers le Root Bridge | Forwarding |
-| **Designated Port (DP)** | Port sélectionné pour chaque segment réseau | Forwarding |
-| **Blocked Port (BP)** | Port redondant mis en veille pour casser la boucle | Blocking |
-
+### Architecture de blocage STP Simplifiée
 ```mermaid
 graph TD
-    RB["🔲 Root Bridge\n(Switch A - ID le plus bas)"]
-    SB["Switch B"]
-    SC["Switch C"]
+    RB["🔲 Switch Root Bridge\n(Le Chef de l'Arbre - Switch Central)"]
+    SB["Switch d'Accès B\n(Étage 1)"]
+    SC["Switch d'Accès C\n(Étage 2)"]
 
-    RB -- "DP" --> SB
-    RB -- "DP" --> SC
-    SB -- "RP" --> RB
-    SC -- "RP" --> RB
-    SB -- "DP ←→ BLOCKED" --> SC
+    RB -- "Port Ouvert (Designated)" --> SB
+    RB -- "Port Ouvert (Designated)" --> SC
+    SB -- "Port Ouvert (Root Port)" --> RB
+    SC -- "Port Ouvert (Root Port)" --> RB
+    SB -. "Câble de secours ROUGE et BLOQUÉ par STP" .- SC
 ```
 
-## États des ports STP (802.1D)
-
-| État | Durée | Description |
-| :--- | :---: | :--- |
-| **Blocking** | — | Reçoit les BPDU, ne transmet pas de données |
-| **Listening** | 15s | Participe à l'élection, ne transmet pas |
-| **Learning** | 15s | Construit la table MAC, ne transmet pas |
-| **Forwarding** | — | Transmet normalement les données |
-| **Disabled** | — | Port administrativement désactivé |
-
-> **Temps de convergence STP (802.1D) : ~30 à 50 secondes.** C'est le principal défaut de STP classique.
-
-## RSTP — Rapid STP (802.1w)
-
-**RSTP** (Rapid Spanning Tree Protocol) est l'évolution moderne de STP. Il remplace les timers par un mécanisme de **négociation explicite** entre switches, réduisant le temps de convergence à **moins de 1 seconde** dans les conditions optimales.
-
-| Caractéristique | STP (802.1D) | RSTP (802.1w) |
-| :--- | :---: | :---: |
-| Convergence | 30 à 50s | < 1s |
-| Rôles de ports | 3 | 5 (+ Alternate, Backup) |
-| Compatibilité | — | Rétrocompatible avec STP |
-| Standard recommandé | ❌ Obsolète | ✅ **Utiliser RSTP** |
-
-## MSTP — Multiple STP (802.1s)
-
-**MSTP** permet de faire tourner **plusieurs instances STP** sur un seul switch, une par groupe de VLANs. Cela permet d'équilibrer le trafic sur des liens redondants en dédiant chaque chemin à certains VLANs.
-
-## Commandes Cisco
-
-```bash
-! Vérifier STP
-show spanning-tree                    ! Vue générale STP par VLAN
-show spanning-tree vlan 10            ! STP pour un VLAN spécifique
-
-! Forcer un switch à être Root Bridge
-spanning-tree vlan 10 priority 4096  ! Priorité basse = Root Bridge préféré
-spanning-tree vlan 10 root primary    ! Commande raccourcie
-
-! Activer RSTP
-spanning-tree mode rapid-pvst         ! Rapid-PVST+ (RSTP par VLAN, Cisco)
-
-! PortFast : convergence immédiate sur les ports accès (PC/serveurs uniquement !)
-interface FastEthernet0/1
- spanning-tree portfast               ! JAMAIS sur un port connecté à un switch
- spanning-tree bpduguard enable       ! Bloque le port si une BPDU est reçue (sécurité)
-```
-
-> [!IMPORTANT]
-> **PortFast + BPDU Guard** : Activer PortFast uniquement sur les ports reliés à des postes finaux (PC, serveurs). Si un switch est accidentellement branché dessus, **BPDU Guard** désactivera immédiatement le port pour éviter les boucles.
+### Les États classiques d'un port sous STP (802.1D)
+| État du port | Comportement sur le réseau |
+| :--- | :--- |
+| **Blocking** (Port Bloqué) | Le port est verrouillé logiquement pour empêcher la boucle fatale. |
+| **Listening** (Phase d'Écoute) | Transition. Le port analyse les annonces STP des switchs voisins. |
+| **Learning** (Apprentissage) | Transition. Le switch mémorise silencieusement les adresses MAC. |
+| **Forwarding** (Acheminement Actif) | Le port est sain, il laisse passer les trames réseau normales. |

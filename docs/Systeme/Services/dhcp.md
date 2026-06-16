@@ -7,24 +7,27 @@ tags:
 
 # DHCP (Dynamic Host Configuration Protocol)
 
-Le DHCP est un protocole réseau dont le rôle est d'assurer la configuration automatique des paramètres IP d'une machine.
+Protocole réseau assurant la configuration automatique des paramètres IP d'une machine.
 
-## Fonctionnement
+## 1. Définition
+Le DHCP (Dynamic Host Configuration Protocol) est un protocole réseau dont le rôle est d'attribuer dynamiquement et automatiquement une adresse IP et des paramètres de configuration réseau aux appareils qui s'y connectent.
 
-Lorsqu'un appareil se connecte au réseau, il envoie une requête de diffusion (*DHCP Discover*) pour trouver un serveur DHCP, qui va lui attribuer dynamiquement :
-- Une adresse IP
-- Un masque de sous-réseau
-- Une passerelle par défaut
-- Un ou plusieurs serveurs [DNS](dns.md)
+## 2. Description / Fonctionnement
+Lorsqu'un appareil se connecte, l'échange se fait en 4 étapes (DORA) :
+* **D**iscover : Le client envoie une requête de diffusion pour trouver un serveur.
+* **O**ffer : Le serveur propose une IP disponible.
+* **R**equest : Le client accepte et demande cette IP.
+* **A**cknowledge : Le serveur confirme et valide le bail (Lease).
 
-## Le Relais DHCP (DHCP Relay / IP Helper)
+Les paramètres distribués incluent l'adresse IP, le masque de sous-réseau, la passerelle par défaut, et les serveurs [DNS](dns.md).
 
-Par défaut, les requêtes DHCP sont des requêtes de **diffusion réseau (Broadcast)**. Or, par définition, **un routeur bloque les broadcasts**. 
+## 3. Utilisation / Cas Pratique
+Le DHCP est utilisé sur la quasi-totalité des réseaux (de la box Internet grand public au réseau d'entreprise) pour éviter à l'administrateur de configurer manuellement l'adresse IP de chaque ordinateur ou smartphone. Cela représente un gain de temps massif et prévient les conflits d'adresses IP.
 
-Si votre serveur DHCP (ex: un Windows Server) ne se trouve pas physiquement sur le même sous-réseau que le PC client (par exemple, le serveur est dans le VLAN Serveurs et le PC dans le VLAN Utilisateurs), la requête du PC n'atteindra jamais le serveur.
+## 4. Modifications possibles / Alternatives
+Pour les serveurs (Web, AD, Fichiers) ou les équipements fixes (imprimantes, caméras), on utilise une IP statique fixée manuellement, ou bien on configure une "réservation DHCP" sur le serveur (il donne toujours la même IP à la même adresse MAC physique).
 
-Pour résoudre ce problème, on configure un **Relais DHCP** (souvent appelé *IP Helper-Address* chez Cisco) sur l'interface du routeur côté client. 
-1. Le client envoie sa requête Broadcast `255.255.255.255`.
-2. Le routeur intercepte ce Broadcast.
-3. Le routeur transforme la requête en message **Unicast** (un message direct point-à-point) et l'envoie à l'adresse IP exacte du serveur DHCP.
-4. Le serveur DHCP répond au routeur, qui retransmet l'IP au client.
+**Le Relais DHCP (IP Helper)** : Si le serveur DHCP n'est pas sur le même réseau local (VLAN) que le client, on configure le routeur pour intercepter le *Discover* et le relayer directement en Unicast au serveur. C'est obligatoire car les routeurs bloquent nativement le trafic Broadcast.
+
+## 5. Exemples visuels et Liens utiles
+*(Ajouter un schéma réseau illustrant le processus DORA).*

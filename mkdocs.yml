@@ -115,6 +115,7 @@ nav:
       - Normes et Réglementation:
           - Cybersecurite/normes_reglementation.md
       - Gouvernance:
+          - Cybersecurite/identite_acces.md
           - Cybersecurite/pssi.md
           - Cybersecurite/pgssi_s.md
           - Cybersecurite/pca_pra.md
@@ -125,6 +126,8 @@ nav:
       - Management/management.md
       - Gestion_de_projet:
           - Management/Gestion_de_projet/outils_gestion_projet.md
+          - Management/Gestion_de_projet/methodologies_projet.md
+          - Management/Gestion_de_projet/pmo_ppm.md
           - Management/Gestion_de_projet/matrice_des_risques.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
@@ -133,12 +136,15 @@ nav:
           - Management/Strategie/but_objectif.md
           - Management/Strategie/kpi.md
           - Management/Strategie/swot.md
+          - Management/Strategie/finance_it.md
+          - Management/Strategie/transformation_numerique.md
   - Développement:
       - Developpement/developpement.md
       - Bases_de_donnees:
           - Developpement/Bases_de_donnees/sql.md
   - Autres:
       - Autres/autres.md
+      - Autres/charte_editoriale.md
       - Projets:
           - Autres/rpg-tower-crawler.md
   - Index des Tags: tags.md

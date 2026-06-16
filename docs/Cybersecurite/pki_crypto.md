@@ -8,70 +8,73 @@ tags:
 
 # Cryptographie, Certificats et PKI
 
-## Concepts Fondamentaux de Cryptographie
-
-### Cryptographie Symétrique
-* Utilise **une seule et même clé** (clé secrète) pour chiffrer **et** déchiffrer la donnée.
-* Extrêmement rapide : idéale pour chiffrer massivement des données (disques durs, payload réseau VPN IPSec/TLS).
-* Protocole dominant : **[AES (Advanced Encryption Standard)](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard)** (AES-128, AES-256).
-* **Le problème** : La distribution de la clé. Comment envoyer la clé secrète au destinataire sur Internet sans qu'elle soit interceptée ?
-
-### Cryptographie Asymétrique (à clé publique)
-Résout le problème de distribution de la clé secrète. Génération d'une paire mathématiquement liée :
-1. **Clé publique** : Diffusée publiquement (à tout le monde).
-2. **Clé privée** : Strictement secrète et conservée localement, **jamais transmise**.
-
-* **Le principe (Chiffrement)** : Tout ce qui est chiffré avec la clé publique d'une personne, ne peut être déchiffré **que** par sa clé privée. Donc on confie notre clé publique à tout Internet. Si Alice veut écrire à Bob, Alice chiffre le message avec la clé publique de Bob. Seul Bob peut le lire.
-* **Le principe (Signature)** : Tout ce qui a été chiffré par la clé privée de Bob ne peut être vérifié que par la clé publique de Bob. C'est l'inverse : Bob chiffre l'empreinte de son contrat avec sa clé secrète. On lit le contrat en utilisant sa clé publique. On prouve ainsi que seul Bob (le possesseur de la clé privée) a rédigé le document (Non-répudiation).
-* Protocoles : **RSA**, courbes elliptiques (ECDH), Diffie-Hellman.
+Principes fondamentaux de protection de la donnée et de vérification des identités numériques.
 
 ---
 
-## Les Certificats Numériques (X.509)
+## 1. Cryptographie Symétrique et Asymétrique
 
-La cryptographie asymétrique a elle aussi une faille critique : l'**attaque Man-in-the-Middle**.
-Si un attaquant intercepte la demande de clé publique, il peut fournir *sa propre clé publique* à la victime en se faisant passer pour un site (ex: fausse clé du site impots.gouv.fr). Comment garantir que la clé publique appartient bien au véritable serveur ? **Grâce aux certificats**.
+### 1.1. Définition
+La cryptographie est l'art de chiffrer un message clair pour le rendre inintelligible. L'informatique moderne repose sur deux grandes familles : la cryptographie **symétrique** et **asymétrique**.
 
-Un **Certificat numérique (standard X.509)** est une carte d'identité inviolable qui lie une identité (Un FQDN de serveur, une entreprise...) à un jeu de clés asymétriques.
+### 1.2. Description / Fonctionnement
+* **Symétrique** : Utilise *une seule et même clé secrète* pour chiffrer et déchiffrer la donnée. Elle est extrêmement rapide (idéale pour la data volumineuse avec AES). Son défaut majeur est la distribution de la clé : comment l'envoyer secrètement au destinataire distant sur Internet ?
+* **Asymétrique** : Utilise une paire de clés mathématiquement liées (*Publique / Privée*). Ce qui est chiffré par l'une ne peut être déchiffré que par l'autre. La clé publique est diffusée à tous sans danger, la privée est gardée secrète. Elle résout le problème d'échange de clé mais reste lente.
 
-Un certificat inclut :
-* L'identité du propriétaire (ex: www.monsite.com, Google LLC...)
-* Sa **clé publique**
-* La date d'expiration
-* Qui a émis le certificat (L'Autorité de Certification)
-* **La signature électronique de l'Autorité qui prouve la validité de l'ensemble.**
+### 1.3. Utilisation / Cas Pratique
+Sur Internet (le Web HTTPS/TLS), on utilise un système **hybride** : l'asymétrique (lent) est utilisé au tout début de la connexion pour permettre aux deux ordinateurs d'échanger une clé symétrique de manière sécurisée. Ensuite, tout le reste de la session Web s'effectue en symétrique (bien plus rapide).
+
+### 1.4. Modifications possibles / Alternatives
+L'informatique quantique menace de casser à terme les algorithmes asymétriques actuels (RSA, Elliptic Curves). L'alternative d'avenir sur laquelle l'industrie travaille est la **cryptographie post-quantique**.
+
+### 1.5. Exemples visuels et Liens utiles
+*(Ajouter un schéma d'échange de clés asymétriques entre Alice et Bob).*
 
 ---
 
-## Infrastructure à Clés Publiques (PKI)
+## 2. Certificats Numériques (X.509)
 
-La **PKI (Public Key Infrastructure)** est le système physique, procédural et humain qui permet de créer, distribuer, gérer et révoquer ces certificats numériques.
+### 2.1. Définition
+Un certificat numérique (au standard X.509) est une "carte d'identité" numérique inviolable qui lie formellement une entité (un nom de domaine, une entreprise, un utilisateur) à sa propre clé publique.
 
+### 2.2. Description / Fonctionnement
+La cryptographie asymétrique a une faille conceptuelle : l'attaque "Man-in-the-Middle" (quelqu'un se fait passer pour le serveur et donne sa propre clé publique à la place). Le certificat numérique empêche cela. Il contient l'identité du serveur, sa clé publique, sa date de validité, et surtout **la signature cryptographique** d'une autorité de confiance supérieure certifiant que "cette clé appartient bien à cette identité".
+
+### 2.3. Utilisation / Cas Pratique
+Lorsqu'un utilisateur navigue sur `https://impots.gouv.fr`, le serveur présente son certificat. Le navigateur de l'utilisateur vérifie cryptographiquement la signature de ce certificat. Si la signature est valide et de confiance, il affiche le "cadenas sécurisé".
+
+### 2.4. Modifications possibles / Alternatives
+Il n'existe pas d'alternative majeure ou de concurrent au standard X.509 aujourd'hui sur le web mondial.
+
+### 2.5. Exemples visuels et Liens utiles
+Vous pouvez cliquer sur le petit cadenas dans la barre d'adresse de votre navigateur pour visualiser le certificat du site actuel et voir qui a signé l'identité du site.
+
+---
+
+## 3. PKI (Public Key Infrastructure)
+
+### 3.1. Définition
+La PKI est l'infrastructure complète (comprenant les serveurs, les algorithmes, et les procédures humaines strictes) qui permet de créer, distribuer, gérer et révoquer les certificats numériques.
+
+### 3.2. Description / Fonctionnement
+Au cœur de toute PKI se trouve l'**Autorité de Certification (CA - Certificate Authority)**. C'est elle qui vérifie l'identité du demandeur et qui appose sa signature sur le certificat.
+Il existe de grandes CA publiques (*Let's Encrypt, DigiCert*) dont le certificat racine est reconnu mondialement et intégré nativement dans tous les PC et smartphones de la planète.
+
+### 3.3. Utilisation / Cas Pratique
+Les grandes entreprises déploient généralement leur propre PKI interne (CA privée) via Microsoft Active Directory Certificate Services (AD CS). Cela permet de générer des certificats internes (gratuits) pour sécuriser l'Intranet, le réseau Wi-Fi d'entreprise (802.1X) ou le VPN des employés.
+
+### 3.4. Modifications possibles / Alternatives
+Gérer une PKI d'entreprise est une tâche d'ingénierie complexe et critique (notamment la gestion des "CRL" pour révoquer les certificats volés). Aujourd'hui, les architectures modernes de type **Zero Trust** s'appuient massivement sur la PKI pour vérifier l'identité de chaque appareil à chaque connexion réseau.
+
+### 3.5. Exemples visuels et Liens utiles
 ```mermaid
 graph TD
     AC["🏢 Root CA (Autorité de Certification Racine)"]
     INT["🏢 Intermediate CA (AC Déléguée)"]
-    USER["💻 End-Entity (Serveur Web HTTPS / Utilisateur / PC)"]
+    USER["💻 End-Entity (Serveur Web / Utilisateur)"]
     CRL["📜 CRL / OCSP (Liste de révocation)"]
 
     AC -- "Signe" --> INT
     INT -- "Émet" --> USER
     INT -. "Vérifie" .-> CRL
 ```
-
-### 1. L'Autorité de Certification (CA - Certificate Authority)
-
-C'est l'ordinateur serveur, ou le service tiers très sécurisé, chargé de vérifier l'identité du demandeur de certificat. S'il valide, le composant CA va apposer **sa propre signature (chiffrement par sa clé privée hyper-référente)** sur la demande du client, émettant ainsi le certificat final du client.
-
-* **Exemples de CA Publics** mondiaux par défaut fournis dans les PC/Mac/iOS/Android : *DigiCert, Let's Encrypt, GlobalSign, IdenTrust.*
-* **CA Privé (PKI d'entreprise)** : Une entreprise gère un serveur "AD CS" (Active Directory Certificate Services) interne pour émettre ses propres cartes d'identité numériques, afin de sécuriser le réseau local interne (Wi-Fi 802.1X, VPN, sites webs intranet). Cette CA racine de l'entreprise est déployée manuellement par GPO sur tous les PCs locaux pour qu'ils lui fassent tous nativement confiance.
-
-### 2. Le fonctionnement Pratique du TLS / HTTPS sur le Web
-
-1. **Le client** "John" accède via son navigateur Chrome à `https://www.site-secure.com`
-2. **Le serveur** `site-secure.com` présente son certificat X.509 à John (comportant sa clé publique, son nom, l'identité du CA qui a signé, et les dates de durée de vie).
-3. **Le navigateur client Chrome** inspecte le certificat. Il lit que "Let's Encrypt" a apposé sa signature dessus. Chrome va fouiller dans le "Root Store" local de l'OS Microsoft Windows (ou l'OS Apple de la machine de John) pour vérifier s'il fait confiance, par défaut, à "Let's Encrypt".
-4. "Let's Encrypt" est préinstallé globalement sur tous les PCs du monde moderne. C'est le cas. Le PC client effectue alors de savants calculs cryptographiques ("Déchiffrer la signature serveur avec la clé de Let's Encrypt stockée localement dans l'OS"). Les mathématiques sont exactes. La validité (la non répudiation) du site `site-secure.com` est validée. Le navigateur dit OK vert (Sécurisé/Cadenas plein).
-5. **Session hybride** : Le navigateur génère une clé SECRÈTE DE SESSION **symétrique (super super rapide en AES!!)** qu'il chiffre asymétriquement avec **la clé publique du serveur lue dans le certificat**.
-6. Le serveur reçoit cette donnée codée illisible, qu'il décrypte secrètement avec sa propre clé privée (lui seul sur la planète, avec son vrai hardware derrière, détient la clé privée qui décrypte !). Le serveur "absorbe" / "comprend" la proposition de session rapide avec AES faite par John.
-7. Dès cet instant précis, sur un canevas sécurisé, le **Trafic Bidirectionnel applicatif de HTTPS peut échanger les vraies données à pleine vitesse, encryptées globalement en symétrique.**

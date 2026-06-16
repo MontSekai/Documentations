@@ -5,29 +5,41 @@ tags:
   - Trame
 ---
 
-# Ethernet et les Trames
+# Ethernet et les Trames (802.3)
 
-Une trame (ou *frame* en anglais) est l'unité de données de la couche 2 (Liaison de données) du modèle OSI. 
+Le standard de communication des réseaux locaux physiques.
 
-## Fonctionnement
+## 1. Définition
+Une **Trame** (ou *Frame* en anglais) est l'unité fondamentale de données qui circule sur la couche 2 (Liaison de données) du [modèle OSI](modele_osi.md). C'est l'emballage physique standardisé par la norme planétaire **IEEE 802.3 (Ethernet)** pour transporter de la donnée sur un câble réseau RJ45 en cuivre ou une Fibre Optique.
 
-Contrairement aux paquets IP qui gèrent le routage à grande échelle (couche 3), les trames circulent sur le réseau local physique en utilisant les adresses MAC pour identifier la source et la destination matérielle.
+## 2. Description / Fonctionnement
+Contrairement aux paquets IP (Couche 3) qui gèrent la navigation mondiale de routeur en routeur, les trames Ethernet sont aveugles sur les longues distances : elles ne savent circuler **que sur le réseau local immédiat**, en passant d'un switch à une carte réseau (Saut par Saut).
+Pour s'identifier au niveau matériel, elles n'utilisent absolument pas les adresses IP, mais les adresses physiques inaltérables gravées sur les cartes réseau à l'usine : les **Adresses MAC**.
 
-## Composition d'une Trame Ethernet (Standard 802.3)
+Une trame complète encapsule le paquet IP dans un En-tête (Header) et un En-queue (Trailer / FCS). La taille utile classique d'une trame est de 1500 octets (le célèbre MTU - *Maximum Transmission Unit*).
 
-À la différence d'un paquet IP, la trame possède un **En-tête** (Header) et un **En-queue** (Trailer/Footer) pour encadrer la donnée. Elle a généralement une taille maximale de 1518 octets (MTU standard).
+## 3. Utilisation / Cas Pratique
+Lorsqu'un PC d'employé veut parler à un serveur de fichiers local, la carte réseau du PC crée une Trame Ethernet. Elle y inscrit sa propre adresse MAC dans le champ "Source", et l'adresse MAC du serveur dans le champ "Destination". S'il ne connaît pas l'adresse MAC du serveur, il utilise au préalable le protocole **ARP** (qui est une trame spéciale envoyée à tout le monde simultanément - adresse de Broadcast `FF:FF:FF:FF:FF:FF` - pour demander *"Qui possède cette IP ?"*).
+Le Switch réseau lit ensuite cet en-tête MAC et redirige physiquement la trame vers le bon câble réseau.
 
-Voici la représentation simplifiée de sa structure :
+## 4. Modifications possibles / Alternatives
+Par défaut, une trame Ethernet standard est dite "plate" et très simple. Cependant, pour répondre aux besoins de flexibilité de l'entreprise moderne (VLANs, Voix sur IP, priorisation), on utilise très souvent des [trames taguées (Norme 802.1Q)](802.1Q_802.1X.md). Le switch ouvre temporairement la trame Ethernet, y insère 4 octets de "Tag", et la referme avant de l'expédier.
 
+**La gestion des erreurs - Le FCS (Frame Check Sequence)** : 
+L'ordinateur expéditeur passe toute sa trame à travers un algorithme mathématique lourd et range le résultat final dans le Trailer (à la fin de la trame). L'ordinateur récepteur refait lui-même le calcul : si la trame a été abîmée, pliée ou parasitée électriquement sur le câble, les résultats ne correspondent pas. La carte réseau réceptrice **détruit alors silencieusement** la trame défectueuse. Le réseau Ethernet de couche 2 n'a aucun système d'accusé de réception (c'est le rôle supérieur du [protocole TCP](tcp_ip.md) de constater la perte de la trame Ethernet et de demander le renvoi du paquet).
+
+## 5. Exemples visuels et Liens utiles
+
+### Architecture d'une Trame Ethernet (Norme 802.3)
 ```mermaid
 block-beta
   columns 6
   Préambule["Préambule / SFD<br/>(8 octets)"]
   Dest["MAC Destination<br/>(6 octets)"]
   Src["MAC Source<br/>(6 octets)"]
-  Type["Type / Longueur<br/>(2 octets)"]
-  Data["Données / Paquet IP<br/>(46 à 1500 octets)"]
-  FCS["FCS / CRC<br/>(4 octets)"]
+  Type["EtherType<br/>(2 octets)"]
+  Data["Données / Paquet IP Applicatif<br/>(46 à 1500 octets max)"]
+  FCS["FCS (Vérification d'erreur)<br/>(4 octets)"]
   
   style Préambule fill:#d9e1e8,stroke:#333
   style Dest fill:#f9f871,stroke:#333
@@ -37,23 +49,9 @@ block-beta
   style FCS fill:#e06666,stroke:#333
 ```
 
-### Explication par contenu
-
-1. **Préambule et SFD (Start of Frame Delimiter)** : 
-   * C'est une suite alternée de 0 et de 1 qui sert à "réveiller" l'interface réseau réceptrice et synchroniser les horloges (les cartes réseaux se mettent au même rythme de lecture). Le dernier bit (le SFD) avertit que le contenu utile commence juste après.
-   
-2. **L'Adresse MAC de Destination** : 
-   * L'adresse matérielle (couche 2) de l'appareil censé recevoir le message sur ce réseau local. S'il s'agit d'un message global, cette zone contient des "F" (`FF:FF:FF:FF:FF:FF`, une trame Broadcast).
-   
-3. **L'Adresse MAC Source** : 
-   * L'adresse matérielle de l'appareil qui a créé et émis cette trame.
-
-4. **L'EtherType (Type / Longueur)** : 
-   * Permet d'indiquer quel type de protocole se cache dans la section "Données" juste après (ex: `0x0800` signifie que la donnée contient un Paquet IPv4, `0x86DD` pour de l'IPv6).
-   
-5. **Les Données (Payload)** :
-   * C'est le colis lui-même (généralement le Paquet IP issu de la Couche 3 du modèle OSI). Cette section doit faire entre 46 octets (minimum) et 1500 octets (MTU habituel). S'il y a moins de 46 octets de données, on ajoute du bourrage (padding) artificiellement.
-   
-6. **Le Trailer : FCS (Frame Check Sequence)** :
-   * C'est la **vérification d'erreur**. L'ordinateur expéditeur passe toute sa trame à travers un algorithme mathématique (le CRC) et y range ce résultat.
-   * L'ordinateur récepteur refait lui-même le calcul quand il reçoit la trame. **Si le résultat est différent du FCS**, cela signifie que la trame a été corrompue pendant le voyage (interférences sur le câble, bout cassé) : la carte réseau du receveur **détruit silencieusement** la trame défectueuse.
+**Explication des champs majeurs :**
+* **Préambule** : Alternance électrique de 0 et 1 pour synchroniser les horloges et "réveiller" les cartes réseau qui "écoutent" le câble.
+* **MAC Dest/Source** : Les identifiants matériels locaux de l'expéditeur et du destinataire.
+* **EtherType** : Indique au système d'exploitation ce qui est transporté dans la "boîte" de données (Ex: Code `0x0800` signifie que la boîte contient un Paquet IPv4, Code `0x86DD` pour de l'IPv6).
+* **Données** : La charge utile elle-même.
+* **FCS** : Algorithme de vérification d'intégrité du signal électrique/optique (Détruit la trame en cas d'erreur).

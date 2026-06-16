@@ -8,77 +8,44 @@ tags:
 
 # Rôles FSMO (Flexible Single Master Operations)
 
-Dans un environnement **Active Directory multi-contrôleurs**, toutes les modifications ne peuvent pas être réalisées sur n'importe quel DC (Domain Controller / Contrôleur de Domaine) en même temps, sous peine de conflit. C'est pourquoi Microsoft a défini 5 rôles spéciaux, appelés **rôles FSMO** (prononcer "Fismo"), dont chacun est attribué à **un seul DC à la fois** dans sa portée.
+Les 5 rôles uniques garantissant la cohérence de l'Active Directory.
 
-## Les 5 rôles FSMO
+## 1. Définition
+Dans un environnement Active Directory composé de multiples contrôleurs de domaine, certaines opérations critiques ne peuvent pas être effectuées simultanément par plusieurs serveurs sous peine de créer de graves conflits de base de données. Microsoft a défini 5 rôles spéciaux, appelés **FSMO**, qui sont obligatoirement détenus par un seul et unique contrôleur de domaine (DC) à la fois.
 
-### Au niveau de la Forêt (1 seul dans toute la forêt)
+## 2. Description / Fonctionnement
 
-Ces deux rôles sont **uniques dans toute la forêt AD**, et résident par défaut sur le premier DC installé dans la forêt.
+**Niveau Forêt (1 seul par forêt dans tout le réseau) :**
+1. **Schema Master** : Le seul autorisé à modifier la structure de la base de données de l'AD (le schéma).
+2. **Domain Naming Master** : Le seul autorisé à ajouter ou supprimer des domaines dans la forêt.
 
-#### 1. Schema Master (Maître du Schéma)
+**Niveau Domaine (1 présent dans chaque domaine) :**
+3. **PDC Emulator** : Le "couteau-suisse". Gère la synchronisation de l'heure (NTP), reçoit en urgence les changements de mots de passe pour éviter les refus de connexion, et gère les verrouillages de comptes.
+4. **RID Master** : Distribue des blocs d'identifiants uniques (SID/RID) aux autres serveurs pour qu'ils puissent créer de nouveaux objets (utilisateurs, PC) sans faire de doublons.
+5. **Infrastructure Master** : Maintient les références croisées des objets entre plusieurs domaines (ex: un utilisateur du domaine A membre d'un groupe du domaine B).
 
-> **Le seul DC autorisé à modifier la structure de l'annuaire.**
+## 3. Utilisation / Cas Pratique
+L'administrateur interagit et dépend énormément du **PDC Emulator** au quotidien : si ce serveur tombe en panne, des désynchronisations d'horloge apparaissent sur le réseau (ce qui rend l'authentification Kerberos impossible) et les verrouillages/déverrouillages de mots de passe deviennent aléatoires.
 
-Le schéma AD est le "dictionnaire" qui définit tous les types d'objets et leurs attributs (ex : ajouter un attribut "NuméroEmployé" sur un objet Utilisateur). Ce rôle n'est sollicité que lors de modifications du schéma, par exemple lors de l'installation d'Exchange Server ou de l'élévation du niveau fonctionnel.
+## 4. Modifications possibles / Alternatives
+En cas de panne matérielle définitive du contrôleur hébergeant un rôle FSMO, l'administrateur doit effectuer un **"Seize" (Saisie forcée)** du rôle pour l'attribuer à un DC survivant. Si l'ancien serveur réapparaît par la suite, il devra être détruit et formaté sans jamais être reconnecté au réseau.
+En temps normal, on peut faire un **"Transfer"** (Transfert propre) des rôles avant d'éteindre un vieux serveur prévu pour le recyclage.
 
-#### 2. Domain Naming Master (Maître d'Attribution des Noms de Domaine)
+## 5. Exemples visuels et Liens utiles
 
-> **Le seul DC autorisé à ajouter ou supprimer des domaines dans la forêt.**
-
-Il garantit l'unicité des noms de domaines au sein de la forêt et doit être accessible lors des opérations d'ajout/suppression de domaine.
-
----
-
-### Au niveau du Domaine (1 par domaine)
-
-Ces trois rôles sont **présents dans chaque domaine** de la forêt.
-
-#### 3. PDC Emulator (Émulateur PDC)
-
-> **Le DC le plus important du domaine au quotidien.**
-
-C'est le couteau suisse des rôles FSMO. Ses responsabilités :
-* **Source de temps (NTP)** : Référence de temps pour tous les membres du domaine. Kerberos exige une horloge synchronisée (tolérance de 5 min max).
-* **Changements de mots de passe** : Receveur prioritaire des changements de mots de passe et arbitre des verrouillages de comptes en temps réel.
-* **Compatibilité rétrograde** : Émule le comportement d'un vieux contrôleur primaire NT4 pour les systèmes anciens.
-* **Mise à jour des GPO** : Point d'édition central des stratégies de groupe.
-
-#### 4. RID Master (Maître des RID - Relative Identifiers)
-
-> **Le DC qui alloue les pools d'identifiants uniques.**
-
-Chaque objet AD (utilisateur, groupe, ordinateur…) possède un identifiant unique appelé **SID** (*Security IDentifier*). La partie variable du SID est le **RID**. Le RID Master attribue des "blocs" de RID disponibles (ex : 1000 RID à la fois) à chaque DC qui en fait la demande, afin d'éviter les doublons lors de la création d'objets.
-
-#### 5. Infrastructure Master (Maître d'Infrastructure)
-
-> **Le DC qui maintient les références croisées inter-domaines.**
-
-Dans une forêt multi-domaines, il gère la cohérence des références entre les objets de différents domaines (ex : un utilisateur du domaine A membre d'un groupe du domaine B).
-
-> [!IMPORTANT]
-> Dans un domaine **à DC unique**, ou si **tous les DC sont des Catalogues Globaux**, le rôle Infrastructure Master n'a pas d'importance car l'information est déjà universellement disponible.
-
-## Résumé et criticité
-
-| Rôle FSMO | Portée | Criticité si absent | Impact immédiat si HS |
+| Rôle FSMO | Portée | Criticité de la panne | Impact immédiat |
 | :--- | :---: | :---: | :--- |
-| **Schema Master** | Forêt | Faible | Impossible de modifier le schéma |
-| **Domain Naming Master** | Forêt | Faible | Impossible d'ajouter/supprimer des domaines |
-| **PDC Emulator** | Domaine | **Très Haute** | Problèmes d'auth, GPO, blocages de comptes |
-| **RID Master** | Domaine | Moyenne | Stock de RID épuisé → création d'objets impossible |
-| **Infrastructure Master** | Domaine | Faible (cas simples) | Références inter-domaines obsolètes |
+| **Schema Master** | Forêt | Faible | Impossible d'étendre le schéma (ex: installation d'Exchange) |
+| **Domain Naming** | Forêt | Faible | Impossible d'ajouter/supprimer un domaine |
+| **PDC Emulator** | Domaine | **Très Forte** | Problèmes GPO, heure, mots de passe |
+| **RID Master** | Domaine | Moyenne | Création d'objets impossible une fois le pool local épuisé |
+| **Infrastructure** | Domaine | Faible | Références inter-domaines obsolètes |
 
-## Commandes utiles
-
+**Commandes utiles :**
 ```powershell
-# Afficher les 5 rôles FSMO du domaine actuel
+# Afficher la liste des serveurs hébergeant les 5 rôles FSMO
 netdom query fsmo
 
-# Transférer un rôle FSMO via PowerShell (ici le PDC Emulator vers DC02)
+# Transférer proprement le rôle PDC vers le serveur DC02
 Move-ADDirectoryServerOperationMasterRole -Identity "DC02" -OperationMasterRole PDCEmulator
-
-# Lister tous les rôles (via AD Module)
-Get-ADDomain | Select-Object PDCEmulator, RIDMaster, InfrastructureMaster
-Get-ADForest | Select-Object SchemaMaster, DomainNamingMaster
 ```

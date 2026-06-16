@@ -7,125 +7,41 @@ tags:
   - FTTH
 ---
 
-# Câblage Réseau : RJ45, Fibre et FTTH
+# Câblage Réseau : Cuivre et Fibre Optique
 
-## Câblage Cuivre — RJ45 / Ethernet
+Les supports physiques (Couche 1) permettant la transmission des données sur les réseaux.
 
-Le câblage cuivre (**paires torsadées**) avec connecteur **RJ45** est le standard des réseaux locaux (LAN). Il existe plusieurs **catégories (Cat)** offrant des performances croissantes :
+## 1. Définition
+Le câblage réseau constitue l'infrastructure physique fondamentale (Couche 1 du [modèle OSI](modele_osi.md)) d'un système d'information. Il se divise historiquement en deux grandes familles : le câblage **Cuivre** (paires torsadées RJ45) transmettant des impulsions électriques, et la **Fibre Optique** transmettant des impulsions lumineuses.
 
-| Catégorie | Débit max | Fréquence | Portée max | Usage |
-| :---: | :---: | :---: | :---: | :--- |
-| **Cat 5e** | 1 Gbps | 100 MHz | 100m | Réseau entreprise standard |
-| **Cat 6** | 10 Gbps | 250 MHz | 55m (10G) / 100m (1G) | Bureaux, serveurs |
-| **Cat 6A** | 10 Gbps | 500 MHz | 100m | Datacenters, PoE++ |
-| **Cat 7** | 10 Gbps | 600 MHz | 100m | Très blindé, usage professionnel |
-| **Cat 8** | 25-40 Gbps | 2000 MHz | 30m | Baies de datacenter |
+## 2. Description / Fonctionnement
 
-### Blindage (UTP / FTP / STP)
+**Le Cuivre (Câbles Ethernet RJ45)** :
+Classé par "Catégories", il offre des débits croissants sur des distances courtes (limite stricte de 100 mètres avant dégradation du signal électrique).
+* **Cat 5e** (1 Gbps) / **Cat 6** (10 Gbps limité sur 55m) / **Cat 6A** (10 Gbps garanti sur 100m).
+* Il peut être non blindé (UTP) ou blindé contre les interférences magnétiques (FTP/STP).
+* Avantage massif : il transporte de l'électricité en plus de la donnée via la norme **PoE (Power over Ethernet)** pour alimenter les équipements (de 15W à 90W).
 
-| Notation | Description |
-| :---: | :--- |
-| **UTP** | Unshielded Twisted Pair — Non blindé, usage courant bureau |
-| **FTP** | Foiled Twisted Pair — Blindage global par feuille aluminium |
-| **STP** | Shielded Twisted Pair — Chaque paire blindée individuellement |
-| **S/FTP** | Double blindage (par paire + global) |
+**La Fibre Optique** :
+* **Monomode (SMF)** : Cœur extrêmement fin, le faisceau laser voyage de manière rectiligne. Portée immense (jusqu'à 40km ou plus). Gaine visuelle souvent **jaune**.
+* **Multimode (MMF)** : Cœur plus large, réflexion lumineuse multiple avec des LEDs. Portée courte à moyenne (jusqu'à 500m). Gaine visuelle souvent **orange ou aqua**.
 
-> Recommander le **F/UTP ou S/FTP** dans les environnements industriels ou avec beaucoup d'interférences électromagnétiques.
+## 3. Utilisation / Cas Pratique
+* **Réseau Local (LAN intra-bureau)** : On câble les bureaux des employés et les caméras IP en cuivre RJ45 (Cat 6A) pour bénéficier de l'alimentation PoE.
+* **Réseau de Campus** : On relie les baies de brassage des différents bâtiments d'un hôpital ou d'une université entre elles via de la Fibre Multimode (liaisons montantes ou "Uplinks").
+* **Datacenter** : On utilise massivement des cordons Fibre Optique à très haute densité (Connecteurs MPO multi-fibres) pour atteindre du 40 Gbps ou 100 Gbps entre les serveurs et les switchs Core.
 
-### PoE — Power over Ethernet
+## 4. Modifications possibles / Alternatives
+**FTTH (Fiber To The Home)** : Variante d'architecture optique (PON - Passive Optical Network) avec des répartiteurs passifs en verre ("Splitters") permettant de diviser le signal d'une seule fibre opérateur pour distribuer Internet à 64 abonnés à moindre coût (comparé à une fibre point-à-point dédiée).
 
-Le **PoE** permet d'alimenter des équipements (téléphones IP, caméras, points d'accès Wi-Fi) **via le câble Ethernet**, sans alimentation externe dédiée.
+**Fibre Noire (Dark Fiber)** : Câble fibre nu loué par un opérateur sous l'espace public. L'entreprise locataire doit acheter et gérer ses propres équipements lasers à chaque extrémité. Offre une confidentialité totale et une bande passante virtuellement illimitée pour relier deux sites distants.
 
-| Standard | Puissance max | Usage typique |
-| :---: | :---: | :--- |
-| **PoE (802.3af)** | 15,4W | Téléphones IP, petites caméras |
-| **PoE+ (802.3at)** | 30W | Points d'accès Wi-Fi, caméras PTZ |
-| **PoE++ (802.3bt)** | 60-90W | Écrans, PC tout-en-un |
+## 5. Exemples visuels et Liens utiles
 
----
-
-## Fibre Optique
-
-La fibre optique transmet les données sous forme de **lumière** dans un fil de verre ou de plastique. Elle offre des débits bien supérieurs au cuivre sur de longues distances, sans dégradation du signal et immunisée aux interférences électromagnétiques.
-
-### Fibre Monomode (SMF — Single Mode Fiber)
-
-| Caractéristique | Valeur |
-| :--- | :--- |
-| Cœur | Très fin (~9 µm) |
-| Longueur d'onde | 1310nm / 1550nm |
-| Portée | **Jusqu'à 40km et plus** |
-| Débit | Très élevé |
-| Coût | Plus élevé (laser précis) |
-| Couleur gaine standard | **Jaune** |
-| Usage | Longues distances, dorsales métropolitaines, liens inter-sites |
-
-### Fibre Multimode (MMF — Multi Mode Fiber)
-
-| Caractéristique | Valeur |
-| :--- | :--- |
-| Cœur | Plus large (50 ou 62.5 µm) |
-| Longueur d'onde | 850nm / 1300nm |
-| Portée | **Jusqu'à ~550m (OM4)** |
-| Débit | Élevé sur courte distance |
-| Coût | Moins cher (LED / VCSEL) |
-| Couleur gaine standard | **Orange** (OM1/OM2) / **Aqua** (OM3/OM4) / **Violet** (OM5) |
-| Usage | Intra-datacenter, campus, distances courtes |
-
-### Connecteurs fibre courants
-
-| Connecteur | Forme | Usage |
-| :---: | :--- | :--- |
-| **LC** | Petit, carré | Standard datacenter, SFP |
-| **SC** | Plus grand, carré | Équipements télécoms, FTTx |
-| **ST** | Rond, à baïonnette | Ancien, militaire |
-| **MPO/MTP** | Multi-fibres (12/24) | Très hauts débits datacenter |
-
----
-
-## Fibre Noire (Dark Fiber)
-
-La **fibre noire** est une infrastructure fibre optique déjà installée mais **non éclairée** (sans équipement actif aux extrémités). Elle est louée ou achetée par des opérateurs ou des entreprises qui y connectent leurs propres équipements actifs (DWDM, amplificateurs, switches...).
-
-**Avantages :**
-* Contrôle total sur les équipements et les protocoles utilisés
-* Bande passante potentiellement illimitée (on choisit ses propres transpondeurs)
-* Confidentialité totale du trafic (pas d'opérateur intermédiaire sur le plan actif)
-
-**Inconvénients :**
-* Coût d'investissement élevé (équipements actifs à charge du client)
-* Maintenance complexe
-* Utilisé principalement par les **grandes entreprises, OIV, opérateurs et opérateurs publics locaux**
-
----
-
-## FTTH — Fiber To The Home
-
-Le **FTTH** (Fiber To The Home) est le déploiement de la fibre optique **jusqu'au logement ou au local professionnel**. C'est la technologie qui remplace progressivement l'ADSL/VDSL en France dans le cadre du **Plan France Très Haut Débit**.
-
-### Architecture FTTH (PON — Passive Optical Network)
-
+### Architecture FTTH (Réseau Optique Passif)
 ```mermaid
 graph LR
-    OLT["🏢 OLT\n(Opérateur - NRO)"] --> Splitter["🔀 Splitter\n(Répartiteur passif 1:32 ou 1:64)"]
-    Splitter --> ONT1["🏠 ONT/Box\nLogement A"]
-    Splitter --> ONT2["🏠 ONT/Box\nLogement B"]
-    Splitter --> ONT3["🏠 ONT/Box\nLogement C"]
+    OLT["🏢 OLT\n(Opérateur)"] --> Splitter["🔀 Splitter Passif\n(Division 1:64)"]
+    Splitter --> ONT1["🏠 Box Internet\nLogement A"]
+    Splitter --> ONT2["🏠 Box Internet\nLogement B"]
 ```
-
-| Composant | Rôle |
-| :--- | :--- |
-| **OLT** (Optical Line Terminal) | Équipement actif chez l'opérateur (NRO — Nœud de Raccordement Optique) |
-| **Splitter** | Répartiteur **passif** qui divise le signal optique vers plusieurs logements |
-| **ONT** (Optical Network Terminal) | Modem/box optique chez l'abonné |
-
-**Débits FTTH :** Selon l'offre et la technologie (GPON / XGS-PON) : de **100 Mbps symétrique** à **10 Gbps**.
-
-### Variantes FTTx
-
-| Acronyme | Signification | Portée fibre |
-| :---: | :--- | :--- |
-| **FTTH** | Fiber To The Home | Jusqu'au logement |
-| **FTTB** | Fiber To The Building | Jusqu'au pied de l'immeuble |
-| **FTTC** | Fiber To The Curb/Cabinet | Jusqu'à l'armoire de rue |
-| **FTTO** | Fiber To The Office | Fibre dédiée pour entreprises (SLA garanti) |

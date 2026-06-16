@@ -9,49 +9,41 @@ tags:
 
 # L'Adressage IPv4
 
-L'**adresse IPv4** est l'identifiant logique historique d'une interface connectée à un réseau IP. Pour la théorie globale d'encapsulation, voir le [Modèle OSI](modele_osi.md) et la structure TCP/IP. Face à la pénurie d'adresses, ce protocole est destiné à être remplacé à long terme par [IPv6](ipv6.md).
+Identifiant logique historique d'une interface réseau connectée.
 
-## 1. Bits, Octets et CIDR
+## 1. Définition
+Une **adresse IPv4** est l'identifiant logique (Couche 3 du [Modèle OSI](modele_osi.md)) unique attribué à une interface réseau connectée à un réseau utilisant la suite TCP/IP. Bien qu'elle soit vouée à être remplacée très progressivement par l'[IPv6](ipv6.md) à cause de la pénurie mondiale d'adresses, elle reste le standard technique dominant dans les réseaux locaux d'entreprise.
 
-Une adresse IPv4 est composée de **32 bits** (des 0 et des 1). Pour la rendre lisible, elle est divisée en **4 octets** (de 8 bits chacun), notés en décimal : `192.168.1.10`.
+## 2. Description / Fonctionnement
+Une adresse IPv4 est mathématiquement composée de **32 bits**, affichée sous la forme de 4 octets décimaux (ex: `192.168.1.10`).
+Pour qu'un ordinateur puisse communiquer avec les autres, il a besoin d'un **Masque de sous-réseau** (Subnet Mask) qui vient "découper" cette IP en deux parties distinctes :
+* **La partie Réseau** : Identifie l'ensemble du sous-réseau global (ex: le nom de la rue).
+* **La partie Hôte** : Identifie la machine précise au sein de ce sous-réseau (ex: le numéro de maison).
 
-Le **Masque de sous-réseau** (Subnet Mask) permet à l'ordinateur de savoir, dans ces 32 bits, quelle partie désigne l'**Adresse du Réseau** (fixe) et quelle partie désigne l'**Hôte** (la machine). La notation **CIDR** compte le nombre de "1" consécutifs du masque.
-* Exemple : Un masque `255.255.255.0` (3 octets bloqués = 24 bits à "1") s'écrit de manière abrégée **`/24`**. L'IP complète est notée `192.168.1.10/24`.
+La notation **CIDR** permet de raccourcir le masque en comptant le nombre de bits alloués à la partie réseau. Par exemple, un masque `255.255.255.0` (qui fige 24 bits sur 32) s'écrit de manière élégante `/24`. L'IP complète de la machine devient donc `192.168.1.10/24`.
 
-## 2. Classes d'adresses (Historique)
+## 3. Utilisation / Cas Pratique
+Sur Internet, les IP doivent être publiques et payées. Ainsi, à l'intérieur des réseaux LAN d'entreprise ou à la maison, on utilise presque exclusivement les **Plages d'adresses privées** (RFC 1918) :
+* Classe A : `10.x.x.x`
+* Classe B : `172.16.x.x` à `172.31.x.x`
+* Classe C : `192.168.x.x`
 
-Historiquement, le routage Internet s'appuyait sur des classes rigides :
+Ces adresses sont gratuites, réutilisables, mais **absolument non routables sur Internet**. C'est le routeur de l'entreprise (ou la box Internet) qui s'occupe de faire la traduction à la volée (le protocole **NAT**) vers l'unique IP publique achetée chez l'opérateur.
 
-| Classe | Plage d'adresses | Masque naturel | Volume d'hôtes | Cas d'usage typique |
-| :--- | :--- | :--- | :--- | :--- |
-| **A** | `1.0.0.0` à `126.0.0.0` | `/8` (255.0.0.0) | 16 Millions | Gouvernements, Telcos |
-| **B** | `128.0.0.0` à `191.255.0.0` | `/16` (255.255.0.0) | 65 534 | Moyennes/Grandes entreprises |
-| **C** | `192.0.0.0` à `223.255.255.0` | `/24` (255.255.255.0) | 254 | LAN de PME/TPE |
+## 4. Modifications possibles / Alternatives
+**Calcul de sous-réseaux (Subnetting)** :
+Les administrateurs découpent souvent les grands blocs réseaux (ex: `/16`) pour en créer des plus petits (ex: `/24`), afin de les isoler dans des [VLANs](vlan.md) spécifiques.
+Il existe une règle mathématique d'or : Dans tout réseau IPv4 (peu importe sa taille), on perd **toujours 2 adresses hôtes inutilisables pour les PC** :
+1. La toute première IP du bloc = l'**Adresse Réseau** (identifie le réseau dans les tables de routage).
+2. La toute dernière IP du bloc = l'**Adresse de Broadcast** (utilisée pour envoyer un message à tout le monde simultanément).
+*Formule mathématique du nombre d'IPs utiles pour des machines = $2^n - 2$* (où $n$ est le nombre de bits restants pour l'hôte).
 
-## 3. IPs Remarquables (Publiques vs Privées)
+## 5. Exemples visuels et Liens utiles
 
-### Plages Privées (RFC 1918)
-Sur Internet (qui est un gigantesque réseau public), les adresses IP doivent être uniques au monde. Cependant, pour économiser ces adresses, des **plages privées** ont été définies. Ces IPs peuvent être réutilisées librement en entreprise ou à la maison, car elles ne sont **pas routables sur Internet**. C'est le routeur/Box qui traduit ces IP vers son unique IP publique avec le [NAT / PAT](routage.md).
-
-* Classe A privée : `10.0.0.0` à `10.255.255.255`
-* Classe B privée : `172.16.0.0` à `172.31.255.255`
-* Classe C privée : `192.168.0.0` à `192.168.255.255`
-
-### Adresses systémiques spéciales
-
-| IP / Plage | Nom | Rôle |
+### IPs remarquables à connaître
+| IP / Plage spéciale | Nom technique | Rôle / Explication |
 | :--- | :--- | :--- |
-| `127.0.0.1` | **Loopback** (Localhost) | Permet à une machine de se "désigner elle-même". |
-| `169.254.x.x` | **APIPA** | IP de "secours" générée par l'OS Windows si le serveur DHCP est injoignable après timeout. |
-| `0.0.0.0` | **Route par défaut** / All | Désigne "n'importe" quelle IP, ou la route globale dans une table de routage vers Internet. |
-| `255.255.255.255` | **Broadcast universel** | Envoi à destination de toutes les machines d'un segment Layer 2. |
-
-## 4. Subnetting : La règle des -2
-
-Quel que soit le sous-réseau (du gigantesque `/8` au microscopique `/30`), il comprend toujours deux adresses qui ne peuvent **jamais** être assignées à un ordinateur :
-
-1. **La Première IP = L'Adresse Réseau** : Identifie l'ensemble du sous-réseau (ex: `192.168.1.0`).
-2. **La Dernière IP = L'Adresse de Broadcast (Diffusion)** : Utilisée pour adresser simultanément tout le monde (ex: `192.168.1.255`).
-
-Le nombre d'ordinateurs (hôtes) que l'on peut brancher se calcule via `2^n - 2`, où `n` = la partie Hôte (Adresses totales 32 bits - Masque CIDR).
-* *Exemple avec un `/24` : Il reste 8 bits pour les hôtes. $2^8 = 256$. Moins 2 (Réseau/Broadcast) = 254 IPs disponibles.*
+| `127.0.0.1` | **Loopback** (Localhost) | Permet à la machine de se "pinguer" elle-même en boucle fermée. |
+| `169.254.x.x` | **APIPA** | Adresse de "secours" auto-assignée par Windows si le serveur [DHCP](../../Systeme/Services/dhcp.md) est injoignable. |
+| `0.0.0.0` | **Route par défaut** | Désigne la route de sortie globale vers l'inconnu (souvent Internet). |
+| `255.255.255.255` | **Broadcast universel** | Message envoyé à toutes les machines du réseau physique. |

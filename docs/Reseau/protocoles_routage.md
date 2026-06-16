@@ -8,129 +8,50 @@ tags:
 
 # Protocoles de Routage Dynamique
 
-Les protocoles de routage dynamique permettent aux routeurs d'**échanger automatiquement leurs tables de routage** et de s'adapter aux changements de topologie réseau (pannes, ajout de liens...). Voir la page [Routage](routage.md) pour le fonctionnement général.
+Les algorithmes mathématiques gérant la découverte automatique des réseaux mondiaux et d'entreprise.
 
-## Concepts communs
+## 1. Définition
+Les protocoles de routage dynamique sont des logiciels de fond exécutés par les [routeurs réseau](../routage.md) qui leur permettent de "discuter" en permanence entre eux. Ils s'échangent automatiquement la liste des réseaux qu'ils connaissent, et calculent mathématiquement en direct le meilleur chemin pour acheminer un paquet IP vers sa destination.
 
-### Métrique
-La **métrique** est la valeur qu'un protocole de routage utilise pour choisir le **meilleur chemin** vers une destination. Si plusieurs routes existent, celle avec la métrique la plus **faible** est préférée.
+## 2. Description / Fonctionnement
+Plutôt que d'obliger l'administrateur à renseigner manuellement chaque route statique (ce qui est humainement intenable à grande échelle ou en cas de coupure inopinée d'un câble), l'administrateur active un protocole dynamique (ex: OSPF).
+Pour choisir le meilleur chemin, le protocole se base sur une "note" appelée **Métrique**. Si plusieurs chemins existent pour atteindre la même destination, le chemin avec la métrique la plus faible gagne le droit de figurer dans la table de routage :
+* **Le protocole historique RIP** : Sa métrique est le *Nombre de sauts* (de routeurs traversés). Aveugle à la vitesse des liens.
+* **Le protocole moderne OSPF** : Sa métrique est le *Coût*, basé intelligemment sur la bande passante physique. (OSPF préfèrera faire un "détour" en traversant 3 routeurs reliés par une fibre optique ultra-rapide 10 Gbps, plutôt que d'aller "tout droit" sur 1 seul routeur relié par un câble ADSL très lent).
 
-### Distance administrative (AD)
-Quand plusieurs protocoles coexistent, le routeur utilise la **distance administrative** pour décider quel protocole il doit croire :
+## 3. Utilisation / Cas Pratique
+* **Sur le Réseau Local d'Entreprise (Routage IGP)** : Le standard absolu de l'industrie est **OSPF (Open Shortest Path First)**. Il divise les réseaux immenses en "Areas" (Zones) pour optimiser la mémoire des routeurs. Tous les routeurs de l'entreprise s'échangent la topologie globale en direct et réagissent en une fraction de seconde aux pannes de câbles.
+* **Sur le grand Internet (Routage EGP)** : Le protocole mondial est le **BGP (Border Gateway Protocol)**. C'est lui qui gère le "Routage inter-domaine" entre les grands fournisseurs d'accès internationaux (Orange, Free, AT&T) et les géants du Cloud (Google, AWS, Netflix). Sa métrique n'est pas basée sur la vitesse pure, mais sur des règles géopolitiques et de coûts commerciaux très complexes.
 
-| Source de la route | Distance Administrative |
-| :--- | :---: |
-| Interface directement connectée | 0 |
-| Route statique | 1 |
-| EIGRP (résumé) | 5 |
-| OSPF | **110** |
-| RIP | **120** |
-| EIGRP (externe) | 170 |
-| Route inconnue | 255 (inutilisable) |
+## 4. Modifications possibles / Alternatives
+**Le concept de Distance Administrative (AD)**
+Si un routeur reçoit deux indications de chemins très différents pour rejoindre exactement la même destination (par exemple : l'une apprise dynamiquement via le protocole OSPF, l'autre forcée et saisie à la main par l'administrateur avec une route statique), il doit choisir à qui il fait le plus confiance. C'est la **Distance Administrative**. Plus la valeur est basse, plus la source d'information est jugée fiable :
+* Route directement branchée sur une interface physique : AD = 0
+* Route Statique (Renseignée manuellement) : AD = 1
+* Protocole OSPF : AD = 110
+* Protocole RIP : AD = 120
 
----
+*Cas pratique : Entre une route manuelle et une route calculée par OSPF, le routeur de l'entreprise préfèrera **toujours** croire aveuglément la route manuelle de l'administrateur (car l'AD 1 l'emporte sur l'AD 110).*
 
-## RIP — Routing Information Protocol
+## 5. Exemples visuels et Liens utiles
 
-RIP est l'un des **plus anciens** protocoles de routage. Il fonctionne selon l'algorithme **Bellman-Ford** (Distance Vector) : chaque routeur n'a de visibilité que sur ses voisins directs et partage sa table de routage entière.
-
-### Caractéristiques
-
-| Caractéristique | RIPv1 | RIPv2 |
-| :--- | :---: | :---: |
-| Classless (VLSM/CIDR) | ❌ Non | ✅ Oui |
-| Authentification | ❌ Non | ✅ Oui (MD5) |
-| Multicast | ❌ Broadcast | ✅ 224.0.0.9 |
-| Métrique | Nombre de sauts | Nombre de sauts |
-| Limite de sauts | **15 max** | **15 max** |
-| Convergence | Lente | Lente |
-
-> [!WARNING]
-> RIP est **obsolète** pour les réseaux d'entreprise modernes. Sa limite de 15 sauts et sa convergence lente le rendent inadapté. Utiliser OSPF à la place.
-
-### Mécanismes anti-boucle RIP
-* **Split Horizon** : Ne pas réannoncer une route vers l'interface par laquelle on l'a apprise.
-* **Route Poisoning** : Annoncer une route tombée avec la métrique infinie (16).
-* **Holddown Timer** : Ignorer les mises à jour sur une route pendant un délai après sa perte.
-
-### Configuration Cisco RIPv2
-
-```bash
-router rip
- version 2
- no auto-summary           ! Désactive la summarisation automatique (pour VLSM)
- network 192.168.1.0
- network 10.0.0.0
-```
-
----
-
-## OSPF — Open Shortest Path First
-
-OSPF est le **protocole de routage Link-State** de référence pour les réseaux d'entreprise. Chaque routeur construit une **carte complète de la topologie** (LSDB — Link State Database) et calcule les meilleures routes avec l'algorithme **Dijkstra (SPF)**.
-
-### Caractéristiques
-
-| Caractéristique | Valeur |
-| :--- | :--- |
-| Type | Link-State |
-| Métrique | **Coût** (basé sur la bande passante : 100 Mbps / BW) |
-| Convergence | **Rapide** |
-| Classless | ✅ Oui (VLSM, CIDR) |
-| Authentification | ✅ Oui (MD5 / SHA) |
-| Multicast | 224.0.0.5 (AllSPFRouters) / 224.0.0.6 (AllDRRouters) |
-| Passage à l'échelle | Excellent (Areas) |
-
-### Les Areas OSPF
-
-Pour les grands réseaux, OSPF est divisé en **zones (areas)** afin de réduire la taille des LSDB et le trafic de mise à jour.
-
+### Architecture OSPF (Division par Zones / Areas)
 ```mermaid
 graph TD
-    BB["Area 0\n(Backbone — Obligatoire)"]
-    A1["Area 1"]
-    A2["Area 2"]
-    ABR1["ABR"]
-    ABR2["ABR"]
-    ASBR["ASBR\n(Vers BGP/Internet)"]
+    BB["Area 0\n(Zone Backbone - Coeur de réseau Obligatoire)"]
+    A1["Area 1\n(Ex: Siège Social de l'entreprise)"]
+    A2["Area 2\n(Ex: Réseau des filiales distantes)"]
+    ABR1["Routeur de Frontière (ABR)"]
+    ABR2["Routeur de Frontière (ABR)"]
 
     A1 --- ABR1 --- BB
     A2 --- ABR2 --- BB
-    BB --- ASBR
 ```
 
-* **Area 0 (Backbone)** : Zone centrale obligatoire. Toutes les autres zones doivent y être connectées.
-* **ABR** (Area Border Router) : Routeur connecté à plusieurs zones, résume les routes entre elles.
-* **ASBR** (Autonomous System Boundary Router) : Routeur qui redistribue des routes d'autres protocoles (BGP, statiques...) dans OSPF.
-
-### Élection DR / BDR
-
-Sur les réseaux multi-accès (Ethernet), OSPF élit un **DR** (Designated Router) et un **BDR** (Backup DR) pour éviter que chaque routeur envoie ses LSA à tous les autres.
-
-* **Élection** : Le routeur avec le **Router ID** (ou la priorité OSPF) le plus élevé devient DR.
-* **Router ID** : Soit configuré manuellement, soit l'IP la plus élevée d'une interface loopback, soit l'IP active la plus haute.
-
-### Configuration Cisco OSPF
-
-```bash
-router ospf 1                          ! 1 = Process ID (local, pas d'importance inter-routeurs)
- router-id 1.1.1.1                     ! Router ID manuel (recommandé)
- network 192.168.1.0 0.0.0.255 area 0  ! Annonce le réseau dans l'area 0
- network 10.0.0.0 0.255.255.255 area 1
-
-! Vérification
-show ip ospf neighbor                  ! Affiche les voisins OSPF
-show ip ospf database                  ! Affiche la LSDB
-show ip route ospf                     ! Affiche les routes apprises par OSPF
-```
-
-## Comparatif RIP vs OSPF
-
-| Critère | RIPv2 | OSPF |
-| :--- | :---: | :---: |
-| Algorithme | Distance Vector | Link State |
-| Métrique | Sauts (max 15) | Coût (bande passante) |
-| Convergence | Lente | Rapide |
-| Passage à l'échelle | Mauvais | Excellent (Areas) |
-| Complexité | Simple | Modérée |
-| Usage recommandé | ❌ Obsolète | ✅ Standard entreprise |
+### RIP vs OSPF : Le match
+| Critère technique | Protocole RIPv2 | Protocole OSPF |
+| :--- | :--- | :--- |
+| **Famille algorithmique** | Vecteur de distance (Ne voit que son voisin) | État de liens (Construit une carte complète du réseau) |
+| **Métrique d'évaluation** | Nombre de sauts physiques (Bloqué à 15 max) | Coût de l'interface (Basé sur le débit réel du lien) |
+| **Vitesse de convergence** (Adaptation à la panne)| Extrêmement Lente | Très Rapide |
+| **Pertinence réseau moderne** | ❌ Obsolète, à éviter | ✅ Standard d'entreprise massivement recommandé |

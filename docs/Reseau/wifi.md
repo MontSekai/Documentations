@@ -8,68 +8,52 @@ tags:
 
 # Wi-Fi et Réseaux Sans Fil (802.11)
 
-La famille de normes **IEEE 802.11** définit la communication réseau sans fil (WLAN).
+Le standard mondial de la communication réseau sans fil par ondes radio.
 
-## 1. Normes et Fréquences Wi-Fi
+## 1. Définition
+Le Wi-Fi est un ensemble de protocoles de communication permettant de relier des équipements informatiques au sein d'un réseau local sans fil (WLAN) par l'émission d'ondes radio, évitant ainsi le recours massif au câblage physique. Ses normes technologiques sont dictées par le standard international IEEE 802.11.
 
-Historiquement, le Wi-Fi utilisait des appellations techniques complexes. Depuis 2018, la Wi-Fi Alliance a simplifié la nomenclature avec des numéros de génération (Wi-Fi 4, 5, 6, 7).
+## 2. Description / Fonctionnement
+Le Wi-Fi évolue par "Générations" successives qui améliorent drastiquement les débits bruts et la gestion simultanée d'un grand nombre d'appareils connectés (forte densité), en exploitant historiquement deux bandes de fréquences majeures :
+* **2.4 GHz** : Les ondes pénètrent très bien les murs et portent loin, mais c'est une bande historiquement saturée, lente, et extrêmement polluée (Bluetooth, fours micro-ondes).
+* **5 GHz** : Offre des débits massifs et très stables, mais la portée radio est beaucoup plus faible et les ondes traversent très mal les gros obstacles matériels (murs porteurs en béton).
 
-| Norme IEEE | Nom Commercial | Fréquence(s) | Débit max théorique | Année |
-| :--- | :--- | :--- | :--- | :--- |
-| **802.11n** | **Wi-Fi 4** | 2.4 GHz et 5 GHz | 600 Mbps | 2009 |
-| **802.11ac** | **Wi-Fi 5** | 5 GHz uniquement | 3.5 Gbps | 2014 |
-| **802.11ax** | **Wi-Fi 6** | 2.4 GHz et 5 GHz | 9.6 Gbps | 2019 |
-| **802.11ax** | **Wi-Fi 6E** | 2.4, 5 et **6 GHz** | 9.6 Gbps | 2021 |
-| **802.11be** | **Wi-Fi 7** | 2.4, 5 et 6 GHz | **46 Gbps** | 2024 |
+L'innovation des nouvelles normes (Wi-Fi 6E et le Wi-Fi 7) est l'ouverture d'une toute nouvelle autoroute vierge : la bande des **6 GHz**.
 
-> [!TIP]
-> **2.4 GHz vs 5 GHz**
-> - **2.4 GHz** : Les ondes pénètrent mieux les murs et portent plus loin. Inconvénient : très saturé et perturbé (Bluetooth, micro-ondes).
-> - **5 GHz** : Débits très élevés et bande peu encombrée. Inconvénient : porte moins loin et traverse mal les obstacles denses.
+## 3. Utilisation / Cas Pratique
+Dans un environnement domestique, la "Box" Internet opérateur fait tout le travail (Routeur, Switch et Point d'accès).
+**En environnement d'entreprise**, l'architecture est centralisée et beaucoup plus intelligente :
+L'équipe informatique installe des dizaines de **Bornes (Access Points - AP)** aux plafonds des couloirs. Ces bornes sont souvent "bêtes" et gérées par un cerveau central en salle serveur : le **WLC (Wireless LAN Controller)**. C'est ce WLC centralisé qui permet le *Roaming* réseau : quand un médecin marche dans le couloir d'un hôpital avec sa tablette, le WLC transfère sa connexion d'une borne à l'autre en une fraction de seconde, sans que sa visioconférence critique ne subisse la moindre coupure.
 
-## 2. Architecture Wi-Fi d'Entreprise
+## 4. Modifications possibles / Alternatives
+**Sécurité Wi-Fi : L'authentification**
+En plus du chiffrement mathématique robuste (WPA2 ou le très récent WPA3) qui brouille les ondes dans l'air, il existe deux manières majeures d'autoriser l'accès au Wi-Fi :
+* **Le mode "Personal" (PSK)** : Le mot de passe (la clé) est le même pour tous les employés. Danger : si un employé part avec la clé, ou la perd, il faut la changer partout sur tous les appareils de l'entreprise.
+* **Le mode "Enterprise" (802.1X / RADIUS)** : Il n'y a pas de clé globale. Chaque employé se connecte au Wi-Fi avec son propre compte Windows individuel (via l'annuaire Active Directory et un serveur NPS). Dès qu'un employé quitte l'entreprise, son compte Active Directory est clôturé, et il perd automatiquement son accès Wi-Fi de manière ultra-sécurisée sans perturber ses collègues.
 
-Dans un contexte domestique, la "box" fait office de routeur, switch et point d'accès Wi-Fi (AP). En entreprise, l'architecture est centralisée :
+## 5. Exemples visuels et Liens utiles
 
-* **AP (Access Point)** : Les bornes qui diffusent le réseau (Lightweight AP ou AP autonomes).
-* **WLC (Wireless LAN Controller)** : Le "cerveau" central. Les bornes légères s'y connectent pour recevoir leur configuration. Le WLC gère le **roaming** (le passage fluide d'un client d'une borne à une autre sans coupure).
-* **PoE (Power over Ethernet)** : Les AP sont alimentés via leur [câble RJ45](cablage.md) depuis les switches.
-* **SSID (Service Set Identifier)** : Le "Nom du réseau" diffusé.
+### Mémento des Normes Wi-Fi
+| Nom commercial simplifé | Norme IEEE | Bandes de Fréquences | Vitesse Max Théorique |
+| :--- | :--- | :--- | :--- |
+| **Wi-Fi 4** | 802.11n | 2.4 et 5 GHz | 600 Mbps |
+| **Wi-Fi 5** | 802.11ac | 5 GHz uniquement | 3.5 Gbps |
+| **Wi-Fi 6** | 802.11ax | 2.4 et 5 GHz | 9.6 Gbps |
+| **Wi-Fi 6E** | 802.11ax | 2.4, 5 et **6 GHz** | 9.6 Gbps |
+| **Wi-Fi 7** (2024) | 802.11be | 2.4, 5 et 6 GHz | **46 Gbps** |
 
+### Architecture Wi-Fi Centralisée (Entreprise)
 ```mermaid
 graph TD
-    WLC["🎛️ Contrôleur Wi-Fi (WLC)"]
-    SW["🔀 Switch PoE"]
-    AP1["📡 Borne Wi-Fi (AP 1)"]
-    AP2["📡 Borne Wi-Fi (AP 2)"]
-    CLIENT["📱 Client (Smartphone/PC)"]
+    WLC["🎛️ Cerveau Central : Contrôleur Wi-Fi (WLC)"]
+    SW["🔀 Switch PoE (Alimentation électrique RJ45)"]
+    AP1["📡 Borne Wi-Fi Couloir 1"]
+    AP2["📡 Borne Wi-Fi Couloir 2"]
+    CLIENT["📱 Client Mobile"]
 
-    WLC <-->|"CAPWAP Tunnel"| SW
-    SW -- "Câble RJ45 + PoE" --> AP1
-    SW -- "Câble RJ45 + PoE" --> AP2
-    CLIENT -. "Wi-Fi" .-> AP1
+    WLC <-->|"Pilote les bornes via Tunnel Sécurisé"| SW
+    SW -- "Câble RJ45" --> AP1
+    SW -- "Câble RJ45" --> AP2
+    CLIENT -. "Ondes (Roaming Fluide)" .-> AP1
+    CLIENT -. "Ondes (Roaming Fluide)" .-> AP2
 ```
-
-## 3. Sécurité Sans Fil
-
-Les protocoles de sécurité Wi-Fi chiffrent le trafic dans l'air pour empêcher l'écoute (sniffing).
-
-| Protocole | Sécurité | Fonctionnement |
-| :--- | :---: | :--- |
-| **WEP** | ❌ Très faible | Craquable en quelques minutes (initialisation IV défectueuse). Abandonné. |
-| **WPA** | ❌ Faible | Utilisait le protocole TKIP. Abandonné (vulnérable à la fragmentation). |
-| **WPA2** | ✅ Robuste | Norme standard actuelle. Utilise le chiffrement robuste **AES (CCMP)**. Vulnérable uniquement au *KRACK attack* ou au brute-force du handshake. |
-| **WPA3** | 🔒 Optimal | Nouveau standard (2018). Remplace le pre-shared key (PSK) par l'échange **SAE (Simultaneous Authentication of Equals)**. Protège contre les attaques hors-ligne par dictionnaire. |
-
-### Les modes d'authentification WPA2/WPA3
-
-Dans le standard, WPA2 et WPA3 se déclinent chacun en deux modes d'authentification :
-
-* **Mode "Personal" (ou PSK - Pre-Shared Key)** : 
-  * Tous les utilisateurs partagent un **même mot de passe (clé unique)**.
-  * Utilisé à domicile ou pour des réseaux invités simples (Captive Portal).
-* **Mode "Enterprise" (ou 802.1X/RADIUS)** : 
-  * Il n'y a pas de clé partagée. Chaque utilisateur s'authentifie avec **son compte individuel** (identifiant + mot de passe, ou certificat AD).
-  * Repose sur la norme **[802.1X et un serveur RADIUS/NPS](802.1Q_802.1X.md)**.
-  * *Avantage majeur* : Si le compte d'un employé est désactivé dans l'Active Directory, il perd automatiquement accès au Wi-Fi. Impossible avec une clé PSK.
-  * *Avantage supplémentaire* : Permet des [VLANs dynamiques](../vlan.md) basés sur le profil de l'utilisateur.

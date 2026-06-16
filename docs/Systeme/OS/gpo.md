@@ -8,42 +8,36 @@ tags:
 
 # GPO (Group Policy Object)
 
-Les **Stratégies de Groupe** (Group Policy) sont le cœur de l'administration centralisée dans un environnement Microsoft [Active Directory](ad_forets_domaines.md). Elles permettent de configurer, à distance et massivement, les paramètres des ordinateurs et des utilisateurs du domaine.
+Le cœur de l'administration centralisée dans un environnement Microsoft Active Directory.
 
-## 1. À quoi sert une GPO ?
-Une GPO est un "paquet de règles" appliquées automatiquement au démarrage du PC (Machine) ou à l'ouverture de session (Utilisateur).
-* **Exemples courants** :
-    * Déployer automatiquement une imprimante ou monter un lecteur réseau `Z:`.
-    * Imposer un fond d'écran d'entreprise.
-    * Bloquer l'accès au Panneau de configuration (pour éviter que l'utilisateur modifie ses IP).
-    * Déployer un logiciel MSI en arrière-plan.
-    * Configurer les règles du pare-feu Windows, créer des raccourcis sur le bureau, paramétrer la politique de mot de passe du domaine (longueur, complexité).
+## 1. Définition
+Les **Stratégies de Groupe (GPO)** sont des règles configurées sur un contrôleur de domaine Active Directory, permettant d'imposer à distance et massivement des paramètres de configuration aux ordinateurs et aux utilisateurs du réseau.
 
-## 2. Les deux cibles d'une GPO
-Une GPO est divisée en deux grandes sections :
-1. **Configuration Ordinateur** (Computer Configuration) :
-    * Modifie la base de registre `HKEY_LOCAL_MACHINE`.
-    * S'applique à l'ordinateur, *peu importe l'utilisateur qui s'y connecte*.
-    * S'exécute au (re)démarrage de la machine Windows.
-2. **Configuration Utilisateur** (User Configuration) :
-    * Modifie la base de registre `HKEY_CURRENT_USER`.
-    * S'applique au profil de l'utilisateur concerné, *peu importe sur quel ordinateur du domaine il se loggue*.
-    * S'exécute à l'ouverture de sa session Windows.
+## 2. Description / Fonctionnement
+Une GPO est divisée en deux sections :
+1. **Configuration Ordinateur** : Modifie la base de registre `HKEY_LOCAL_MACHINE`. S'applique à l'ordinateur, peu importe qui se connecte. S'exécute au démarrage de la machine.
+2. **Configuration Utilisateur** : Modifie la base de registre `HKEY_CURRENT_USER`. S'applique au profil utilisateur, peu importe le PC. S'exécute à l'ouverture de session de l'utilisateur.
 
-## 3. L'héritage et l'ordre d'application (LSDOU)
-Les GPO s'appliquent sur les **OU (Unités Organisationnelles)**. C'est l'un des rôles majeurs du découpage d'Active Directory. L'ordre d'application des stratégies suit le modèle **LSDOU** :
+L'ordre d'application suit le modèle **LSDOU** (Local, Site, Domaine, Unité Organisationnelle). En cas de conflit, c'est la dernière appliquée (l'OU la plus proche) qui gagne et écrase la précédente.
 
-1. **L**ocal (La stratégie locale de l'ordinateur de base)
-2. **S**ite (Les stratégies liées au Site Active Directory — rare)
-3. **D**omaine (Les stratégies liées à la racine du domaine, ex: `Default Domain Policy`)
-4. **OU** (Les stratégies liées aux Unités Organisationnelles : l'OU parente, puis l'OU enfant)
+## 3. Utilisation / Cas Pratique
+Les GPO servent à standardiser l'environnement de travail :
+* Déployer automatiquement une imprimante réseau.
+* Déployer silencieusement un logiciel (fichier d'installation MSI).
+* Imposer un fond d'écran d'entreprise.
+* Bloquer l'accès au Panneau de configuration ou fixer la politique de complexité des mots de passe.
 
-> [!IMPORTANT]
-> **Règle de conflit : La dernière appliquée gagne.** Une règle fixée sur une "OU Ventes" écrasera la même règle si elle était paramétrée différemment au niveau du "Domaine".
+## 4. Modifications possibles / Alternatives
 
-## 4. Outils et Commandes Utiles
+### Modèles d'administration (ADMX / ADML)
+Les fichiers ADMX/ADML permettent d'étendre les capacités natives des GPO pour contrôler des applications tierces (ex: Google Chrome, Mozilla Firefox). Placés dans le "Magasin Central" du contrôleur de domaine (`SYSVOL\policies\PolicyDefinitions`), ils ajoutent des menus spécifiques dans l'éditeur GPO.
 
-* **GPMC (`gpmc.msc`)** : La console *Group Policy Management*, outil principal de l'administrateur pour créer, lier, sauvegarder et lister les GPO.
-* `gpupdate /force` : Commande à lancer sur un PC cible pour le "forcer" à re-télécharger la dernière version des règles du serveur immédiatement (au lieu d'attendre l'intervalle régulier de 90 minutes).
-* `gpresult /r` (ou `/h report.html`) : Commande indispensable de diagnostic sur un PC cible pour voir en clair la liste exacte des règles GPO qui sont appliquées (ou refusées) sur ce poste ou cet utilisateur.
-* **WMI Filtering** : Permet d'appliquer une GPO selon un critère particulier plutôt qu'une OU entière (Exemple: "Appliquer cette GPO uniquement s'il s'agit d'une machine Windows 10").
+### Cas Pratique : Gestion des extensions navigateur
+En utilisant les ADMX de Google Chrome, on peut créer une GPO qui force de manière transparente l'installation d'un bloqueur de publicité (ex: uBlock Origin) sur tous les postes, et qui interdit l'installation d'extensions non validées (Whitelisting) pour prévenir la fuite de données (DLP).
+
+## 5. Exemples visuels et Liens utiles
+
+**Outils et Commandes indispensables :**
+* `gpmc.msc` : La console graphique pour créer et lier les GPO.
+* `gpupdate /force` : Commande à lancer sur un PC pour le forcer à télécharger immédiatement les dernières GPO.
+* `gpresult /r` : Affiche quelles GPO sont appliquées (ou refusées) sur le PC cible.

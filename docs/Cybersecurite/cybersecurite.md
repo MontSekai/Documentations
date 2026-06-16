@@ -17,6 +17,7 @@ Cette section regroupe toutes les notes relatives à la cybersécurité.
     - [RGPD, HDS, ISO 27001, NIS2...](normes_reglementation.md)
 
 ??? note "Gouvernance"
+    - [Gestion des Identités et des Accès](identite_acces.md)
     - [PSSI — Politique de Sécurité des SI](pssi.md)
     - [PGSSI-S — Version Santé](pgssi_s.md)
     - [PCA / PRA — Continuité et Reprise d'Activité](pca_pra.md)

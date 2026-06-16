@@ -6,51 +6,25 @@ tags:
   - PGSSI
 ---
 
-# PGSSI-S — Politique Générale de Sécurité des SI de Santé
+# PGSSI-S (Politique Générale de Sécurité des SI de Santé)
 
-La **PGSSI-S** est le cadre de référence national pour la sécurité des systèmes d'information de santé en France. Élaborée par l'**ANS** (Agence du Numérique en Santé, ex-ASIP Santé) sous l'égide du ministère de la Santé, elle s'impose à l'ensemble des acteurs de la santé.
+Cadre de référence national pour la sécurité des systèmes d'information de santé en France.
 
-> [!IMPORTANT]
-> La PGSSI-S n'est **pas** une PSSI d'établissement. C'est un **cadre national** qui fixe les exigences et les référentiels que chaque acteur de santé doit décliner dans sa propre PSSI et ses règles de sécurité.
+## 1. Définition
+La **PGSSI-S** est le cadre de référence national pour la sécurité des systèmes d'information de santé en France, élaboré par l'ANS (Agence du Numérique en Santé). Elle s'impose à l'ensemble des acteurs manipulant des données de santé.
 
-## Pourquoi une politique spécifique à la santé ?
+## 2. Description / Fonctionnement
+Contrairement à la [PSSI](pssi.md) qui est spécifique à un seul établissement, la PGSSI-S est un document cadre global. Elle rassemble de nombreux référentiels opposables :
+* Référentiel d'authentification (règles des cartes CPS, e-CPS).
+* Référentiel de gestion des habilitations (accès selon le profil médical).
+* Référentiel de journalisation et de traçabilité.
+* L'exigence de la certification **HDS** (Hébergeur de Données de Santé) pour tout traitement cloud.
 
-Le secteur de la santé présente des enjeux de sécurité particuliers :
-* **Données très sensibles** : Les données de santé sont parmi les plus sensibles (DMP, dossiers patients, résultats d'analyses...).
-* **Disponibilité critique** : Une panne du SI dans un hôpital peut avoir un impact direct sur la vie des patients.
-* **Interopérabilité** : Les systèmes de santé échangent entre eux (laboratoires, radiologie, médecins de ville, hôpitaux) et nécessitent des protocoles sécurisés.
-* **Obligation légale** : La loi impose la certification **HDS** pour tout hébergement de données de santé.
+## 3. Utilisation / Cas Pratique
+Tous les établissements de santé (CHU, cliniques), les éditeurs de logiciels métiers (Dossier Patient Informatisé), et les professionnels libéraux doivent s'appuyer sur la PGSSI-S pour rédiger leurs propres règles de sécurité internes et garantir l'interopérabilité sécurisée de l'information (ex: envoyer un document sur Mon Espace Santé de manière sécurisée).
 
-## Structure de la PGSSI-S
+## 4. Modifications possibles / Alternatives
+La PGSSI-S évolue régulièrement pour s'adapter aux nouvelles architectures (Cloud) et aux menaces croissantes ciblant les hôpitaux. Pour les organismes qui ne sont pas dans le secteur médical, il faut se référer au RGS (Référentiel Général de Sécurité) de l'État ou aux guides standards de l'ANSSI.
 
-La PGSSI-S s'articule autour de plusieurs référentiels thématiques :
-
-| Référentiel | Contenu |
-| :--- | :--- |
-| **Référentiel d'authentification** | Règles sur l'identification et l'authentification des professionnels de santé (CPS, e-CPS...) |
-| **Référentiel de certification** | Conditions de certification des logiciels et services de santé |
-| **Référentiel de gestion des habilitations** | Gestion des droits d'accès selon le profil (médecin, infirmier, administratif...) |
-| **Référentiel de journalisation** | Règles de traçabilité des accès aux données de santé |
-| **Référentiel HDS** | Certification pour l'hébergement des données de santé |
-| **Guide SSI pour les établissements** | Guide pratique de mise en œuvre pour les hôpitaux et cliniques |
-
-## Les acteurs concernés
-
-* **Établissements de santé** : CHU, CH, cliniques privées, EHPAD
-* **Professionnels de santé libéraux** : médecins, pharmaciens, infirmiers
-* **Éditeurs de logiciels** : DPI (Dossier Patient Informatisé), LGO (Logiciel de Gestion d'Officine)
-* **Hébergeurs HDS**
-* **GHTs** (Groupements Hospitaliers de Territoire)
-
-## Lien avec le Programme HOP'EN et SUN-ES
-
-La PGSSI-S s'inscrit dans la trajectoire de **numérisation du système de santé** français :
-* **Mon Espace Santé** : Espace numérique de santé pour chaque citoyen
-* **Identifiant National de Santé (INS)** : Identifiant unique du patient utilisé pour tous les échanges
-* **Messagerie Sécurisée de Santé (MSSanté)** : Protocole d'échange sécurisé entre professionnels
-
-## Voir aussi
-
-* [PSSI — Politique Générale de Sécurité SI](pssi.md)
-* [Normes et Réglementation (HDS, RGPD...)](normes_reglementation.md)
-* [PCA / PRA](pca_pra.md)
+## 5. Exemples visuels et Liens utiles
+Pour consulter les derniers référentiels de sécurité, se rendre sur le site de l'[ANS (Agence du Numérique en Santé)](https://esante.gouv.fr/).
