@@ -69,6 +69,10 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Developpement/api/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Developpement/developpement/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -93,6 +97,10 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/journal_raid/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/matrice_des_risques/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -105,7 +113,23 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/plan_management_projet/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/pmi_pmp/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/pmo_ppm/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/referentiel_documentaire/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/rex/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
@@ -177,6 +201,14 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Architecture/p2p/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Infrastructure/nat_pat/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/Physique_Transport/cablage/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -193,6 +225,10 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/http_https/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/ipv4/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -202,6 +238,10 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/modele_osi/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Reseau/Protocoles/ssh_rdp/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
@@ -277,6 +317,14 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/ldap/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/noyau/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/OS/windows_server/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -301,7 +349,15 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Stockage/iscsi/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/Stockage/netapp/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Stockage/raid/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
 </urlset>
