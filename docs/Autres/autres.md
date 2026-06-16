@@ -5,7 +5,10 @@ tags:
 
 # Autres et Projets
 
-Cette section regroupe les notes diverses temporelles et les projets complets.
+Cette section regroupe la gestion même du Wiki et les projets de développement divers.
 
-??? note "Projets"
-    - [RPG Tower Crawler](rpg-tower-crawler.md)
+## 📂 Gestion du Wiki
+* [Charte Éditoriale du Wiki](charte_editoriale.md)
+
+## 📂 Projets de développement
+* [RPG Tower Crawler](rpg-tower-crawler.md)

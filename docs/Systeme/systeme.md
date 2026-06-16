@@ -5,30 +5,39 @@ tags:
 
 # Système
 
-Cette section regroupe toutes les notes relatives à l'administration système.
+Cette section regroupe toutes les notes relatives à l'administration système, serveurs et infrastructure.
 
-??? note "OS"
-    - [Commandes Linux (Debian)](OS/commande_linux.md)
-    - [Commandes Windows](OS/commande_windows.md)
-    - [Windows Server](OS/windows_server.md)
-    ??? note "Active Directory"
-        - [Forêts et Domaines](OS/ad_forets_domaines.md)
-        - [Rôles FSMO](OS/ad_fsmo.md)
-        - [Types de contrôleurs de domaine](OS/ad_types_dc.md)
+## 📂 OS et Systèmes d'Exploitation
+* [Noyau (Kernel)](OS/noyau.md)
+* [Commandes Linux (Debian)](OS/commande_linux.md)
+* [Commandes Windows](OS/commande_windows.md)
+* [Windows Server](OS/windows_server.md)
 
-??? note "Automatisation"
-    - [Ansible](Automatisation/ansible.md)
+## 📂 Active Directory (Identités)
+* [Forêts et Domaines](OS/ad_forets_domaines.md)
+* [Rôles FSMO](OS/ad_fsmo.md)
+* [Types de contrôleurs de domaine](OS/ad_types_dc.md)
+* [GPO (Stratégies de groupe)](OS/gpo.md)
+* [Entra ID (Azure AD)](OS/entra_id.md)
+* [LDAP et LDAPS](OS/ldap.md)
 
-??? note "Virtualisation et Conteneurs"
-    - [Virtualisation (VM, LXC) et Docker](virtualisation.md)
-    - [Docker](Conteneurs/docker.md)
-    - [Kubernetes](Conteneurs/kubernetes.md)
+## 📂 Automatisation & IaC
+* [Ansible](Automatisation/ansible.md)
+* [Terraform](Infrastructure_as_Code/terraform.md)
 
-??? note "Infrastructure as Code"
-    - [Terraform](Infrastructure_as_Code/terraform.md)
+## 📂 Virtualisation et Conteneurs
+* [Virtualisation (VM, LXC)](virtualisation.md)
+* [Docker](Conteneurs/docker.md)
+* [Kubernetes](Conteneurs/kubernetes.md)
 
-??? note "Services"
-    - [DHCP](Services/dhcp.md)
-    - [DNS](Services/dns.md)
-    - [Sauvegarde et PRA](Services/sauvegarde.md)
-    - [Supervision / SNMP](Services/supervision.md)
+## 📂 Services d'Infrastructure
+* [DHCP](Services/dhcp.md)
+* [DNS](Services/dns.md)
+* [Sauvegarde](Services/sauvegarde.md)
+* [Supervision](Services/supervision.md)
+
+## 📂 Stockage
+* [Baies NetApp (Concept)](Stockage/netapp.md)
+* [Commandes NetApp (CLI)](Stockage/commande_netapp.md)
+* [RAID (Matériel/Disques)](Stockage/raid.md)
+* [iSCSI (SAN)](Stockage/iscsi.md)
