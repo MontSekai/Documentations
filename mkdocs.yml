@@ -78,6 +78,9 @@ nav:
           - Systeme/Services/dns.md
           - Systeme/Services/sauvegarde.md
           - Systeme/Services/supervision.md
+      - Stockage:
+          - Systeme/Stockage/netapp.md
+          - Systeme/Stockage/commande_netapp.md
   - Réseau: 
       - Reseau/reseau.md
       - Protocoles:
@@ -127,10 +130,12 @@ nav:
       - Gestion_de_projet:
           - Management/Gestion_de_projet/outils_gestion_projet.md
           - Management/Gestion_de_projet/methodologies_projet.md
+          - Management/Gestion_de_projet/agile_scrum.md
           - Management/Gestion_de_projet/pmo_ppm.md
           - Management/Gestion_de_projet/matrice_des_risques.md
       - Processus:
           - Management/Processus/diagramme_des_flux.md
+          - Management/Processus/bpmn.md
           - Management/Processus/itil.md
       - Stratégie:
           - Management/Strategie/but_objectif.md
@@ -138,6 +143,7 @@ nav:
           - Management/Strategie/swot.md
           - Management/Strategie/finance_it.md
           - Management/Strategie/transformation_numerique.md
+          - Management/Strategie/industrie_40.md
   - Développement:
       - Developpement/developpement.md
       - Bases_de_donnees:
