@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -617,7 +617,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -645,7 +645,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1092,33 +1092,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-la-virtualisation-machines-virtuelles-vms" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. La Virtualisation (Machines Virtuelles - VMs)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. La Virtualisation (Machines Virtuelles - VMs)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hyperviseur-de-type-1-bare-metal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hyperviseur de Type 1 (Bare-Metal)
+        1. Définition
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#hyperviseur-de-type-2-hosted" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hyperviseur de Type 2 (Hosted)
+        2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Modifications possibles / Alternatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-micro-vms-firecracker-kata-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les Micro-VMs (Firecracker, Kata Containers)
       
     </span>
   </a>
@@ -1131,22 +1153,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-la-conteneurisation" class="md-nav__link">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. La Conteneurisation
+        5. Exemples visuels et Liens utiles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. La Conteneurisation">
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#les-conteneurs-systemes-lxc-lxd" class="md-nav__link">
+  <a href="#comparatif-vm-vs-lxc-vs-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les Conteneurs Systèmes : LXC / LXD
+        Comparatif VM vs LXC vs Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture de base
       
     </span>
   </a>
@@ -1155,17 +1188,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-comparatif-vm-vs-lxc-vs-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Comparatif : VM vs LXC vs Docker
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1462,7 +1484,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1490,7 +1512,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1693,7 +1715,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1953,7 +1975,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -2993,6 +3015,8 @@
       
         
       
+        
+      
     
     
     
@@ -3043,6 +3067,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3050,7 +3102,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3078,7 +3130,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3106,7 +3158,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3162,7 +3214,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3190,7 +3242,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3320,6 +3372,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3378,6 +3434,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3562,6 +3674,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3676,6 +3792,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3898,6 +4070,8 @@
       
         
       
+        
+      
     
     
     
@@ -3975,6 +4149,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -3991,10 +4193,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4012,8 +4214,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4150,45 +4352,45 @@
 
 
 <h1 id="virtualisation-et-conteneurisation">Virtualisation et Conteneurisation</h1>
-<p>La virtualisation et la conteneurisation sont deux approches permettant d'isoler des applications et de maximiser l'utilisation des ressources matérielles. Bien qu'elles répondent à des besoins similaires en termes d'isolation, leur fonctionnement diffère fondamentalement.</p>
-<h2 id="1-la-virtualisation-machines-virtuelles-vms">1. La Virtualisation (Machines Virtuelles - VMs)</h2>
-<p>La virtualisation s'appuie sur une couche logicielle appelée <strong>hyperviseur</strong>, qui permet d'exécuter plusieurs systèmes d'exploitation (Guest OS) de manière isolée sur une même machine physique (Host).</p>
-<p>Chaque VM embarque :
-- Un noyau complet (Kernel)
-- Les bibliothèques et binaires nécessaires
-- L'application</p>
-<h3 id="hyperviseur-de-type-1-bare-metal">Hyperviseur de Type 1 (Bare-Metal)</h3>
-<p>S'installe <strong>directement sur le matériel</strong>, sans OS intermédiaire. Idéal pour les serveurs en production, car les performances sont excellentes.
-* <strong>Exemples</strong> : VMware ESXi, Microsoft Hyper-V (Server Core), Proxmox VE (KVM), Xen.</p>
-<h3 id="hyperviseur-de-type-2-hosted">Hyperviseur de Type 2 (Hosted)</h3>
-<p>S'installe <strong>au-dessus d'un système d'exploitation hôte</strong> existant (Windows, Linux, macOS). Principalement utilisé pour le test et le développement sur poste de travail.
-* <strong>Exemples</strong> : VMware Workstation, Oracle VirtualBox.</p>
-<h2 id="2-la-conteneurisation">2. La Conteneurisation</h2>
-<p>La conteneurisation est une virtualisation <strong>au niveau de l'OS</strong>. Il n'y a pas d'hyperviseur ni de système d'exploitation invité (Guest OS).
-Tous les conteneurs se <strong>partagent le même noyau (Kernel)</strong> de l'OS hôte, mais restent isolés les uns des autres dans l'espace utilisateur (user space) grâce aux <em>Namespaces</em> et aux <em>Cgroups</em> sous Linux.</p>
+<p>Techniques permettant d'isoler des systèmes ou des applications pour maximiser l'utilisation du matériel.</p>
+<h2 id="1-definition">1. Définition</h2>
 <ul>
-<li><strong>Exemples</strong> : <a href="../Conteneurs/docker/">Docker</a>, Podman, Containerd.</li>
+<li><strong>Virtualisation</strong> : S'appuie sur une couche logicielle (l'hyperviseur) pour simuler un ordinateur physique complet et y exécuter plusieurs systèmes d'exploitation (Machines Virtuelles ou VMs) de manière totalement isolée sur le même matériel physique.</li>
+<li><strong>Conteneurisation</strong> : Virtualisation légère au niveau de l'OS. Les conteneurs se partagent le même noyau (Kernel) que l'hôte mais restent isolés dans l'espace utilisateur.</li>
 </ul>
-<h3 id="les-conteneurs-systemes-lxc-lxd">Les Conteneurs Systèmes : LXC / LXD</h3>
-<p>Les <strong>LXC</strong> (Linux Containers) se situent à mi-chemin entre une VM complète et un conteneur applicatif Docker :
-* Contrairement à Docker (qui fait tourner un seul processus par conteneur), un <strong>LXC fait tourner un OS Linux complet</strong> (init, sshd, syslog...) de façon légère, mais toujours en partageant le noyau hôte.
-* <strong>LXD / Incus</strong> : Propose une surcouche de gestion aux LXC, les gérant presque comme des VMs (snapshots, migrations, réseau virtuel) au point qu'ils sont très populaires sur des plateformes comme Proxmox.</p>
-<h2 id="3-comparatif-vm-vs-lxc-vs-docker">3. Comparatif : VM vs LXC vs Docker</h2>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<ul>
+<li><strong>L'hyperviseur de Type 1 (Bare-Metal)</strong> : S'installe directement sur le matériel, sans OS intermédiaire, pour des performances maximales (ex: VMware ESXi, Proxmox VE). </li>
+<li><strong>L'hyperviseur de Type 2</strong> : S'installe sur un OS existant, utile pour les tests sur PC (ex: VirtualBox sur Windows).</li>
+<li><strong>Les conteneurs systèmes (LXC)</strong> : Simulent un système Linux complet (init, ssh) de façon très légère en partageant le noyau hôte.</li>
+<li><strong>Les conteneurs applicatifs (Docker)</strong> : Isolent uniquement un processus ou une application spécifique.</li>
+</ul>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<ul>
+<li><strong>VMs</strong> : Serveurs de production lourds, isolation forte de sécurité, hébergement d'OS différents (ex: faire tourner un serveur Windows sur une infrastructure physique Linux).</li>
+<li><strong>LXC</strong> : Déploiement d'environnements de type "serveur Linux" très denses sur Proxmox. Ils sont très rapides à démarrer et consomment très peu de RAM et d'espace disque.</li>
+<li><strong>Docker</strong> : Architecture microservices, pipelines CI/CD, garantie de portabilité du code entre l'environnement du développeur et la production.</li>
+</ul>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<h3 id="les-micro-vms-firecracker-kata-containers">Les Micro-VMs (Firecracker, Kata Containers)</h3>
+<p>Une Micro-VM est une machine virtuelle extrêmement allégée, conçue pour démarrer en quelques millisecondes. Elle offre la vitesse de lancement d'un conteneur avec l'isolation de sécurité stricte d'une VM traditionnelle en utilisant un noyau minimaliste. C'est la technologie phare utilisée par le cloud public pour le <em>Serverless</em> (ex: AWS Lambda) afin d'exécuter du code de locataires différents sur les mêmes serveurs physiques en toute sécurité.</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="comparatif-vm-vs-lxc-vs-docker">Comparatif VM vs LXC vs Docker</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Caractéristique</th>
 <th style="text-align: left;">Machine Virtuelle (VM)</th>
 <th style="text-align: left;">Conteneur Système (LXC)</th>
-<th style="text-align: left;">Conteneur d'Application (Docker)</th>
+<th style="text-align: left;">Conteneur (Docker)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Périmètre</strong></td>
-<td style="text-align: left;">Isole un OS complet</td>
-<td style="text-align: left;">Isole un environnement OS Linux</td>
-<td style="text-align: left;">Isole un processus applicatif (microservice)</td>
+<td style="text-align: left;">OS complet</td>
+<td style="text-align: left;">Environnement OS Linux</td>
+<td style="text-align: left;">Processus (Microservice)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Noyau (Kernel)</strong></td>
@@ -4197,46 +4399,33 @@ Tous les conteneurs se <strong>partagent le même noyau (Kernel)</strong> de l'O
 <td style="text-align: left;"><strong>Partage le noyau de l'hôte</strong></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Poids (Stockage)</strong></td>
+<td style="text-align: left;"><strong>Temps boot</strong></td>
+<td style="text-align: left;">Lent (Minutes)</td>
+<td style="text-align: left;">Instantané (Secondes)</td>
+<td style="text-align: left;">Instantané (Secondes)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poids</strong></td>
 <td style="text-align: left;">Lourd (Plusieurs Go)</td>
 <td style="text-align: left;">Très léger (Quelques Mo)</td>
 <td style="text-align: left;">Très léger (Quelques Mo)</td>
 </tr>
-<tr>
-<td style="text-align: left;"><strong>Temps de démarrage</strong></td>
-<td style="text-align: left;">Lent (Minutes)</td>
-<td style="text-align: left;">Quasi instantané (Secondes)</td>
-<td style="text-align: left;">Quasi instantané (Secondes)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Sécurité/Isolation</strong></td>
-<td style="text-align: left;">Forte (Isolation Hard/Hyperviseur)</td>
-<td style="text-align: left;">Modérée (Namespaces)</td>
-<td style="text-align: left;">Modérée (Namespaces)</td>
-</tr>
 </tbody>
 </table>
+<h3 id="architecture-de-base">Architecture de base</h3>
 <pre class="mermaid"><code>graph TD
-    subgraph "Machine Virtuelle (Hyperviseur)"
+    subgraph "Virtualisation (Hyperviseur)"
         H1["OS Invité 1 + App"]
-        H2["OS Invité 2 + App"]
-        HYP["Hyperviseur (ESXi / Hyper-V)"]
-        MAT1["Matériel Physique"]
+        HYP["Hyperviseur (ESXi / Proxmox)"]
         H1 --&gt; HYP
-        H2 --&gt; HYP
-        HYP --&gt; MAT1
     end
 
-    subgraph "Conteneurs (LXC / Docker)"
-        C1["App 1"]
-        C2["App 2"]
-        ENG["Moteur de Conteneurs (Docker/LXC)"]
+    subgraph "Conteneurisation (LXC / Docker)"
+        C1["App / LXC 1"]
+        ENG["Moteur (Docker/LXD)"]
         OSH["OS Hôte (Noyau partagé)"]
-        MAT2["Matériel Physique"]
         C1 --&gt; ENG
-        C2 --&gt; ENG
         ENG --&gt; OSH
-        OSH --&gt; MAT2
     end</code></pre>
 
 

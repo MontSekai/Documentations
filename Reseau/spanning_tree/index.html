@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -612,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -640,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1330,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1358,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1566,7 +1566,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1826,7 +1826,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -2391,10 +2391,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pourquoi-stp-est-il-necessaire" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pourquoi STP est-il nécessaire ?
+        1. Définition
       
     </span>
   </a>
@@ -2402,22 +2402,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fonctionnement-de-stp-8021d" class="md-nav__link">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fonctionnement de STP (802.1D)
+        2. Description / Fonctionnement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fonctionnement de STP (802.1D)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#etape-1-election-du-root-bridge" class="md-nav__link">
+  <a href="#architecture-de-blocage-stp-simplifiee" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 1 : Élection du Root Bridge
+        Architecture de blocage STP Simplifiée
       
     </span>
   </a>
@@ -2425,21 +2458,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#etape-2-calcul-du-chemin-vers-le-root-bridge" class="md-nav__link">
+  <a href="#les-etats-classiques-dun-port-sous-stp-8021d" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 2 : Calcul du chemin vers le Root Bridge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etape-3-attribution-des-roles-aux-ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Étape 3 : Attribution des rôles aux ports
+        Les États classiques d'un port sous STP (802.1D)
       
     </span>
   </a>
@@ -2448,50 +2470,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etats-des-ports-stp-8021d" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        États des ports STP (802.1D)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rstp-rapid-stp-8021w" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RSTP — Rapid STP (802.1w)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mstp-multiple-stp-8021s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSTP — Multiple STP (802.1s)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commandes-cisco" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commandes Cisco
-      
-    </span>
-  </a>
   
 </li>
       
@@ -3020,6 +2998,8 @@
       
         
       
+        
+      
     
     
     
@@ -3070,6 +3050,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3077,7 +3085,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3105,7 +3113,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3133,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3189,7 +3197,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3217,7 +3225,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3347,6 +3355,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3405,6 +3417,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3589,6 +3657,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3703,6 +3775,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3925,6 +4053,8 @@
       
         
       
+        
+      
     
     
     
@@ -4002,6 +4132,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4018,10 +4176,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4039,8 +4197,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4163,174 +4321,62 @@
 
 
 <h1 id="spanning-tree-protocol-stp">Spanning Tree Protocol (STP)</h1>
-<p>Le <strong>Spanning Tree Protocol (STP)</strong> est un protocole de couche 2 qui permet d'<strong>éliminer les boucles</strong> dans les réseaux commutés (switches) tout en maintenant une <strong>redondance physique</strong> des liens.</p>
-<h2 id="pourquoi-stp-est-il-necessaire">Pourquoi STP est-il nécessaire ?</h2>
-<p>Dans un réseau avec plusieurs switches interconnectés, il est courant de câbler des liens en redondance pour éviter les SPOF. Sans STP, ces boucles physiques provoquent des <strong>tempêtes de broadcast</strong> : les trames se multiplient à l'infini sur le réseau et le saturent complètement.</p>
-<p><strong>STP résout ce problème en bloquant logiquement certains ports</strong>, tout en conservant les câbles comme chemin de secours.</p>
-<h2 id="fonctionnement-de-stp-8021d">Fonctionnement de STP (802.1D)</h2>
-<h3 id="etape-1-election-du-root-bridge">Étape 1 : Élection du Root Bridge</h3>
-<p>Le <strong>Root Bridge</strong> est le centre de l'arbre STP. Il est élu en fonction du <strong>Bridge ID</strong> = Priorité (défaut: 32768) + Adresse MAC. Le Bridge ID le plus bas est élu.</p>
-<h3 id="etape-2-calcul-du-chemin-vers-le-root-bridge">Étape 2 : Calcul du chemin vers le Root Bridge</h3>
-<p>Chaque switch calcule le chemin le plus court (en <strong>coût STP</strong>) vers le Root Bridge.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Vitesse du lien</th>
-<th style="text-align: center;">Coût STP (802.1D)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">10 Mbps</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr>
-<td style="text-align: center;">100 Mbps</td>
-<td style="text-align: center;">19</td>
-</tr>
-<tr>
-<td style="text-align: center;">1 Gbps</td>
-<td style="text-align: center;">4</td>
-</tr>
-<tr>
-<td style="text-align: center;">10 Gbps</td>
-<td style="text-align: center;">2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="etape-3-attribution-des-roles-aux-ports">Étape 3 : Attribution des rôles aux ports</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Rôle</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: center;">État</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Root Port (RP)</strong></td>
-<td style="text-align: left;">Port offrant le meilleur chemin vers le Root Bridge</td>
-<td style="text-align: center;">Forwarding</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Designated Port (DP)</strong></td>
-<td style="text-align: left;">Port sélectionné pour chaque segment réseau</td>
-<td style="text-align: center;">Forwarding</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Blocked Port (BP)</strong></td>
-<td style="text-align: left;">Port redondant mis en veille pour casser la boucle</td>
-<td style="text-align: center;">Blocking</td>
-</tr>
-</tbody>
-</table>
+<p>Le protocole indispensable garant de la topologie physique et de l'absence de boucles réseau fatales.</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>Le <strong>Spanning Tree Protocol (STP / IEEE 802.1D)</strong> est un protocole de sécurité de couche 2 (Liaison de données, celle des <a href="../Protocoles/ethernet_trames/">Trames Ethernet</a>) qui a pour rôle fondamental d'<strong>éliminer les boucles logiques</strong> dans les réseaux de Switchs tout en conservant et en autorisant un câblage de secours matériel redondant.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>Dans les armoires informatiques d'une entreprise, on relie très souvent les Switchs d'étage entre eux avec plusieurs câbles de secours en même temps (le but : si un câble est mordu par un rat ou coupé, le réseau d'étage continue de fonctionner). 
+Le drame de la Couche 2, c'est qu'elle ne possède aucun mécanisme de durée de vie (pas de <em>TTL</em>) sur ses trames, contrairement aux paquets IP. 
+Si une simple trame de Broadcast (ex: demande IP au réseau DHCP) se met à tourner en boucle dans ces câbles de secours branchés en rond, la trame se duplique à l'infini en une fraction de seconde : c'est la <strong>Tempête de Broadcast</strong> qui sature les puces des switchs et fait s'effondrer la totalité du réseau de l'entreprise.</p>
+<p><strong>Le STP résout ce problème mortel en "bloquant" de manière virtuelle et automatique (Blocking State) les ports des câbles redondants</strong>. Il trace un chemin unique, propre, et sans boucle (une forme mathématique d'Arbre - <em>Tree</em>). Si le câble principal de travail lâche, le STP s'en aperçoit et débloque le câble de secours (Forwarding State) pour rétablir la communication.</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<p>Le fonctionnement mathématique du STP s'articule autour de l'élection d'un "Chef d'orchestre", le <strong>Root Bridge (Le pont racine)</strong>.
+Le switch central possédant le numéro de priorité matérielle le plus bas devient le Root Bridge. Ensuite, absolument tous les autres switchs du réseau calculent la distance la plus courte pour le rejoindre. Ils laissent le port le plus proche ouvert, et décident de bloquer de force tous les autres câbles inutiles qui risqueraient de former une boucle.</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p>Le problème historique majeur du vieux STP (Norme 802.1D des années 90) est son incroyable lenteur : quand un câble est physiquement cassé, le STP met entre 30 et 50 secondes pour analyser le réseau et oser débloquer le câble de secours. Cela provoque une coupure réseau très douloureuse pour la téléphonie et les applications.</p>
+<p><strong>L'alternative moderne indispensable est le RSTP (Rapid Spanning Tree - 802.1w)</strong> : Il s'agit du standard mondial actuel. Grâce à de nouveaux mécanismes de négociation explicite de switch à switch, il "converge" (s'adapte à une panne) en <strong>moins d'une seconde</strong>.</p>
+<p><strong>PortFast et BPDU Guard</strong> :
+Sur les Switchs d'accès, les ports qui sont branchés à des PC de bureau ou à des Serveurs finaux ne causeront logiquement jamais de boucle de switch. L'administrateur active donc la configuration <strong>PortFast</strong> sur ces ports : cela ordonne au STP de ne pas analyser le port au démarrage et de l'ouvrir immédiatement (le PC ne doit pas attendre 30 secondes pour avoir du réseau).
+En contrepartie, par sécurité drastique, on y greffe le mécanisme <strong>BPDU Guard</strong> : si un employé mal intentionné branche en douce un switch de maison sur cette prise murale "PortFast", le BPDU Guard détecte la trame du switch et "éteint / coupe" la prise murale instantanément.</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="architecture-de-blocage-stp-simplifiee">Architecture de blocage STP Simplifiée</h3>
 <pre class="mermaid"><code>graph TD
-    RB["🔲 Root Bridge\n(Switch A - ID le plus bas)"]
-    SB["Switch B"]
-    SC["Switch C"]
+    RB["🔲 Switch Root Bridge\n(Le Chef de l'Arbre - Switch Central)"]
+    SB["Switch d'Accès B\n(Étage 1)"]
+    SC["Switch d'Accès C\n(Étage 2)"]
 
-    RB -- "DP" --&gt; SB
-    RB -- "DP" --&gt; SC
-    SB -- "RP" --&gt; RB
-    SC -- "RP" --&gt; RB
-    SB -- "DP ←→ BLOCKED" --&gt; SC</code></pre>
-<h2 id="etats-des-ports-stp-8021d">États des ports STP (802.1D)</h2>
+    RB -- "Port Ouvert (Designated)" --&gt; SB
+    RB -- "Port Ouvert (Designated)" --&gt; SC
+    SB -- "Port Ouvert (Root Port)" --&gt; RB
+    SC -- "Port Ouvert (Root Port)" --&gt; RB
+    SB -. "Câble de secours ROUGE et BLOQUÉ par STP" .- SC</code></pre>
+<h3 id="les-etats-classiques-dun-port-sous-stp-8021d">Les États classiques d'un port sous STP (802.1D)</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">État</th>
-<th style="text-align: center;">Durée</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">État du port</th>
+<th style="text-align: left;">Comportement sur le réseau</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Blocking</strong></td>
-<td style="text-align: center;">—</td>
-<td style="text-align: left;">Reçoit les BPDU, ne transmet pas de données</td>
+<td style="text-align: left;"><strong>Blocking</strong> (Port Bloqué)</td>
+<td style="text-align: left;">Le port est verrouillé logiquement pour empêcher la boucle fatale.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Listening</strong></td>
-<td style="text-align: center;">15s</td>
-<td style="text-align: left;">Participe à l'élection, ne transmet pas</td>
+<td style="text-align: left;"><strong>Listening</strong> (Phase d'Écoute)</td>
+<td style="text-align: left;">Transition. Le port analyse les annonces STP des switchs voisins.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Learning</strong></td>
-<td style="text-align: center;">15s</td>
-<td style="text-align: left;">Construit la table MAC, ne transmet pas</td>
+<td style="text-align: left;"><strong>Learning</strong> (Apprentissage)</td>
+<td style="text-align: left;">Transition. Le switch mémorise silencieusement les adresses MAC.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Forwarding</strong></td>
-<td style="text-align: center;">—</td>
-<td style="text-align: left;">Transmet normalement les données</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Disabled</strong></td>
-<td style="text-align: center;">—</td>
-<td style="text-align: left;">Port administrativement désactivé</td>
+<td style="text-align: left;"><strong>Forwarding</strong> (Acheminement Actif)</td>
+<td style="text-align: left;">Le port est sain, il laisse passer les trames réseau normales.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Temps de convergence STP (802.1D) : ~30 à 50 secondes.</strong> C'est le principal défaut de STP classique.</p>
-</blockquote>
-<h2 id="rstp-rapid-stp-8021w">RSTP — Rapid STP (802.1w)</h2>
-<p><strong>RSTP</strong> (Rapid Spanning Tree Protocol) est l'évolution moderne de STP. Il remplace les timers par un mécanisme de <strong>négociation explicite</strong> entre switches, réduisant le temps de convergence à <strong>moins de 1 seconde</strong> dans les conditions optimales.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Caractéristique</th>
-<th style="text-align: center;">STP (802.1D)</th>
-<th style="text-align: center;">RSTP (802.1w)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Convergence</td>
-<td style="text-align: center;">30 à 50s</td>
-<td style="text-align: center;">&lt; 1s</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rôles de ports</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">5 (+ Alternate, Backup)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Compatibilité</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">Rétrocompatible avec STP</td>
-</tr>
-<tr>
-<td style="text-align: left;">Standard recommandé</td>
-<td style="text-align: center;">❌ Obsolète</td>
-<td style="text-align: center;">✅ <strong>Utiliser RSTP</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="mstp-multiple-stp-8021s">MSTP — Multiple STP (802.1s)</h2>
-<p><strong>MSTP</strong> permet de faire tourner <strong>plusieurs instances STP</strong> sur un seul switch, une par groupe de VLANs. Cela permet d'équilibrer le trafic sur des liens redondants en dédiant chaque chemin à certains VLANs.</p>
-<h2 id="commandes-cisco">Commandes Cisco</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!<span class="w"> </span>Vérifier<span class="w"> </span>STP
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>show<span class="w"> </span>spanning-tree<span class="w">                    </span>!<span class="w"> </span>Vue<span class="w"> </span>générale<span class="w"> </span>STP<span class="w"> </span>par<span class="w"> </span>VLAN
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>show<span class="w"> </span>spanning-tree<span class="w"> </span>vlan<span class="w"> </span><span class="m">10</span><span class="w">            </span>!<span class="w"> </span>STP<span class="w"> </span>pour<span class="w"> </span>un<span class="w"> </span>VLAN<span class="w"> </span>spécifique
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>!<span class="w"> </span>Forcer<span class="w"> </span>un<span class="w"> </span>switch<span class="w"> </span>à<span class="w"> </span>être<span class="w"> </span>Root<span class="w"> </span>Bridge
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>spanning-tree<span class="w"> </span>vlan<span class="w"> </span><span class="m">10</span><span class="w"> </span>priority<span class="w"> </span><span class="m">4096</span><span class="w">  </span>!<span class="w"> </span>Priorité<span class="w"> </span><span class="nv">basse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Root<span class="w"> </span>Bridge<span class="w"> </span>préféré
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>spanning-tree<span class="w"> </span>vlan<span class="w"> </span><span class="m">10</span><span class="w"> </span>root<span class="w"> </span>primary<span class="w">    </span>!<span class="w"> </span>Commande<span class="w"> </span>raccourcie
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>!<span class="w"> </span>Activer<span class="w"> </span>RSTP
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>spanning-tree<span class="w"> </span>mode<span class="w"> </span>rapid-pvst<span class="w">         </span>!<span class="w"> </span>Rapid-PVST+<span class="w"> </span><span class="o">(</span>RSTP<span class="w"> </span>par<span class="w"> </span>VLAN,<span class="w"> </span>Cisco<span class="o">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>!<span class="w"> </span>PortFast<span class="w"> </span>:<span class="w"> </span>convergence<span class="w"> </span>immédiate<span class="w"> </span>sur<span class="w"> </span>les<span class="w"> </span>ports<span class="w"> </span>accès<span class="w"> </span><span class="o">(</span>PC/serveurs<span class="w"> </span>uniquement<span class="w"> </span>!<span class="o">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>interface<span class="w"> </span>FastEthernet0/1
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w"> </span>spanning-tree<span class="w"> </span>portfast<span class="w">               </span>!<span class="w"> </span>JAMAIS<span class="w"> </span>sur<span class="w"> </span>un<span class="w"> </span>port<span class="w"> </span>connecté<span class="w"> </span>à<span class="w"> </span>un<span class="w"> </span>switch
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span>spanning-tree<span class="w"> </span>bpduguard<span class="w"> </span><span class="nb">enable</span><span class="w">       </span>!<span class="w"> </span>Bloque<span class="w"> </span>le<span class="w"> </span>port<span class="w"> </span>si<span class="w"> </span>une<span class="w"> </span>BPDU<span class="w"> </span>est<span class="w"> </span>reçue<span class="w"> </span><span class="o">(</span>sécurité<span class="o">)</span>
-</code></pre></div>
-<blockquote>
-<p>[!IMPORTANT]
-<strong>PortFast + BPDU Guard</strong> : Activer PortFast uniquement sur les ports reliés à des postes finaux (PC, serveurs). Si un switch est accidentellement branché dessus, <strong>BPDU Guard</strong> désactivera immédiatement le port pour éviter les boucles.</p>
-</blockquote>
 
 
 

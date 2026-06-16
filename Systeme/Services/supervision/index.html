@@ -23,11 +23,11 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Supervision des Systèmes et Réseaux - Documentation Raphaël Hirsch</title>
+        <title>Supervision (Monitoring) - Documentation Raphaël Hirsch</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supervision-des-systemes-et-reseaux" class="md-skip">
+        <a href="#supervision-monitoring" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Supervision des Systèmes et Réseaux
+              Supervision (Monitoring)
             
           </span>
         </div>
@@ -617,7 +617,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -645,7 +645,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1337,7 +1337,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1374,7 +1374,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1392,7 +1392,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1418,10 +1418,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#les-3-piliers-de-lobservabilite" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les 3 piliers de l'observabilité
+        1. Définition
       
     </span>
   </a>
@@ -1429,105 +1429,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#snmp-simple-network-management-protocol" class="md-nav__link">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SNMP — Simple Network Management Protocol
+        2. Description / Fonctionnement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SNMP — Simple Network Management Protocol">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#composants-snmp" class="md-nav__link">
+  <a href="#fonctionnement-du-trap-snmp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Composants SNMP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-versions-snmp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les versions SNMP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-traps-snmp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les Traps SNMP
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outils-de-supervision-courants" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outils de supervision courants
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indicateurs-a-surveiller" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Indicateurs à surveiller
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Indicateurs à surveiller">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#systeme" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Système
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reseau" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Réseau
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#applicatif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applicatif
+        Fonctionnement du Trap SNMP
       
     </span>
   </a>
@@ -1737,7 +1687,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1997,7 +1947,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -3037,6 +2987,8 @@
       
         
       
+        
+      
     
     
     
@@ -3087,6 +3039,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3094,7 +3074,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3122,7 +3102,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3150,7 +3130,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3206,7 +3186,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3234,7 +3214,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3364,6 +3344,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3422,6 +3406,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3606,6 +3646,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3720,6 +3764,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3942,6 +4042,8 @@
       
         
       
+        
+      
     
     
     
@@ -4019,6 +4121,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4035,10 +4165,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4056,8 +4186,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4186,171 +4316,40 @@
 
 
 
-<h1 id="supervision-des-systemes-et-reseaux">Supervision des Systèmes et Réseaux</h1>
-<p>La supervision (ou monitoring) consiste à surveiller en temps réel l'état de santé de l'infrastructure IT pour anticiper les pannes et garantir la disponibilité des services.</p>
-<h2 id="les-3-piliers-de-lobservabilite">Les 3 piliers de l'observabilité</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Pilier</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Exemples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Métriques</strong></td>
-<td style="text-align: left;">Données numériques mesurées dans le temps (CPU, RAM, bande passante)</td>
-<td style="text-align: left;">Grafana, Prometheus, Zabbix</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Logs</strong></td>
-<td style="text-align: left;">Journaux d'événements textuels générés par les systèmes</td>
-<td style="text-align: left;"><a href="../Cybersecurite/siem.md">SIEM</a>, ELK Stack, Graylog</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Traces</strong></td>
-<td style="text-align: left;">Suivi du parcours d'une requête dans une application distribuée</td>
-<td style="text-align: left;">Jaeger, Zipkin, Tempo</td>
-</tr>
-</tbody>
-</table>
-<h2 id="snmp-simple-network-management-protocol">SNMP — Simple Network Management Protocol</h2>
-<p>Le <strong>SNMP</strong> est le protocole standard utilisé pour superviser et gérer les équipements réseau (routeurs, switches, serveurs, imprimantes...).</p>
-<h3 id="composants-snmp">Composants SNMP</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Composant</th>
-<th style="text-align: left;">Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Manager (NMS)</strong></td>
-<td style="text-align: left;">Le serveur de supervision qui interroge les agents</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Agent</strong></td>
-<td style="text-align: left;">Logiciel embarqué sur l'équipement supervisé qui répond aux requêtes</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>MIB</strong> (Management Information Base)</td>
-<td style="text-align: left;">Base de données hiérarchique des variables supervisables (OID)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>OID</strong> (Object Identifier)</td>
-<td style="text-align: left;">Identifiant unique d'une variable SNMP (ex: <code>1.3.6.1.2.1.1.1.0</code> = description système)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="les-versions-snmp">Les versions SNMP</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Version</th>
-<th style="text-align: left;">Sécurité</th>
-<th style="text-align: left;">Usage recommandé</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>v1</strong></td>
-<td style="text-align: left;">Aucune (communauté en clair)</td>
-<td style="text-align: left;">❌ Obsolète, abandonner</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>v2c</strong></td>
-<td style="text-align: left;">Communauté en clair (mais plus de fonctions)</td>
-<td style="text-align: left;">⚠️ Acceptable en réseau isolé</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>v3</strong></td>
-<td style="text-align: left;">Authentification + chiffrement</td>
-<td style="text-align: left;">✅ <strong>Recommandé</strong> en production</td>
-</tr>
-</tbody>
-</table>
-<h3 id="les-traps-snmp">Les Traps SNMP</h3>
-<p>Un <strong>Trap SNMP</strong> est un mécanisme d'alerte <strong>proactif</strong> : au lieu d'attendre que le Manager interroge l'agent (<em>polling</em>), l'agent envoie <strong>lui-même</strong> une notification en cas d'événement critique (panne d'interface, surcharge CPU, redémarrage...).</p>
+<h1 id="supervision-monitoring">Supervision (Monitoring)</h1>
+<p>Surveillance en temps réel de l'état de santé de l'infrastructure IT.</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>La supervision (ou monitoring) consiste à surveiller en permanence et en temps réel l'état de santé, la disponibilité et les performances de l'infrastructure IT (réseaux, serveurs, applications) pour anticiper les pannes et réagir rapidement.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>La supervision s'appuie sur <strong>3 piliers de l'observabilité</strong> :
+1. <strong>Les Métriques</strong> : Données chiffrées tracées dans le temps (CPU, RAM, bande passante).
+2. <strong>Les Logs</strong> : Journaux textuels générés par les événements systèmes.
+3. <strong>Les Traces</strong> : Suivi d'une requête utilisateur de bout en bout.</p>
+<p>Le protocole standard historique de l'industrie pour les équipements réseau est le <strong>SNMP (Simple Network Management Protocol)</strong>.
+Un serveur "Manager" interroge régulièrement des "Agents" installés sur les équipements. Si une anomalie grave survient, l'agent peut aussi envoyer de lui-même une alerte non sollicitée : c'est le <strong>Trap SNMP</strong>.</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<p>Lorsqu'un lien fibre lâche, qu'un serveur de base de données sature (CPU &gt; 90%), ou que l'espace disque d'un serveur critique passe sous les 5%, le serveur de supervision détecte l'anomalie et envoie instantanément un e-mail, un SMS ou un message Teams à l'administrateur d'astreinte, souvent avant même que les utilisateurs ne s'en plaignent.</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p>Le SNMP a évolué :
+* <strong>v1 et v2c</strong> : Le trafic réseau circule en clair (non sécurisé, à réserver aux réseaux très isolés).
+* <strong>v3</strong> : Intègre l'authentification et le chiffrement fort (fortement recommandé).</p>
+<p>Au-delà du SNMP, la supervision moderne privilégie l'installation d'agents logiciels dédiés (Push) ou l'utilisation d'APIs pour les environnements Cloud et les conteneurs Kubernetes.</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<p><strong>Outils courants du marché :</strong>
+* <em>Zabbix</em>, <em>Nagios/Centreon</em>, <em>PRTG</em> (Supervision classique SNMP/Agents).
+* <em>Grafana + Prometheus</em> (Observabilité moderne Cloud Native).
+* <em>Datadog</em> (Supervision APM SaaS puissante).</p>
+<h3 id="fonctionnement-du-trap-snmp">Fonctionnement du Trap SNMP</h3>
 <pre class="mermaid"><code>sequenceDiagram
-    participant E as Équipement réseau (Agent SNMP)
-    participant M as Serveur de supervision (NMS)
+    participant E as Équipement (Agent)
+    participant M as Serveur Supervision (NMS)
 
-    M-&gt;&gt;E: GET-REQUEST (polling régulier)
-    E--&gt;&gt;M: GET-RESPONSE (valeurs métriques)
+    M-&gt;&gt;E: GET-REQUEST (Polling régulier)
+    E--&gt;&gt;M: GET-RESPONSE (CPU: 20%)
 
-    note over E: Événement critique détecté !
-    E--)M: TRAP (alerte sans sollicitation)
-    M--&gt;&gt;M: Déclenchement d'une alerte</code></pre>
-<h2 id="outils-de-supervision-courants">Outils de supervision courants</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Outil</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Points forts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Zabbix</strong></td>
-<td style="text-align: left;">Open-source</td>
-<td style="text-align: left;">Très complet, SNMP, agents, dashboards</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Nagios / Icinga</strong></td>
-<td style="text-align: left;">Open-source</td>
-<td style="text-align: left;">Pilier historique des checks de disponibilité</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>PRTG</strong></td>
-<td style="text-align: left;">Commercial</td>
-<td style="text-align: left;">Très simple d'utilisation, all-in-one</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Grafana + Prometheus</strong></td>
-<td style="text-align: left;">Open-source</td>
-<td style="text-align: left;">Visualisation de métriques, idéal pour infra cloud/kubernetes</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Datadog</strong></td>
-<td style="text-align: left;">SaaS</td>
-<td style="text-align: left;">Cloud-native, APM, observabilité complète</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Elastic Stack (ELK)</strong></td>
-<td style="text-align: left;">Open-source</td>
-<td style="text-align: left;">Logs centralisés, dashboards Kibana</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>LibreNMS</strong></td>
-<td style="text-align: left;">Open-source</td>
-<td style="text-align: left;">Découverte automatique réseau, SNMP natif</td>
-</tr>
-</tbody>
-</table>
-<h2 id="indicateurs-a-surveiller">Indicateurs à surveiller</h2>
-<h3 id="systeme">Système</h3>
-<ul>
-<li><strong>CPU</strong> : Utilisation % (alerte si &gt; 85% pendant +5 min)</li>
-<li><strong>RAM</strong> : Utilisation % et disponible</li>
-<li><strong>Disque</strong> : Occupation % et IOPS (alerte si &gt; 90%)</li>
-<li><strong>Services</strong> : Statut actif/inactif des processus critiques</li>
-</ul>
-<h3 id="reseau">Réseau</h3>
-<ul>
-<li><strong>Bande passante</strong> : Débit entrant/sortant par interface</li>
-<li><strong>Erreurs de paquets</strong> : CRC errors, discards, collisions</li>
-<li><strong>Latence / Ping</strong> : Temps de réponse entre équipements</li>
-<li><strong>Disponibilité des liens</strong> : Up/Down des interfaces</li>
-</ul>
-<h3 id="applicatif">Applicatif</h3>
-<ul>
-<li><strong>Temps de réponse HTTP</strong> : Code retour 200/404/500</li>
-<li><strong>Disponibilité des URLs</strong> : Probe web externe</li>
-<li><strong>Certificats SSL</strong> : Date d'expiration</li>
-</ul>
+    note over E: Panne d'interface réseau détectée !
+    E--)M: TRAP (Alerte envoyée sans attendre le sondage)
+    M--&gt;&gt;M: Envoi SMS Administrateur</code></pre>
 
 
 

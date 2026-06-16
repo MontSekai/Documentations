@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -612,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -640,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1330,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1358,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1566,7 +1566,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1826,7 +1826,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -2363,10 +2363,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#le-routeur" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Le Routeur
+        1. Définition
       
     </span>
   </a>
@@ -2374,10 +2374,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-table-de-routage" class="md-nav__link">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La Table de Routage
+        2. Description / Fonctionnement
       
     </span>
   </a>
@@ -2385,22 +2385,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-de-routage" class="md-nav__link">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types de routage
+        3. Utilisation / Cas Pratique
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Types de routage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#routage-statique" class="md-nav__link">
+  <a href="#architecture-router-on-a-stick" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Routage Statique
+        Architecture Router-on-a-Stick
       
     </span>
   </a>
@@ -2408,49 +2430,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#routage-dynamique" class="md-nav__link">
+  <a href="#table-de-routage-typique-exemple-console-cisco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Routage Dynamique
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#routage-inter-vlan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Routage Inter-VLAN
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Routage Inter-VLAN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#methode-1-router-on-a-stick-sous-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Méthode 1 : Router-on-a-Stick (Sous-interfaces)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methode-2-switch-de-couche-3-svis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Méthode 2 : Switch de Couche 3 (SVIs)
+        Table de routage typique (Exemple console Cisco)
       
     </span>
   </a>
@@ -3015,6 +2998,8 @@
       
         
       
+        
+      
     
     
     
@@ -3065,6 +3050,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3072,7 +3085,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3100,7 +3113,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3128,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3184,7 +3197,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3212,7 +3225,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3342,6 +3355,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3400,6 +3417,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3584,6 +3657,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3698,6 +3775,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3920,6 +4053,8 @@
       
         
       
+        
+      
     
     
     
@@ -3997,6 +4132,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4013,10 +4176,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4034,8 +4197,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4158,151 +4321,68 @@
 
 
 <h1 id="routeur-routage-et-routage-inter-vlan">Routeur, Routage et Routage Inter-VLAN</h1>
-<h2 id="le-routeur">Le Routeur</h2>
-<p>Un <strong>routeur</strong> est un équipement de couche 3 (réseau) dont le rôle est d'<strong>acheminer les paquets IP entre différents réseaux</strong>. Contrairement à un switch (couche 2) qui ne voit que les adresses MAC, le routeur prend ses décisions en lisant l'<strong>adresse IP de destination</strong>.</p>
-<h2 id="la-table-de-routage">La Table de Routage</h2>
-<p>Chaque routeur maintient une <strong>table de routage</strong> : une liste de réseaux connus et de l'interface (ou du prochain routeur, le <em>next-hop</em>) à utiliser pour les atteindre.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Commande show ip route (Cisco)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>C<span class="w">    </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>is<span class="w"> </span>directly<span class="w"> </span>connected,<span class="w"> </span>GigabitEthernet0/0<span class="w">  </span>!<span class="w"> </span>Réseau<span class="w"> </span>directement<span class="w"> </span>connecté
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>S<span class="w">    </span><span class="m">10</span>.0.0.0/8<span class="w"> </span><span class="o">[</span><span class="m">1</span>/0<span class="o">]</span><span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.254<span class="w">                        </span>!<span class="w"> </span>Route<span class="w"> </span>statique
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>O<span class="w">    </span><span class="m">172</span>.16.0.0/16<span class="w"> </span><span class="o">[</span><span class="m">110</span>/20<span class="o">]</span><span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.2.1,<span class="w"> </span>OSPF<span class="w">              </span>!<span class="w"> </span>Route<span class="w"> </span>apprise<span class="w"> </span>par<span class="w"> </span>OSPF
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>R<span class="w">    </span><span class="m">0</span>.0.0.0/0<span class="w"> </span><span class="o">[</span><span class="m">120</span>/1<span class="o">]</span><span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.254,<span class="w"> </span>RIP<span class="w">                  </span>!<span class="w"> </span>Route<span class="w"> </span>par<span class="w"> </span>défaut<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>gateway<span class="o">)</span>
-</code></pre></div>
-<p><strong>Codes des routes :</strong></p>
+<p>Le mécanisme intelligent de transfert des paquets IP entre les réseaux.</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>Le <strong>routage</strong> est le processus réseau fondamental qui permet d'acheminer des paquets IP (Couche 3) d'un réseau source vers un autre réseau de destination. Un <strong>routeur</strong> (ou un pare-feu/Switch L3) est l'équipement dédié à cette tâche. Sans mécanisme de routage, une machine est incapable de communiquer avec une autre machine située en dehors de son propre sous-réseau local.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>Pour fonctionner, chaque routeur maintient en mémoire vive une "carte GPS" appelée <strong>Table de routage</strong>. Lorsqu'il reçoit un paquet IP entrant sur l'une de ses pattes, il lit l'adresse IP de destination, consulte sa table, et transmet le paquet vers l'interface ou le routeur voisin approprié (le <em>Next-Hop</em>).</p>
+<p>Les tables de routage sont alimentées par deux grandes méthodes :
+* <strong>Routage Statique</strong> : Les chemins sont renseignés à la main par l'administrateur (ex: "Pour aller vers le réseau 10.0.0.0/8, passe par le routeur 192.168.1.254"). Inadapté aux grands réseaux car statique en cas de panne de lien.
+* <strong>Routage Dynamique</strong> : Les routeurs utilisent des protocoles mathématiques complexes (OSPF, BGP) pour s'échanger en direct la liste des réseaux qu'ils connaissent. Le routeur calcule automatiquement le chemin le plus court et réagit instantanément si une fibre est coupée.</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<p>Le routage est indispensable sur Internet pour lier les fournisseurs d'accès, mais il est aussi la clé des réseaux LAN d'entreprise avec le principe du <strong>Routage Inter-<a href="../vlan/">VLAN</a></strong>.
+Exemple : Par sécurité matérielle (Couche 2), un poste situé dans le VLAN 10 (Comptabilité) ne peut pas communiquer directement avec un serveur situé dans le VLAN 20 (Production). Il faut donc placer un routeur ou un Pare-feu au milieu pour faire "passer la frontière" aux paquets IP de la couche 3, tout en y appliquant éventuellement des règles de sécurité (ACL).</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p>Il existe deux manières standards de concevoir du routage inter-VLAN en LAN :
+* <strong>Router-on-a-Stick</strong> (Ancienne méthode) : On utilise un Routeur externe relié au Switch central par un seul lien physique "Trunk" (qui porte tous les VLANs). Le routeur crée des "sous-interfaces virtuelles" (ex: interface gig0/0.10 et gig0/0.20) qui serviront de passerelles pour les différents VLANs. C'est simple, mais le câble unique devient un goulot d'étranglement sévère.
+* <strong>Switch Multicouche de Couche 3</strong> (SVI - Méthode moderne) : On se passe de routeur physique local. Le Switch (modèle plus haut de gamme) embarque le processeur de routage et gère directement cela en interne à des vitesses faramineuses grâce à des interfaces virtuelles internes (SVI).</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="architecture-router-on-a-stick">Architecture Router-on-a-Stick</h3>
+<pre class="mermaid"><code>graph LR
+    V10["💻 PC VLAN 10\nIP 192.168.10.x"]
+    V20["💻 PC VLAN 20\nIP 192.168.20.x"]
+    SW["🔀 Switch L2"]
+    R["🌐 Routeur Pare-Feu"]
+
+    V10 -- "Access" --&gt; SW
+    V20 -- "Access" --&gt; SW
+    SW -- "Câble Trunk Unique" --&gt; R
+
+    note over R: Interfaces virtuelles\nEth0.10 et Eth0.20</code></pre>
+<h3 id="table-de-routage-typique-exemple-console-cisco">Table de routage typique (Exemple console Cisco)</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Code</th>
-<th style="text-align: left;">Signification</th>
+<th style="text-align: center;">Code initial</th>
+<th style="text-align: left;">Réseau de Destination</th>
+<th style="text-align: left;">Passerelle (Next Hop)</th>
+<th style="text-align: left;">Origine (Comment a-t-il été appris ?)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;"><strong>C</strong></td>
-<td style="text-align: left;">Connected — réseau directement connecté à une interface</td>
+<td style="text-align: left;"><code>192.168.1.0/24</code></td>
+<td style="text-align: left;"><em>Directly connected</em></td>
+<td style="text-align: left;">Le réseau est branché sur mon port local.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>S</strong></td>
-<td style="text-align: left;">Static — route configurée manuellement</td>
+<td style="text-align: left;"><code>10.0.0.0/8</code></td>
+<td style="text-align: left;"><code>via 192.168.1.254</code></td>
+<td style="text-align: left;"><strong>Route statique</strong> ajoutée à la main.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>O</strong></td>
-<td style="text-align: left;">OSPF — route apprise dynamiquement via OSPF</td>
+<td style="text-align: left;"><code>172.16.0.0/16</code></td>
+<td style="text-align: left;"><code>via 192.168.2.1</code></td>
+<td style="text-align: left;"><strong>OSPF</strong> (Protocole dynamique intra-entreprise).</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>R</strong></td>
-<td style="text-align: left;">RIP — route apprise via RIP</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>B</strong></td>
-<td style="text-align: left;">BGP — route apprise via BGP (protocole d'Internet)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="types-de-routage">Types de routage</h2>
-<h3 id="routage-statique">Routage Statique</h3>
-<p>Les routes sont <strong>configurées manuellement</strong> par l'administrateur. Simple pour les petits réseaux, mais ne s'adapte pas automatiquement en cas de panne.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ip<span class="w"> </span>route<span class="w"> </span><span class="m">10</span>.0.0.0<span class="w"> </span><span class="m">255</span>.0.0.0<span class="w"> </span><span class="m">192</span>.168.1.254<span class="w">   </span>!<span class="w"> </span>Vers<span class="w"> </span>le<span class="w"> </span>réseau<span class="w"> </span><span class="m">10</span>.0.0.0/8,<span class="w"> </span>passer<span class="w"> </span>par<span class="w"> </span>.254
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ip<span class="w"> </span>route<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">        </span>!<span class="w"> </span>Route<span class="w"> </span>par<span class="w"> </span>défaut<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>gateway<span class="o">)</span>
-</code></pre></div>
-<h3 id="routage-dynamique">Routage Dynamique</h3>
-<p>Les routeurs échangent automatiquement leurs tables de routage via des <strong>protocoles de routage</strong>. Ils s'adaptent en temps réel aux pannes de liens.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Protocole</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>RIP</strong> (v2)</td>
-<td style="text-align: left;">Distance Vector</td>
-<td style="text-align: left;">Petits réseaux, obsolète</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>OSPF</strong></td>
-<td style="text-align: left;">Link State</td>
-<td style="text-align: left;">Standard pour les réseaux d'entreprise</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>EIGRP</strong></td>
-<td style="text-align: left;">Hybride (Cisco)</td>
-<td style="text-align: left;">Réseaux Cisco uniquement</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>BGP</strong></td>
-<td style="text-align: left;">Path Vector</td>
-<td style="text-align: left;">Protocole d'Internet entre AS (FAI, cloud providers)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="routage-inter-vlan">Routage Inter-VLAN</h2>
-<p>Par définition, les VLANs isolent les réseaux : un poste en <a href="../vlan/">VLAN 10</a> ne peut pas communiquer avec un poste en VLAN 20 sans passer par un routeur (couche 3). C'est le <strong>routage inter-VLAN</strong>.</p>
-<h3 id="methode-1-router-on-a-stick-sous-interfaces">Méthode 1 : Router-on-a-Stick (Sous-interfaces)</h3>
-<p>Un seul lien physique <strong>trunk (802.1Q)</strong> relie le switch au routeur. Le routeur crée des <strong>sous-interfaces virtuelles</strong>, une par VLAN, chacune avec sa propre adresse IP (passerelle du VLAN).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!<span class="w"> </span>Routeur<span class="w"> </span><span class="o">(</span>Router-on-a-Stick<span class="o">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>interface<span class="w"> </span>GigabitEthernet0/0.10
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span>encapsulation<span class="w"> </span>dot1Q<span class="w"> </span><span class="m">10</span><span class="w">                </span>!<span class="w"> </span>Tag<span class="w"> </span>VLAN<span class="w"> </span><span class="m">10</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span><span class="m">192</span>.168.10.254<span class="w"> </span><span class="m">255</span>.255.255.0<span class="w">  </span>!<span class="w"> </span>Passerelle<span class="w"> </span>du<span class="w"> </span>VLAN<span class="w"> </span><span class="m">10</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>interface<span class="w"> </span>GigabitEthernet0/0.20
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w"> </span>encapsulation<span class="w"> </span>dot1Q<span class="w"> </span><span class="m">20</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span><span class="m">192</span>.168.20.254<span class="w"> </span><span class="m">255</span>.255.255.0
-</code></pre></div>
-<pre class="mermaid"><code>graph LR
-    V10["💻 VLAN 10\n192.168.10.0/24"]
-    V20["💻 VLAN 20\n192.168.20.0/24"]
-    SW["🔀 Switch L2\n(Port Trunk)"]
-    R["🌐 Routeur\nGi0/0.10 + Gi0/0.20"]
-
-    V10 --&gt; SW
-    V20 --&gt; SW
-    SW -- "Trunk 802.1Q" --&gt; R</code></pre>
-<h3 id="methode-2-switch-de-couche-3-svis">Méthode 2 : Switch de Couche 3 (SVIs)</h3>
-<p>Un <strong>switch multicouche (L3)</strong> peut router directement entre VLANs sans routeur externe, via des <strong>SVI</strong> (Switched Virtual Interface) : des interfaces virtuelles créées sur le switch, une par VLAN.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>!<span class="w"> </span>Switch<span class="w"> </span>L3
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>interface<span class="w"> </span>Vlan10
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span><span class="m">192</span>.168.10.254<span class="w"> </span><span class="m">255</span>.255.255.0
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w"> </span>no<span class="w"> </span>shutdown
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>interface<span class="w"> </span>Vlan20
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span><span class="m">192</span>.168.20.254<span class="w"> </span><span class="m">255</span>.255.255.0
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w"> </span>no<span class="w"> </span>shutdown
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>ip<span class="w"> </span>routing<span class="w">   </span>!<span class="w"> </span>Active<span class="w"> </span>le<span class="w"> </span>routage<span class="w"> </span>IP<span class="w"> </span>sur<span class="w"> </span>le<span class="w"> </span>switch<span class="w"> </span>L3
-</code></pre></div>
-<p><strong>Avantage</strong> : Le routage est fait en interne sur le switch, beaucoup plus rapide (ASIC hardware), sans lien physique trunk dédié vers un routeur externe.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Critère</th>
-<th style="text-align: center;">Router-on-a-Stick</th>
-<th style="text-align: center;">Switch L3 (SVI)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Matériel nécessaire</td>
-<td style="text-align: center;">Routeur + Switch L2</td>
-<td style="text-align: center;">Switch L3 uniquement</td>
-</tr>
-<tr>
-<td style="text-align: left;">Performance</td>
-<td style="text-align: center;">Limitée par le lien trunk</td>
-<td style="text-align: center;">Très haute (hardware)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Simplicité</td>
-<td style="text-align: center;">Simple à implémenter</td>
-<td style="text-align: center;">Idéal pour les entreprises</td>
-</tr>
-<tr>
-<td style="text-align: left;">Coût</td>
-<td style="text-align: center;">Faible</td>
-<td style="text-align: center;">Plus élevé (switch L3)</td>
+<td style="text-align: center;"><strong>S</strong>*</td>
+<td style="text-align: left;"><code>0.0.0.0/0</code></td>
+<td style="text-align: left;"><code>via 192.168.1.254</code></td>
+<td style="text-align: left;"><strong>Route par défaut</strong> (Le chemin vers Internet).</td>
 </tr>
 </tbody>
 </table>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -612,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -640,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1330,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1358,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1561,7 +1561,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1821,7 +1821,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -2788,57 +2788,290 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synthese-des-outils" class="md-nav__link">
+  <a href="#1-edr-endpoint-detection-and-response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Synthèse des outils
+        1. EDR (Endpoint Detection and Response)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. EDR (Endpoint Detection and Response)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Définition
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#edr-endpoint-detection-and-response" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        EDR (Endpoint Detection and Response)
+        1.2. Description / Fonctionnement
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ndr-network-detection-and-response" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#13-utilisation-cas-pratique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NDR (Network Detection and Response)
+        1.3. Utilisation / Cas Pratique
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#siem-security-information-and-event-management" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#14-modifications-possibles-alternatives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SIEM (Security Information and Event Management)
+        1.4. Modifications possibles / Alternatives
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#xdr-extended-detection-and-response" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#15-exemples-visuels-et-liens-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        XDR (Extended Detection and Response)
+        1.5. Exemples visuels et Liens utiles
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ndr-network-detection-and-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. NDR (Network Detection and Response)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. NDR (Network Detection and Response)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-description-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-siem-security-information-and-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SIEM (Security Information and Event Management)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. SIEM (Security Information and Event Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-description-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xdr-extended-detection-and-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. XDR (Extended Detection and Response)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. XDR (Extended Detection and Response)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-description-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2970,6 +3203,8 @@
       
         
       
+        
+      
     
     
     
@@ -3020,6 +3255,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pssi/" class="md-nav__link">
         
   
@@ -3027,7 +3290,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3055,7 +3318,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3083,7 +3346,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3139,7 +3402,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3167,7 +3430,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3297,6 +3560,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3355,6 +3622,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3539,6 +3862,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3653,6 +3980,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3875,6 +4258,8 @@
       
         
       
+        
+      
     
     
     
@@ -3952,6 +4337,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -3968,10 +4381,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -3989,8 +4402,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4141,13 +4554,63 @@
 
 
 <h1 id="outils-de-detection-edr-ndr-siem-xdr">Outils de Détection (EDR, NDR, SIEM, XDR)</h1>
-<p>La surveillance et la détection d'incidents de sécurité s'appuient sur plusieurs familles d'outils, souvent gérés par le <strong>SOC</strong> (Security Operations Center). Chacun a une zone de visibilité précise.</p>
-<h2 id="synthese-des-outils">Synthèse des outils</h2>
+<p>La surveillance et la détection d'incidents de sécurité s'appuient sur plusieurs familles d'outils, souvent gérés par le SOC (Security Operations Center). Chacun a une zone de visibilité précise.</p>
+<hr />
+<h2 id="1-edr-endpoint-detection-and-response">1. EDR (Endpoint Detection and Response)</h2>
+<h3 id="11-definition">1.1. Définition</h3>
+<p>L'EDR est une solution de sécurité installée sur les terminaux (endpoints : PC, Serveurs) qui remplace l'antivirus traditionnel pour détecter les menaces avancées.</p>
+<h3 id="12-description-fonctionnement">1.2. Description / Fonctionnement</h3>
+<p>Là où l'antivirus fonctionne par signature stricte (connu vs inconnu), l'EDR fait de l'analyse comportementale en surveillant l'activité du système (processus, registre, réseau local). Il permet de bloquer automatiquement les comportements suspects et de tracer l'origine exacte de l'attaque.</p>
+<h3 id="13-utilisation-cas-pratique">1.3. Utilisation / Cas Pratique</h3>
+<p>L'EDR est indispensable pour détecter des attaques modernes comme les ransomwares <em>fileless</em> (en mémoire RAM) ou les attaques "Living off the Land" (utilisation d'outils système légitimes comme PowerShell à des fins malveillantes).
+En cas d'alerte, l'analyste SOC peut utiliser l'EDR pour isoler la machine du réseau instantanément.</p>
+<h3 id="14-modifications-possibles-alternatives">1.4. Modifications possibles / Alternatives</h3>
+<p>L'évolution directe de l'EDR est le XDR (voir section 4), qui ajoute d'autres sources de télémétrie réseau et cloud.</p>
+<h3 id="15-exemples-visuels-et-liens-utiles">1.5. Exemples visuels et Liens utiles</h3>
+<p>Exemples du marché : CrowdStrike Falcon, Microsoft Defender for Endpoint (MDE), SentinelOne.</p>
+<hr />
+<h2 id="2-ndr-network-detection-and-response">2. NDR (Network Detection and Response)</h2>
+<h3 id="21-definition">2.1. Définition</h3>
+<p>Le NDR est un outil de surveillance qui analyse le trafic réseau brut en temps réel pour détecter les comportements anormaux.</p>
+<h3 id="22-description-fonctionnement">2.2. Description / Fonctionnement</h3>
+<p>Il s'appuie sur des sondes réseaux (Port SPAN / TAP), du Machine Learning et du DPI (Deep Packet Inspection) pour établir une ligne de base du réseau ("baselining") et alerter en cas de déviations suspectes.</p>
+<h3 id="23-utilisation-cas-pratique">2.3. Utilisation / Cas Pratique</h3>
+<p>Le NDR est l'outil privilégié pour détecter les mouvements latéraux d'un attaquant entre deux machines internes, l'exfiltration massive de données, ou la communication vers un serveur pirate (C2 - Command &amp; Control). Point crucial : il voit tout ce qui passe sur le réseau, même ce qui provient de matériels où l'on ne peut pas installer d'EDR (caméras IP, imprimantes, systèmes industriels SCADA).</p>
+<h3 id="24-modifications-possibles-alternatives">2.4. Modifications possibles / Alternatives</h3>
+<p>L'IDS (Intrusion Detection System) classique est l'ancêtre du NDR, mais il fonctionne principalement par signatures connues et est devenu insuffisant.</p>
+<h3 id="25-exemples-visuels-et-liens-utiles">2.5. Exemples visuels et Liens utiles</h3>
+<p>Exemples du marché : Darktrace, ExtraHop Reveal(x), Cisco Secure Network Analytics.</p>
+<hr />
+<h2 id="3-siem-security-information-and-event-management">3. SIEM (Security Information and Event Management)</h2>
+<h3 id="31-definition">3.1. Définition</h3>
+<p>Le SIEM est la "tour de contrôle" d'un SOC. C'est un outil centralisant les journaux d'événements (logs) de toute l'infrastructure IT (réseaux, serveurs, cloud, applications).</p>
+<h3 id="32-description-fonctionnement">3.2. Description / Fonctionnement</h3>
+<p>Il remplit deux rôles principaux :
+1. <strong>Archivage (SIM)</strong> : Stocker les logs à long terme pour la conformité légale et les enquêtes (forensics).
+2. <strong>Corrélation (SEM)</strong> : Analyser les logs en direct via des règles de corrélation (Ex: "Si un compte Admin se connecte de Paris puis de Tokyo 5 min après =&gt; Alerte").</p>
+<h3 id="33-utilisation-cas-pratique">3.3. Utilisation / Cas Pratique</h3>
+<p>Si un pare-feu bloque une adresse IP suspecte, et qu'au même moment l'Active Directory signale 50 erreurs de mot de passe pour un compte précis, le SIEM va corréler ces deux logs indépendants (et invisibles séparément) pour générer une alerte globale d'"Attaque Brute Force".</p>
+<h3 id="34-modifications-possibles-alternatives">3.4. Modifications possibles / Alternatives</h3>
+<p>Le SIEM est de plus en plus souvent couplé à un <strong>SOAR</strong> (Security Orchestration, Automation, and Response) pour réagir automatiquement aux alertes générées par le SIEM via des scripts ("Playbooks").</p>
+<h3 id="35-exemples-visuels-et-liens-utiles">3.5. Exemples visuels et Liens utiles</h3>
+<p>Exemples du marché : Splunk, IBM QRadar, Microsoft Sentinel, Elastic SIEM.</p>
+<hr />
+<h2 id="4-xdr-extended-detection-and-response">4. XDR (Extended Detection and Response)</h2>
+<h3 id="41-definition">4.1. Définition</h3>
+<p>Le XDR est une plateforme de sécurité unifiée qui collecte et corrèle automatiquement les données provenant de multiples couches de l'entreprise (endpoints, réseau, serveurs, cloud, e-mails).</p>
+<h3 id="42-description-fonctionnement">4.2. Description / Fonctionnement</h3>
+<p>C'est l'évolution du concept d'EDR étendu à toute l'infrastructure. Face à la multiplication des consoles de sécurité dispersées, le XDR se propose de tout corréler au sein d'une seule et même interface native pour casser les silos.</p>
+<h3 id="43-utilisation-cas-pratique">4.3. Utilisation / Cas Pratique</h3>
+<p>Lorsqu'une attaque commence par un email (Phishing), infecte un poste (vu par l'EDR), se propage sur le réseau (vu par le NDR) pour exfiltrer la donnée vers un cloud (vu par le CASB), le XDR relie nativement tous ces événements pour former une "Attack Story" chronologique claire pour l'analyste.</p>
+<h3 id="44-modifications-possibles-alternatives">4.4. Modifications possibles / Alternatives</h3>
+<p>Il existe deux approches XDR : 
+* <strong>Natif</strong> (l'éditeur fournit tous les outils de la chaîne : EDR, Pare-feu, Email, ex: Microsoft Defender XDR).
+* <strong>Ouvert</strong> (la plateforme XDR s'interface par API avec les outils de sécurité de différents éditeurs déjà existants chez le client, ex: Palo Alto Cortex XDR).</p>
+<h3 id="45-exemples-visuels-et-liens-utiles">4.5. Exemples visuels et Liens utiles</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Outil</th>
-<th style="text-align: left;">Acronyme</th>
 <th style="text-align: left;">Zone de surveillance</th>
 <th style="text-align: left;">Point fort</th>
 <th style="text-align: left;">Point aveugle</th>
@@ -4156,73 +4619,30 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>EDR</strong></td>
-<td style="text-align: left;">Endpoint Detection &amp; Response</td>
-<td style="text-align: left;">Les machines (PC, Serveurs)</td>
-<td style="text-align: left;">Bloque les malwares avancés au plus près du système.</td>
-<td style="text-align: left;">Ne voit pas les équipements sans agent (IoT, switches) ni le trafic réseau.</td>
+<td style="text-align: left;">Endpoints (PC, Serveurs)</td>
+<td style="text-align: left;">Bloque au plus près du système.</td>
+<td style="text-align: left;">Ne voit pas le trafic réseau ou les IoT.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>NDR</strong></td>
-<td style="text-align: left;">Network Detection &amp; Response</td>
-<td style="text-align: left;">Le trafic réseau (Trames, Flux)</td>
-<td style="text-align: left;">Détecte les mouvements latéraux, le beaconing C2, l'exfiltration.</td>
-<td style="text-align: left;">Ne sait pas ce qui se passe dans la RAM d'une machine.</td>
+<td style="text-align: left;">Réseau (Flux, Trames)</td>
+<td style="text-align: left;">Détecte les mouvements latéraux.</td>
+<td style="text-align: left;">Ne voit pas l'intérieur de la RAM des PC.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>SIEM</strong></td>
-<td style="text-align: left;">Security Information &amp; Event Management</td>
 <td style="text-align: left;">Toute l'infrastructure (Logs)</td>
-<td style="text-align: left;">Centralise les logs, prouve la conformité, corrèle tout.</td>
-<td style="text-align: left;">Dépend de ce qu'on lui envoie. Souvent lent (beaucoup de bruit).</td>
+<td style="text-align: left;">Centralise et prouve la conformité.</td>
+<td style="text-align: left;">Dépend des logs envoyés, beaucoup de bruit.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>XDR</strong></td>
-<td style="text-align: left;">Extended Detection &amp; Response</td>
-<td style="text-align: left;">Endpoints + Réseau + Cloud + Email</td>
-<td style="text-align: left;">Unifie la détection et la réponse dans une seule console.</td>
-<td style="text-align: left;">Dépend des intégrations disponibles (natif vs ouvert).</td>
+<td style="text-align: left;">L'ensemble unifié</td>
+<td style="text-align: left;">"Attack Story" claire, unifiée.</td>
+<td style="text-align: left;">Dépend de l'intégration des outils de la chaîne.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="edr-endpoint-detection-and-response">EDR (Endpoint Detection and Response)</h2>
-<p>L'EDR s'installe sur les endpoints et remplace l'antivirus traditionnel. Là où l'antivirus fonctionne par <strong>signature</strong> (connu vs inconnu), l'EDR fait de l'<strong>analyse comportementale</strong>.</p>
-<ul>
-<li><strong>Fonctionnalités clés</strong> : Collecte des événements système (processus, registre, réseau), détection comportementale, Threat Hunting (recherche d'IoC), et réponse à incident (isolation réseau de la machine, kill automatique).</li>
-<li><strong>Face aux attaques modernes</strong> : L'EDR est indispensable contre les attaques <em>Living off the Land</em> (LoTL) qui détournent des outils légitimes (PowerShell, WMI) ou les ransomwares <em>fileless</em> (en mémoire).</li>
-<li><strong>Exemples du marché</strong> : CrowdStrike Falcon, Microsoft Defender for Endpoint (MDE), SentinelOne.</li>
-</ul>
-<hr />
-<h2 id="ndr-network-detection-and-response">NDR (Network Detection and Response)</h2>
-<p>Le NDR analyse le <strong>trafic réseau en temps réel</strong> (Sondes, Port SPAN/TAP, NetFlow). Il est indispensable pour voir ce que les agents EDR ne peuvent pas voir.</p>
-<ul>
-<li><strong>Fonctionnalités clés</strong> : Analyse DPI (Deep Packet Inspection), Machine Learning pour établir une ligne de base (<em>baselining</em>), analyse des flux, détection de trafic vers serveurs C2 (Command &amp; Control), analyse des certificats SSL/TLS.</li>
-<li><strong>Point fort</strong> : Il peut détecter une compromission sur une machine où l'attaquant a réussi à désactiver l'EDR, ou sur des équipements non administrables (caméras IP, imprimantes, SCADA/OT).</li>
-<li><strong>Exemples du marché</strong> : Darktrace, ExtraHop Reveal(x), Cisco Secure Network Analytics.</li>
-</ul>
-<hr />
-<h2 id="siem-security-information-and-event-management">SIEM (Security Information and Event Management)</h2>
-<p>Le SIEM est la "tour de contrôle" d'un SOC. Il ingère des <strong>journaux d'événements (logs)</strong> de toutes les sources (Active Directory, pare-feux, serveurs, antivirus...).</p>
-<ul>
-<li>Il remplit deux rôles :<ol>
-<li><strong>SIM (Information Management)</strong> : Archiver les logs sur le long terme (ex: 1 an) pour répondre aux obligations légales de conformité (RGPD, LPM, ISO 27001).</li>
-<li><strong>SEM (Event Management)</strong> : Analyser les logs en direct via des règles de corrélation (Ex: "Si un compte se connecte de Paris puis de Tokyo 5 min après =&gt; Alerte Incident").</li>
-</ol>
-</li>
-<li><strong>SOAR</strong> : Le SIEM est de plus en plus couplé au SOAR (Orchestration et Automatisation) pour réagir automatiquement aux alertes (Playbooks).</li>
-<li><strong>Exemples du marché</strong> : Splunk, IBM QRadar, Microsoft Sentinel, Elastic SIEM.</li>
-</ul>
-<hr />
-<h2 id="xdr-extended-detection-and-response">XDR (Extended Detection and Response)</h2>
-<p>Le XDR est l'évolution naturelle de l'EDR. Face à la multiplication des consoles de sécurité (EDR, Pare-feu, Filtre email, Broker Cloud), le XDR se propose de <strong>tout corréler au sein d'une seule interface native</strong>.</p>
-<ul>
-<li><strong>Pourquoi le XDR ?</strong> Une attaque commence par un email (Phishing), infecte un poste (EDR), se propage sur le réseau (NDR) pour voler un mot de passe (AD/Identité) et exfiltrer la donnée vers un cloud (CASB/Cloud). Le XDR relie tous ces événements isolés pour former une "Attack Story" claire.</li>
-<li><strong>XDR Natif vs Ouvert</strong> :<ul>
-<li><em>Natif</em> : L'éditeur fournit l'EDR, la sécu email, la sécu réseau (ex: Microsoft Defender XDR). L'intégration est parfaite mais on est dépendant d'un seul partenaire.</li>
-<li><em>Ouvert</em> : La plateforme XDR se connecte aux outils divers du client via API (ex: Palo Alto Cortex XDR). Plus de flexibilité.</li>
-</ul>
-</li>
-</ul>
 
 
 

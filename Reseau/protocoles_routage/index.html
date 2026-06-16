@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -612,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -640,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1330,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1358,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1568,7 +1568,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1789,22 +1789,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#concepts-communs" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Concepts communs
+        1. Définition
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Concepts communs">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#metrique" class="md-nav__link">
+  <a href="#architecture-ospf-division-par-zones-areas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Métrique
+        Architecture OSPF (Division par Zones / Areas)
       
     </span>
   </a>
@@ -1812,10 +1856,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#distance-administrative-ad" class="md-nav__link">
+  <a href="#rip-vs-ospf-le-match" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Distance administrative (AD)
+        RIP vs OSPF : Le match
       
     </span>
   </a>
@@ -1824,128 +1868,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rip-routing-information-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RIP — Routing Information Protocol
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="RIP — Routing Information Protocol">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caractéristiques
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mecanismes-anti-boucle-rip" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mécanismes anti-boucle RIP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-cisco-ripv2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Cisco RIPv2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ospf-open-shortest-path-first" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OSPF — Open Shortest Path First
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OSPF — Open Shortest Path First">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristiques_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caractéristiques
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-areas-ospf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les Areas OSPF
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#election-dr-bdr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Élection DR / BDR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-cisco-ospf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Cisco OSPF
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparatif-rip-vs-ospf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comparatif RIP vs OSPF
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2036,7 +1958,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -3076,6 +2998,8 @@
       
         
       
+        
+      
     
     
     
@@ -3126,6 +3050,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3133,7 +3085,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3161,7 +3113,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3189,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3245,7 +3197,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3273,7 +3225,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3403,6 +3355,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3461,6 +3417,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3645,6 +3657,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3759,6 +3775,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3981,6 +4053,8 @@
       
         
       
+        
+      
     
     
     
@@ -4058,6 +4132,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4074,10 +4176,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4095,8 +4197,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4226,228 +4328,67 @@
 
 
 <h1 id="protocoles-de-routage-dynamique">Protocoles de Routage Dynamique</h1>
-<p>Les protocoles de routage dynamique permettent aux routeurs d'<strong>échanger automatiquement leurs tables de routage</strong> et de s'adapter aux changements de topologie réseau (pannes, ajout de liens...). Voir la page <a href="../routage/">Routage</a> pour le fonctionnement général.</p>
-<h2 id="concepts-communs">Concepts communs</h2>
-<h3 id="metrique">Métrique</h3>
-<p>La <strong>métrique</strong> est la valeur qu'un protocole de routage utilise pour choisir le <strong>meilleur chemin</strong> vers une destination. Si plusieurs routes existent, celle avec la métrique la plus <strong>faible</strong> est préférée.</p>
-<h3 id="distance-administrative-ad">Distance administrative (AD)</h3>
-<p>Quand plusieurs protocoles coexistent, le routeur utilise la <strong>distance administrative</strong> pour décider quel protocole il doit croire :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Source de la route</th>
-<th style="text-align: center;">Distance Administrative</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Interface directement connectée</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">Route statique</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">EIGRP (résumé)</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr>
-<td style="text-align: left;">OSPF</td>
-<td style="text-align: center;"><strong>110</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">RIP</td>
-<td style="text-align: center;"><strong>120</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">EIGRP (externe)</td>
-<td style="text-align: center;">170</td>
-</tr>
-<tr>
-<td style="text-align: left;">Route inconnue</td>
-<td style="text-align: center;">255 (inutilisable)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="rip-routing-information-protocol">RIP — Routing Information Protocol</h2>
-<p>RIP est l'un des <strong>plus anciens</strong> protocoles de routage. Il fonctionne selon l'algorithme <strong>Bellman-Ford</strong> (Distance Vector) : chaque routeur n'a de visibilité que sur ses voisins directs et partage sa table de routage entière.</p>
-<h3 id="caracteristiques">Caractéristiques</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Caractéristique</th>
-<th style="text-align: center;">RIPv1</th>
-<th style="text-align: center;">RIPv2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Classless (VLSM/CIDR)</td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: center;">✅ Oui</td>
-</tr>
-<tr>
-<td style="text-align: left;">Authentification</td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: center;">✅ Oui (MD5)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Multicast</td>
-<td style="text-align: center;">❌ Broadcast</td>
-<td style="text-align: center;">✅ 224.0.0.9</td>
-</tr>
-<tr>
-<td style="text-align: left;">Métrique</td>
-<td style="text-align: center;">Nombre de sauts</td>
-<td style="text-align: center;">Nombre de sauts</td>
-</tr>
-<tr>
-<td style="text-align: left;">Limite de sauts</td>
-<td style="text-align: center;"><strong>15 max</strong></td>
-<td style="text-align: center;"><strong>15 max</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Convergence</td>
-<td style="text-align: center;">Lente</td>
-<td style="text-align: center;">Lente</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>[!WARNING]
-RIP est <strong>obsolète</strong> pour les réseaux d'entreprise modernes. Sa limite de 15 sauts et sa convergence lente le rendent inadapté. Utiliser OSPF à la place.</p>
-</blockquote>
-<h3 id="mecanismes-anti-boucle-rip">Mécanismes anti-boucle RIP</h3>
+<p>Les algorithmes mathématiques gérant la découverte automatique des réseaux mondiaux et d'entreprise.</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>Les protocoles de routage dynamique sont des logiciels de fond exécutés par les <a href="../routage.md">routeurs réseau</a> qui leur permettent de "discuter" en permanence entre eux. Ils s'échangent automatiquement la liste des réseaux qu'ils connaissent, et calculent mathématiquement en direct le meilleur chemin pour acheminer un paquet IP vers sa destination.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>Plutôt que d'obliger l'administrateur à renseigner manuellement chaque route statique (ce qui est humainement intenable à grande échelle ou en cas de coupure inopinée d'un câble), l'administrateur active un protocole dynamique (ex: OSPF).
+Pour choisir le meilleur chemin, le protocole se base sur une "note" appelée <strong>Métrique</strong>. Si plusieurs chemins existent pour atteindre la même destination, le chemin avec la métrique la plus faible gagne le droit de figurer dans la table de routage :
+* <strong>Le protocole historique RIP</strong> : Sa métrique est le <em>Nombre de sauts</em> (de routeurs traversés). Aveugle à la vitesse des liens.
+* <strong>Le protocole moderne OSPF</strong> : Sa métrique est le <em>Coût</em>, basé intelligemment sur la bande passante physique. (OSPF préfèrera faire un "détour" en traversant 3 routeurs reliés par une fibre optique ultra-rapide 10 Gbps, plutôt que d'aller "tout droit" sur 1 seul routeur relié par un câble ADSL très lent).</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
 <ul>
-<li><strong>Split Horizon</strong> : Ne pas réannoncer une route vers l'interface par laquelle on l'a apprise.</li>
-<li><strong>Route Poisoning</strong> : Annoncer une route tombée avec la métrique infinie (16).</li>
-<li><strong>Holddown Timer</strong> : Ignorer les mises à jour sur une route pendant un délai après sa perte.</li>
+<li><strong>Sur le Réseau Local d'Entreprise (Routage IGP)</strong> : Le standard absolu de l'industrie est <strong>OSPF (Open Shortest Path First)</strong>. Il divise les réseaux immenses en "Areas" (Zones) pour optimiser la mémoire des routeurs. Tous les routeurs de l'entreprise s'échangent la topologie globale en direct et réagissent en une fraction de seconde aux pannes de câbles.</li>
+<li><strong>Sur le grand Internet (Routage EGP)</strong> : Le protocole mondial est le <strong>BGP (Border Gateway Protocol)</strong>. C'est lui qui gère le "Routage inter-domaine" entre les grands fournisseurs d'accès internationaux (Orange, Free, AT&amp;T) et les géants du Cloud (Google, AWS, Netflix). Sa métrique n'est pas basée sur la vitesse pure, mais sur des règles géopolitiques et de coûts commerciaux très complexes.</li>
 </ul>
-<h3 id="configuration-cisco-ripv2">Configuration Cisco RIPv2</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>router<span class="w"> </span>rip
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span>version<span class="w"> </span><span class="m">2</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span>no<span class="w"> </span>auto-summary<span class="w">           </span>!<span class="w"> </span>Désactive<span class="w"> </span>la<span class="w"> </span>summarisation<span class="w"> </span>automatique<span class="w"> </span><span class="o">(</span>pour<span class="w"> </span>VLSM<span class="o">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w"> </span>network<span class="w"> </span><span class="m">192</span>.168.1.0
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"> </span>network<span class="w"> </span><span class="m">10</span>.0.0.0
-</code></pre></div>
-<hr />
-<h2 id="ospf-open-shortest-path-first">OSPF — Open Shortest Path First</h2>
-<p>OSPF est le <strong>protocole de routage Link-State</strong> de référence pour les réseaux d'entreprise. Chaque routeur construit une <strong>carte complète de la topologie</strong> (LSDB — Link State Database) et calcule les meilleures routes avec l'algorithme <strong>Dijkstra (SPF)</strong>.</p>
-<h3 id="caracteristiques_1">Caractéristiques</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Caractéristique</th>
-<th style="text-align: left;">Valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Type</td>
-<td style="text-align: left;">Link-State</td>
-</tr>
-<tr>
-<td style="text-align: left;">Métrique</td>
-<td style="text-align: left;"><strong>Coût</strong> (basé sur la bande passante : 100 Mbps / BW)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Convergence</td>
-<td style="text-align: left;"><strong>Rapide</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Classless</td>
-<td style="text-align: left;">✅ Oui (VLSM, CIDR)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Authentification</td>
-<td style="text-align: left;">✅ Oui (MD5 / SHA)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Multicast</td>
-<td style="text-align: left;">224.0.0.5 (AllSPFRouters) / 224.0.0.6 (AllDRRouters)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Passage à l'échelle</td>
-<td style="text-align: left;">Excellent (Areas)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="les-areas-ospf">Les Areas OSPF</h3>
-<p>Pour les grands réseaux, OSPF est divisé en <strong>zones (areas)</strong> afin de réduire la taille des LSDB et le trafic de mise à jour.</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p><strong>Le concept de Distance Administrative (AD)</strong>
+Si un routeur reçoit deux indications de chemins très différents pour rejoindre exactement la même destination (par exemple : l'une apprise dynamiquement via le protocole OSPF, l'autre forcée et saisie à la main par l'administrateur avec une route statique), il doit choisir à qui il fait le plus confiance. C'est la <strong>Distance Administrative</strong>. Plus la valeur est basse, plus la source d'information est jugée fiable :
+* Route directement branchée sur une interface physique : AD = 0
+* Route Statique (Renseignée manuellement) : AD = 1
+* Protocole OSPF : AD = 110
+* Protocole RIP : AD = 120</p>
+<p><em>Cas pratique : Entre une route manuelle et une route calculée par OSPF, le routeur de l'entreprise préfèrera </em><em>toujours</em><em> croire aveuglément la route manuelle de l'administrateur (car l'AD 1 l'emporte sur l'AD 110).</em></p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="architecture-ospf-division-par-zones-areas">Architecture OSPF (Division par Zones / Areas)</h3>
 <pre class="mermaid"><code>graph TD
-    BB["Area 0\n(Backbone — Obligatoire)"]
-    A1["Area 1"]
-    A2["Area 2"]
-    ABR1["ABR"]
-    ABR2["ABR"]
-    ASBR["ASBR\n(Vers BGP/Internet)"]
+    BB["Area 0\n(Zone Backbone - Coeur de réseau Obligatoire)"]
+    A1["Area 1\n(Ex: Siège Social de l'entreprise)"]
+    A2["Area 2\n(Ex: Réseau des filiales distantes)"]
+    ABR1["Routeur de Frontière (ABR)"]
+    ABR2["Routeur de Frontière (ABR)"]
 
     A1 --- ABR1 --- BB
-    A2 --- ABR2 --- BB
-    BB --- ASBR</code></pre>
-<ul>
-<li><strong>Area 0 (Backbone)</strong> : Zone centrale obligatoire. Toutes les autres zones doivent y être connectées.</li>
-<li><strong>ABR</strong> (Area Border Router) : Routeur connecté à plusieurs zones, résume les routes entre elles.</li>
-<li><strong>ASBR</strong> (Autonomous System Boundary Router) : Routeur qui redistribue des routes d'autres protocoles (BGP, statiques...) dans OSPF.</li>
-</ul>
-<h3 id="election-dr-bdr">Élection DR / BDR</h3>
-<p>Sur les réseaux multi-accès (Ethernet), OSPF élit un <strong>DR</strong> (Designated Router) et un <strong>BDR</strong> (Backup DR) pour éviter que chaque routeur envoie ses LSA à tous les autres.</p>
-<ul>
-<li><strong>Élection</strong> : Le routeur avec le <strong>Router ID</strong> (ou la priorité OSPF) le plus élevé devient DR.</li>
-<li><strong>Router ID</strong> : Soit configuré manuellement, soit l'IP la plus élevée d'une interface loopback, soit l'IP active la plus haute.</li>
-</ul>
-<h3 id="configuration-cisco-ospf">Configuration Cisco OSPF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>router<span class="w"> </span>ospf<span class="w"> </span><span class="m">1</span><span class="w">                          </span>!<span class="w"> </span><span class="nv">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Process<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span>local,<span class="w"> </span>pas<span class="w"> </span>d<span class="s1">&#39;importance inter-routeurs)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s1"> router-id 1.1.1.1                     ! Router ID manuel (recommandé)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s1"> network 192.168.1.0 0.0.0.255 area 0  ! Annonce le réseau dans l&#39;</span>area<span class="w"> </span><span class="m">0</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w"> </span>network<span class="w"> </span><span class="m">10</span>.0.0.0<span class="w"> </span><span class="m">0</span>.255.255.255<span class="w"> </span>area<span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>!<span class="w"> </span>Vérification
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>show<span class="w"> </span>ip<span class="w"> </span>ospf<span class="w"> </span>neighbor<span class="w">                  </span>!<span class="w"> </span>Affiche<span class="w"> </span>les<span class="w"> </span>voisins<span class="w"> </span>OSPF
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>show<span class="w"> </span>ip<span class="w"> </span>ospf<span class="w"> </span>database<span class="w">                  </span>!<span class="w"> </span>Affiche<span class="w"> </span>la<span class="w"> </span>LSDB
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>show<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>ospf<span class="w">                     </span>!<span class="w"> </span>Affiche<span class="w"> </span>les<span class="w"> </span>routes<span class="w"> </span>apprises<span class="w"> </span>par<span class="w"> </span>OSPF
-</code></pre></div>
-<h2 id="comparatif-rip-vs-ospf">Comparatif RIP vs OSPF</h2>
+    A2 --- ABR2 --- BB</code></pre>
+<h3 id="rip-vs-ospf-le-match">RIP vs OSPF : Le match</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Critère</th>
-<th style="text-align: center;">RIPv2</th>
-<th style="text-align: center;">OSPF</th>
+<th style="text-align: left;">Critère technique</th>
+<th style="text-align: left;">Protocole RIPv2</th>
+<th style="text-align: left;">Protocole OSPF</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Algorithme</td>
-<td style="text-align: center;">Distance Vector</td>
-<td style="text-align: center;">Link State</td>
+<td style="text-align: left;"><strong>Famille algorithmique</strong></td>
+<td style="text-align: left;">Vecteur de distance (Ne voit que son voisin)</td>
+<td style="text-align: left;">État de liens (Construit une carte complète du réseau)</td>
 </tr>
 <tr>
-<td style="text-align: left;">Métrique</td>
-<td style="text-align: center;">Sauts (max 15)</td>
-<td style="text-align: center;">Coût (bande passante)</td>
+<td style="text-align: left;"><strong>Métrique d'évaluation</strong></td>
+<td style="text-align: left;">Nombre de sauts physiques (Bloqué à 15 max)</td>
+<td style="text-align: left;">Coût de l'interface (Basé sur le débit réel du lien)</td>
 </tr>
 <tr>
-<td style="text-align: left;">Convergence</td>
-<td style="text-align: center;">Lente</td>
-<td style="text-align: center;">Rapide</td>
+<td style="text-align: left;"><strong>Vitesse de convergence</strong> (Adaptation à la panne)</td>
+<td style="text-align: left;">Extrêmement Lente</td>
+<td style="text-align: left;">Très Rapide</td>
 </tr>
 <tr>
-<td style="text-align: left;">Passage à l'échelle</td>
-<td style="text-align: center;">Mauvais</td>
-<td style="text-align: center;">Excellent (Areas)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Complexité</td>
-<td style="text-align: center;">Simple</td>
-<td style="text-align: center;">Modérée</td>
-</tr>
-<tr>
-<td style="text-align: left;">Usage recommandé</td>
-<td style="text-align: center;">❌ Obsolète</td>
-<td style="text-align: center;">✅ Standard entreprise</td>
+<td style="text-align: left;"><strong>Pertinence réseau moderne</strong></td>
+<td style="text-align: left;">❌ Obsolète, à éviter</td>
+<td style="text-align: left;">✅ Standard d'entreprise massivement recommandé</td>
 </tr>
 </tbody>
 </table>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -612,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -640,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -1330,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1358,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1566,7 +1566,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1826,7 +1826,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -2419,10 +2419,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vip-virtual-ip-address" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VIP — Virtual IP Address
+        1. Définition
       
     </span>
   </a>
@@ -2430,22 +2430,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cluster" class="md-nav__link">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cluster
+        2. Description / Fonctionnement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cluster">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cluster-de-haute-disponibilite-ha-cluster" class="md-nav__link">
+  <a href="#basculement-via-vip-failover-actifpassif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cluster de Haute Disponibilité (HA Cluster)
+        Basculement via VIP (Failover Actif/Passif)
       
     </span>
   </a>
@@ -2453,10 +2486,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cluster-de-load-balancing" class="md-nav__link">
+  <a href="#stack-de-switchs-reseau" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cluster de Load Balancing
+        Stack de Switchs Réseau
       
     </span>
   </a>
@@ -2465,45 +2498,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ha-high-availability-haute-disponibilite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HA — High Availability (Haute Disponibilité)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="HA — High Availability (Haute Disponibilité)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#composants-dune-architecture-ha" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Composants d'une architecture HA
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stack-empilage-de-switches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stack (Empilage de switches)
-      
-    </span>
-  </a>
   
 </li>
       
@@ -3004,6 +2998,8 @@
       
         
       
+        
+      
     
     
     
@@ -3054,6 +3050,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3061,7 +3085,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3089,7 +3113,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3117,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3173,7 +3197,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3201,7 +3225,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3331,6 +3355,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3389,6 +3417,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3573,6 +3657,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3687,6 +3775,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3909,6 +4053,8 @@
       
         
       
+        
+      
     
     
     
@@ -3986,6 +4132,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4002,10 +4176,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4023,8 +4197,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4161,132 +4335,35 @@
 
 
 <h1 id="vip-cluster-ha-et-stack">VIP, Cluster, HA et Stack</h1>
-<p>Ces concepts désignent les différentes techniques utilisées pour <strong>garantir la disponibilité et la redondance</strong> d'un service ou d'un équipement réseau.</p>
-<h2 id="vip-virtual-ip-address">VIP — Virtual IP Address</h2>
-<p>Une <strong>VIP</strong> (Adresse IP Virtuelle) est une adresse IP qui n'est pas liée à un seul équipement physique, mais qui <strong>flotte</strong> entre plusieurs serveurs ou équipements. Les clients accèdent toujours à la même IP, qui est prise en charge par l'équipement actif à un instant donné.</p>
+<p>Les concepts clés pour garantir la résilience extrême et la continuité de service des infrastructures.</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>La <strong>Haute Disponibilité (HA - High Availability)</strong> est un objectif majeur de conception d'architecture visant à éliminer totalement les points uniques de défaillance (SPOF - Single Point of Failure). Le but est de garantir qu'un service informatique reste accessible et transparent pour les utilisateurs, même en cas de panne matérielle sévère (feu, perte de courant, crash matériel).</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>Pour atteindre la HA, l'infrastructure s'appuie sur plusieurs technologies collaboratives :
+* <strong>Le Cluster</strong> : C'est un groupe de serveurs physiques qui travaillent main dans la main. S'il s'agit d'un cluster <em>Actif/Passif</em>, un seul serveur travaille, l'autre est en veille de secours. S'il est <em>Actif/Actif</em> (Load Balancing / Équilibrage de charge), ils se partagent le travail en permanence. Si l'un meurt, les survivants encaissent la totalité de son trafic.
+* <strong>La VIP (Virtual IP)</strong> : C'est une adresse IP "flottante" qui n'est pas fixée physiquement. Si le serveur A (qui détient la VIP) tombe en panne, le serveur B réclame immédiatement la VIP. Le client distant, qui ne connaît que l'adresse de cette VIP, ne subit aucune coupure.
+* <strong>La Stack (Empilage)</strong> : Technologie spécifique aux switchs réseau physiques. On relie plusieurs switchs empilés par un très gros câble dédié à l'arrière pour qu'ils fusionnent et ne forment plus qu'un seul gros équipement logique aux yeux de l'administrateur.</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<p>Lors du déploiement d'un portail web e-commerce ultra-critique, on place un <em>Load Balancer</em> (équilibreur de charge type HAProxy) devant deux gros serveurs Web. Le Load Balancer détient la <strong>VIP</strong> publique connue des clients. Il répartit le trafic de manière équitable (<em>Cluster Actif/Actif</em>).
+Côté armoire réseau, ces serveurs sont branchés à une <strong>Stack</strong> de 2 switchs en lien agrégé (LACP - un câble vers chaque switch). Ainsi, si un câble est coupé, qu'un switch grille, ou qu'un serveur Web brûle, le site web ne s'arrête pas une seule seconde.</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p>L'ennemi mortel redouté de tout cluster est le fameux phénomène de <strong>Split-Brain</strong>. 
+C'est le cas très grave où le lien réseau de synchronisation entre le nœud A et le nœud B est coupé, mais que les deux serveurs physiques sont encore en vie de leur côté. Chacun croyant à tort que l'autre est mort, ils s'arrogent tous les deux la VIP en même temps et écrivent sur les mêmes disques de stockage partagés simultanément, ce qui entraîne une corruption irréversible de la base de données.
+La parade technologique est le <strong>STONITH (Shoot The Other Node In The Head)</strong> : Un mécanisme bas-niveau (ex: via iDRAC/IPMI) qui donne l'ordre d'éteindre de force l'alimentation électrique de l'autre nœud au moindre doute.</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="basculement-via-vip-failover-actifpassif">Basculement via VIP (Failover Actif/Passif)</h3>
 <pre class="mermaid"><code>graph LR
-    C["👤 Client\n(accède à 10.0.0.100)"] --&gt; VIP["🔵 VIP : 10.0.0.100"]
-    VIP --&gt; A["⚙️ Nœud Actif\n(10.0.0.1)"]
-    VIP -.-&gt;|"Basculement si panne"| B["⚙️ Nœud Passif\n(10.0.0.2)"]</code></pre>
-<p><strong>Protocoles de gestion de VIP :</strong>
-* <strong>VRRP</strong> (Virtual Router Redundancy Protocol) : Standard ouvert, très utilisé sur les routeurs et pare-feux. Un routeur <strong>Master</strong> détient la VIP, les autres sont en <strong>Backup</strong>.
-* <strong>HSRP</strong> (Hot Standby Router Protocol) : Protocole propriétaire Cisco, logique similaire à VRRP.
-* <strong>CARP</strong> (Common Address Redundancy Protocol) : Utilisé sur BSD et pfSense.
-* <strong>Keepalived</strong> : Solution Linux très répandue pour la gestion de VIP couplée à des health checks.</p>
-<hr />
-<h2 id="cluster">Cluster</h2>
-<p>Un <strong>cluster</strong> est un groupe de serveurs qui travaillent ensemble pour former un <strong>système unique et plus fiable</strong> (ou plus puissant). Il existe deux grandes familles :</p>
-<h3 id="cluster-de-haute-disponibilite-ha-cluster">Cluster de Haute Disponibilité (HA Cluster)</h3>
-<p>Objectif : <strong>Éliminer les points uniques de défaillance (SPOF)</strong>. Si un nœud tombe, un autre prend le relais automatiquement.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Mode</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Actif / Passif</strong></td>
-<td style="text-align: left;">Un seul nœud traite les requêtes, l'autre attend en veille.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Actif / Actif</strong></td>
-<td style="text-align: left;">Tous les nœuds traitent des requêtes simultanément. Répartition de charge + redondance.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="cluster-de-load-balancing">Cluster de Load Balancing</h3>
-<p>Plusieurs serveurs traitent les requêtes en parallèle pour améliorer les <strong>performances et la scalabilité</strong>. Un <strong>load balancer</strong> (matériel ou logiciel) distribue les requêtes selon différents algorithmes :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Algorithme</th>
-<th style="text-align: left;">Fonctionnement</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Round Robin</strong></td>
-<td style="text-align: left;">Envoie à chaque serveur à tour de rôle</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Least Connections</strong></td>
-<td style="text-align: left;">Envoie au serveur qui a le moins de connexions actives</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>IP Hash</strong></td>
-<td style="text-align: left;">Le même client va toujours sur le même serveur (session persistante)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Weighted</strong></td>
-<td style="text-align: left;">Servers plus puissants reçoivent plus de requêtes</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="ha-high-availability-haute-disponibilite">HA — High Availability (Haute Disponibilité)</h2>
-<p>La <strong>HA</strong> est un objectif de conception : garantir qu'un service reste <strong>disponible un maximum de temps</strong>, exprimé en pourcentage d'uptime :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Niveau</th>
-<th style="text-align: center;">% Disponibilité</th>
-<th style="text-align: left;">Indisponibilité max / an</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>3 nines</strong></td>
-<td style="text-align: center;">99,9%</td>
-<td style="text-align: left;">~8h 45min</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>4 nines</strong></td>
-<td style="text-align: center;">99,99%</td>
-<td style="text-align: left;">~52 min</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>5 nines</strong></td>
-<td style="text-align: center;">99,999%</td>
-<td style="text-align: left;">~5 min</td>
-</tr>
-</tbody>
-</table>
-<h3 id="composants-dune-architecture-ha">Composants d'une architecture HA</h3>
-<ul>
-<li><strong>Redondance matérielle</strong> : Alimentations doubles, disques en RAID, cartes réseau en agrégation (LACP/bonding)</li>
-<li><strong>Clustering</strong> : Plusieurs nœuds capables de prendre le relais</li>
-<li><strong>VIP / Floating IP</strong> : Les clients ne changent pas d'adresse lors d'un basculement</li>
-<li><strong>Health checks</strong> : Surveillance continue de l'état des nœuds</li>
-<li><strong>Fencing / STONITH</strong> : Mécanisme d'isolation d'un nœud défaillant pour éviter le split-brain</li>
-</ul>
-<blockquote>
-<p>[!IMPORTANT]
-Le <strong>Split-Brain</strong> est la situation où deux nœuds d'un cluster pensent chacun être le seul actif (après une perte de la liaison inter-nœuds). Cela peut provoquer une corruption des données. Le mécanisme <strong>STONITH</strong> (Shoot The Other Node In The Head) éteint de force le nœud incertain.</p>
-</blockquote>
-<hr />
-<h2 id="stack-empilage-de-switches">Stack (Empilage de switches)</h2>
-<p>Une <strong>stack</strong> est un groupe de switches interconnectés par un câble dédié (backplane virtuel) et qui fonctionnent comme <strong>un seul équipement logique</strong> géré depuis une seule interface.</p>
+    C["👤 Client Internet\n(Requête IP: 10.0.0.100)"] --&gt; VIP["🔵 VIP Flottante : 10.0.0.100"]
+    VIP --&gt; A["⚙️ Nœud Master (Actif)\nIP machine réelle : 10.0.0.1"]
+    VIP -.-&gt;|"En cas de panne du Master"| B["⚙️ Nœud Backup (Passif)\nIP machine réelle : 10.0.0.2"]</code></pre>
+<h3 id="stack-de-switchs-reseau">Stack de Switchs Réseau</h3>
 <pre class="mermaid"><code>graph TD
-    subgraph "Stack = 1 switch logique"
+    subgraph "Une Stack = 1 seul switch logique"
         S1["Switch 1 (Master)"]
         S2["Switch 2"]
-        S3["Switch 3"]
-        S1 &lt;-- "Câble Stack\n(StackWise, VSS, IRF)" --&gt; S2
-        S2 &lt;-- "Câble Stack" --&gt; S3
-        S3 &lt;-- "Câble Stack" --&gt; S1
+        S1 &lt;-- "Gros Câble Empilage (Backplane)" --&gt; S2
     end
-    ADM["🖥️ Management\n(1 seule IP, 1 seule config)"] --&gt; S1</code></pre>
-<p><strong>Avantages :</strong>
-* <strong>Gestion simplifiée</strong> : Une seule IP de management, une seule configuration, un seul fichier IOS.
-* <strong>Redondance</strong> : Si le switch Master tombe, un autre prend le rôle automatiquement.
-* <strong>Haute bande passante inter-switches</strong> : Le backplane de stack est bien plus rapide qu'un simple câble réseau.
-* <strong>Ports agrégés (LAG) cross-stack</strong> : On peut créer un agrégat de liens physiquement répartis sur différents switches de la stack.</p>
-<p><strong>Technologies propriétaires :</strong>
-* <strong>Cisco StackWise / StackWise Virtual</strong> (VSS pour les Catalyst 6500+)
-* <strong>HP/Aruba IRF</strong> (Intelligent Resilient Framework)
-* <strong>Juniper Virtual Chassis</strong></p>
+    ADM["🖥️ PC Administrateur\n(Se connecte à 1 seule IP de Management commune)"] --&gt; S1</code></pre>
 
 
 

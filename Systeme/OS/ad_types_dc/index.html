@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -619,7 +619,7 @@
   <span class="md-ellipsis">
     
   
-    Commande Linux
+    Mémento : Commandes Linux (Debian)
   
 
     
@@ -647,7 +647,7 @@
   <span class="md-ellipsis">
     
   
-    Commandes Réseau Windows
+    Mémento : Commandes Réseau Windows
   
 
     
@@ -874,10 +874,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rwdc-readwrite-domain-controller" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RWDC – Read/Write Domain Controller
+        1. Définition
       
     </span>
   </a>
@@ -885,22 +885,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rodc-read-only-domain-controller" class="md-nav__link">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RODC – Read-Only Domain Controller
+        2. Description / Fonctionnement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="RODC – Read-Only Domain Controller">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cas-dusage-les-sites-distants-agences" class="md-nav__link">
+  <a href="#tableau-comparatif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cas d'usage : Les sites distants (Agences)
+        Tableau Comparatif
       
     </span>
   </a>
@@ -908,32 +941,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pourquoi-le-rodc-est-il-plus-sur" class="md-nav__link">
+  <a href="#authentification-via-un-rodc-agence-distante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pourquoi le RODC est-il plus sûr ?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fonctionnement-detaille-du-rodc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fonctionnement détaillé du RODC
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#administrateur-rodc-local-delegue" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Administrateur RODC local délégué
+        Authentification via un RODC (Agence distante)
       
     </span>
   </a>
@@ -942,39 +953,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adc-additional-domain-controller" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ADC – Additional Domain Controller
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serveur-catalogue-global-cg" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Serveur Catalogue Global (CG)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tableau-comparatif-general" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tableau comparatif général
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1491,7 +1469,7 @@
   <span class="md-ellipsis">
     
   
-    Sauvegarde et Plan de Reprise d'Activité
+    Sauvegarde
   
 
     
@@ -1519,7 +1497,7 @@
   <span class="md-ellipsis">
     
   
-    Supervision des Systèmes et Réseaux
+    Supervision (Monitoring)
   
 
     
@@ -1722,7 +1700,7 @@
   <span class="md-ellipsis">
     
   
-    Ethernet et les Trames
+    Ethernet et les Trames (802.3)
   
 
     
@@ -1982,7 +1960,7 @@
   <span class="md-ellipsis">
     
   
-    Câblage Réseau : RJ45, Fibre et FTTH
+    Câblage Réseau : Cuivre et Fibre Optique
   
 
     
@@ -3022,6 +3000,8 @@
       
         
       
+        
+      
     
     
     
@@ -3072,6 +3052,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../Cybersecurite/identite_acces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des Identités et des Accès (IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Cybersecurite/pssi/" class="md-nav__link">
         
   
@@ -3079,7 +3087,7 @@
   <span class="md-ellipsis">
     
   
-    PSSI — Politique de Sécurité des Systèmes d'Information
+    PSSI (Politique de Sécurité des Systèmes d'Information)
   
 
     
@@ -3107,7 +3115,7 @@
   <span class="md-ellipsis">
     
   
-    PGSSI-S — Politique Générale de Sécurité des SI de Santé
+    PGSSI-S (Politique Générale de Sécurité des SI de Santé)
   
 
     
@@ -3135,7 +3143,7 @@
   <span class="md-ellipsis">
     
   
-    PCA et PRA — Plan de Continuité et de Reprise d'Activité
+    PCA et PRA (Continuité et Reprise d'Activité)
   
 
     
@@ -3191,7 +3199,7 @@
   <span class="md-ellipsis">
     
   
-    ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information
+    ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
   
 
     
@@ -3219,7 +3227,7 @@
   <span class="md-ellipsis">
     
   
-    CNIL — Commission Nationale de l'Informatique et des Libertés
+    CNIL (Commission Nationale de l'Informatique et des Libertés)
   
 
     
@@ -3349,6 +3357,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3407,6 +3419,62 @@
     
   
     Outils de la Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Gestion_de_projet/methodologies_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Méthodologies de Gestion de Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Gestion_de_projet/pmo_ppm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de Portefeuille et PMO
   
 
     
@@ -3591,6 +3659,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3705,6 +3777,62 @@
     
   
     Matrice SWOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/finance_it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance et Gestion IT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/transformation_numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformation Numérique et Stratégie
   
 
     
@@ -3927,6 +4055,8 @@
       
         
       
+        
+      
     
     
     
@@ -4004,6 +4134,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Autres/charte_editoriale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charte Éditoriale de la Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4020,10 +4178,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
   
@@ -4041,8 +4199,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4165,85 +4323,31 @@
 
 
 <h1 id="types-de-controleurs-de-domaine-dc">Types de Contrôleurs de Domaine (DC)</h1>
-<p>Un <strong>Contrôleur de Domaine (DC)</strong> est le serveur qui héberge la base de données Active Directory et qui répond aux requêtes d'authentification. Il existe plusieurs types de DCs, chacun adapté à des scénarios différents.</p>
-<h2 id="rwdc-readwrite-domain-controller">RWDC – Read/Write Domain Controller</h2>
-<p>C'est le <strong>contrôleur de domaine standard</strong>, qui possède une copie <strong>complète et modifiable</strong> de la base de données AD.</p>
+<p>Serveurs hébergeant la base Active Directory (RWDC, RODC, ADC).</p>
+<h2 id="1-definition">1. Définition</h2>
+<p>Un <strong>Contrôleur de Domaine (DC)</strong> est un serveur Windows qui héberge la base de données de l'annuaire Active Directory et traite les requêtes d'authentification des utilisateurs (Logon). Il en existe plusieurs types pour s'adapter à la sécurité physique et à la redondance des différents sites de l'entreprise.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
 <ul>
-<li>Il peut traiter toutes les opérations : création/modification/suppression d'objets, authentification, réplication bidirectionnelle.</li>
-<li>Au minimum <strong>deux RWDCs</strong> par domaine sont recommandés pour la tolérance aux pannes.</li>
-<li>En l'absence du RWDC principal, l'autre prend le relais de façon transparente.</li>
+<li><strong>RWDC (Read/Write Domain Controller)</strong> : C'est le contrôleur standard. Il possède une copie complète et totalement modifiable de la base AD.</li>
+<li><strong>RODC (Read-Only Domain Controller)</strong> : C'est un DC en "lecture seule". Il ne peut pas être modifié directement, les changements proviennent tous des RWDCs.</li>
+<li><strong>ADC (Additional Domain Controller)</strong> : Ce terme désigne simplement un 2ème ou 3ème RWDC ajouté au réseau pour la répartition de charge et la tolérance aux pannes (redondance).</li>
 </ul>
-<h2 id="rodc-read-only-domain-controller">RODC – Read-Only Domain Controller</h2>
-<p>Le RODC est un DC "en lecture seule". Il possède une <strong>copie non modifiable</strong> de la base AD.</p>
-<h3 id="cas-dusage-les-sites-distants-agences">Cas d'usage : Les sites distants (Agences)</h3>
-<p>Un RODC est typiquement déployé dans un <strong>bureau distant ou une agence</strong> qui n'a pas de local serveur sécurisé (pas de salle informatique verrouillée, personnel non IT sur place).</p>
-<h3 id="pourquoi-le-rodc-est-il-plus-sur">Pourquoi le RODC est-il plus sûr ?</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Fonctionnalité</th>
-<th style="text-align: center;">RWDC</th>
-<th style="text-align: center;">RODC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Peut authentifier les utilisateurs</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅ (localement)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Peut être modifié directement</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td style="text-align: left;">Stocke les mots de passe (hachages)</td>
-<td style="text-align: center;">Tous</td>
-<td style="text-align: center;">Seulement ceux autorisés (PRP)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Impact si volé/compromis</td>
-<td style="text-align: center;"><strong>Critique</strong></td>
-<td style="text-align: center;"><strong>Limité</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>PRP (Password Replication Policy)</strong> : Sur un RODC, seuls les hachages de mots de passe des utilisateurs explicitement autorisés dans la liste blanche PRP sont mis en cache localement. Si le RODC est volé, l'attaquant n'obtient que les comptes de la liste blanche, et non tout le domaine. La révocation est simple : réinitialiser les mots de passe de la liste blanche uniquement.</p>
-</blockquote>
-<h3 id="fonctionnement-detaille-du-rodc">Fonctionnement détaillé du RODC</h3>
-<pre class="mermaid"><code>sequenceDiagram
-    participant U as Utilisateur (Agence)
-    participant RODC as RODC (Agence)
-    participant RWDC as RWDC (Siège)
-
-    U-&gt;&gt;RODC: Authentification (login)
-    alt Hachage en cache (PRP)
-        RODC--&gt;&gt;U: ✅ Authentifié localement
-    else Hachage absent
-        RODC-&gt;&gt;RWDC: Demande d'authentification
-        RWDC--&gt;&gt;RODC: Réponse + mise en cache (si autorisé PRP)
-        RODC--&gt;&gt;U: ✅ Authentifié
-    end</code></pre>
-<h3 id="administrateur-rodc-local-delegue">Administrateur RODC local délégué</h3>
-<p>Il est possible de déléguer l'administration locale d'un RODC (redémarrage, mises à jour) à un utilisateur <strong>sans lui donner des droits sur l'ensemble du domaine</strong>. Idéal pour désigner un référent informatique dans une agence.</p>
-<h2 id="adc-additional-domain-controller">ADC – Additional Domain Controller</h2>
-<p>Ce n'est pas un type officiel distinct, mais le terme désigne simplement un <strong>RWDC supplémentaire</strong> déployé pour la <strong>redondance et la répartition de charge</strong>. Il est identique au DC principal (premier DC installé) et participe à la réplication multi-maîtres.</p>
-<h2 id="serveur-catalogue-global-cg">Serveur Catalogue Global (CG)</h2>
-<p>Ce n'est pas vraiment un "type" de DC, mais un <strong>rôle supplémentaire</strong> que l'on peut activer sur un RWDC ou un RODC.</p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
 <ul>
-<li>Un DC Catalogue Global héberge une copie partielle (mais indexée) de tous les attributs de <strong>tous les objets de toute la forêt</strong>, pas juste du domaine local.</li>
-<li>Il est indispensable pour la recherche d'objets inter-domaines et pour la connexion des utilisateurs UPN (<em>User Principal Name</em>).</li>
-<li><strong>Bonne pratique</strong> : Il est recommandé de faire de <strong>tous les DCs des serveurs CG</strong> dans les forêts modernes, sauf cas particulier.</li>
+<li><strong>RWDC / ADC</strong> : Ils sont déployés au siège social ou dans des Datacenters hypersécurisés. Il en faut au strict minimum 2 par domaine.</li>
+<li><strong>RODC</strong> : Il est déployé dans une petite agence ou un bureau distant ne disposant pas de local informatique sécurisé. Si le serveur physique est volé par un intrus, l'impact de sécurité global sur l'entreprise est drastiquement limité.</li>
 </ul>
-<h2 id="tableau-comparatif-general">Tableau comparatif général</h2>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p>Le RODC inclut une fonctionnalité de sécurité vitale : la <strong>PRP (Password Replication Policy)</strong>. Un RODC ne stocke <em>aucun</em> mot de passe par défaut. Il faut explicitement autoriser certains comptes (la liste blanche PRP) pour que leurs hachages de mots de passe soient mis en cache localement et accélérer leur connexion. En cas de vol, seul un nombre très limité de mots de passe devra être réinitialisé en urgence.</p>
+<p>Le <strong>Catalogue Global (CG)</strong> est un rôle supplémentaire souvent activé sur tous les DCs modernes. Il indexe partiellement toute la forêt pour accélérer la recherche globale et les connexions UPN (ex: <code>jean.dupont@corp.fr</code>).</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="tableau-comparatif">Tableau Comparatif</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Type</th>
-<th style="text-align: center;">Modifiable</th>
-<th style="text-align: center;">Mots de passe</th>
+<th style="text-align: center;">Base Modifiable</th>
+<th style="text-align: center;">Stockage des mots de passe</th>
 <th style="text-align: left;">Use case principal</th>
 </tr>
 </thead>
@@ -4258,22 +4362,30 @@
 <td style="text-align: left;"><strong>RODC</strong></td>
 <td style="text-align: center;">❌ Non (lecture seule)</td>
 <td style="text-align: center;">Liste blanche PRP seulement</td>
-<td style="text-align: left;">Agences / Sites distants non sécurisés</td>
+<td style="text-align: left;">Agences physiques non sécurisées</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>ADC (RWDC sup.)</strong></td>
+<td style="text-align: left;"><strong>ADC</strong></td>
 <td style="text-align: center;">✅ Oui</td>
 <td style="text-align: center;">Tous les comptes</td>
 <td style="text-align: left;">Redondance / Haute disponibilité</td>
 </tr>
-<tr>
-<td style="text-align: left;"><strong>+ Rôle CG</strong></td>
-<td style="text-align: center;">(selon DC de base)</td>
-<td style="text-align: center;">(selon DC de base)</td>
-<td style="text-align: left;">Recherche inter-domaines, auth. UPN</td>
-</tr>
 </tbody>
 </table>
+<h3 id="authentification-via-un-rodc-agence-distante">Authentification via un RODC (Agence distante)</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as Utilisateur
+    participant RODC as RODC (Agence locale)
+    participant RWDC as RWDC (Siège Central)
+
+    U-&gt;&gt;RODC: Login au matin
+    alt Hachage en cache (PRP)
+        RODC--&gt;&gt;U: Authentifié localement (Rapide)
+    else Hachage absent ou non autorisé
+        RODC-&gt;&gt;RWDC: Demande d'auth via lien VPN
+        RWDC--&gt;&gt;RODC: Réponse + mise en cache éventuelle
+        RODC--&gt;&gt;U: Authentifié
+    end</code></pre>
 
 
 
