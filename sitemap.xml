@@ -81,6 +81,10 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/agile_scrum/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/Gestion_de_projet/matrice_des_risques/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -97,6 +101,10 @@
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Processus/bpmn/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/Processus/diagramme_des_flux/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
@@ -110,6 +118,10 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Management/Strategie/finance_it/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Management/Strategie/industrie_40/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
     <url>
@@ -266,6 +278,14 @@
     </url>
     <url>
          <loc>https://documentation.raphael-hirsch.fr/Systeme/Services/supervision/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Stockage/commande_netapp/</loc>
+         <lastmod>2026-06-16</lastmod>
+    </url>
+    <url>
+         <loc>https://documentation.raphael-hirsch.fr/Systeme/Stockage/netapp/</loc>
          <lastmod>2026-06-16</lastmod>
     </url>
 </urlset>
