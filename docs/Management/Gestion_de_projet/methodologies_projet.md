@@ -8,28 +8,48 @@ tags:
   - PMBOK
 ---
 
-# Méthodologies de Gestion de Projet
+## 1. Définition
+Les méthodologies dites **"Prédictives" (Traditionnelles)** partent du principe que le besoin du client final peut être parfaitement connu, analysé et figé dès le premier jour. Tout est donc documenté, budgétisé et planifié contractuellement avant même que le travail de réalisation ne commence. C'est l'opposé diamétral de l'approche empirique et itérative [Agile (Scrum)](agile_scrum.md).
 
-## PRINCE2
+## 2. Description / Fonctionnement (Les Grands Modèles)
 
-**Définition** : PRINCE2 (*PRojects IN Controlled Environments*) est une méthode de gestion de projet structurée, orientée processus et largement utilisée au niveau international.
-**Description** : Elle divise les projets en phases gérables et contrôlables (séquentiel/prédictif). Elle repose sur 7 principes, 7 thèmes et 7 processus.
-**Utilisation** : Très utilisée dans les environnements institutionnels, gouvernementaux ou pour des projets de grande envergure avec des exigences strictes en matière de documentation et de gouvernance.
-**Modifications possibles** : La méthode est conçue pour être "adaptée à l'environnement du projet" (tailoring). On peut alléger la documentation ou la combiner avec des méthodes agiles (PRINCE2 Agile) pour la phase de livraison.
+### A. Le Modèle en Cascade (Waterfall)
+Le tout premier modèle industriel et informatique. Les phases s'enchaînent de haut en bas comme une cascade d'eau (Le principe est qu'on ne remonte jamais en arrière).
+1. *Cahier des charges* -> 2. *Architecture* -> 3. *Code/Fabrication* -> 4. *Tests globaux* -> 5. *Déploiement*.
+**Le problème mortel :** Si une erreur de conception majeure est découverte très tardivement à l'étape 4 (Tests), la méthode ne permet pas de remonter facilement corriger l'étape 1, rendant le projet un échec financier.
 
-## PMBOK
+### B. Le Cycle en V (V-Model)
+C'est la correction moderne et l'amélioration majeure de la Cascade. Le projet "descend" dans le V pour la phase de conception, et "remonte" pour la phase de tests. 
+Surtout, **chaque phase de conception descendante possède sa propre phase de test (validation) strictement correspondante en face**. 
+Si on découvre un bug précis lors du *Test d'intégration*, on sait exactement qu'il faut corriger l'étape de *Conception technique détaillée* située juste en face sur la barre du V.
 
-**Définition** : Le PMBOK (*Project Management Body of Knowledge*) est un guide publié par le PMI (Project Management Institute) qui rassemble l'ensemble des connaissances, pratiques, outils et techniques de gestion de projet.
-**Description** : Contrairement à PRINCE2 qui est une méthode, le PMBOK est un référentiel de bonnes pratiques. Il décrit les domaines de connaissances (intégration, périmètre, délais, coûts, qualité, etc.) et les processus associés.
-**Utilisation** : Il sert de boîte à outils pour le chef de projet, afin d'y piocher les meilleures pratiques adaptées à la situation de son projet (souvent aux États-Unis ou dans de grandes multinationales).
-**Modifications possibles** : Puisqu'il s'agit d'un référentiel, le chef de projet est entièrement libre de sélectionner les outils et processus du PMBOK qu'il juge pertinents et de les adapter au contexte. La version 7 du PMBOK intègre d'ailleurs fortement les approches agiles.
+### C. La Méthode PRINCE2
+PRINCE2 (*PRojects IN Controlled Environments*) n'est pas un dessin de cycle, c'est une méthode britannique très stricte de gouvernance de projet. Elle impose des rôles hiérarchiques précis (Le Comité de pilotage / *Project Board* qui valide les étapes par dessus le Chef de projet) et dicte très exactement qui doit signer quel document papier (les "Produits de Management") pour avoir le droit d'engager le budget de l'étape suivante.
 
-## Méthodologie Agile (Scrum)
+## 3. Utilisation / Cas Pratique
+Ces méthodes prédictives sont obligatoires et vitales dans l'industrie lourde (Aéronautique, Nucléaire, BTP, Appels d'offres publics).
+*Cas Pratique* : On ne construit pas un Pont d'autoroute en méthode "Agile" (On ne livre pas un petit morceau de pont au-dessus du vide en demandant aux voitures si ça leur plaît pour améliorer la version 2). Tout doit être planifié et mathématiquement validé (*Cycle en V*) avant même de couler le premier pilier en béton.
 
-**Définition** : L'approche Agile est un état d'esprit itératif et incrémental de gestion de projet, visant à livrer de la valeur rapidement et à s'adapter en continu aux changements.
-**Description** : Plutôt que de tout planifier à l'avance (cycle en V), le projet avance par petits cycles. Parmi les concepts clés de Scrum (le framework Agile le plus populaire) :
-- **Epic** : Une grande fonctionnalité ou un grand besoin utilisateur (trop gros pour être fait en une seule fois).
-- **User Story** : Une exigence métier simple et compréhensible, écrite du point de vue de l'utilisateur final. L'Epic est découpé en plusieurs User Stories.
-- **Sprint** : Une itération courte (généralement 1 à 4 semaines) durant laquelle l'équipe s'engage à livrer un incrément de produit fonctionnel (les User Stories sélectionnées).
-**Utilisation** : Incontournable dans le développement logiciel, la création de produits innovants ou lorsque les besoins du client sont susceptibles d'évoluer rapidement.
-**Modifications possibles** : Bien que Scrum ait des règles précises, les équipes peuvent ajuster la durée des sprints, les critères "Definition of Done", ou combiner l'Agile avec d'autres approches (ex: SAFe pour le passage à l'échelle, ou Kanban pour la gestion du flux).
+## 4. Modifications possibles / Alternatives
+Le grand défaut de toutes ces méthodes prédictives est **l'Effet Tunnel** : Le client signe le cahier des charges le 1er Janvier, l'équipe technique s'enferme et travaille "dans le noir" (dans le tunnel) pendant 1 an, et livre le logiciel d'un coup le 31 Décembre. Sauf qu'entre temps, le marché a évolué, ou le client a changé d'avis.
+* **L'alternative absolue** : L'approche [Agile / Scrum](agile_scrum.md), qui oblige l'équipe à sortir du tunnel et à livrer un petit morceau réellement fonctionnel du produit final toutes les 2 semaines pour que le client le valide.
+* **L'hybridation (PRINCE2 Agile)** : De nombreuses ESN utilisent la coquille PRINCE2 (pour rassurer la direction financière et organiser les contrats) tout en laissant l'équipe de développement interne travailler concrètement en Sprints Agiles.
+
+## 5. Exemples visuels et Liens utiles
+
+### Le Schéma classique du Cycle en V
+```mermaid
+graph TD
+    A[Expression des besoins] --> B[Spécifications fonctionnelles]
+    B --> C[Conception technique]
+    C --> D[Développement / Réalisation]
+    
+    D --> E[Tests Unitaires]
+    E -.->|Valident| C
+    E --> F[Tests d'Intégration]
+    F -.->|Valident| B
+    F --> G[Recette Client / UAT]
+    G -.->|Valide| A
+```
+
+`Voir aussi : [PMI et PMBOK](pmi_pmp.md) | [Agilité et Scrum](agile_scrum.md) | [Les outils (GANTT, PERT)](outils_gestion_projet.md)`

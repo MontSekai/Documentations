@@ -9,6 +9,7 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
 ??? note "Système"
     - [Général (Page Accueil)](Systeme/systeme.md)
     ??? note "OS"
+        - [Noyau (Kernel)](Systeme/OS/noyau.md)
         - [Commandes Linux (Debian)](Systeme/OS/commande_linux.md)
         - [Commandes Windows](Systeme/OS/commande_windows.md)
         - [Windows Server](Systeme/OS/windows_server.md)
@@ -18,6 +19,7 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
             - [Types de contrôleurs de domaine](Systeme/OS/ad_types_dc.md)
             - [GPO (Stratégies de groupe)](Systeme/OS/gpo.md)
             - [Entra ID (Azure AD)](Systeme/OS/entra_id.md)
+            - [LDAP et LDAPS](Systeme/OS/ldap.md)
     ??? note "Automatisation"
         - [Ansible](Systeme/Automatisation/ansible.md)
     ??? note "Virtualisation et Conteneurs"
@@ -34,10 +36,14 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     ??? note "Stockage"
         - [Baies NetApp (Concept)](Systeme/Stockage/netapp.md)
         - [Commandes NetApp (CLI)](Systeme/Stockage/commande_netapp.md)
+        - [RAID (Matériel/Disques)](Systeme/Stockage/raid.md)
+        - [iSCSI (SAN)](Systeme/Stockage/iscsi.md)
 
 ??? note "Réseau"
     - [Général (Page Accueil)](Reseau/reseau.md)
     ??? note "Protocoles"
+        - [HTTP et HTTPS](Reseau/Protocoles/http_https.md)
+        - [SSH et RDP (Accès distant)](Reseau/Protocoles/ssh_rdp.md)
         - [Ethernet et Trames](Reseau/Protocoles/ethernet_trames.md)
         - [Trames taguées : 802.1Q/802.1X](Reseau/Protocoles/802.1Q_802.1X.md)
         - [Modèle OSI](Reseau/Protocoles/modele_osi.md)
@@ -57,10 +63,12 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [Proxy, Reverse Proxy, WAF, Pare-feu](Reseau/Securite/proxy_firewall.md)
         - [ACL](Reseau/Securite/acl.md)
     ??? note "Infrastructure"
+        - [NAT, PAT et Bridge](Reseau/Infrastructure/nat_pat.md)
+        - [Peer-to-Peer (P2P)](Reseau/Architecture/p2p.md)
         - [VLAN et Segmentation réseau](Reseau/vlan.md)
         - [Routage et Routage inter-VLAN](Reseau/routage.md)
         - [Spanning Tree (STP)](Reseau/spanning_tree.md)
-        - [Haute Disponibilité (Cluster)](Reseau/haute_disponibilite.md)
+        - [Haute Disponibilité (Cluster/VIP)](Reseau/haute_disponibilite.md)
 
 ??? note "Cybersécurité"
     - [Général (Page Accueil)](Cybersecurite/cybersecurite.md)
@@ -85,10 +93,15 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
     - [Général (Page Accueil)](Management/management.md)
     ??? note "Gestion de projet"
         - [Outils fondamentaux (GANTT, PERT, RACI)](Management/Gestion_de_projet/outils_gestion_projet.md)
+        - [Plan de Management de Projet (PMP)](Management/Gestion_de_projet/plan_management_projet.md)
+        - [Référentiel Documentaire (DAT, DEX)](Management/Gestion_de_projet/referentiel_documentaire.md)
+        - [Le REX / Post-Mortem](Management/Gestion_de_projet/rex.md)
+        - [PMI et Certification PMP](Management/Gestion_de_projet/pmi_pmp.md)
+        - [Journal RAID (Risques, Hypothèses)](Management/Gestion_de_projet/journal_raid.md)
         - [Méthodologies de Projet (Cycle en V, Prince2)](Management/Gestion_de_projet/methodologies_projet.md)
         - [Agilité et Scrum](Management/Gestion_de_projet/agile_scrum.md)
         - [PMO et PPM](Management/Gestion_de_projet/pmo_ppm.md)
-        - [Matrice des risques](Management/Gestion_de_projet/matrice_des_risques.md)
+        - [Matrice des risques et Remédiation](Management/Gestion_de_projet/matrice_des_risques.md)
     ??? note "Processus"
         - [Diagramme des flux](Management/Processus/diagramme_des_flux.md)
         - [BPMN](Management/Processus/bpmn.md)
@@ -104,6 +117,7 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)
+    - [API REST](Developpement/api.md)
     ??? note "Bases de données"
         - [Bases de données relationnelles (MariaDB/SQL)](Developpement/Bases_de_donnees/sql.md)
         - [Mémento des requêtes SQL](Developpement/Bases_de_donnees/commande_sql.md)

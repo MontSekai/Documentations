@@ -57,6 +57,7 @@ nav:
   - Système: 
       - Systeme/systeme.md
       - OS:
+          - Systeme/OS/noyau.md
           - Systeme/OS/commande_linux.md
           - Systeme/OS/commande_windows.md
           - Systeme/OS/windows_server.md
@@ -66,6 +67,7 @@ nav:
               - Systeme/OS/ad_types_dc.md
               - Systeme/OS/gpo.md
               - Systeme/OS/entra_id.md
+              - Systeme/OS/ldap.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Virtualisation et Conteneurs: 
@@ -82,9 +84,13 @@ nav:
       - Stockage:
           - Systeme/Stockage/netapp.md
           - Systeme/Stockage/commande_netapp.md
+          - Systeme/Stockage/raid.md
+          - Systeme/Stockage/iscsi.md
   - Réseau: 
       - Reseau/reseau.md
       - Protocoles:
+          - Reseau/Protocoles/http_https.md
+          - Reseau/Protocoles/ssh_rdp.md
           - Reseau/Protocoles/ethernet_trames.md
           - Reseau/Protocoles/802.1Q_802.1X.md
           - Reseau/Protocoles/modele_osi.md
@@ -104,6 +110,8 @@ nav:
           - Reseau/Securite/proxy_firewall.md
           - Reseau/Securite/acl.md
       - Infrastructure:
+          - Reseau/Infrastructure/nat_pat.md
+          - Reseau/Architecture/p2p.md
           - Reseau/vlan.md
           - Reseau/routage.md
           - Reseau/spanning_tree.md
@@ -130,6 +138,11 @@ nav:
       - Management/management.md
       - Gestion_de_projet:
           - Management/Gestion_de_projet/outils_gestion_projet.md
+          - Management/Gestion_de_projet/plan_management_projet.md
+          - Management/Gestion_de_projet/referentiel_documentaire.md
+          - Management/Gestion_de_projet/rex.md
+          - Management/Gestion_de_projet/pmi_pmp.md
+          - Management/Gestion_de_projet/journal_raid.md
           - Management/Gestion_de_projet/methodologies_projet.md
           - Management/Gestion_de_projet/agile_scrum.md
           - Management/Gestion_de_projet/pmo_ppm.md
@@ -148,6 +161,7 @@ nav:
           - Management/Strategie/loi_pareto.md
   - Développement:
       - Developpement/developpement.md
+      - Developpement/api.md
       - Bases_de_donnees:
           - Developpement/Bases_de_donnees/sql.md
           - Developpement/Bases_de_donnees/commande_sql.md
