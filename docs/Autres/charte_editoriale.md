@@ -71,3 +71,22 @@ tags:
 | :--- | :--- | :--- |
 | `ping` | Tester la connectivité IP | `ping 8.8.8.8` |
 ```
+
+---
+
+## 3. Checklist obligatoire à la création d'une page
+
+**À NE JAMAIS OUBLIER :** La simple création d'une nouvelle page Markdown avec du texte ne suffit pas. Pour qu'elle soit correctement intégrée au wiki, vous devez systématiquement vérifier ces 3 points :
+
+1. **L'en-tête YAML (Tags)** : Toute page doit commencer par un bloc définissant ses catégories pour le moteur de recherche.
+   ```yaml
+   ---
+   tags:
+     - CategoriePrincipale
+     - MotClef
+   ---
+   ```
+2. **Le Maillage Interne (Liens)** : Créez des ponts ! Ajoutez systématiquement dans le corps du texte ou dans la section 5 des liens vers d'autres concepts du wiki (ex: `Voir aussi : [Modèle OSI](../Protocoles/modele_osi.md)`).
+3. **Mise à jour de la Navigation** : Pour que la page soit visible par l'utilisateur, vous devez ajouter son chemin d'accès à deux endroits précis :
+   - Le fichier racine **`mkdocs.yml`** (pour l'intégrer au menu latéral gauche).
+   - Le fichier **`docs/index.md`** (pour l'intégrer aux blocs de la page d'accueil).
