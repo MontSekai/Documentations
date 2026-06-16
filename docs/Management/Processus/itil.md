@@ -3,38 +3,43 @@ tags:
   - Management
   - Processus
   - ITIL
+  - SLA
 ---
 
-# ITIL (Information Technology Infrastructure Library)
+# ITIL V4 (Information Technology Infrastructure Library)
 
-ITIL est un référentiel recensant les bonnes pratiques pour le **Management des Services Informatiques** (ITSM - *IT Service Management*). Son but est d'aligner les services informatiques sur les besoins de l'entreprise.
+Le référentiel mondial des bonnes pratiques pour la gestion des services informatiques (ITSM).
 
-## ITIL 4
+## 1. Définition
+**ITIL** est un cadre de travail (framework) recensant les meilleures pratiques mondiales pour la gestion des services IT. Son but principal est d'aligner l'informatique sur les besoins réels de l'entreprise : l'IT n'est plus vue comme un simple "centre de coûts" technique, mais comme un véritable partenaire stratégique **co-créateur de valeur** avec les métiers.
 
-**Définition** : ITIL 4 est la dernière version du référentiel recensant les bonnes pratiques pour le Management des Services Informatiques (ITSM).
-**Description** : Elle s'appuie sur le Système de Valeur des Services (SVS) et délaisse l'ancien cycle de vie en V pour une approche beaucoup plus agile et holistique. Elle intègre des concepts issus d'autres frameworks comme Agile, DevOps et Lean.
-**Utilisation** : ITIL 4 est utilisé par les entreprises pour aligner l'informatique sur les besoins métiers, améliorer la qualité des services IT, réduire les coûts et gérer les risques.
-**Modifications possibles** : ITIL n'est pas une norme stricte mais un cadre (framework). Il est fortement recommandé d'adapter (tailoring) les pratiques à la taille, la culture et les contraintes spécifiques de l'organisation. On peut choisir de n'implémenter que certaines pratiques (ex: gestion des incidents, centre de services).
+## 2. Description / Fonctionnement
+ITIL 4 s'appuie sur le "Système de Valeur des Services" (SVS) et délaisse l'ancien cycle de vie en V très rigide (ITIL V3) pour une approche agile, moderne et intégrée aux méthodes DevOps. 
 
-## Les concepts clés
+**Les Engagements de Service (SLA)**
+Un des piliers fondateurs du fonctionnement ITIL est l'engagement de résultat contractuel :
+* **SLA (Service Level Agreement)** : Le contrat de service formel signé entre le fournisseur IT et les clients/métiers (ex: "Le réseau Wi-Fi sera disponible 99.9% du temps").
+* **OLA (Operational Level Agreement)** : L'accord interne à l'IT entre les différentes équipes techniques pour supporter le SLA (ex: L'équipe Réseau s'engage à répondre à l'équipe Serveur en moins de 2 heures).
+* **UC (Underpinning Contract)** : Le contrat juridique avec les prestataires externes (ex: L'opérateur Fibre Optique).
 
-### 1. La co-création de Valeur
-Les services IT ne sont plus justes "délivrés" au client, la valeur est co-créée entre le fournisseur (l'IT) et le consommateur (les métiers), via une relation de partenariat.
+## 3. Utilisation / Cas Pratique
+Les entreprises utilisent les 34 "Pratiques" d'ITIL pour s'organiser au quotidien. Voici comment le Centre de Services (Service Desk) gère les problèmes avec différents types d'actions :
 
-### 2. Les 4 Dimensions du Service Management
-Pour qu'un service soit correctement délivré, il faut gérer de front 4 piliers :
-* Organisme et implication de personnes.
-* Information et technologie.
-* Partenaires et fournisseurs.
-* Chaines de valeur et processus.
+* **Incident Management (Action Réactive / Curative)** : Une imprimante est physiquement en panne ou un utilisateur n'arrive plus à se connecter. L'objectif est de rétablir le service dégradé le plus vite possible (Mode Pompier, solution de contournement autorisée). C'est du **réactif**.
+* **Problem Management (Action Préventive / Proactive)** : Le support remarque que la même imprimante tombe en panne tous les lundis matin. L'équipe ouvre une enquête de fond pour trouver la cause racine du problème et remplacer la pièce défectueuse avant qu'une nouvelle panne ne survienne et ne crée de nouveaux tickets d'incident. C'est du **préventif**.
+* **Change Enablement (Action Évolutive)** : L'entreprise veut changer de serveur de messagerie. Avant de toucher à quoi que ce soit, on analyse les risques et on prépare un plan de retour arrière (*Rollback*) pour minimiser les impacts métiers en cas de catastrophe lors du changement.
 
-### 3. Les Pratiques ITIL (Anciennement Processus)
-ITIL décrit 34 pratiques recommandées. Les plus courantes en entreprise sont :
-* **Service Desk** : Le point de contact unique pour les utilisateurs.
-* **Incident Management** : Rétablir un service le plus vite possible (Mode Pompier).
-* **Problem Management** : Trouver la cause racine d'un ou plusieurs incidents récurrents pour qu'ils ne se reproduisent plus (Mode Enquêteur).
-* **Change Enablement** : Gérer les modifications de l'infrastructure pour minimiser les risques de panne.
+## 4. Modifications possibles / Alternatives
+ITIL n'est pas une loi stricte à appliquer à la lettre. Le principe fondateur est "*Adopt and Adapt*" : il est fortement recommandé de piocher uniquement les pratiques utiles et de les adapter à la taille et à la culture de son organisation. 
+Une alternative ou un complément technique pour le monde moderne du développement est l'approche **DevOps**, qui automatise, fluidifie et accélère tout ce qu'ITIL essaie de sécuriser de manière procédurale.
 
-## Complémentarité
+## 5. Exemples visuels et Liens utiles
 
-ITIL dicte *ce qu'il faut faire* pour bien gérer un service, mais pas *comment le faire* techniquement. Il se couple très bien avec les méthodes Agiles, DevOps, ou encore le [Triangle QCD](../Gestion_de_projet/qcd.md) pour évaluer la livraison des services.
+### Les 4 Dimensions du Service Management (ITIL 4)
+Pour réussir à délivrer un service correctement, ITIL impose de ne jamais oublier l'équilibre de ces 4 piliers fondamentaux (ne pas penser "que" à la technologie) :
+1. **Organisation et Personnes** (La culture d'entreprise, les compétences, le management)
+2. **Information et Technologie** (Les logiciels, les bases de données, les serveurs)
+3. **Partenaires et Fournisseurs** (Les contrats externes, les sous-traitants vitaux)
+4. **Flux de valeur et Processus** (Comment le travail s'enchaîne de manière logique)
+
+`Voir aussi : [Diagramme des flux](diagramme_des_flux.md) | [KPI](../Strategie/kpi.md)`

@@ -23,7 +23,15 @@ Le protocole standard historique de l'industrie pour les équipements réseau es
 Un serveur "Manager" interroge régulièrement des "Agents" installés sur les équipements. Si une anomalie grave survient, l'agent peut aussi envoyer de lui-même une alerte non sollicitée : c'est le **Trap SNMP**.
 
 ## 3. Utilisation / Cas Pratique
-Lorsqu'un lien fibre lâche, qu'un serveur de base de données sature (CPU > 90%), ou que l'espace disque d'un serveur critique passe sous les 5%, le serveur de supervision détecte l'anomalie et envoie instantanément un e-mail, un SMS ou un message Teams à l'administrateur d'astreinte, souvent avant même que les utilisateurs ne s'en plaignent.
+**Les principaux indicateurs (KPI) de supervision IT :**
+Pour assurer la santé de l'infrastructure, l'administrateur configure des seuils d'alerte sur plusieurs métriques critiques :
+* **Taux de disponibilité (Uptime)** : Le pourcentage de temps où le service est en ligne (Lié aux contrats de SLA, ex: 99,9%).
+* **Consommation CPU / RAM** : Déclenchement d'une alerte "Warning" à 80% d'utilisation, et "Critique" à 95% pour prévenir le plantage total de l'OS.
+* **Espace Disque (Stockage)** : Alerte critique si la partition contenant les bases de données passe sous les 5% d'espace libre (cause numéro 1 des crashs de serveurs web).
+* **Latence Réseau (Ping)** : Mesurée en millisecondes (ms), c'est le temps de réponse d'un équipement. Une hausse brutale trahit souvent un problème de routage ou de câble.
+* **Bande passante (Trafic)** : Le débit en Mbps transitant sur un câble. Déclenchement d'une alerte si une interface réseau sature à 100% de sa capacité.
+
+Lorsqu'un de ces seuils est franchi en temps réel (ex: un lien fibre de secours lâche), le serveur de supervision détecte l'anomalie et envoie instantanément un e-mail, un SMS ou un Webhook Teams à l'administrateur d'astreinte, souvent bien avant que les utilisateurs ne s'en plaignent.
 
 ## 4. Modifications possibles / Alternatives
 Le SNMP a évolué :

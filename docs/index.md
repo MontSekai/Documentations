@@ -17,6 +17,7 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
             - [Rôles FSMO](Systeme/OS/ad_fsmo.md)
             - [Types de contrôleurs de domaine](Systeme/OS/ad_types_dc.md)
             - [GPO (Stratégies de groupe)](Systeme/OS/gpo.md)
+            - [Entra ID (Azure AD)](Systeme/OS/entra_id.md)
     ??? note "Automatisation"
         - [Ansible](Systeme/Automatisation/ansible.md)
     ??? note "Virtualisation et Conteneurs"
@@ -99,18 +100,17 @@ Cette documentation est construite sur un modèle de **dossiers plats** pour les
         - [Finance IT (ROI, CAPEX/OPEX)](Management/Strategie/finance_it.md)
         - [Transformation Numérique](Management/Strategie/transformation_numerique.md)
         - [Industrie 4.0](Management/Strategie/industrie_40.md)
+        - [Loi de Pareto (80/20)](Management/Strategie/loi_pareto.md)
 
 ??? note "Développement"
     - [Général (Page Accueil)](Developpement/developpement.md)
     ??? note "Bases de données"
-        - [SQL](Developpement/Bases_de_donnees/sql.md)
+        - [Bases de données relationnelles (MariaDB/SQL)](Developpement/Bases_de_donnees/sql.md)
+        - [Mémento des requêtes SQL](Developpement/Bases_de_donnees/commande_sql.md)
+        - [Sécurisation de la BDD](Developpement/Bases_de_donnees/securite_bdd.md)
 
 ??? note "Autres et Projets"
     - [Général (Page Accueil)](Autres/autres.md)
     - [Charte Éditoriale du Wiki](Autres/charte_editoriale.md)
     ??? note "Projets"
         - [RPG Tower Crawler](Autres/rpg-tower-crawler.md)
-
----
-
-*L'intégration d'un Chatbot IA type "RAG" (Mendable, Dify...) est prévue pour pouvoir poser des questions en langage naturel à cette documentation.*

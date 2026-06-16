@@ -65,6 +65,7 @@ nav:
               - Systeme/OS/ad_fsmo.md
               - Systeme/OS/ad_types_dc.md
               - Systeme/OS/gpo.md
+              - Systeme/OS/entra_id.md
       - Automatisation:
           - Systeme/Automatisation/ansible.md
       - Virtualisation et Conteneurs: 
@@ -144,10 +145,13 @@ nav:
           - Management/Strategie/finance_it.md
           - Management/Strategie/transformation_numerique.md
           - Management/Strategie/industrie_40.md
+          - Management/Strategie/loi_pareto.md
   - Développement:
       - Developpement/developpement.md
       - Bases_de_donnees:
           - Developpement/Bases_de_donnees/sql.md
+          - Developpement/Bases_de_donnees/commande_sql.md
+          - Developpement/Bases_de_donnees/securite_bdd.md
   - Autres:
       - Autres/autres.md
       - Autres/charte_editoriale.md
