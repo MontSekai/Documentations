@@ -706,6 +706,8 @@
       
         
       
+        
+      
     
     
     
@@ -848,6 +850,34 @@
     
   
     GPO (Group Policy Object)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/entra_id/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Entra ID (Ex Azure AD)
   
 
     
@@ -3791,7 +3821,7 @@
   <span class="md-ellipsis">
     
   
-    ITIL (Information Technology Infrastructure Library)
+    ITIL V4 (Information Technology Infrastructure Library)
   
 
     
@@ -3821,6 +3851,8 @@
   
     
     
+      
+        
       
         
       
@@ -4045,6 +4077,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/loi_pareto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loi de Pareto (Règle des 80/20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4155,6 +4215,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4213,6 +4277,62 @@
     
   
     Bases de Données (SQL)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developpement/Bases_de_donnees/commande_sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mémento : Requêtes SQL (MariaDB / MySQL)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developpement/Bases_de_donnees/securite_bdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurisation des Bases de Données
   
 
     
@@ -4540,7 +4660,14 @@
 <p>Le protocole standard historique de l'industrie pour les équipements réseau est le <strong>SNMP (Simple Network Management Protocol)</strong>.
 Un serveur "Manager" interroge régulièrement des "Agents" installés sur les équipements. Si une anomalie grave survient, l'agent peut aussi envoyer de lui-même une alerte non sollicitée : c'est le <strong>Trap SNMP</strong>.</p>
 <h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
-<p>Lorsqu'un lien fibre lâche, qu'un serveur de base de données sature (CPU &gt; 90%), ou que l'espace disque d'un serveur critique passe sous les 5%, le serveur de supervision détecte l'anomalie et envoie instantanément un e-mail, un SMS ou un message Teams à l'administrateur d'astreinte, souvent avant même que les utilisateurs ne s'en plaignent.</p>
+<p><strong>Les principaux indicateurs (KPI) de supervision IT :</strong>
+Pour assurer la santé de l'infrastructure, l'administrateur configure des seuils d'alerte sur plusieurs métriques critiques :
+* <strong>Taux de disponibilité (Uptime)</strong> : Le pourcentage de temps où le service est en ligne (Lié aux contrats de SLA, ex: 99,9%).
+* <strong>Consommation CPU / RAM</strong> : Déclenchement d'une alerte "Warning" à 80% d'utilisation, et "Critique" à 95% pour prévenir le plantage total de l'OS.
+* <strong>Espace Disque (Stockage)</strong> : Alerte critique si la partition contenant les bases de données passe sous les 5% d'espace libre (cause numéro 1 des crashs de serveurs web).
+* <strong>Latence Réseau (Ping)</strong> : Mesurée en millisecondes (ms), c'est le temps de réponse d'un équipement. Une hausse brutale trahit souvent un problème de routage ou de câble.
+* <strong>Bande passante (Trafic)</strong> : Le débit en Mbps transitant sur un câble. Déclenchement d'une alerte si une interface réseau sature à 100% de sa capacité.</p>
+<p>Lorsqu'un de ces seuils est franchi en temps réel (ex: un lien fibre de secours lâche), le serveur de supervision détecte l'anomalie et envoie instantanément un e-mail, un SMS ou un Webhook Teams à l'administrateur d'astreinte, souvent bien avant que les utilisateurs ne s'en plaignent.</p>
 <h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
 <p>Le SNMP a évolué :
 * <strong>v1 et v2c</strong> : Le trafic réseau circule en clair (non sécurisé, à réserver aux réseaux très isolés).

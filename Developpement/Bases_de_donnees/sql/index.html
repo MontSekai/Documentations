@@ -16,7 +16,7 @@
         <link rel="prev" href="../../developpement/">
       
       
-        <link rel="next" href="../../../Autres/autres/">
+        <link rel="next" href="../commande_sql/">
       
       
         
@@ -701,6 +701,8 @@
       
         
       
+        
+      
     
     
     
@@ -843,6 +845,34 @@
     
   
     GPO (Group Policy Object)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Systeme/OS/entra_id/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Entra ID (Ex Azure AD)
   
 
     
@@ -3665,7 +3695,7 @@
   <span class="md-ellipsis">
     
   
-    ITIL (Information Technology Infrastructure Library)
+    ITIL V4 (Information Technology Infrastructure Library)
   
 
     
@@ -3695,6 +3725,8 @@
   
     
     
+      
+        
       
         
       
@@ -3919,6 +3951,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Management/Strategie/loi_pareto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loi de Pareto (Règle des 80/20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4036,6 +4096,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4146,13 +4210,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-concepts-de-base" class="md-nav__link">
+  <a href="#1-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Concepts de base
+        1. Définition
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-description-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Description / Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-utilisation-cas-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Utilisation / Cas Pratique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modifications-possibles-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modifications possibles / Alternatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemples-visuels-et-liens-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemples visuels et Liens utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemples visuels et Liens utiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-relationnelle-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture relationnelle simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4160,6 +4285,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commande_sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mémento : Requêtes SQL (MariaDB / MySQL)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../securite_bdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurisation des Bases de Données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4462,13 +4643,53 @@
 
 <h1 id="bases-de-donnees-sql">Bases de Données (SQL)</h1>
 <p>Cette page sert d'aide-mémoire pour préparer, structurer et utiliser des bases de données relationnelles avec le langage SQL.</p>
-<h2 id="1-concepts-de-base">1. Concepts de base</h2>
-<p>Les bases de données relationnelles (SGBDR) stockent les données dans des tables liées entre elles.
-Voici quelques termes essentiels :
-- <strong>Table</strong> : Structure de base contenant des données réparties en colonnes et lignes.
-- <strong>Clé Primaire (Primary Key - PK)</strong> : Identifiant unique d'une ligne dans une table (ex: ID).
-- <strong>Clé Étrangère (Foreign Key - FK)</strong> : Référence à la clé primaire d'une autre table, créant ainsi une relation.</p>
-<p><em>(Contenu à enrichir selon les besoins de vos projets)</em></p>
+<h2 id="1-definition">1. Définition</h2>
+<p>Un <strong>SGBDR</strong> (Système de Gestion de Bases de Données Relationnelles) est un logiciel serveur puissant dont le seul but est de stocker, trier et sécuriser des millions de données de manière logique et fiable. 
+L'immense majorité des SGBDR utilise le langage standardisé <strong>SQL</strong> (<em>Structured Query Language</em>) pour interroger et modifier ces données. Le moteur open-source le plus célèbre et utilisé sur le web est <strong>MySQL</strong>, dont le dérivé libre et très performant est <strong>MariaDB</strong>.</p>
+<h2 id="2-description-fonctionnement">2. Description / Fonctionnement</h2>
+<p>L'architecture relationnelle s'articule autour de concepts très stricts, semblables à un immense fichier Excel dont les pages seraient interconnectées :
+* <strong>La Base de Données (Database)</strong> : Le grand conteneur global du projet (ex: <code>boutique_ecommerce</code>).
+* <strong>La Table</strong> : Une "feuille de calcul" thématique dans la base (ex: Une table <code>Utilisateurs</code>, une table <code>Commandes</code>, une table <code>Produits</code>).
+* <strong>Les Colonnes (Champs)</strong> : Les attributs définis à l'avance pour la table (ex: <em>Nom</em>, <em>Email</em>, <em>Prix</em>). Une colonne ne peut contenir qu'un seul type précis de donnée (Texte, Entier, Date).
+* <strong>Les Lignes (Enregistrements)</strong> : Une entrée unique contenant des données pour chaque colonne.
+* <strong>La Clé Primaire (L'ID - Identifiant Unique)</strong> : C'est le concept central du SQL. Chaque ligne DOIT posséder un numéro d'identification unique, qui s'incrémente tout seul à chaque nouvelle ligne (ex: ID <code>144</code>). C'est la plaque d'immatriculation infalsifiable de l'enregistrement.
+* <strong>La Clé Étrangère (Foreign Key)</strong> : C'est ce qui crée la <em>relation</em> entre les tables. La table <code>Commandes</code> ne stockera pas directement le prénom et le nom du client (ça prendrait trop de place et créerait des erreurs), elle stockera uniquement l'ID du client (ex: <em>L'utilisateur ID <code>144</code> a acheté le produit ID <code>8</code></em>). </p>
+<h2 id="3-utilisation-cas-pratique">3. Utilisation / Cas Pratique</h2>
+<p>Lorsqu'un visiteur charge son panier sur un site e-commerce, le code PHP ou Python du site web se connecte au serveur MariaDB et lui envoie une requête textuelle SQL :
+<em>"Trouve-moi toutes les lignes dans la table <code>Commandes</code> où l'ID Client est égal à 144, et inclus (grâce à une Jointure SQL) le vrai nom des produits correspondants situés dans la table <code>Produits</code>."</em>
+Le serveur MariaDB lit ses disques extrêmement rapidement (grâce à la magie des "Index"), croise les tables, et renvoie le tableau final au site web.</p>
+<h2 id="4-modifications-possibles-alternatives">4. Modifications possibles / Alternatives</h2>
+<p><strong>Alternatives Relationnelles (Bases SQL) :</strong>
+* <strong>PostgreSQL</strong> : Très apprécié dans l'industrie logicielle pour sa rigueur stricte, sa fiabilité et ses fonctionnalités de données très avancées. L'étoile montante.
+* <strong>Microsoft SQL Server / Oracle DB</strong> : Les mastodontes commerciaux surpuissants mais très coûteux pour les très grandes entreprises.
+* <strong>SQLite</strong> : Une base de données légère tenant dans un seul fichier texte, géniale pour les développeurs, le prototypage ou les applications mobiles.</p>
+<p><strong>Le monde du NoSQL (Non-Relationnel) :</strong>
+Lorsque les données sont trop chaotiques (pas de colonnes fixes possibles) ou nécessitent une scalabilité mondiale répartie sur des centaines de serveurs (Big Data / Réseaux Sociaux), on utilise des SGBD dits "NoSQL". Ils fonctionnent souvent sous forme de documents au format JSON libre (Les leaders sont <strong>MongoDB</strong>, <strong>Cassandra</strong>, <strong>Redis</strong>).</p>
+<h2 id="5-exemples-visuels-et-liens-utiles">5. Exemples visuels et Liens utiles</h2>
+<h3 id="architecture-relationnelle-simple">Architecture relationnelle simple</h3>
+<pre class="mermaid"><code>erDiagram
+    UTILISATEURS {
+        int id PK "Clé Primaire (ID Unique ex: 144)"
+        string nom "ex: Dupont"
+        string email "ex: dupont@mail.fr"
+    }
+
+    PRODUITS {
+        int id PK "Clé Primaire (ID Unique ex: 8)"
+        string nom_produit "ex: Clavier Mécanique"
+        float prix "ex: 59.99"
+    }
+
+    COMMANDES {
+        int id PK "ID Unique de commande"
+        int id_utilisateur FK "Clé Étrangère vers UTILISATEURS (144)"
+        int id_produit FK "Clé Étrangère vers PRODUITS (8)"
+        date date_achat
+    }
+
+    UTILISATEURS ||--o{ COMMANDES : "passe"
+    PRODUITS ||--o{ COMMANDES : "est contenu dans"</code></pre>
+<p><code>Voir aussi : [Mémento SQL](commande_sql.md) | [Sécurisation de la BDD](securite_bdd.md)</code></p>
 
 
 
